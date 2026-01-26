@@ -1,26 +1,42 @@
-<section class="container py-5">
-  <h1 class="mb-4">Centres d’intérêt</h1>
+<section class="hobbies-section">
+    <div class="container">
+        <div class="section-header mb-5">
+            <h1 class="section-title">Centres d'intérêt</h1>
+            <p class="section-subtitle">Au-delà de l'ingénierie, je cultive des passions qui me définissent</p>
+        </div>
 
-  {{#interets}}
-  <div class="card mb-4 shadow-sm">
-    <div class="card-body">
-      <div class="d-flex justify-content-between align-items-baseline mb-2">
-        <h3 class="h5 mb-0">{{titre}}</h3>
-        {{#sous_titre}}
-        <span class="badge bg-light text-muted">{{sous_titre}}</span>
-        {{/sous_titre}}
-      </div>
+        <div class="hobbies-grid">
+            {{#interets}}
+            <div class="hobby-card">
+                {{#image}}
+                <div class="hobby-image">
+                    <img src="{{image}}" alt="{{titre}}" onerror="this.parentElement.style.display='none'">
+                </div>
+                {{/image}}
+                
+                <div class="hobby-header">
+                    <h3 class="hobby-title">{{titre}}</h3>
+                    {{#sous_titre}}
+                    <span class="hobby-badge">{{sous_titre}}</span>
+                    {{/sous_titre}}
+                </div>
 
-      {{#paragraphes}}
-      <p class="mb-1">{{.}}</p>
-      {{/paragraphes}}
+                <div class="hobby-body">
+                    {{#paragraphes}}
+                    <p class="hobby-text">{{.}}</p>
+                    {{/paragraphes}}
 
-      {{#liens}}
-      <p class="mb-1">
-        <a href="{{url}}" target="_blank" rel="noopener" class="link-primary">{{texte}}</a>
-      </p>
-      {{/liens}}
+                    {{#liens}}
+                    <div class="hobby-links mt-3">
+                        <a href="{{url}}" target="_blank" rel="noopener" class="hobby-link">
+                            {{texte}}
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                    {{/liens}}
+                </div>
+            </div>
+            {{/interets}}
+        </div>
     </div>
-  </div>
-  {{/interets}}
 </section>

@@ -79,8 +79,7 @@ function getData() {
     interets: [
       {
         titre: "Football",
-        sous_titre: "Gardien de but",
-        paragraphes: [
+        sous_titre: "Gardien de but",        image: "images/hobbies/football.jpg",        paragraphes: [
           "Je joue au football depuis le collège, essentiellement au poste de gardien de but.",
           "À l’École polytechnique, je suis gardien depuis deux ans. Nous avons deux créneaux d’entraînement par semaine (un en troisième année), ainsi que des matchs en championnat universitaire le jeudi.",
           "Avant cela, j’ai joué deux ans en club au collège et deux ans avec l'équipe de ma prépa."
@@ -89,8 +88,7 @@ function getData() {
       },
       {
         titre: "Scoutisme marin",
-        sous_titre: "Troupe Saint François-Xavier (Paris VI)",
-        paragraphes: [
+        sous_titre: "Troupe Saint François-Xavier (Paris VI)",        image: "images/hobbies/scout.jpeg",        paragraphes: [
           "J’ai commencé le scoutisme à la troupe Vé Brest marine, avec un premier camp d’été et deux années de troupe.",
           "Je suis actuellement assistant chef de troupe à la SUF Saint François-Xavier à Notre-Dame-des-Champs (Paris VI).",
           "J’ai participé à un camp d’été en 2024, un autre en 2025 et je préparerai mon dernier camp en 2026.",
@@ -131,8 +129,7 @@ function getData() {
       },
       {
         titre: "Chant choral",
-        sous_titre: "Ensemble Vocal de l’École polytechnique",
-        paragraphes: [
+        sous_titre: "Ensemble Vocal de l’École polytechnique",        image: "images/hobbies/concert_chorale.jpeg",        paragraphes: [
           "Je fais partie de l’Ensemble Vocal de l’École polytechnique depuis deux ans.",
           "J’ai été responsable de la communication pendant une année : réalisation des affiches, gestion du site web et des comptes Instagram / Facebook, préparation des concerts avec le bureau.",
           "La chorale fait partie des activités qui structurent mon année à l’école, autant sur le plan musical que collectif."
@@ -191,5 +188,11 @@ $(function () {
     const page = $(this).data("page");
     console.log("click bouton sur", page);
     goTo(page);
+  });
+  
+  // Active le lien de navigation correspondant
+  $(document).on('pageLoaded', function(event, page) {
+    $('.nav-link').removeClass('active');
+    $('.nav-link[data-page="' + page + '"]').addClass('active');
   });
 });

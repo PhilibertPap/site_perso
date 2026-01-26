@@ -1,32 +1,63 @@
-<section class="container py-5">
-    <div class="row align-items-center">
-        <div class="col-lg-7">
-            <p class="text-uppercase mb-2 text-muted" style="letter-spacing:.25em;">
-                Élève-officier – École polytechnique
-            </p>
-            <h1 class="mb-3 display-5">{{nom}}</h1>
-            <p class="lead mb-4">
-                Ce site présente une sélection de projets, mes centres d'intérêt, ainsi que mon parcours.
-            </p>
-            <a href="#" data-page="projets" class="btn btn-outline-primary me-2 js-nav">Voir mes projets</a>
-            <a href="#" data-page="hobbies" class="btn btn-outline-primary me-2 js-nav">Centres d'intérêt</a>
-            <a href="#" data-page="cours" class="btn btn-outline-primary me-2 js-nav">Cours suivis</a>
-        </div>
-        <div class="col-lg-5 mt-4 mt-lg-0">
-            <div class="p-4 rounded-4 domaines-card">
-                <h3 class="h6 text-uppercase text-muted mb-3" style="letter-spacing:.18em;">
-                Actuellement
-                </h3>
-                <ul class="mb-0 small">
-                    <li>Élève en troisième année à l'École polytechnique</li>
-                    <li>Parcours d’approfondissement en mécanique – matériaux et structures.</li>
-                    <li>Intérêt pour l'architecture navale et le monde maritime.</li>
-                </ul>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <!-- Colonne texte -->
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <p class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Élève-officier – École polytechnique
+                    </p>
+                    <h1 class="hero-title">{{nom}}</h1>
+                    <p class="hero-subtitle">
+                        Etudes d'ingénierie en mécanique des structures et des matériaux. Passioné par le monde maritime.
+                    </p>
+                    
+                    <!-- Compétences principales -->
+                    <div class="hero-skills mb-5">
+                        <span class="skill-tag">Culture pluridisciplinaire</span>
+                        <span class="skill-tag">Curiosité intellectuelle</span>
+                        <span class="skill-tag">Discipline personnelle</span>
+                        <span class="skill-tag">Sens du détail et rigueur</span>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta">
+                        <a href="#" data-page="projets" class="btn btn-primary btn-lg js-nav">
+                            Voir mes projets
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#" data-page="hobbies" class="btn btn-outline-primary btn-lg js-nav">Centres d'intérêt</a>
+                    </div>
+
+                    <p class="hero-footer">
+                        <a href="cv.pdf" target="_blank" class="link-secondary">Télécharger mon CV (PDF)</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Colonne image/infos -->
+            <div class="col-lg-6">
+                <div class="hero-visual">
+                    <!-- Zone réservée pour photo -->
+                    <div class="profile-image-container">
+                        <img src="images/profile/photo.jpeg" alt="Philibert Pappens" class="profile-image" onerror="this.style.display='none'">
+                        <div class="image-placeholder">
+                            <span>images/profile/photo.jpg</span>
+                        </div>
+                    </div>
+
+                    <!-- Carte infos -->
+                    <div class="hero-info-card">
+                        <h3 class="h6 text-uppercase text-muted" style="letter-spacing:.18em;">Actuellement</h3>
+                        <ul class="info-list mb-0">
+                            <li><span class="info-icon">📚</span> Elève en 3ème année à l'École polytechnique</li>
+                            <li><span class="info-icon">⚙️</span> Etudiant en mécanique – matériaux et structures</li>
+                            <li><span class="info-icon">⛵</span> Attrait pour l'architecture navale & le monde maritime</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="mt-3 small text-muted">
-            Une version détaillée de mon parcours est disponible dans mon
-            <a href="cv.pdf" target="_blank">CV (PDF)</a>.
-        </p>
     </div>
 </section>
