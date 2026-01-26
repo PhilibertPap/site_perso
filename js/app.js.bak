@@ -33,116 +33,45 @@ function getData() {
         elements: [
           {
             titre: "Mécanique des milieux continus",
-            description: "Formulation mathématique du comportement des solides et fluides.",
-            paragraphes: [
-              "Introduction aux principes fondamentaux de la mécanique du continu : cinématique, déformation, contrainte et lois de conservation.",
-              "Formulation locale et faible des problèmes mécaniques, tenseurs de contrainte et de déformation.",
-              "Application aux matériaux élastiques et théorie de l'élasticité linéaire."
-            ]
+            description: "Bases du comportement des matériaux, formulation locale/faible."
           },
           {
             titre: "Mécanique des structures et flambement",
-            description: "Analyse des structures élancées et problèmes de stabilité.",
-            paragraphes: [
-              "Théorie des poutres (Euler-Bernoulli et Timoshenko), plaques et coques.",
-              "Stabilité des structures : flambement élastique, post-flambement et comportement non-linéaire.",
-              "Méthodes énergétiques et résolution des problèmes de valeurs propres pour la stabilité."
-            ]
+            description: "Poutres, plaques, stabilité et post‑flambement."
           },
           {
             titre: "Mécanique des matériaux",
-            description: "Comportement des matériaux sous charge et endommagement.",
-            paragraphes: [
-              "Comportement élasto-plastique des matériaux métalliques.",
-              "Introduction à la mécanique de l'endommagement et critères de rupture.",
-              "Essais mécaniques et caractérisation expérimentale des matériaux."
-            ]
+            description: "Comportement élasto‑plastique, endommagement (intro)."
           }
         ]
       },
       {
-        categorie: "Mathématiques",
+        categorie: "Méthodes numériques / Calcul scientifique",
         elements: [
           {
-            titre: "Cours 1",
-            description: "À compléter",
-            paragraphes: ["À compléter"]
-          }
-        ]
-      },
-      {
-        categorie: "Physique",
-        elements: [
-          {
-            titre: "Cours 1",
-            description: "À compléter",
-            paragraphes: ["À compléter"]
-          }
-        ]
-      },
-      {
-        categorie: "Mathématiques appliquées",
-        elements: [
-          {
-            titre: "Méthodes numériques pour l'ingénieur",
-            description: "Schémas d'approximation, erreurs et analyse de stabilité.",
-            paragraphes: [
-              "Méthodes de discrétisation : différences finies, éléments finis, volumes finis.",
-              "Analyse de convergence, stabilité et ordre de précision des schémas numériques.",
-              "Résolution de systèmes linéaires et problèmes aux valeurs propres."
-            ]
+            titre: "Méthodes numériques pour l’ingénieur",
+            description: "Schémas d’approximation, erreurs, stabilité."
           },
           {
             titre: "Éléments finis",
-            description: "Formulation variationnelle et méthode des éléments finis.",
-            paragraphes: [
-              "Formulations variationnelle et faible des problèmes différentiels.",
-              "Construction d'espaces d'approximation, fonctions de forme et intégration numérique.",
-              "Assemblage et résolution de systèmes linéaires et non-linéaires en FEM."
-            ]
+            description: "Formulation variationnelle, espaces d’approximation, assemblage."
           },
           {
             titre: "Simulation numérique avancée",
-            description: "Problèmes couplés, non-linéarités et applications pratiques.",
-            paragraphes: [
-              "Résolution de problèmes multi-physiques couplés (thermomécanique, fluide-structure, etc.).",
-              "Gestion de la non-linéarité : matérielle, géométrique et de contact.",
-              "Analyse de sensibilité et optimisation en calcul scientifique."
-            ]
+            description: "Problèmes couplés et non linéaires (projets)."
           }
         ]
       },
       {
-        categorie: "Informatique",
+        categorie: "Autres domaines",
         elements: [
+          {
+            titre: "Probabilités / statistiques",
+            description: "Outils pour l’analyse de données et la fiabilité."
+          },
           {
             titre: "Informatique scientifique",
-            description: "Python, algorithmes et structures de données pour l'ingénierie.",
-            paragraphes: [
-              "Programmation en Python pour les applications scientifiques.",
-              "Structures de données, algorithmes et complexité computationnelle.",
-              "Bibliothèques scientifiques : NumPy, SciPy, Matplotlib pour post-traitement."
-            ]
-          }
-        ]
-      },
-      {
-        categorie: "Humanités et sciences sociales",
-        elements: [
-          {
-            titre: "Cours 1",
-            description: "À compléter",
-            paragraphes: ["À compléter"]
-          }
-        ]
-      },
-      {
-        categorie: "Langues",
-        elements: [
-          {
-            titre: "Cours 1",
-            description: "À compléter",
-            paragraphes: ["À compléter"]
+            description: "Python, structures de données, algorithmes."
           }
         ]
       }

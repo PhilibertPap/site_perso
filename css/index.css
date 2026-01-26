@@ -166,6 +166,16 @@ section.container {
   gap: 0.5rem;
 }
 
+.btn-primary:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .btn-arrow {
   transition: transform 0.3s ease;
 }
@@ -351,7 +361,7 @@ section.container {
 /* Image du hobby */
 .hobby-image {
   margin: -1.75rem -1.75rem 1.25rem -1.75rem;
-  height: 200px;
+  height: 280px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--accent-soft) 0%, #e0f2fe 100%);
   border-radius: 16px 16px 0 0;
@@ -366,6 +376,38 @@ section.container {
 }
 
 .hobby-card:hover .hobby-image img {
+  transform: scale(1.05);
+}
+
+/* Galerie d'images */
+.hobby-gallery {
+  margin: -1.75rem -1.75rem 1.25rem -1.75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, #e0f2fe 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+.gallery-item {
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-soft) 0%, #e0f2fe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .gallery-item img {
   transform: scale(1.05);
 }
 
@@ -486,5 +528,156 @@ section.container {
   
   .hobby-badge {
     align-self: flex-start;
+  }
+  
+  /* Images plus compactes sur mobile */
+  .hobby-image {
+    height: 200px;
+  }
+  
+  .gallery-item {
+    height: 180px;
+  }
+}
+
+/* ==================== COURS SECTION ==================== */
+.cours-section {
+  padding: 4rem 0;
+}
+
+.cours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.cours-category {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cours-category:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.15);
+  border-color: var(--accent-soft);
+}
+
+/* Header catégorie */
+.category-header {
+  background: linear-gradient(135deg, var(--accent) 0%, #60a5fa 100%);
+  color: #ffffff;
+  padding: 2rem 1.75rem;
+  border-bottom: 3px solid #1d4ed8;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Liste des cours */
+.courses-list {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.course-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+
+.course-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.course-item:hover {
+  padding-left: 0.5rem;
+}
+
+/* Marqueur left */
+.course-marker {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.course-item:hover .course-marker {
+  width: 8px;
+  height: 8px;
+  background: #1d4ed8;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Contenu cours */
+.course-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.course-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.course-paragraph {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--accent-soft);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cours-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .category-header {
+    padding: 1.5rem 1.5rem;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+  }
+  
+  .courses-list {
+    padding: 1.25rem;
+    gap: 1rem;
   }
 }

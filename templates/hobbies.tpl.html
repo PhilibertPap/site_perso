@@ -14,6 +14,16 @@
                 </div>
                 {{/image}}
                 
+                {{#images}}
+                <div class="hobby-gallery">
+                    {{#.}}
+                    <div class="gallery-item">
+                        <img src="{{src}}" alt="{{alt}}" onerror="this.parentElement.style.display='none'">
+                    </div>
+                    {{/.}}
+                </div>
+                {{/images}}
+                
                 <div class="hobby-header">
                     <h3 class="hobby-title">{{titre}}</h3>
                     {{#sous_titre}}

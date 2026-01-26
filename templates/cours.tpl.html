@@ -1,17 +1,33 @@
-<section class="container py-5">
-  <h1 class="mb-4">Cours suivis à l’École polytechnique</h1>
+<section class="cours-section">
+    <div class="container">
+        <div class="section-header mb-5">
+            <h1 class="section-title">Formations & Cours</h1>
+            <p class="section-subtitle">Cours suivis a lEcole polytechnique, organises par domaine</p>
+        </div>
 
-  <p class="mb-4 text-muted">
-    Sélection de cours regroupés par thématique. Chaque ligne indique le thème
-    et le type d’outils ou d’approches associés.
-  </p>
+        <div class="cours-grid">
+            {{#cours}}
+            <div class="cours-category">
+                <div class="category-header">
+                    <h2 class="category-title">{{categorie}}</h2>
+                </div>
 
-  {{#cours}}
-  <h3 class="h5 mt-4">{{categorie}}</h3>
-  <ul>
-    {{#elements}}
-    <li><strong>{{titre}}</strong> – {{description}}</li>
-    {{/elements}}
-  </ul>
-  {{/cours}}
+                <div class="courses-list">
+                    {{#elements}}
+                    <div class="course-item">
+                        <div class="course-marker"></div>
+                        <div class="course-content">
+                            <h3 class="course-title">{{titre}}</h3>
+                            <p class="course-description">{{description}}</p>
+                            {{#paragraphes}}
+                            <p class="course-paragraph">{{.}}</p>
+                            {{/paragraphes}}
+                        </div>
+                    </div>
+                    {{/elements}}
+                </div>
+            </div>
+            {{/cours}}
+        </div>
+    </div>
 </section>
