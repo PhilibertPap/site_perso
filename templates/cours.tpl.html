@@ -1,0 +1,17 @@
+<section class="container py-5">
+  <h1 class="mb-4">Cours suivis à l’École polytechnique</h1>
+
+  <p class="mb-4 text-muted">
+    Sélection de cours regroupés par thématique. Chaque ligne indique le thème
+    et le type d’outils ou d’approches associés.
+  </p>
+
+  {{#cours}}
+  <h3 class="h5 mt-4">{{categorie}}</h3>
+  <ul>
+    {{#elements}}
+    <li><strong>{{titre}}</strong> – {{description}}</li>
+    {{/elements}}
+  </ul>
+  {{/cours}}
+</section>

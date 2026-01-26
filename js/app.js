@@ -82,14 +82,14 @@ function getData() {
         sous_titre: "Gardien de but",
         paragraphes: [
           "Je joue au football depuis le collège, essentiellement au poste de gardien de but.",
-          "À l’École polytechnique, je suis gardien dans une des équipes de l’école depuis deux ans.",
-          "Avant cela, j’ai joué deux ans en club au collège et deux ans en prépa."
+          "À l’École polytechnique, je suis gardien depuis deux ans. Nous avons deux créneaux d’entraînement par semaine (un en troisième année), ainsi que des matchs en championnat universitaire le jeudi.",
+          "Avant cela, j’ai joué deux ans en club au collège et deux ans avec l'équipe de ma prépa."
         ],
         liens: []
       },
       {
         titre: "Scoutisme marin",
-        sous_titre: "Troupe Vé Brest marine puis SUF Saint François-Xavier (Paris VI)",
+        sous_titre: "Troupe Saint François-Xavier (Paris VI)",
         paragraphes: [
           "J’ai commencé le scoutisme à la troupe Vé Brest marine, avec un premier camp d’été et deux années de troupe.",
           "Je suis actuellement assistant chef de troupe à la SUF Saint François-Xavier à Notre-Dame-des-Champs (Paris VI).",
@@ -103,26 +103,31 @@ function getData() {
         titre: "Orgue",
         sous_titre: "Formation au conservatoire et en cours particuliers",
         paragraphes: [
-          "J’ai commencé l’orgue au conservatoire pendant le primaire, puis j’ai poursuivi tout le collège.",
+          "J’ai commencé l’orgue au conservatoire pendant le primaire, puis j’ai poursuivi tout le collège avec un professeur particulier.",
           "Au lycée, j’ai continué une année avec un professeur particulier, organiste dans une église.",
-          "Je suis particulièrement attaché à la musique de Bach, notamment les petits préludes et fugues pour orgue."
+          "Je suis particulièrement attaché à la musique de Bach"
         ],
         liens: [
           {
-            url: "https://www.youtube.com/results?search_query=bach+petits+pr%C3%A9ludes+et+fugues+orgue",
-            texte: "Quelques interprétations des petits préludes et fugues de Bach"
+            url: "https://www.youtube.com/watch?v=a_pJjg6qUXk&list=RDa_pJjg6qUXk&start_radio=1",
+            texte: "Une interprétation des petits préludes et fugues de Bach"
           }
         ]
       },
       {
         titre: "Piano",
-        sous_titre: "Découverte en cours particuliers",
+        sous_titre: "Cours particuliers",
         paragraphes: [
           "J’ai pris un an de cours particuliers de piano au lycée.",
           "Même si je ne joue pas à un niveau avancé, j’apprécie beaucoup le répertoire pour piano.",
-          "En particulier, j’aime les concertos de Bach (même si je ne les joue pas), ainsi que Chopin, Beethoven et Mozart."
+          "En particulier, j’aime beaucoup Bach, mais également Chopin, Beethoven, Mozart ..."
         ],
-        liens: []
+        liens: [
+          {
+            url: "https://www.youtube.com/watch?v=NLF-OpGH-u4&list=RDNLF-OpGH-u4&start_radio=1",
+            texte: "Le concerto pour clavier n°1 de Bach, interprété par Glenn Gould"
+          }
+        ]
       },
       {
         titre: "Chant choral",
@@ -132,7 +137,12 @@ function getData() {
           "J’ai été responsable de la communication pendant une année : réalisation des affiches, gestion du site web et des comptes Instagram / Facebook, préparation des concerts avec le bureau.",
           "La chorale fait partie des activités qui structurent mon année à l’école, autant sur le plan musical que collectif."
         ],
-        liens: []
+        liens: [
+            {
+            url: "https://www.instagram.com/chorale_x/",
+            texte: "Le compte Instagram de l'Ensemble Vocal"
+          }
+        ]
         }
     ]
   };
