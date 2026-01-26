@@ -75,6 +75,65 @@ function getData() {
           }
         ]
       }
+    ],
+    interets: [
+      {
+        titre: "Football",
+        sous_titre: "Gardien de but",
+        paragraphes: [
+          "Je joue au football depuis le collège, essentiellement au poste de gardien de but.",
+          "À l’École polytechnique, je suis gardien dans une des équipes de l’école depuis deux ans.",
+          "Avant cela, j’ai joué deux ans en club au collège et deux ans en prépa."
+        ],
+        liens: []
+      },
+      {
+        titre: "Scoutisme marin",
+        sous_titre: "Troupe Vé Brest marine puis SUF Saint François-Xavier (Paris VI)",
+        paragraphes: [
+          "J’ai commencé le scoutisme à la troupe Vé Brest marine, avec un premier camp d’été et deux années de troupe.",
+          "Je suis actuellement assistant chef de troupe à la SUF Saint François-Xavier à Notre-Dame-des-Champs (Paris VI).",
+          "J’ai participé à un camp d’été en 2024, un autre en 2025 et je préparerai mon dernier camp en 2026.",
+          "La particularité de ces groupes est d’être des scouts marins : les camps comprennent une partie voile, en plus des activités scoutes habituelles.",
+          "Je suis titulaire du CEP1 et du PSC1."
+        ],
+        liens: []
+      },
+      {
+        titre: "Orgue",
+        sous_titre: "Formation au conservatoire et en cours particuliers",
+        paragraphes: [
+          "J’ai commencé l’orgue au conservatoire pendant le primaire, puis j’ai poursuivi tout le collège.",
+          "Au lycée, j’ai continué une année avec un professeur particulier, organiste dans une église.",
+          "Je suis particulièrement attaché à la musique de Bach, notamment les petits préludes et fugues pour orgue."
+        ],
+        liens: [
+          {
+            url: "https://www.youtube.com/results?search_query=bach+petits+pr%C3%A9ludes+et+fugues+orgue",
+            texte: "Quelques interprétations des petits préludes et fugues de Bach"
+          }
+        ]
+      },
+      {
+        titre: "Piano",
+        sous_titre: "Découverte en cours particuliers",
+        paragraphes: [
+          "J’ai pris un an de cours particuliers de piano au lycée.",
+          "Même si je ne joue pas à un niveau avancé, j’apprécie beaucoup le répertoire pour piano.",
+          "En particulier, j’aime les concertos de Bach (même si je ne les joue pas), ainsi que Chopin, Beethoven et Mozart."
+        ],
+        liens: []
+      },
+      {
+        titre: "Chant choral",
+        sous_titre: "Ensemble Vocal de l’École polytechnique",
+        paragraphes: [
+          "Je fais partie de l’Ensemble Vocal de l’École polytechnique depuis deux ans.",
+          "J’ai été responsable de la communication pendant une année : réalisation des affiches, gestion du site web et des comptes Instagram / Facebook, préparation des concerts avec le bureau.",
+          "La chorale fait partie des activités qui structurent mon année à l’école, autant sur le plan musical que collectif."
+        ],
+        liens: []
+        }
     ]
   };
 }

@@ -1,0 +1,18 @@
+<section class="container py-5">
+  <h1 class="mb-4">Centres d’intérêt</h1>
+
+  {{#interets}}
+  <div class="mb-4">
+    <h3 class="h5">{{titre}}</h3>
+    <p class="mb-1"><em>{{sous_titre}}</em></p>
+    {{#paragraphes}}
+    <p class="mb-1">{{.}}</p>
+    {{/paragraphes}}
+    {{#liens}}
+    <p class="mb-1">
+      <a href="{{url}}" target="_blank" rel="noopener">{{texte}}</a>
+    </p>
+    {{/liens}}
+  </div>
+  {{/interets}}
+</section>
