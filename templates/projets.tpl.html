@@ -1,18 +1,66 @@
-<section class="container py-5">
-  <h1 class="mb-4">Projets</h1>
+<section class="projets-section">
+    <div class="container">
+        <div class="section-header mb-5">
+            <h1 class="section-title">Projets</h1>
+            <p class="section-subtitle">Sélection de mes principaux projets et réalisations</p>
+        </div>
 
-  {{#projets}}
-  <div class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title">{{titre}}</h5>
-      <h6 class="card-subtitle mb-1 text-muted">{{contexte}}</h6>
-      {{#date}}
-      <p class="text-muted small mb-2">{{date}}</p>
-      {{/date}}
-      {{#description}}
-      <p class="card-text">{{description}}</p>
-      {{/description}}
+        <div class="projets-list">
+            {{#projets}}
+            <div class="project-card">
+                {{#image}}
+                <div class="project-image">
+                    <img src="{{image}}" alt="{{titre}}" onerror="this.parentElement.style.display='none'">
+                </div>
+                {{/image}}
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div>
+                            <h2 class="project-title">{{titre}}</h2>
+                            <p class="project-context">{{contexte}}</p>
+                            {{#date}}
+                            <p class="project-date">
+                                <span class="date-icon">📅</span> {{date}}
+                            </p>
+                            {{/date}}
+                        </div>
+                    </div>
+
+                    <p class="project-description">{{description}}</p>
+
+                    {{#resultats}}
+                    <div class="project-results">
+                        <h4 class="results-title">Résultats clés</h4>
+                        <ul class="results-list">
+                            {{#.}}
+                            <li>{{.}}</li>
+                            {{/.}}
+                        </ul>
+                    </div>
+                    {{/resultats}}
+
+                    {{#technologies}}
+                    <div class="project-tech">
+                        {{#.}}
+                        <span class="tech-tag">{{.}}</span>
+                        {{/.}}
+                    </div>
+                    {{/technologies}}
+
+                    {{#liens}}
+                    <div class="project-links">
+                        {{#.}}
+                        <a href="{{url}}" target="_blank" rel="noopener" class="project-link">
+                            {{label}}
+                            <span class="link-arrow">→</span>
+                        </a>
+                        {{/.}}
+                    </div>
+                    {{/liens}}
+                </div>
+            </div>
+            {{/projets}}
+        </div>
     </div>
-  </div>
-  {{/projets}}
 </section>

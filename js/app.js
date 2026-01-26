@@ -17,14 +17,30 @@ function getData() {
       {
         titre: "Analyse structurelle du gréement d’un voilier",
         contexte: "Projet de recherche – École polytechnique",
-        description: "Étude du comportement du gréement et du mât, dimensionnement et analyse de stabilité.",
-        date: "Septembre 2025 – Décembre 2025"
+        description: "Étude approfondie du comportement mécanique du gréement et du mât, incluant le dimensionnement structural et l'analyse de stabilité en conditions de navigation variées.",
+        date: "Septembre 2025 – Décembre 2025",
+        technologies: ["Éléments finis", "Mechanics", "Python", "ANSYS"],
+        resultats: [
+          "Modèle numérique 3D du système de gréement",
+          "Analyse modale et harmonique du mât",
+          "Dimensionnement optimisé des éléments structuraux",
+          "Validation par comparaison avec données expérimentales"
+        ],
+        liens: []
       },
       {
         titre: "Solution au problème d'isomorphisme de graphes",
         contexte: "Projet scientifique collectif – École polytechnique",
-        description: "Implémentation et étude d’algorithmes pour l’isomorphisme de graphes.",
-        date: "Septembre 2024 – Avril 2025"
+        description: "Implémentation et analyse comparative d'algorithmes pour la résolution du problème d'isomorphisme de graphes, incluant des approches heuristiques et exactes.",
+        date: "Septembre 2024 – Avril 2025",
+        technologies: ["Algorithmes", "Python", "Théorie des graphes", "Optimisation"],
+        resultats: [
+          "Implémentation de 3 algorithmes distincts",
+          "Analyse de complexité et performances comparées",
+          "Optimisations heuristiques significatives",
+          "Rapport détaillé avec résultats expérimentaux"
+        ],
+        liens: []
       }
     ],
     cours: [
