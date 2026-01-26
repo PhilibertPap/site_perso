@@ -5,8 +5,13 @@
   <div class="card mb-3">
     <div class="card-body">
       <h5 class="card-title">{{titre}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{contexte}}</h6>
+      <h6 class="card-subtitle mb-1 text-muted">{{contexte}}</h6>
+      {{#date}}
+      <p class="text-muted small mb-2">{{date}}</p>
+      {{/date}}
+      {{#description}}
       <p class="card-text">{{description}}</p>
+      {{/description}}
     </div>
   </div>
   {{/projets}}
