@@ -1,7 +1,9 @@
 :root {
-  --bg-main: #eef2ff;        /* bleu pastel */
+  --bg-main: #eef2ff;
+  /* bleu pastel */
   --bg-section: #ffffff;
-  --accent: #2563eb;         /* bleu vif pour les liens/boutons */
+  --accent: #2563eb;
+  /* bleu vif pour les liens/boutons */
   --accent-soft: #dbeafe;
   --text-main: #111827;
   --text-muted: #6b7280;
@@ -17,10 +19,11 @@ body {
 
 /* Navbar */
 .navbar {
-  background: rgba(255,255,255,0.95) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border-bottom: 1px solid #e5e7eb;
   backdrop-filter: blur(10px);
 }
+
 .navbar-brand {
   color: var(--accent) !important;
   letter-spacing: 0.12em;
@@ -28,10 +31,12 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
+
 .nav-link {
   color: var(--text-muted) !important;
   font-size: 0.9rem;
 }
+
 .nav-link.active,
 .nav-link:hover {
   color: var(--accent) !important;
@@ -43,7 +48,7 @@ section.container {
   border-radius: 20px;
   padding: 2.5rem 2.2rem;
   margin-top: 2.5rem;
-  box-shadow: 0 18px 45px rgba(15,23,42,0.12);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
 .domaines-card {
@@ -51,6 +56,7 @@ section.container {
   border: 1px solid #bfdbfe;
   color: #0f172a;
 }
+
 .domaines-card li::marker {
   color: var(--accent);
 }
@@ -97,8 +103,15 @@ section.container {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* Titre principal */
@@ -298,15 +311,15 @@ section.container {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     max-width: 100%;
   }
-  
+
   .hero-cta {
     flex-direction: column;
   }
-  
+
   .hero-cta .btn {
     width: 100%;
     justify-content: center;
@@ -515,26 +528,26 @@ section.container {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .hobbies-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .hobby-header {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .hobby-badge {
     align-self: flex-start;
   }
-  
+
   /* Images plus compactes sur mobile */
   .hobby-image {
     height: 200px;
   }
-  
+
   .gallery-item {
     height: 180px;
   }
@@ -667,15 +680,15 @@ section.container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .category-header {
     padding: 1.5rem 1.5rem;
   }
-  
+
   .category-title {
     font-size: 1.2rem;
   }
-  
+
   .courses-list {
     padding: 1.25rem;
     gap: 1rem;
@@ -947,7 +960,7 @@ section.container {
   .project-card {
     grid-template-columns: 1fr;
   }
-  
+
   .project-image {
     height: 250px;
   }
@@ -957,20 +970,20 @@ section.container {
   .project-card {
     grid-template-columns: 1fr;
   }
-  
+
   .project-image {
     height: 200px;
   }
-  
+
   .project-content {
     padding: 1.5rem;
     gap: 1rem;
   }
-  
+
   .project-title {
     font-size: 1.2rem;
   }
-  
+
   .project-header {
     flex-direction: column;
     gap: 0.75rem;

@@ -100,120 +100,228 @@ const portfolioData = {
   ],
   cours: [
     {
-      categorie: "Mécanique",
-      elements: [
+      matiere: "Mécanique",
+      matiere_id: "MEC",
+      annees: [
         {
-          titre: "Mécanique des milieux continus",
-          description: "Formulation mathématique du comportement des solides et fluides.",
-          paragraphes: [
-            "Introduction aux principes fondamentaux de la mécanique du continu : cinématique, déformation, contrainte et lois de conservation.",
-            "Formulation locale et faible des problèmes mécaniques, tenseurs de contrainte et de déformation.",
-            "Application aux matériaux élastiques et théorie de l'élasticité linéaire."
+          annee: "2A",
+          cours: [
+            {
+              titre: "Mécanique des milieux continus 1",
+              description: "Structures élancées, équilibre, flambement et formulation variationnelle.",
+              paragraphes: [
+                "Introduction aux concepts fondamentaux de la mécanique des milieux continus dans le cadre simplifié des structures élancées (fils, tiges, poutres, arcs élastiques).",
+                "Formulation des problèmes mécaniques : efforts intérieurs et extérieurs, équations d'équilibre, conditions aux limites et lois de comportement élastiques.",
+                "Étude de la statique et des instabilités (flambement) et introduction à la formulation variationnelle et aux approches énergétiques, en vue de la méthode des éléments finis."
+              ]
+            },
+            {
+              titre: "Mécanique des milieux continus 2",
+              description: "Mécanique des milieux continus tridimensionnels et principes variationnels.",
+              paragraphes: [
+                "Cinématique des milieux continus en trois dimensions : transformations, tenseurs de déformation, descriptions lagrangienne et eulérienne.",
+                "Lois de bilan (masse, quantité de mouvement, moment cinétique), tenseur des contraintes et lois de comportement (élasticité isotrope, hyperélasticité).",
+                "Formulation et résolution de problèmes d'élasticité en petites et grandes déformations, avec introduction aux principes variationnelles et aux méthodes énergétiques."
+              ]
+            },
+            {
+              titre: "Mécanique des fluides",
+              description: "Bases de la mécanique des fluides pour l’analyse et la modélisation des écoulements.",
+              paragraphes: [
+                "Définition d'un fluide, propriétés physiques et forces qui génèrent ou limitent son mouvement.",
+                "Équations de Navier–Stokes, écoulements incompressibles et compressibles.",
+                "Analyse dimensionnelle, similitude et applications aux écoulements réels : régimes où l’inertie ou la viscosité domine, couches limites, écoulements autour des corps et premières notions d’instabilités."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      matiere: "Mathématiques",
+      matiere_id: "MAT",
+      annees: [
+        {
+          annee: "1A",
+          cours: [
+            {
+              titre: "Analyse réelle et méthodes variationnelles",
+              description: "Analyse réelle, espaces de Hilbert et introduction aux méthodes variationnelles.",
+              paragraphes: [
+                "Socle de compétences en analyse fonctionnelle pour aborder les cours avancés de mathématiques, mécanique et physique théorique.",
+                "Étude de la mesure et de l’intégration de Lebesgue, de la transformation de Fourier et de la théorie des espaces de Hilbert.",
+                "Introduction aux méthodes variationnelles comme cadre unifié pour formuler et analyser des problèmes aux dérivées partielles et de physique mathématique."
+              ]
+            }
           ]
         },
         {
-          titre: "Mécanique des structures et flambement",
-          description: "Analyse des structures élancées et problèmes de stabilité.",
-          paragraphes: [
-            "Théorie des poutres (Euler-Bernoulli et Timoshenko), plaques et coques.",
-            "Stabilité des structures : flambement élastique, post-flambement et comportement non-linéaire.",
-            "Méthodes énergétiques et résolution des problèmes de valeurs propres pour la stabilité."
+          annee: "2A",
+          cours: [
+            {
+              titre: "Calcul différentiel et fonctions holomorphes",
+              description: "Analyse complexe et calcul différentiel dans des espaces de dimension finie et de Banach.",
+              paragraphes: [
+                "Première partie consacrée à la théorie des fonctions holomorphes : propriétés des fonctions analytiques, intégrale de contour et outils classiques de l’analyse complexe.",
+                "Seconde partie dédiée au calcul différentiel dans les espaces de Banach : différentiabilité, théorèmes d’inversion et des fonctions implicites, applications aux équations différentielles.",
+                "Outils mathématiques de base pour les cours de mathématiques appliquées, de physique, de mécanique et d’économie, ainsi que pour les enseignements de niveau M1."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      matiere: "Physique",
+      matiere_id: "PHY",
+      annees: [
+        {
+          annee: "1A",
+          cours: [
+            {
+              titre: "Mécanique quantique",
+              description: "Introduction à la physique quantique et à ses principales applications modernes.",
+              paragraphes: [
+                "Découverte de la dualité onde–corpuscule, de la fonction d’onde et des principes fondamentaux de la physique quantique.",
+                "Étude de systèmes quantiques simples : états de polarisation d’un photon, particule en une dimension, transformée de Fourier en physique quantique.",
+                "Produit tensoriel, intrication et spin 1/2, de l’expérience de Stern–Gerlach à la résonance magnétique nucléaire."
+              ]
+            }
           ]
         },
         {
-          titre: "Mécanique des matériaux",
-          description: "Comportement des matériaux sous charge et endommagement.",
-          paragraphes: [
-            "Comportement élasto-plastique des matériaux métalliques.",
-            "Introduction à la mécanique de l'endommagement et critères de rupture.",
-            "Essais mécaniques et caractérisation expérimentale des matériaux."
+          annee: "2A",
+          cours: [
+            {
+              titre: "Physique quantique avancée",
+              description: "Méthodes avancées de mécanique quantique pour systèmes à une ou plusieurs particules.",
+              paragraphes: [
+                "Étude des symétries en physique quantique (translations, rotations) et de leur impact sur les spectres d’énergie, du cristal périodique à l’atome d’hydrogène.",
+                "Méthodes d’approximation (perturbations stationnaires, méthodes variationnelles) pour traiter des systèmes réalistes en mécanique quantique.",
+                "Introduction aux particules indiscernables et à la structure des atomes, états non stationnaires et premières applications aux technologies quantiques modernes."
+              ]
+            },
+            {
+              titre: "Relativité et principes variationnels",
+              description: "Relativité restreinte, mécanique analytique et liens avec la mécanique quantique.",
+              paragraphes: [
+                "Fondements de la relativité restreinte : transformations de Lorentz, optique relativiste et espace-temps de Minkowski.",
+                "Principes variationnels, équations d’Euler–Lagrange, invariances du lagrangien et lois de conservation (énergie, impulsion, moment cinétique).",
+                "Mécanique relativiste et hamiltonienne, relativité et électromagnétisme, ouverture vers la relativité générale et le principe de Feynman."
+              ]
+            },
+            {
+              titre: "Physique statistique",
+              description: "Concepts et méthodes de la physique statistique pour systèmes à grand nombre de particules.",
+              paragraphes: [
+                "Ensembles statistiques, notion d’équilibre thermodynamique et dérivation des lois de la thermodynamique (température, entropie, chaleur) sur des systèmes simples comme le gaz parfait.",
+                "Statistiques de Fermi–Dirac et de Bose–Einstein pour des particules indiscernables, applications aux métaux, semi-conducteurs et rayonnement électromagnétique.",
+                "Introduction aux transitions de phase et aux phénomènes collectifs, brisure spontanée de symétrie et caractère universel de nombreux comportements physiques et hors-physique."
+              ]
+            },
+            {
+              titre: "Ondes électromagnétiques",
+              description: "Propagation, rayonnement et interaction lumière–matière à partir des équations de Maxwell.",
+              paragraphes: [
+                "Équations de Maxwell dans les milieux matériels (conducteurs, diélectriques, milieux magnétiques) et lien entre propriétés microscopiques et grandeurs macroscopiques (indice, aimantation, conductivité).",
+                "Propagation des ondes électromagnétiques dans le vide et dans des guides, diffraction (Huyghens–Fresnel), champ proche et optique guidée.",
+                "Rayonnement électromagnétique (particules accélérées, dipôles), diffusion par la matière, calcul de l’indice optique et introduction à la propagation dans les milieux dispersifs et non linéaires."
+              ]
+            }
           ]
         }
       ]
     },
+
     {
-      categorie: "Mathématiques",
-      elements: [
+      matiere: "Informatique",
+      matiere_id: "INF",
+      annees: [
         {
-          titre: "Cours 1",
-          description: "À compléter",
-          paragraphes: ["À compléter"]
-        }
-      ]
-    },
-    {
-      categorie: "Physique",
-      elements: [
-        {
-          titre: "Cours 1",
-          description: "À compléter",
-          paragraphes: ["À compléter"]
-        }
-      ]
-    },
-    {
-      categorie: "Mathématiques appliquées",
-      elements: [
-        {
-          titre: "Méthodes numériques pour l'ingénieur",
-          description: "Schémas d'approximation, erreurs et analyse de stabilité.",
-          paragraphes: [
-            "Méthodes de discrétisation : différences finies, éléments finis, volumes finis.",
-            "Analyse de convergence, stabilité et ordre de précision des schémas numériques.",
-            "Résolution de systèmes linéaires et problèmes aux valeurs propres."
+          annee: "1A",
+          cours: [
+            {
+              titre: "Mécanismes de la programmation orientée objet",
+              description: "Mécanismes avancés des langages et traits orientés objet en Java.",
+              paragraphes: [
+                "Étude détaillée des fonctionnalités de Java (hors threads) et de leur traduction vers une machine abstraite, avec un lien direct vers l’architecture des ordinateurs.",
+                "Implémentation orientée objet de structures de données classiques (piles, files, tableaux dynamiques, arbres, tables de hachage) et analyse de leur représentation mémoire.",
+                "Introduction à la compilation (analyse syntaxique, génération de code, optimisations), utilisation d’une bibliothèque graphique et preuves de propriétés de programmes via la logique de Hoare."
+              ]
+            }
           ]
         },
         {
-          titre: "Éléments finis",
-          description: "Formulation variationnelle et méthode des éléments finis.",
-          paragraphes: [
-            "Formulations variationnelle et faible des problèmes différentiels.",
-            "Construction d'espaces d'approximation, fonctions de forme et intégration numérique.",
-            "Assemblage et résolution de systèmes linéaires et non-linéaires en FEM."
+          annee: "2A",
+          cours: [
+            {
+              titre: "Informatique graphique 3D",
+              description: "Création, animation et rendu interactif de mondes virtuels 3D.",
+              paragraphes: [
+                "Concepts fondamentaux de la synthèse d’images à partir de modèles 3D : rendu projectif, éclairage, textures et bases de l’animation.",
+                "Techniques de modélisation géométrique et approches procédurales ou interactives pour construire des scènes 3D virtuelles.",
+                "Programmation graphique interactive en C++/OpenGL à travers TPs et mini-projet de monde virtuel 3D, avec ouverture vers réalité virtuelle/augmentée et comportements « intelligents » des personnages."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      matiere: "Mathématiques appliquées",
+      matiere_id: "APM",
+      annees: [
+        {
+          annee: "1A",
+          cours: [
+            {
+              titre: "Aléatoire",
+              description: "Introduction à la théorie des probabilités et aux premières notions de statistique.",
+              paragraphes: [
+                "Notions de probabilité discrète et continue : conditionnement, indépendance, variables aléatoires, lois usuelles et espérance.",
+                "Vecteurs aléatoires, convergence des suites de variables aléatoires, lois des grands nombres et théorème central limite.",
+                "Premiers outils de statistique (estimateurs, intervalles de confiance) et mise en pratique par des simulations Python et un projet de modélisation probabiliste."
+              ]
+            }
           ]
         },
         {
-          titre: "Simulation numérique avancée",
-          description: "Problèmes couplés, non-linéarités et applications pratiques.",
-          paragraphes: [
-            "Résolution de problèmes multi-physiques couplés (thermomécanique, fluide-structure, etc.).",
-            "Gestion de la non-linéarité : matérielle, géométrique et de contact.",
-            "Analyse de sensibilité et optimisation en calcul scientifique."
+          annee: "2A",
+          cours: [
+            {
+              titre: "Modélisation de phénomènes aléatoires",
+              description: "Processus stochastiques pour la modélisation de données corrélées dans le temps.",
+              paragraphes: [
+                "Introduction aux chaînes de Markov et aux martingales comme modèles fondamentaux de phénomènes aléatoires dépendant du temps.",
+                "Applications à des domaines variés : télécommunications, réseaux, économie, biologie, propagation d’épidémies et physique statistique.",
+                "Analyse du comportement asymptotique et outils pour la prédiction et la gestion du risque dans des systèmes soumis à l’aléa."
+              ]
+            }
           ]
         }
       ]
     },
+
     {
-      categorie: "Informatique",
-      elements: [
+      matiere: "Économie",
+      matiere_id: "ECO",
+      annees: [
         {
-          titre: "Informatique scientifique",
-          description: "Python, algorithmes et structures de données pour l'ingénierie.",
-          paragraphes: [
-            "Programmation en Python pour les applications scientifiques.",
-            "Structures de données, algorithmes et complexité computationnelle.",
-            "Bibliothèques scientifiques : NumPy, SciPy, Matplotlib pour post-traitement."
+          annee: "1A",
+          cours: [
+            {
+              titre: "Introduction aux sciences économiques",
+              description: "Principes fondamentaux de l’analyse économique et fonctionnement des économies de marché.",
+              paragraphes: [
+                "Présentation des notions d’offre, de demande et d’équilibre de marché, et analyse des conditions d’efficacité et des défaillances de marché.",
+                "Introduction au commerce international, à l’économie publique, à la concurrence imparfaite et à la théorie des jeux avec asymétries d’information.",
+                "Premiers éléments d’économie du travail, de marchés financiers et de macroéconomie, avec mise en perspective de grandes problématiques économiques contemporaines."
+              ]
+            }
           ]
-        }
-      ]
-    },
-    {
-      categorie: "Humanités et sciences sociales",
-      elements: [
-        {
-          titre: "Cours 1",
-          description: "À compléter",
-          paragraphes: ["À compléter"]
-        }
-      ]
-    },
-    {
-      categorie: "Langues",
-      elements: [
-        {
-          titre: "Cours 1",
-          description: "À compléter",
-          paragraphes: ["À compléter"]
         }
       ]
     }

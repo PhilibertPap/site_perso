@@ -1,33 +1,77 @@
 <section class="cours-section">
-    <div class="container">
-        <div class="section-header mb-5">
-            <h1 class="section-title">Formations & Cours</h1>
-            <p class="section-subtitle">Cours suivis a lEcole polytechnique, organises par domaine</p>
-        </div>
-
-        <div class="cours-grid">
-            {{#cours}}
-            <div class="cours-category">
-                <div class="category-header">
-                    <h2 class="category-title">{{categorie}}</h2>
-                </div>
-
-                <div class="courses-list">
-                    {{#elements}}
-                    <div class="course-item">
-                        <div class="course-marker"></div>
-                        <div class="course-content">
-                            <h3 class="course-title">{{titre}}</h3>
-                            <p class="course-description">{{description}}</p>
-                            {{#paragraphes}}
-                            <p class="course-paragraph">{{.}}</p>
-                            {{/paragraphes}}
-                        </div>
-                    </div>
-                    {{/elements}}
-                </div>
-            </div>
-            {{/cours}}
-        </div>
+  <div class="container">
+    <div class="section-header mb-5">
+      <h1 class="section-title">Formations & Cours</h1>
+      <p class="section-subtitle">
+        Cours suivis en classes préparatoires et à l'Ecole polytechnique.
+      </p>
     </div>
+
+    <div class="accordion" id="accordionMatieres">
+      {{#cours}}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-{{matiere_id}}">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-{{matiere_id}}"
+            aria-expanded="false"
+            aria-controls="collapse-{{matiere_id}}"
+          >
+            {{matiere}}
+          </button>
+        </h2>
+        <div
+          id="collapse-{{matiere_id}}"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading-{{matiere_id}}"
+          data-bs-parent="#accordionMatieres"
+        >
+          <div class="accordion-body">
+            <div class="accordion" id="accordion-{{matiere_id}}-annees">
+              {{#annees}}
+              <div class="accordion-item">
+                <h2
+                  class="accordion-header"
+                  id="heading-{{matiere_id}}-{{annee}}"
+                >
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-{{matiere_id}}-{{annee}}"
+                    aria-expanded="false"
+                    aria-controls="collapse-{{matiere_id}}-{{annee}}"
+                  >
+                    {{annee}}
+                  </button>
+                </h2>
+                <div
+                  id="collapse-{{matiere_id}}-{{annee}}"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading-{{matiere_id}}-{{annee}}"
+                  data-bs-parent="#accordion-{{matiere_id}}-annees"
+                >
+                  <div class="accordion-body">
+                    {{#cours}}
+                    <div class="mb-4">
+                      <h3 class="h5 mb-1">{{titre}}</h3>
+                      <p class="course-description mb-2">{{description}}</p>
+                      {{#paragraphes}}
+                      <p class="course-paragraph mb-1">{{.}}</p>
+                      {{/paragraphes}}
+                    </div>
+                    {{/cours}}
+                  </div>
+                </div>
+              </div>
+              {{/annees}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/cours}}
+    </div>
+  </div>
 </section>
