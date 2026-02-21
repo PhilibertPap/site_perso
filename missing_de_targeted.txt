@@ -1,0 +1,307 @@
+Qiskit
+---
+Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos navigent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.
+---
+C++
+---
+Introduction aux concepts fondamentaux de la mécanique des milieux continus dans le cadre simplifié des structures élancées (fils, tiges, poutres, arcs élastiques).
+---
+Formulation des problèmes mécaniques : efforts intérieurs et extérieurs, équations d'équilibre, conditions aux limites et lois de comportement élastiques.
+---
+Étude de la statique et des instabilités (flambement) et introduction à la formulation variationnelle et aux approches énergétiques, en vue de la méthode des éléments finis.
+---
+Cinématique des milieux continus en trois dimensions : transformations, tenseurs de déformation, descriptions lagrangienne et eulérienne.
+---
+Lois de bilan (masse, quantité de mouvement, moment cinétique), tenseur des contraintes et lois de comportement (élasticité isotrope, hyperélasticité).
+---
+Formulation et résolution de problèmes d'élasticité en petites et grandes déformations, avec introduction aux principes variationnelles et aux méthodes énergétiques.
+---
+Définition d'un fluide, propriétés physiques et forces qui génèrent ou limitent son mouvement.
+---
+Équations de Navier–Stokes, écoulements incompressibles et compressibles.
+---
+Analyse dimensionnelle, similitude et applications aux écoulements réels : régimes où l’inertie ou la viscosité domine, couches limites, écoulements autour des corps et premières notions d’instabilités.
+---
+Le cours traite des comportements non linéaires des matériaux en petites déformations, avec un accent sur la viscoélasticité, la plasticité et la viscoplasticité.
+---
+Il relie les mécanismes physiques aux lois de comportement macroscopiques, dans un cadre mécanique puis thermomécanique, et présente les essais utilisés pour identifier les paramètres des modèles.
+---
+Une partie est consacrée à l’implémentation numérique des lois de comportement et au passage du matériau à la structure sur des cas de chargements thermomécaniques.
+---
+Ce cours m’a permis de mieux relier phénomènes physiques, modélisation constitutive et analyse de structures au-delà du domaine élastique.
+---
+Le cours présente les bases de la résolution numérique en mécanique des milieux continus : systèmes linéaires et non linéaires, équations différentielles ordinaires et partielles, problèmes aux valeurs initiales et aux limites.
+---
+Il développe ensuite la méthode des éléments finis, de la formulation variationnelle à la discrétisation, puis ses étapes de mise en œuvre : maillage, fonctions de forme, intégration numérique, assemblage et post-traitement.
+---
+Les notions sont appliquées à des cas de poutres, plaques et solides en statique et en dynamique, avec des implémentations progressives en Python dans des notebooks Jupyter.
+---
+Ce cours m’a apporté une vraie autonomie sur la chaîne complète d’un calcul numérique, de la modélisation à l’interprétation des résultats.
+---
+Le cours donne une vision d’ensemble des phénomènes dynamiques en mécanique des solides, en régimes harmonique et transitoire, en reliant vibrations, ondes et dynamique structurale.
+---
+La progression va des systèmes discrets (un degré de liberté puis N degrés de liberté) vers les milieux continus, avec des applications sur les poutres, les solides élastiques et les problèmes de stabilité.
+---
+Des thèmes avancés sont abordés, notamment la dynamique des milieux structurés et la dynamique non linéaire, avec un appui fort sur les PC et l’implémentation numérique en Python.
+---
+Ce cours m’a permis de mieux passer du modèle physique à l’outil de calcul pour analyser des phénomènes vibratoires complexes.
+---
+Après des rappels sur les poutres et les plaques, le cours est centré sur des projets concrets de conception et de dimensionnement issus de problématiques industrielles.
+---
+Les sujets couvrent le génie civil, le génie mécanique et la modélisation de composants, avec des approches analytiques, numériques ou expérimentales selon le besoin.
+---
+Le travail en binôme met l’accent sur la démarche d’ingénieur : hypothèses de modélisation, choix des méthodes, justification des résultats et prise en compte des contraintes de conception.
+---
+Ce cours m’a apporté une expérience proche des pratiques industrielles, avec une meilleure capacité d’argumentation technique sur des choix de dimensionnement.
+---
+Le cours fournit un cadre unifié pour modéliser des systèmes où interagissent plusieurs physiques, notamment en énergétique, biomédical, durabilité des structures et capteurs/actionneurs.
+---
+Il aborde le point de vue énergétique et thermodynamique, puis la construction de lois de comportement adaptées aux sollicitations multiphysiques, avec de nombreux exemples industriels.
+---
+Les applications traitées incluent les couplages chimio-mécaniques, la thermo-mécanique des matériaux actifs, la thermo-piézo-électricité et les schémas numériques dédiés aux problèmes d’évolution.
+---
+Ce cours m’a donné une vision intégrée des couplages physiques et des outils pour construire des modèles robustes de systèmes complexes.
+---
+Le cours relie les bases d’élasticité à la modélisation des phénomènes de fissuration et de rupture, à partir d’observations expérimentales et d’exemples d’incidents structuraux.
+---
+L’approche repose sur des concepts énergétiques et variationnels pour construire des modèles utiles au calcul et au dimensionnement de structures sollicitées mécaniquement.
+---
+Une partie numérique met en œuvre ces modèles par éléments finis en Python, avec analyse des champs de contraintes et simulation de propagation de fissures en 2D.
+---
+Ce cours m’a permis d’articuler compréhension physique de la rupture, cadre théorique et simulation pour anticiper les mécanismes de défaillance.
+---
+Le cours complète la mécanique des milieux continus en traitant les non-linéarités géométriques et le comportement des solides hors du cadre des petites perturbations.
+---
+Il reprend la cinématique en grandes transformations, les tenseurs de contraintes associés, puis les lois de comportement non linéaires isotropes et anisotropes.
+---
+Il aborde aussi les effets des précontraintes et contraintes résiduelles, les vibrations autour d’un état tendu, ainsi que des comportements non standards (croissance, polymérisation induite, viscoélasticité).
+---
+Ce cours m’a permis de mieux modéliser des structures soumises à de fortes déformations et d’intégrer l’effet des contraintes internes dans l’analyse mécanique.
+---
+Le cours combine des présentations sur la microfluidique, la nanophysique et la bioingénierie avec une réflexion sur la propriété intellectuelle, le transfert technologique et l’entrepreneuriat scientifique.
+---
+Il s’appuie sur des projets courts pour acquérir des briques expérimentales (mesures de fluorescence, culture de bactéries) puis sur un projet long de conception-réalisation d’un laboratoire sur puce.
+---
+L’ensemble relie état de l’art scientifique, prototypage et applications industrielles innovantes dans une démarche de projet en groupe.
+---
+Ce cours m’a apporté une expérience concrète de projet interdisciplinaire et une meilleure compréhension du continuum recherche-innovation-industrie.
+---
+Le programme couvre les fondamentaux de l'algèbre linéaire, de l'analyse (suites, séries, fonctions, intégration) et de la géométrie, avec une forte exigence de rigueur dans les démonstrations.
+---
+Une place importante est donnée à la résolution de problèmes, à la modélisation et à l'articulation entre intuition et formalisation mathématique.
+---
+Le rythme soutenu de la prépa m'a permis de consolider des automatismes solides en calcul, en raisonnement et en rédaction mathématique.
+---
+Ce cours m'a donné une base très robuste pour aborder ensuite les mathématiques de niveau supérieur à l'École polytechnique.
+---
+La deuxième année approfondit les structures algébriques, l'analyse différentielle et intégrale, les équations différentielles et les raisonnements de haut niveau attendus aux concours.
+---
+Le cadre MP* pousse plus loin la technicité, la rapidité d'exécution et la capacité à relier plusieurs chapitres dans une même résolution.
+---
+Le travail régulier sur des problèmes exigeants m'a fait progresser en synthèse, en précision et en stratégie de résolution.
+---
+Ce cours m'a apporté une vraie maturité mathématique, utile ensuite en mécanique, en physique théorique et en modélisation.
+---
+Socle de compétences en analyse fonctionnelle pour aborder les cours avancés de mathématiques, mécanique et physique théorique.
+---
+Étude de la mesure et de l’intégration de Lebesgue, de la transformation de Fourier et de la théorie des espaces de Hilbert.
+---
+Introduction aux méthodes variationnelles comme cadre unifié pour formuler et analyser des problèmes aux dérivées partielles et de physique mathématique.
+---
+Première partie consacrée à la théorie des fonctions holomorphes : propriétés des fonctions analytiques, intégrale de contour et outils classiques de l’analyse complexe.
+---
+Seconde partie dédiée au calcul différentiel dans les espaces de Banach : différentiabilité, théorèmes d’inversion et des fonctions implicites, applications aux équations différentielles.
+---
+Outils mathématiques de base pour les cours de mathématiques appliquées, de physique, de mécanique et d’économie, ainsi que pour les enseignements de niveau M1.
+---
+Le programme de physique traite notamment la mécanique, l'électromagnétisme, l'optique et la thermodynamique, en articulant modélisation et expériences.
+---
+La partie chimie introduit les équilibres, la cinétique, les transformations de la matière et les outils de raisonnement physico-chimique.
+---
+Les TP et les exercices m'ont appris à passer d'un phénomène concret à un modèle exploitable puis à une interprétation quantitative.
+---
+Ce cours m'a donné une base expérimentale et conceptuelle solide pour les enseignements de physique avancée suivis ensuite.
+---
+Le cursus MP* renforce l'analyse des systèmes dynamiques, des ondes, de l'électromagnétisme et des phénomènes de transport, avec un niveau de formalisation plus exigeant.
+---
+La chimie conserve un rôle important dans la compréhension des équilibres, des transformations et des ordres de grandeur utiles en ingénierie.
+---
+Le travail en problèmes et en TP m'a entraîné à mobiliser rapidement des outils variés pour traiter des situations nouvelles.
+---
+Ce cours m'a apporté des réflexes puissants de modélisation physique et de validation des hypothèses.
+---
+Découverte de la dualité onde–corpuscule, de la fonction d’onde et des principes fondamentaux de la physique quantique.
+---
+Étude de systèmes quantiques simples : états de polarisation d’un photon, particule en une dimension, transformée de Fourier en physique quantique.
+---
+Produit tensoriel, intrication et spin 1/2, de l’expérience de Stern–Gerlach à la résonance magnétique nucléaire.
+---
+Étude des symétries en physique quantique (translations, rotations) et de leur impact sur les spectres d’énergie, du cristal périodique à l’atome d’hydrogène.
+---
+Méthodes d’approximation (perturbations stationnaires, méthodes variationnelles) pour traiter des systèmes réalistes en mécanique quantique.
+---
+Introduction aux particules indiscernables et à la structure des atomes, états non stationnaires et premières applications aux technologies quantiques modernes.
+---
+Fondements de la relativité restreinte : transformations de Lorentz, optique relativiste et espace-temps de Minkowski.
+---
+Principes variationnels, équations d’Euler–Lagrange, invariances du lagrangien et lois de conservation (énergie, impulsion, moment cinétique).
+---
+Mécanique relativiste et hamiltonienne, relativité et électromagnétisme, ouverture vers la relativité générale et le principe de Feynman.
+---
+Ensembles statistiques, notion d’équilibre thermodynamique et dérivation des lois de la thermodynamique (température, entropie, chaleur) sur des systèmes simples comme le gaz parfait.
+---
+Statistiques de Fermi–Dirac et de Bose–Einstein pour des particules indiscernables, applications aux métaux, semi-conducteurs et rayonnement électromagnétique.
+---
+Introduction aux transitions de phase et aux phénomènes collectifs, brisure spontanée de symétrie et caractère universel de nombreux comportements physiques et hors-physique.
+---
+Équations de Maxwell dans les milieux matériels (conducteurs, diélectriques, milieux magnétiques) et lien entre propriétés microscopiques et grandeurs macroscopiques (indice, aimantation, conductivité).
+---
+Propagation des ondes électromagnétiques dans le vide et dans des guides, diffraction (Huyghens–Fresnel), champ proche et optique guidée.
+---
+Rayonnement électromagnétique (particules accélérées, dipôles), diffusion par la matière, calcul de l’indice optique et introduction à la propagation dans les milieux dispersifs et non linéaires.
+---
+Le tronc commun introduit la programmation structurée (principalement en Python), les structures de données usuelles et les premiers outils d'analyse de complexité.
+---
+L'objectif est de savoir concevoir des algorithmes corrects, lisibles et efficaces pour résoudre des problèmes mathématiques et scientifiques.
+---
+Ce cours m'a appris à formaliser une idée en étapes calculables et à vérifier la robustesse d'une solution.
+---
+L'option renforce les méthodes de raisonnement algorithmique, la maîtrise des structures de données et la résolution de problèmes plus exigeants.
+---
+Le format m'a permis d'aller au-delà des automatismes de base pour travailler la qualité des preuves et la performance des programmes.
+---
+Ce cours m'a donné le goût des approches plus théoriques de l'informatique, en complément de la pratique de programmation.
+---
+Le tronc commun entretient les fondamentaux : rigueur de programmation, analyse de complexité et conception de solutions fiables.
+---
+Il sert de socle méthodologique commun pour traiter les problèmes scientifiques nécessitant une implémentation rapide et juste.
+---
+Ce cours m'a permis de garder des réflexes solides d'écriture et de vérification d'algorithmes.
+---
+Le module renforcé développe des notions plus avancées d'algorithmique et de structures discrètes, avec une exigence forte sur la qualité des raisonnements.
+---
+Il prépare aux problèmes d'informatique de concours, à la fois sur la conception d'algorithmes et sur leur justification.
+---
+Ce cours m'a apporté une meilleure capacité à traiter des problèmes abstraits d'informatique en gardant un ancrage concret d'implémentation.
+---
+Étude détaillée des fonctionnalités de Java (hors threads) et de leur traduction vers une machine abstraite, avec un lien direct vers l’architecture des ordinateurs.
+---
+Implémentation orientée objet de structures de données classiques (piles, files, tableaux dynamiques, arbres, tables de hachage) et analyse de leur représentation mémoire.
+---
+Introduction à la compilation (analyse syntaxique, génération de code, optimisations), utilisation d’une bibliothèque graphique et preuves de propriétés de programmes via la logique de Hoare.
+---
+Concepts fondamentaux de la synthèse d’images à partir de modèles 3D : rendu projectif, éclairage, textures et bases de l’animation.
+---
+Techniques de modélisation géométrique et approches procédurales ou interactives pour construire des scènes 3D virtuelles.
+---
+Programmation graphique interactive en C++/OpenGL à travers TPs et mini-projet de monde virtuel 3D, avec ouverture vers réalité virtuelle/augmentée et comportements « intelligents » des personnages.
+---
+Notions de probabilité discrète et continue : conditionnement, indépendance, variables aléatoires, lois usuelles et espérance.
+---
+Vecteurs aléatoires, convergence des suites de variables aléatoires, lois des grands nombres et théorème central limite.
+---
+Premiers outils de statistique (estimateurs, intervalles de confiance) et mise en pratique par des simulations Python et un projet de modélisation probabiliste.
+---
+Introduction aux chaînes de Markov et aux martingales comme modèles fondamentaux de phénomènes aléatoires dépendant du temps.
+---
+Applications à des domaines variés : télécommunications, réseaux, économie, biologie, propagation d’épidémies et physique statistique.
+---
+Analyse du comportement asymptotique et outils pour la prédiction et la gestion du risque dans des systèmes soumis à l’aléa.
+---
+Présentation des notions d’offre, de demande et d’équilibre de marché, et analyse des conditions d’efficacité et des défaillances de marché.
+---
+Introduction au commerce international, à l’économie publique, à la concurrence imparfaite et à la théorie des jeux avec asymétries d’information.
+---
+Premiers éléments d’économie du travail, de marchés financiers et de macroéconomie, avec mise en perspective de grandes problématiques économiques contemporaines.
+---
+Le cours articule lecture comparée d'oeuvres philosophiques et littéraires, analyse conceptuelle et entraînement méthodique à la dissertation.
+---
+Le thème de l'enfance conduit à interroger l'éducation, la formation du sujet, la mémoire, la transmission et la construction de la liberté.
+---
+Le travail hebdomadaire m'a entraîné à problématiser rapidement, structurer une argumentation solide et soigner la précision de l'expression.
+---
+Ce cours m'a apporté une méthode durable de réflexion et de rédaction, utile bien au-delà des concours.
+---
+Le thème du travail permet d'examiner les dimensions économiques, sociales, politiques et existentielles de l'activité humaine.
+---
+Le cours combine étude d'oeuvres, clarification des concepts, confrontation des positions d'auteurs et entraînement intensif à l'écrit.
+---
+Il m'a aidé à mieux articuler lecture fine des textes, mise en perspective historique et argumentation personnelle rigoureuse.
+---
+Ce cours m'a renforcé en culture générale et en qualité d'expression, avec un impact direct sur mes présentations et écrits académiques.
+---
+Le cours analyse la manière dont les enjeux de défense s’inscrivent dans un ordre mondial en recomposition, entre retour des rivalités de puissance, conflictualités hybrides et transformations de la souveraineté.
+---
+Il mobilise les cadres des relations internationales et des war studies pour étudier les logiques d’alliance, de dissuasion, d’interdépendance et de compétition stratégique.
+---
+Le séminaire thématique couvre notamment le lien armée-société, le rôle des organisations internationales, la dissuasion nucléaire française, la cybersécurité, les politiques industrielles de défense et l’impact des technologies émergentes.
+---
+Les interventions de praticiens et d’experts permettent d’articuler concepts théoriques et enjeux opérationnels actuels.
+---
+Ce cours m’a donné des repères solides pour lire les équilibres géopolitiques contemporains et comprendre leurs implications concrètes en matière de défense.
+---
+Le cours part d’un constat central : la démocratie est aujourd’hui universellement valorisée dans le langage politique, tout en faisant l’objet d’une défiance croissante dans les pratiques.
+---
+Il interroge cette tension entre idéal démocratique et désaffection civique, en analysant notamment la crise de la représentation, la montée de l’abstention et la distance entre gouvernants et gouvernés.
+---
+Le parcours mobilise des références philosophiques et historiques, de l’Antiquité à la période contemporaine, pour comprendre comment la démocratie est passée d’un régime critiqué à un horizon politique quasi incontournable.
+---
+Ce cours m’a apporté des outils d’analyse rigoureux pour articuler concepts philosophiques et enjeux institutionnels actuels.
+---
+Le cours étudie l’empire dans la longue durée, du modèle romain aux impérialismes modernes, afin de définir la notion et d’en dégager une typologie (territoriale, coloniale, idéologique).
+---
+Il analyse l’effacement des empires au XXe siècle, puis leur retour dans les débats géopolitiques récents, en lien avec les notions d’hégémonie, de leadership et d’ordre international.
+---
+La pluralité des interventions permet de comparer des cas variés (pharaonique, assyrien, perse, romain, carolingien, arabo-islamique, austro-hongrois, coloniaux) et de comprendre les logiques de durée, de circulation et d’identités multiples.
+---
+Ce cours m’a permis d’affiner ma lecture historique des rapports de puissance et des formes politiques à grande échelle.
+---
+Le cours combine science politique et droit constitutionnel pour présenter les notions clés du constitutionnalisme, de l’État et des régimes politiques.
+---
+Il étudie les interactions entre exécutif et législatif, puis les institutions en action à travers la réforme de l’État, l’organisation territoriale, l’action publique et les mécanismes électoraux.
+---
+Des comparaisons historiques et internationales permettent de situer les spécificités françaises dans un cadre plus large.
+---
+Ce cours m’a donné une base solide pour analyser les institutions, leurs acteurs et leurs transformations dans le temps.
+---
+Le cours montre comment la démocratie républicaine s’enracine au tournant des XIXe et XXe siècles, en articulant institutions, culture politique et pratiques sociales.
+---
+L’approche est thématique : élections, presse, libertés, sociabilités politiques, question sociale, radicalisme, nationalismes, place des religions et rapports entre élus et citoyens.
+---
+Une attention particulière est portée aux sources culturelles et iconographiques, ainsi qu’aux continuités et ruptures entre la Belle Époque et la période de l’après-guerre.
+---
+Ce cours m’a aidé à relier histoire politique, histoire culturelle et enjeux contemporains de la démocratie.
+---
+Le cours interroge le paradoxe de l’après-1989 : une promesse de pacification globale, mais une persistance de conflits interétatiques, de violences civiles internationalisées et de violences terroristes.
+---
+Il mobilise les grandes approches des relations internationales (réalistes, libérales, constructivistes, critiques) pour analyser les logiques de guerre, de dissuasion, d’hégémonie, d’interdépendance et de reconnaissance.
+---
+Les séances s’appuient sur des cas empiriques concrets (Europe, Moyen-Orient, Russie, Chine, etc.) pour articuler concepts politistes et dynamiques géopolitiques contemporaines.
+---
+Ce cours m’a donné des repères solides pour lire les rapports de force internationaux au-delà de l’actualité immédiate.
+---
+Le séminaire explore l’opéra comme rencontre du chant, de la musique, du théâtre et de la mise en scène, avec une attention aux styles, aux grandes œuvres, aux voix et aux compositeurs.
+---
+Il montre aussi l’envers du décor : coordination d’équipes artistiques et techniques, contraintes de production, arbitrages de programmation et exigences de qualité dans une grande institution culturelle.
+---
+Le format combine cours à l’X et immersion sur le terrain (répétitions et représentations), afin d’observer concrètement les étapes qui précèdent la représentation publique.
+---
+Ce cours m’a apporté une meilleure compréhension des liens entre création artistique, organisation collective et exigence d’exécution.
+---
+Le cours part du constat que les organisations (entreprises, laboratoires, services publics, etc.) structurent l’action collective et constituent le cadre principal de la vie professionnelle.
+---
+Il montre que leur fonctionnement repose sur des dimensions à la fois techniques et humaines, et mobilise les apports des sciences de gestion pour mieux comprendre leurs logiques internes et externes.
+---
+L’objectif est d’acquérir des repères concrets pour décoder ces dynamiques et mieux y agir, notamment en stage puis dans des responsabilités futures.
+---
+Ce cours m’a donné des clés utiles pour analyser une organisation de manière systémique et y prendre des décisions plus pertinentes.
+---
+Le cours compare les grands modèles de gouvernance, notamment les approches « shareholder » et « stakeholder », et analyse leurs effets sur la définition des objectifs et la création de valeur.
+---
+Il aborde la montée de la valeur actionnariale, les mécanismes d’incitation des dirigeants, les limites d’une lecture purement financière de la performance, et l’intégration des enjeux ESG.
+---
+Une place importante est donnée à la finance durable : ISR, notation ESG, gestion de portefeuille responsable et articulation avec les politiques RSE des organisations.
+---
+L’ensemble est traité dans une perspective internationale pour comprendre les spécificités des modèles européens par rapport aux cas américains et asiatiques.
+---
+Ce cours m’a permis de mieux relier stratégie d’entreprise, gouvernance et critères de durabilité dans l’évaluation de la performance.
