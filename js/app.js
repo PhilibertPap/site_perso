@@ -9,9 +9,7 @@ const routes = {
 const DEFAULT_LANG = "fr";
 const SUPPORTED_LANGS = ["fr", "en", "de"];
 const LANG_STORAGE_KEY = "portfolio_lang";
-const VIEW_MODE_STORAGE_KEY = "portfolio_view_mode";
 const COURSE_VIEW_MODE_STORAGE_KEY = "portfolio_course_view_mode";
-const MOBILE_VIEW_MAX_WIDTH = 991;
 const EMAIL_ADDRESS = "philibert.pappens@gmail.com";
 const LINKEDIN_URL = "https://linkedin.com/in/philibert-pappens-993468313";
 const GITHUB_URL = "https://github.com/PhilibertPap";
@@ -748,15 +746,6 @@ function getUi(lang) {
   return UI_STRINGS[lang] || UI_STRINGS.fr;
 }
 
-function getStoredViewMode() {
-  const raw = localStorage.getItem(VIEW_MODE_STORAGE_KEY);
-  return raw === "desktop" ? "desktop" : "auto";
-}
-
-function setStoredViewMode(mode) {
-  localStorage.setItem(VIEW_MODE_STORAGE_KEY, mode === "desktop" ? "desktop" : "auto");
-}
-
 function getStoredCourseViewMode() {
   const raw = localStorage.getItem(COURSE_VIEW_MODE_STORAGE_KEY);
   return raw === "compact" ? "compact" : "detailed";
@@ -766,48 +755,9 @@ function setStoredCourseViewMode(mode) {
   localStorage.setItem(COURSE_VIEW_MODE_STORAGE_KEY, mode === "compact" ? "compact" : "detailed");
 }
 
-function isMobileViewport() {
-  return window.matchMedia(`(max-width: ${MOBILE_VIEW_MAX_WIDTH}px)`).matches;
-}
-
-function getEffectiveViewMode() {
-  const preferred = getStoredViewMode();
-  const isMobile = isMobileViewport();
-  if (preferred === "desktop" && isMobile) return "desktop";
-  return isMobile ? "mobile" : "desktop";
-}
-
-function applyViewportMode(lang) {
-  const ui = getUi(lang);
-  const effectiveMode = getEffectiveViewMode();
-  const isMobile = isMobileViewport();
-  const forceDesktop = isMobile && effectiveMode === "desktop";
-
-  const viewportMeta = document.getElementById("viewport-meta");
-  if (viewportMeta) {
-    viewportMeta.setAttribute(
-      "content",
-      forceDesktop ? "width=1280" : "width=device-width, initial-scale=1.0"
-    );
-  }
-
-  document.documentElement.classList.toggle("force-desktop-view", forceDesktop);
-  document.documentElement.classList.toggle("mobile-layout", isMobile && !forceDesktop);
-
-  document.querySelectorAll("[data-view-toggle]").forEach((btn) => {
-    if (!isMobile) {
-      btn.classList.add("d-none");
-      return;
-    }
-
-    btn.classList.remove("d-none");
-    const toDesktop = !forceDesktop;
-    btn.dataset.viewTarget = toDesktop ? "desktop" : "mobile";
-    const label = toDesktop ? ui.footer.switch_to_desktop : ui.footer.switch_to_mobile;
-    btn.textContent = label;
-    btn.setAttribute("aria-label", label);
-    btn.setAttribute("title", label);
-  });
+function clearLegacyMobileOverride() {
+  localStorage.removeItem("portfolio_view_mode");
+  document.documentElement.classList.remove("force-desktop-view", "mobile-layout");
 }
 
 function formatDateLabel(date, lang) {
@@ -1072,8 +1022,6 @@ function applyStaticUi(ui, lang) {
     el.setAttribute("aria-label", label);
     el.setAttribute("title", label);
   });
-
-  applyViewportMode(lang);
 }
 
 function initBottomDock() {
@@ -1409,23 +1357,16 @@ $(function () {
     if (nextLang && nextLang !== currentLang) applyLanguage(nextLang);
   });
 
-  $(document).on("click", "[data-view-toggle]", function () {
-    const target = this.dataset.viewTarget === "mobile" ? "auto" : "desktop";
-    setStoredViewMode(target);
-    applyViewportMode(currentLang);
-    window.location.reload();
-  });
-
   $(document).on("click", "[data-scroll-top]", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  window.addEventListener("resize", () => applyViewportMode(currentLang), { passive: true });
   window.addEventListener("hashchange", () => {
     const hashPage = window.location.hash.replace(/^#/, "");
     if (hashPage && routes[hashPage] && hashPage !== currentPage) goTo(hashPage);
   });
 
+  clearLegacyMobileOverride();
   initBottomDock();
   applyStaticUi(getUi(currentLang), currentLang);
   goTo(currentPage);
