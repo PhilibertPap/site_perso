@@ -102,6 +102,7 @@ const portfolioData = {
     {
       matiere: "Mécanique",
       matiere_id: "MEC",
+      logo: "⚙",
       annees: [
         {
           annee: "2A",
@@ -226,6 +227,7 @@ const portfolioData = {
     {
       matiere: "Mathématiques",
       matiere_id: "MAT",
+      logo: "∫",
       annees: [
         {
           annee: "1A",
@@ -261,6 +263,7 @@ const portfolioData = {
     {
       matiere: "Physique",
       matiere_id: "PHY",
+      logo: "Φ",
       annees: [
         {
           annee: "1A",
@@ -323,6 +326,7 @@ const portfolioData = {
     {
       matiere: "Informatique",
       matiere_id: "INF",
+      logo: "⌘",
       annees: [
         {
           annee: "1A",
@@ -358,6 +362,7 @@ const portfolioData = {
     {
       matiere: "Mathématiques appliquées",
       matiere_id: "APM",
+      logo: "ℙ",
       annees: [
         {
           annee: "1A",
@@ -393,6 +398,7 @@ const portfolioData = {
     {
       matiere: "Économie",
       matiere_id: "ECO",
+      logo: "€",
       annees: [
         {
           annee: "1A",
@@ -404,6 +410,139 @@ const portfolioData = {
                 "Présentation des notions d’offre, de demande et d’équilibre de marché, et analyse des conditions d’efficacité et des défaillances de marché.",
                 "Introduction au commerce international, à l’économie publique, à la concurrence imparfaite et à la théorie des jeux avec asymétries d’information.",
                 "Premiers éléments d’économie du travail, de marchés financiers et de macroéconomie, avec mise en perspective de grandes problématiques économiques contemporaines."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      matiere: "Humanités et Sciences Sociales",
+      matiere_id: "HSS",
+      logo: "⚖",
+      annees: [
+        {
+          annee: "1A",
+          cours: [
+            {
+              titre: "Équilibres mondiaux et enjeux de défense",
+              description: "Introduction aux grands équilibres internationaux et à leur impact direct sur les politiques de défense contemporaines.",
+              paragraphes: [
+                "Le cours analyse la manière dont les enjeux de défense s’inscrivent dans un ordre mondial en recomposition, entre retour des rivalités de puissance, conflictualités hybrides et transformations de la souveraineté.",
+                "Il mobilise les cadres des relations internationales et des war studies pour étudier les logiques d’alliance, de dissuasion, d’interdépendance et de compétition stratégique.",
+                "Le séminaire thématique couvre notamment le lien armée-société, le rôle des organisations internationales, la dissuasion nucléaire française, la cybersécurité, les politiques industrielles de défense et l’impact des technologies émergentes.",
+                "Les interventions de praticiens et d’experts permettent d’articuler concepts théoriques et enjeux opérationnels actuels.",
+                "Ce cours m’a donné des repères solides pour lire les équilibres géopolitiques contemporains et comprendre leurs implications concrètes en matière de défense."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "2A",
+          cours: [
+            {
+              titre: "Pouvons-nous aimer la démocratie ?",
+              description: "Réflexion philosophique sur le paradoxe démocratique contemporain : triomphe de la démocratie comme référence et crise de la confiance politique.",
+              paragraphes: [
+                "Le cours part d’un constat central : la démocratie est aujourd’hui universellement valorisée dans le langage politique, tout en faisant l’objet d’une défiance croissante dans les pratiques.",
+                "Il interroge cette tension entre idéal démocratique et désaffection civique, en analysant notamment la crise de la représentation, la montée de l’abstention et la distance entre gouvernants et gouvernés.",
+                "Le parcours mobilise des références philosophiques et historiques, de l’Antiquité à la période contemporaine, pour comprendre comment la démocratie est passée d’un régime critiqué à un horizon politique quasi incontournable.",
+                "Ce cours m’a apporté des outils d’analyse rigoureux pour articuler concepts philosophiques et enjeux institutionnels actuels."
+              ]
+            },
+            {
+              titre: "Histoires d'Empires",
+              description: "Approche historique de la notion d’empire, de ses formes anciennes à ses reconfigurations contemporaines.",
+              paragraphes: [
+                "Le cours étudie l’empire dans la longue durée, du modèle romain aux impérialismes modernes, afin de définir la notion et d’en dégager une typologie (territoriale, coloniale, idéologique).",
+                "Il analyse l’effacement des empires au XXe siècle, puis leur retour dans les débats géopolitiques récents, en lien avec les notions d’hégémonie, de leadership et d’ordre international.",
+                "La pluralité des interventions permet de comparer des cas variés (pharaonique, assyrien, perse, romain, carolingien, arabo-islamique, austro-hongrois, coloniaux) et de comprendre les logiques de durée, de circulation et d’identités multiples.",
+                "Ce cours m’a permis d’affiner ma lecture historique des rapports de puissance et des formes politiques à grande échelle."
+              ]
+            },
+            {
+              titre: "Introduction aux problèmes institutionnels",
+              description: "Analyse des cadres institutionnels et de la pratique du pouvoir, principalement sous la Ve République française.",
+              paragraphes: [
+                "Le cours combine science politique et droit constitutionnel pour présenter les notions clés du constitutionnalisme, de l’État et des régimes politiques.",
+                "Il étudie les interactions entre exécutif et législatif, puis les institutions en action à travers la réforme de l’État, l’organisation territoriale, l’action publique et les mécanismes électoraux.",
+                "Des comparaisons historiques et internationales permettent de situer les spécificités françaises dans un cadre plus large.",
+                "Ce cours m’a donné une base solide pour analyser les institutions, leurs acteurs et leurs transformations dans le temps."
+              ]
+            },
+            {
+              titre: "Histoire politique et culturelle de la France : de la Commune à la Belle Époque",
+              description: "Étude de la République, de la démocratie et de la citoyenneté en France entre 1871 et 1914.",
+              paragraphes: [
+                "Le cours montre comment la démocratie républicaine s’enracine au tournant des XIXe et XXe siècles, en articulant institutions, culture politique et pratiques sociales.",
+                "L’approche est thématique : élections, presse, libertés, sociabilités politiques, question sociale, radicalisme, nationalismes, place des religions et rapports entre élus et citoyens.",
+                "Une attention particulière est portée aux sources culturelles et iconographiques, ainsi qu’aux continuités et ruptures entre la Belle Époque et la période de l’après-guerre.",
+                "Ce cours m’a aidé à relier histoire politique, histoire culturelle et enjeux contemporains de la démocratie."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "3A",
+          cours: [
+            {
+              titre: "Stratégie et géopolitique",
+              description: "Analyse des conflictualités internationales contemporaines à partir des concepts clés des relations internationales.",
+              paragraphes: [
+                "Le cours interroge le paradoxe de l’après-1989 : une promesse de pacification globale, mais une persistance de conflits interétatiques, de violences civiles internationalisées et de violences terroristes.",
+                "Il mobilise les grandes approches des relations internationales (réalistes, libérales, constructivistes, critiques) pour analyser les logiques de guerre, de dissuasion, d’hégémonie, d’interdépendance et de reconnaissance.",
+                "Les séances s’appuient sur des cas empiriques concrets (Europe, Moyen-Orient, Russie, Chine, etc.) pour articuler concepts politistes et dynamiques géopolitiques contemporaines.",
+                "Ce cours m’a donné des repères solides pour lire les rapports de force internationaux au-delà de l’actualité immédiate."
+              ]
+            },
+            {
+              titre: "Découverte de l'Opéra",
+              description: "Introduction au monde de l’opéra comme art total et comme organisation complexe, entre esthétique, technique et management culturel.",
+              paragraphes: [
+                "Le séminaire explore l’opéra comme rencontre du chant, de la musique, du théâtre et de la mise en scène, avec une attention aux styles, aux grandes œuvres, aux voix et aux compositeurs.",
+                "Il montre aussi l’envers du décor : coordination d’équipes artistiques et techniques, contraintes de production, arbitrages de programmation et exigences de qualité dans une grande institution culturelle.",
+                "Le format combine cours à l’X et immersion sur le terrain (répétitions et représentations), afin d’observer concrètement les étapes qui précèdent la représentation publique.",
+                "Ce cours m’a apporté une meilleure compréhension des liens entre création artistique, organisation collective et exigence d’exécution."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      matiere: "Management de l'innovation et entrepreneuriat",
+      matiere_id: "MIE",
+      logo: "↗",
+      annees: [
+        {
+          annee: "2A",
+          cours: [
+            {
+              titre: "Fondamentaux des Organisations",
+              description: "Introduction aux dynamiques des organisations et aux outils de management pour agir dans des environnements complexes.",
+              paragraphes: [
+                "Le cours part du constat que les organisations (entreprises, laboratoires, services publics, etc.) structurent l’action collective et constituent le cadre principal de la vie professionnelle.",
+                "Il montre que leur fonctionnement repose sur des dimensions à la fois techniques et humaines, et mobilise les apports des sciences de gestion pour mieux comprendre leurs logiques internes et externes.",
+                "L’objectif est d’acquérir des repères concrets pour décoder ces dynamiques et mieux y agir, notamment en stage puis dans des responsabilités futures.",
+                "Ce cours m’a donné des clés utiles pour analyser une organisation de manière systémique et y prendre des décisions plus pertinentes."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "3A",
+          cours: [
+            {
+              titre: "Gouvernance d'entreprise et finance durable",
+              description: "Mise en perspective des travaux récents sur la gouvernance des entreprises et la finance responsable.",
+              paragraphes: [
+                "Le cours compare les grands modèles de gouvernance, notamment les approches « shareholder » et « stakeholder », et analyse leurs effets sur la définition des objectifs et la création de valeur.",
+                "Il aborde la montée de la valeur actionnariale, les mécanismes d’incitation des dirigeants, les limites d’une lecture purement financière de la performance, et l’intégration des enjeux ESG.",
+                "Une place importante est donnée à la finance durable : ISR, notation ESG, gestion de portefeuille responsable et articulation avec les politiques RSE des organisations.",
+                "L’ensemble est traité dans une perspective internationale pour comprendre les spécificités des modèles européens par rapport aux cas américains et asiatiques.",
+                "Ce cours m’a permis de mieux relier stratégie d’entreprise, gouvernance et critères de durabilité dans l’évaluation de la performance."
               ]
             }
           ]

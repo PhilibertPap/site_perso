@@ -7,26 +7,75 @@
       </p>
     </div>
 
-    <div class="accordion" id="accordionMatieres">
+    <div class="cours-toolbar">
+      <p class="cours-toolbar-label">Filtrer par matière</p>
+      <div class="cours-filters" role="toolbar" aria-label="Filtre des matières">
+        <button
+          class="course-filter-btn is-active"
+          type="button"
+          data-cours-filter="ALL"
+          data-cours-label="Toutes"
+        >
+          Toutes
+        </button>
+        {{#cours}}
+        <button
+          class="course-filter-btn matiere-{{matiere_id}}"
+          type="button"
+          data-cours-filter="{{matiere_id}}"
+          data-cours-label="{{matiere}}"
+          aria-label="Filtrer sur {{matiere}}"
+        >
+          <span class="matiere-logo" aria-hidden="true">
+            {{#logo}}{{logo}}{{/logo}}{{^logo}}{{matiere_id}}{{/logo}}
+          </span>
+          <span>{{matiere}}</span>
+          <span class="filter-count">{{course_count}}</span>
+        </button>
+        {{/cours}}
+      </div>
+      <div class="cours-toolbar-actions">
+        <button type="button" class="cours-action-btn" data-cours-action="open-visible">
+          Ouvrir visibles
+        </button>
+        <button type="button" class="cours-action-btn" data-cours-action="close-visible">
+          Fermer visibles
+        </button>
+        <button type="button" class="cours-action-btn" data-cours-action="clear-filters">
+          Réinitialiser filtres
+        </button>
+      </div>
+      <p class="cours-active-filters" data-cours-active-filters></p>
+    </div>
+
+    <div class="accordion cours-accordion" id="accordionMatieres">
       {{#cours}}
-      <div class="accordion-item">
+      <div
+        class="accordion-item matiere-item matiere-{{matiere_id}}"
+        data-matiere-id="{{matiere_id}}"
+      >
         <h2 class="accordion-header" id="heading-{{matiere_id}}">
           <button
-            class="accordion-button collapsed"
+            class="accordion-button collapsed matiere-button matiere-{{matiere_id}}"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapse-{{matiere_id}}"
             aria-expanded="false"
             aria-controls="collapse-{{matiere_id}}"
           >
-            {{matiere}}
+            <span class="matiere-logo" aria-hidden="true">
+              {{#logo}}{{logo}}{{/logo}}{{^logo}}{{matiere_id}}{{/logo}}
+            </span>
+            <span class="matiere-name-wrap">
+              <span class="matiere-name">{{matiere}}</span>
+              <span class="matiere-meta">{{course_count}} cours · {{annee_count}} années</span>
+            </span>
           </button>
         </h2>
         <div
           id="collapse-{{matiere_id}}"
           class="accordion-collapse collapse"
           aria-labelledby="heading-{{matiere_id}}"
-          data-bs-parent="#accordionMatieres"
         >
           <div class="accordion-body">
             <div class="accordion" id="accordion-{{matiere_id}}-annees">
@@ -37,14 +86,15 @@
                   id="heading-{{matiere_id}}-{{annee}}"
                 >
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button collapsed annee-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapse-{{matiere_id}}-{{annee}}"
                     aria-expanded="false"
                     aria-controls="collapse-{{matiere_id}}-{{annee}}"
                   >
-                    {{annee}}
+                    <span>{{annee}}</span>
+                    <span class="annee-meta">{{course_count}} cours</span>
                   </button>
                 </h2>
                 <div
@@ -55,13 +105,17 @@
                 >
                   <div class="accordion-body">
                     {{#cours}}
-                    <div class="mb-4">
-                      <h3 class="h5 mb-1">{{titre}}</h3>
-                      <p class="course-description mb-2">{{description}}</p>
-                      {{#paragraphes}}
-                      <p class="course-paragraph mb-1">{{.}}</p>
-                      {{/paragraphes}}
-                    </div>
+                    <details class="course-entry course-details">
+                      <summary class="course-summary">
+                        <span class="course-summary-title">{{titre}}</span>
+                      </summary>
+                      <div class="course-content-panel">
+                        <p class="course-description mb-2">{{description}}</p>
+                        {{#paragraphes}}
+                        <p class="course-paragraph mb-1">{{.}}</p>
+                        {{/paragraphes}}
+                      </div>
+                    </details>
                     {{/cours}}
                   </div>
                 </div>

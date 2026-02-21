@@ -36,7 +36,132 @@ function getData() {
     return parseProjectEndDate(b.date) - parseProjectEndDate(a.date);
   });
 
+  // Préparer les métadonnées d'affichage pour la section cours
+  data.cours.forEach((matiere) => {
+    let courseCount = 0;
+    (matiere.annees || []).forEach((annee) => {
+      const count = Array.isArray(annee.cours) ? annee.cours.length : 0;
+      annee.course_count = count;
+      courseCount += count;
+    });
+    matiere.course_count = courseCount;
+    matiere.annee_count = Array.isArray(matiere.annees) ? matiere.annees.length : 0;
+  });
+
   return data;
+}
+
+function initCourseFilters() {
+  const filterButtons = Array.from(document.querySelectorAll('[data-cours-filter]'));
+  if (!filterButtons.length) return;
+
+  const matiereItems = Array.from(document.querySelectorAll('.matiere-item'));
+  if (!matiereItems.length) return;
+
+  const allButton = filterButtons.find((btn) => btn.dataset.coursFilter === 'ALL');
+  const matiereButtons = filterButtons.filter((btn) => btn.dataset.coursFilter !== 'ALL');
+  const actionButtons = Array.from(document.querySelectorAll('[data-cours-action]'));
+  const activeFiltersEl = document.querySelector('[data-cours-active-filters]');
+  const activeFilterIds = new Set();
+
+  function getTopCollapse(item) {
+    return item.querySelector(':scope > .accordion-collapse') || item.querySelector('.accordion-collapse');
+  }
+
+  function hideOpenCollapses(item) {
+    item.querySelectorAll('.accordion-collapse.show').forEach((collapseEl) => {
+      bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
+    });
+  }
+
+  function setTopCollapseVisible(item, shouldShow) {
+    const collapseEl = getTopCollapse(item);
+    if (!collapseEl) return;
+    if (shouldShow) {
+      bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).show();
+    } else if (collapseEl.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false }).hide();
+    }
+  }
+
+  function applyFilters(options = {}) {
+    const { openSelected = false } = options;
+    const hasSelection = activeFilterIds.size > 0;
+
+    if (allButton) {
+      allButton.classList.toggle('is-active', !hasSelection);
+    }
+
+    matiereButtons.forEach((btn) => {
+      btn.classList.toggle('is-active', activeFilterIds.has(btn.dataset.coursFilter));
+    });
+
+    matiereItems.forEach((item) => {
+      const isVisible = !hasSelection || activeFilterIds.has(item.dataset.matiereId);
+      item.classList.toggle('d-none', !isVisible);
+
+      if (!isVisible) {
+        hideOpenCollapses(item);
+      }
+    });
+
+    if (hasSelection && openSelected) {
+      matiereItems.forEach((item) => {
+        if (!item.classList.contains('d-none')) {
+          setTopCollapseVisible(item, true);
+        }
+      });
+    }
+
+    if (activeFiltersEl) {
+      if (!hasSelection) {
+        activeFiltersEl.textContent = 'Affichage: toutes les matières.';
+      } else {
+        const labels = matiereButtons
+          .filter((btn) => activeFilterIds.has(btn.dataset.coursFilter))
+          .map((btn) => btn.dataset.coursLabel || btn.dataset.coursFilter);
+        activeFiltersEl.textContent = `Affichage: ${labels.join(' + ')}`;
+      }
+    }
+  }
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filterId = btn.dataset.coursFilter || 'ALL';
+
+      if (filterId === 'ALL') {
+        activeFilterIds.clear();
+        applyFilters();
+        return;
+      }
+
+      if (activeFilterIds.has(filterId)) {
+        activeFilterIds.delete(filterId);
+      } else {
+        activeFilterIds.add(filterId);
+      }
+
+      applyFilters({ openSelected: true });
+    });
+  });
+
+  actionButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const action = btn.dataset.coursAction;
+      const visibleItems = matiereItems.filter((item) => !item.classList.contains('d-none'));
+
+      if (action === 'open-visible') {
+        visibleItems.forEach((item) => setTopCollapseVisible(item, true));
+      } else if (action === 'close-visible') {
+        visibleItems.forEach((item) => hideOpenCollapses(item));
+      } else if (action === 'clear-filters') {
+        activeFilterIds.clear();
+        applyFilters();
+      }
+    });
+  });
+
+  applyFilters();
 }
 
 function loadPage(page) {
@@ -90,6 +215,8 @@ function loadPage(page) {
           });
         }
       });
+
+      initCourseFilters();
     })
     .fail(function (err) {
       console.error("Erreur chargement template", path, err);
