@@ -1,22 +1,20 @@
 <section class="cours-section">
   <div class="container">
     <div class="section-header mb-5">
-      <h1 class="section-title">Formations & Cours</h1>
-      <p class="section-subtitle">
-        Cours suivis en classes préparatoires et à l'Ecole polytechnique.
-      </p>
+      <h1 class="section-title">{{ui.cours.title}}</h1>
+      <p class="section-subtitle">{{ui.cours.subtitle}}</p>
     </div>
 
     <div class="cours-toolbar">
-      <p class="cours-toolbar-label">Filtrer par matière</p>
-      <div class="cours-filters" role="toolbar" aria-label="Filtre des matières">
+      <p class="cours-toolbar-label">{{ui.cours.filter_label}}</p>
+      <div class="cours-filters" role="toolbar" aria-label="{{ui.cours.filter_aria}}">
         <button
           class="course-filter-btn is-active"
           type="button"
           data-cours-filter="ALL"
-          data-cours-label="Toutes"
+          data-cours-label="{{ui.cours.all_label}}"
         >
-          Toutes
+          {{ui.cours.all_label}}
         </button>
         {{#cours}}
         <button
@@ -24,7 +22,7 @@
           type="button"
           data-cours-filter="{{matiere_id}}"
           data-cours-label="{{matiere}}"
-          aria-label="Filtrer sur {{matiere}}"
+          aria-label="{{ui.cours.filter_on_label}} {{matiere}}"
         >
           <span class="matiere-logo" aria-hidden="true">
             {{#logo}}{{logo}}{{/logo}}{{^logo}}{{matiere_id}}{{/logo}}
@@ -36,13 +34,13 @@
       </div>
       <div class="cours-toolbar-actions">
         <button type="button" class="cours-action-btn" data-cours-action="open-visible">
-          Ouvrir visibles
+          {{ui.cours.open_visible}}
         </button>
         <button type="button" class="cours-action-btn" data-cours-action="close-visible">
-          Fermer visibles
+          {{ui.cours.close_visible}}
         </button>
         <button type="button" class="cours-action-btn" data-cours-action="clear-filters">
-          Réinitialiser filtres
+          {{ui.cours.reset_filters}}
         </button>
       </div>
       <p class="cours-active-filters" data-cours-active-filters></p>
@@ -68,7 +66,7 @@
             </span>
             <span class="matiere-name-wrap">
               <span class="matiere-name">{{matiere}}</span>
-              <span class="matiere-meta">{{course_count}} cours · {{annee_count}} années</span>
+              <span class="matiere-meta">{{course_meta_label}}</span>
             </span>
           </button>
         </h2>
@@ -83,24 +81,24 @@
               <div class="accordion-item">
                 <h2
                   class="accordion-header"
-                  id="heading-{{matiere_id}}-{{annee}}"
+                  id="heading-{{matiere_id}}-{{annee_id}}"
                 >
                   <button
                     class="accordion-button collapsed annee-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapse-{{matiere_id}}-{{annee}}"
+                    data-bs-target="#collapse-{{matiere_id}}-{{annee_id}}"
                     aria-expanded="false"
-                    aria-controls="collapse-{{matiere_id}}-{{annee}}"
+                    aria-controls="collapse-{{matiere_id}}-{{annee_id}}"
                   >
                     <span>{{annee}}</span>
-                    <span class="annee-meta">{{course_count}} cours</span>
+                    <span class="annee-meta">{{course_meta_label}}</span>
                   </button>
                 </h2>
                 <div
-                  id="collapse-{{matiere_id}}-{{annee}}"
+                  id="collapse-{{matiere_id}}-{{annee_id}}"
                   class="accordion-collapse collapse"
-                  aria-labelledby="heading-{{matiere_id}}-{{annee}}"
+                  aria-labelledby="heading-{{matiere_id}}-{{annee_id}}"
                   data-bs-parent="#accordion-{{matiere_id}}-annees"
                 >
                   <div class="accordion-body">

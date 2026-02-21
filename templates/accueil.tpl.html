@@ -1,35 +1,28 @@
 <section class="hero-section">
   <div class="container">
     <div class="row align-items-center g-5">
-      <!-- Colonne texte -->
       <div class="col-lg-6">
         <div class="hero-content">
           <p class="hero-badge">
             <span class="badge-dot"></span>
-            Élève-officier – École polytechnique
+            {{ui.accueil.badge}}
           </p>
           <h1 class="hero-title">{{nom}}</h1>
-          <p class="hero-subtitle">
-            Etudes d'ingénierie en mécanique des structures et des matériaux.
-            Passioné par le monde maritime.
-          </p>
+          <p class="hero-subtitle">{{ui.accueil.subtitle}}</p>
 
-          <!-- Compétences principales -->
           <div class="hero-skills mb-5">
-            <span class="skill-tag">Culture pluridisciplinaire</span>
-            <span class="skill-tag">Curiosité intellectuelle</span>
-            <span class="skill-tag">Discipline personnelle</span>
-            <span class="skill-tag">Sens du détail et rigueur</span>
+            {{#ui.accueil.skills}}
+            <span class="skill-tag">{{.}}</span>
+            {{/ui.accueil.skills}}
           </div>
 
-          <!-- CTA Buttons -->
           <div class="hero-cta">
             <a
               href="#"
               data-page="projets"
               class="btn btn-primary btn-lg js-nav"
             >
-              Voir mes projets
+              {{ui.accueil.cta_projects}}
               <span class="btn-arrow">→</span>
             </a>
             <a
@@ -37,29 +30,27 @@
               data-page="cours"
               class="btn btn-outline-primary btn-lg js-nav"
             >
-              Cours suivis
+              {{ui.accueil.cta_courses}}
             </a>
             <a
               href="#"
               data-page="hobbies"
               class="btn btn-outline-primary btn-lg js-nav"
             >
-              Centres d'intérêt
+              {{ui.accueil.cta_hobbies}}
             </a>
           </div>
 
           <p class="hero-footer">
             <a href="documents/cv.pdf" target="_blank" class="link-secondary">
-              Télécharger mon CV (PDF)
+              {{ui.accueil.cta_cv}}
             </a>
           </p>
         </div>
       </div>
 
-      <!-- Colonne image/infos -->
       <div class="col-lg-6">
         <div class="hero-visual">
-          <!-- Zone réservée pour photo -->
           <div class="profile-image-container">
             <img
               src="images/profile/photo.jpeg"
@@ -72,27 +63,20 @@
             </div>
           </div>
 
-          <!-- Carte infos -->
           <div class="hero-info-card">
             <h3
               class="h6 text-uppercase text-muted"
               style="letter-spacing: 0.18em"
             >
-              Actuellement
+              {{ui.accueil.currently}}
             </h3>
             <ul class="info-list mb-0">
+              {{#ui.accueil.info_items}}
               <li>
-                <span class="info-icon">📚</span>
-                Elève en 3ème année à l'École polytechnique
+                <span class="info-icon">{{icon}}</span>
+                {{text}}
               </li>
-              <li>
-                <span class="info-icon">⚙️</span>
-                Etudiant en mécanique – matériaux et structures
-              </li>
-              <li>
-                <span class="info-icon">⛵</span>
-                Attrait pour l'architecture navale & le monde maritime
-              </li>
+              {{/ui.accueil.info_items}}
             </ul>
           </div>
         </div>

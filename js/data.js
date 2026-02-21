@@ -230,6 +230,36 @@ const portfolioData = {
       logo: "∫",
       annees: [
         {
+          annee: "Prépa MPSI",
+          cours: [
+            {
+              titre: "Mathématiques (MPSI)",
+              description: "Formation intensive en algèbre, analyse et géométrie, avec un volume de 12h par semaine (hors colles et devoirs surveillés), au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le programme couvre les fondamentaux de l'algèbre linéaire, de l'analyse (suites, séries, fonctions, intégration) et de la géométrie, avec une forte exigence de rigueur dans les démonstrations.",
+                "Une place importante est donnée à la résolution de problèmes, à la modélisation et à l'articulation entre intuition et formalisation mathématique.",
+                "Le rythme soutenu de la prépa m'a permis de consolider des automatismes solides en calcul, en raisonnement et en rédaction mathématique.",
+                "Ce cours m'a donné une base très robuste pour aborder ensuite les mathématiques de niveau supérieur à l'École polytechnique."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "Prépa MP* (option informatique)",
+          cours: [
+            {
+              titre: "Mathématiques (MP*)",
+              description: "Approfondissement des outils d'algèbre et d'analyse en deuxième année, avec 12h hebdomadaires (hors colles et devoirs surveillés), au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "La deuxième année approfondit les structures algébriques, l'analyse différentielle et intégrale, les équations différentielles et les raisonnements de haut niveau attendus aux concours.",
+                "Le cadre MP* pousse plus loin la technicité, la rapidité d'exécution et la capacité à relier plusieurs chapitres dans une même résolution.",
+                "Le travail régulier sur des problèmes exigeants m'a fait progresser en synthèse, en précision et en stratégie de résolution.",
+                "Ce cours m'a apporté une vraie maturité mathématique, utile ensuite en mécanique, en physique théorique et en modélisation."
+              ]
+            }
+          ]
+        },
+        {
           annee: "1A",
           cours: [
             {
@@ -265,6 +295,36 @@ const portfolioData = {
       matiere_id: "PHY",
       logo: "Φ",
       annees: [
+        {
+          annee: "Prépa MPSI",
+          cours: [
+            {
+              titre: "Physique-Chimie (MPSI)",
+              description: "Socle de physique-chimie de première année (6h de physique + 2h de chimie par semaine, hors colles et devoirs surveillés), au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le programme de physique traite notamment la mécanique, l'électromagnétisme, l'optique et la thermodynamique, en articulant modélisation et expériences.",
+                "La partie chimie introduit les équilibres, la cinétique, les transformations de la matière et les outils de raisonnement physico-chimique.",
+                "Les TP et les exercices m'ont appris à passer d'un phénomène concret à un modèle exploitable puis à une interprétation quantitative.",
+                "Ce cours m'a donné une base expérimentale et conceptuelle solide pour les enseignements de physique avancée suivis ensuite."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "Prépa MP* (option informatique)",
+          cours: [
+            {
+              titre: "Physique-Chimie (MP*)",
+              description: "Approfondissement en deuxième année avec 7h de physique et 2h de chimie par semaine (hors colles et devoirs surveillés), au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le cursus MP* renforce l'analyse des systèmes dynamiques, des ondes, de l'électromagnétisme et des phénomènes de transport, avec un niveau de formalisation plus exigeant.",
+                "La chimie conserve un rôle important dans la compréhension des équilibres, des transformations et des ordres de grandeur utiles en ingénierie.",
+                "Le travail en problèmes et en TP m'a entraîné à mobiliser rapidement des outils variés pour traiter des situations nouvelles.",
+                "Ce cours m'a apporté des réflexes puissants de modélisation physique et de validation des hypothèses."
+              ]
+            }
+          ]
+        },
         {
           annee: "1A",
           cours: [
@@ -328,6 +388,52 @@ const portfolioData = {
       matiere_id: "INF",
       logo: "⌘",
       annees: [
+        {
+          annee: "Prépa MPSI",
+          cours: [
+            {
+              titre: "Informatique tronc commun (MPSI)",
+              description: "Bases de l'algorithmique et de la programmation scientifique, avec 2h hebdomadaires en tronc commun, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le tronc commun introduit la programmation structurée (principalement en Python), les structures de données usuelles et les premiers outils d'analyse de complexité.",
+                "L'objectif est de savoir concevoir des algorithmes corrects, lisibles et efficaces pour résoudre des problèmes mathématiques et scientifiques.",
+                "Ce cours m'a appris à formaliser une idée en étapes calculables et à vérifier la robustesse d'une solution."
+              ]
+            },
+            {
+              titre: "Option informatique (MPSI, S2)",
+              description: "Approfondissement de l'algorithmique en option, avec 2h hebdomadaires supplémentaires au second semestre, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "L'option renforce les méthodes de raisonnement algorithmique, la maîtrise des structures de données et la résolution de problèmes plus exigeants.",
+                "Le format m'a permis d'aller au-delà des automatismes de base pour travailler la qualité des preuves et la performance des programmes.",
+                "Ce cours m'a donné le goût des approches plus théoriques de l'informatique, en complément de la pratique de programmation."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "Prépa MP* (option informatique)",
+          cours: [
+            {
+              titre: "Informatique tronc commun (MP*)",
+              description: "Consolidation des bases algorithmiques en deuxième année, avec 1h hebdomadaire en tronc commun, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le tronc commun entretient les fondamentaux : rigueur de programmation, analyse de complexité et conception de solutions fiables.",
+                "Il sert de socle méthodologique commun pour traiter les problèmes scientifiques nécessitant une implémentation rapide et juste.",
+                "Ce cours m'a permis de garder des réflexes solides d'écriture et de vérification d'algorithmes."
+              ]
+            },
+            {
+              titre: "Informatique renforcée (MP*, option informatique)",
+              description: "Approfondissement en option informatique en MP*, avec 2h hebdomadaires dédiées, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le module renforcé développe des notions plus avancées d'algorithmique et de structures discrètes, avec une exigence forte sur la qualité des raisonnements.",
+                "Il prépare aux problèmes d'informatique de concours, à la fois sur la conception d'algorithmes et sur leur justification.",
+                "Ce cours m'a apporté une meilleure capacité à traiter des problèmes abstraits d'informatique en gardant un ancrage concret d'implémentation."
+              ]
+            }
+          ]
+        },
         {
           annee: "1A",
           cours: [
@@ -422,6 +528,36 @@ const portfolioData = {
       matiere_id: "HSS",
       logo: "⚖",
       annees: [
+        {
+          annee: "Prépa MPSI",
+          cours: [
+            {
+              titre: "Français-Philosophie (thème : L'enfance)",
+              description: "Travail annuel de culture générale et de dissertation sur le thème de « l'enfance » en CPGE scientifique, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le cours articule lecture comparée d'oeuvres philosophiques et littéraires, analyse conceptuelle et entraînement méthodique à la dissertation.",
+                "Le thème de l'enfance conduit à interroger l'éducation, la formation du sujet, la mémoire, la transmission et la construction de la liberté.",
+                "Le travail hebdomadaire m'a entraîné à problématiser rapidement, structurer une argumentation solide et soigner la précision de l'expression.",
+                "Ce cours m'a apporté une méthode durable de réflexion et de rédaction, utile bien au-delà des concours."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "Prépa MP* (option informatique)",
+          cours: [
+            {
+              titre: "Français-Philosophie (thème : Le travail)",
+              description: "Approfondissement des méthodes d'analyse et de dissertation autour du thème de « le travail » en deuxième année de prépa, au Lycée Sainte-Geneviève (Versailles).",
+              paragraphes: [
+                "Le thème du travail permet d'examiner les dimensions économiques, sociales, politiques et existentielles de l'activité humaine.",
+                "Le cours combine étude d'oeuvres, clarification des concepts, confrontation des positions d'auteurs et entraînement intensif à l'écrit.",
+                "Il m'a aidé à mieux articuler lecture fine des textes, mise en perspective historique et argumentation personnelle rigoureuse.",
+                "Ce cours m'a renforcé en culture générale et en qualité d'expression, avec un impact direct sur mes présentations et écrits académiques."
+              ]
+            }
+          ]
+        },
         {
           annee: "1A",
           cours: [
