@@ -11,14 +11,14 @@
         <input
           type="search"
           class="cours-search-input"
-          data-cours-search
+          data-cours-search="true"
           aria-label="{{ui.cours.search_label}}"
           placeholder="{{ui.cours.search_placeholder}}"
         />
         <button
           type="button"
           class="cours-search-clear d-none"
-          data-cours-search-clear
+          data-cours-search-clear="true"
         >
           {{ui.cours.search_clear}}
         </button>
@@ -67,7 +67,7 @@
           {{ui.cours.view_compact}}
         </button>
       </div>
-      <p class="cours-active-filters" data-cours-active-filters role="status" aria-live="polite"></p>
+      <p class="cours-active-filters" data-cours-active-filters="true" role="status" aria-live="polite"></p>
     </div>
 
     <div class="accordion cours-accordion" id="accordionMatieres">
@@ -100,55 +100,62 @@
           aria-labelledby="heading-{{matiere_id}}"
         >
           <div class="accordion-body">
-            <div class="accordion" id="accordion-{{matiere_id}}-annees">
-              {{#annees}}
-              <div class="accordion-item">
-                <h2
-                  class="accordion-header"
-                  id="heading-{{matiere_id}}-{{annee_id}}"
-                >
-                  <button
-                    class="accordion-button collapsed annee-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse-{{matiere_id}}-{{annee_id}}"
-                    aria-expanded="false"
-                    aria-controls="collapse-{{matiere_id}}-{{annee_id}}"
+            <div class="cours-compact-list">
+              {{#cours_flat}}
+              <p class="cours-compact-item">{{titre}}</p>
+              {{/cours_flat}}
+            </div>
+            <div class="cours-detailed-years">
+              <div class="accordion" id="accordion-{{matiere_id}}-annees">
+                {{#annees}}
+                <div class="accordion-item">
+                  <h2
+                    class="accordion-header"
+                    id="heading-{{matiere_id}}-{{annee_id}}"
                   >
-                    <span>{{annee}}</span>
-                    <span class="annee-meta">{{course_meta_label}}</span>
-                  </button>
-                </h2>
-                <div
-                  id="collapse-{{matiere_id}}-{{annee_id}}"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="heading-{{matiere_id}}-{{annee_id}}"
-                  data-bs-parent="#accordion-{{matiere_id}}-annees"
-                >
-                  <div class="accordion-body">
-                    {{#cours}}
-                    <details class="course-entry course-details">
-                      <summary class="course-summary">
-                        <span class="course-summary-title">{{titre}}</span>
-                      </summary>
-                      <div class="course-content-panel">
-                        <p class="course-description mb-2">{{description}}</p>
-                        {{#paragraphes}}
-                        <p class="course-paragraph mb-1">{{.}}</p>
-                        {{/paragraphes}}
-                      </div>
-                    </details>
-                    {{/cours}}
+                    <button
+                      class="accordion-button collapsed annee-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse-{{matiere_id}}-{{annee_id}}"
+                      aria-expanded="false"
+                      aria-controls="collapse-{{matiere_id}}-{{annee_id}}"
+                    >
+                      <span>{{annee}}</span>
+                      <span class="annee-meta">{{course_meta_label}}</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse-{{matiere_id}}-{{annee_id}}"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="heading-{{matiere_id}}-{{annee_id}}"
+                    data-bs-parent="#accordion-{{matiere_id}}-annees"
+                  >
+                    <div class="accordion-body">
+                      {{#cours}}
+                      <details class="course-entry course-details">
+                        <summary class="course-summary">
+                          <span class="course-summary-title">{{titre}}</span>
+                        </summary>
+                        <div class="course-content-panel">
+                          <p class="course-description mb-2">{{description}}</p>
+                          {{#paragraphes}}
+                          <p class="course-paragraph mb-1">{{.}}</p>
+                          {{/paragraphes}}
+                        </div>
+                      </details>
+                      {{/cours}}
+                    </div>
                   </div>
                 </div>
+                {{/annees}}
               </div>
-              {{/annees}}
             </div>
           </div>
         </div>
       </div>
       {{/cours}}
     </div>
-    <p class="cours-empty d-none" data-cours-empty role="status" aria-live="polite">{{ui.cours.no_results}}</p>
+    <p class="cours-empty d-none" data-cours-empty="true" role="status" aria-live="polite">{{ui.cours.no_results}}</p>
   </div>
 </section>

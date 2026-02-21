@@ -938,14 +938,20 @@ function getData(lang) {
 
   data.cours.forEach((matiere) => {
     let courseCount = 0;
+    const compactCourses = [];
     const anneeList = Array.isArray(matiere.annees) ? matiere.annees : [];
     anneeList.forEach((annee, index) => {
-      const count = Array.isArray(annee.cours) ? annee.cours.length : 0;
+      const yearCourses = Array.isArray(annee.cours) ? annee.cours : [];
+      const count = yearCourses.length;
       annee.course_count = count;
       annee.course_meta_label = formatYearMeta(count, ui);
       annee.annee_id = `${matiere.matiere_id || "mat"}-${index}-${slugify(annee.annee)}`;
+      yearCourses.forEach((cours) => {
+        compactCourses.push({ titre: cours.titre });
+      });
       courseCount += count;
     });
+    matiere.cours_flat = compactCourses;
     matiere.course_count = courseCount;
     matiere.annee_count = anneeList.length;
     matiere.course_meta_label = formatMatterMeta(courseCount, anneeList.length, ui);

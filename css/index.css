@@ -566,10 +566,11 @@ section.container {
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.15rem;
   }
 
   .hero-subtitle {
+    font-size: 1.02rem;
     max-width: 100%;
   }
 
@@ -784,24 +785,80 @@ section.container {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+  }
+
+  .hero-section .container {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+  }
+
+  .hero-section .row {
+    --bs-gutter-x: 1.2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-section .row > [class*="col-"] {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
   section.container {
-    padding: 1.45rem 1rem;
+    padding: 1.35rem 1.05rem;
     margin-top: 1.15rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     border-radius: 14px;
   }
 
   .hero-section {
     min-height: auto;
-    padding: 1.8rem 0 2.2rem;
+    padding: 1.5rem 0 1.9rem;
     align-items: flex-start;
   }
 
+  .hero-badge {
+    font-size: 0.76rem;
+    padding: 0.42rem 0.82rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 7.2vw, 2.05rem);
+    line-height: 1.16;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-tag {
+    font-size: 0.82rem;
+    padding: 0.42rem 0.76rem;
+  }
+
+  .btn-lg {
+    font-size: 0.94rem;
+    padding: 0.64rem 1.05rem;
+  }
+
   .profile-image-container {
-    height: 280px;
+    height: 230px;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.72rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 0.96rem;
+    line-height: 1.5;
   }
 
   .hobbies-grid {
@@ -820,11 +877,11 @@ section.container {
 
   /* Images plus compactes sur mobile */
   .hobby-image {
-    height: 200px;
+    height: 170px;
   }
 
   .gallery-item {
-    height: 180px;
+    height: 150px;
   }
 }
 
@@ -1145,6 +1202,25 @@ section.container {
   margin-bottom: 0;
 }
 
+.cours-compact-list {
+  display: none;
+}
+
+.cours-compact-item {
+  margin: 0 0 0.55rem 0;
+  padding: 0.62rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cours-compact-item:last-child {
+  margin-bottom: 0;
+}
+
 .course-entry {
   margin-bottom: 0.7rem;
 }
@@ -1212,6 +1288,14 @@ section.container {
 
 .cours-mode-compact .course-content-panel {
   display: none;
+}
+
+.cours-mode-compact .cours-detailed-years {
+  display: none;
+}
+
+.cours-mode-compact .cours-compact-list {
+  display: block;
 }
 
 .course-title {
@@ -1304,15 +1388,30 @@ section.container {
   }
 
   .course-summary-title {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
   }
 
   .course-content-panel {
-    padding: 0.75rem 0.85rem 0.85rem;
+    padding: 0.68rem 0.8rem 0.78rem;
   }
+
 }
 
 @media (max-width: 576px) {
+  .container {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
+
+  .hero-section .container {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
+
+  .hero-section .row {
+    --bs-gutter-x: 0.95rem;
+  }
+
   .navbar-brand {
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -1323,7 +1422,23 @@ section.container {
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.52rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.62rem, 7.8vw, 1.9rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.93rem;
+  }
+
+  .hero-skills {
+    gap: 0.48rem;
   }
 
   .site-footer-inner {
@@ -1640,7 +1755,7 @@ section.container {
 @media (max-width: 768px) {
   .project-card {
     grid-template-columns: 1fr;
-    padding: 1.1rem;
+    padding: 1rem;
   }
 
   .project-image {
@@ -1653,7 +1768,16 @@ section.container {
   }
 
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+  }
+
+  .project-context {
+    font-size: 0.84rem;
+  }
+
+  .project-description {
+    font-size: 0.91rem;
+    line-height: 1.52;
   }
 
   .project-header {
@@ -1667,17 +1791,17 @@ section.container {
   }
 
   .carousel-item {
-    height: 260px;
+    height: 220px;
   }
 
   .carousel-item img {
-    padding: 0.75rem;
+    padding: 0.6rem;
   }
 }
 
 @media (max-width: 480px) {
   .carousel-item {
-    height: 220px;
+    height: 190px;
   }
 
   .carousel-control-prev,
