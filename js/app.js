@@ -11,7 +11,9 @@ const routes = {
 const DEFAULT_LANG = "fr";
 const SUPPORTED_LANGS = ["fr", "en", "de"];
 const LANG_STORAGE_KEY = "portfolio_lang";
-const CONTACT_LINK = "documents/cv.pdf";
+const EMAIL_ADDRESS = "philibert.pappens@gmail.com";
+const LINKEDIN_URL = "https://linkedin.com/in/philibert-pappens-993468313";
+const GITHUB_URL = "https://github.com/PhilibertPap";
 
 const UI_STRINGS = {
   fr: {
@@ -67,7 +69,9 @@ const UI_STRINGS = {
       link_projects: "Projets",
       link_courses: "Cours",
       link_hobbies: "Centres d'intérêt",
-      link_contact: "Contact",
+      contact_label: "Contact",
+      contact_linkedin: "Profil LinkedIn",
+      contact_github: "Profil GitHub",
       back_to_top: "Remonter"
     },
     errors: { template_load: "Erreur de chargement du template." }
@@ -125,7 +129,9 @@ const UI_STRINGS = {
       link_projects: "Projects",
       link_courses: "Courses",
       link_hobbies: "Interests",
-      link_contact: "Contact",
+      contact_label: "Contact",
+      contact_linkedin: "LinkedIn profile",
+      contact_github: "GitHub profile",
       back_to_top: "Top"
     },
     errors: { template_load: "Template loading error." }
@@ -183,7 +189,9 @@ const UI_STRINGS = {
       link_projects: "Projekte",
       link_courses: "Kurse",
       link_hobbies: "Interessen",
-      link_contact: "Kontakt",
+      contact_label: "Kontakt",
+      contact_linkedin: "LinkedIn-Profil",
+      contact_github: "GitHub-Profil",
       back_to_top: "Nach oben"
     },
     errors: { template_load: "Fehler beim Laden der Vorlage." }
@@ -789,11 +797,27 @@ function applyStaticUi(ui, lang) {
     footerUpdated.textContent = ui.footer.updated_value;
   }
 
-  document.querySelectorAll("[data-contact-link]").forEach((el) => {
-    el.setAttribute("href", CONTACT_LINK);
+  document.querySelectorAll("[data-email-link]").forEach((el) => {
+    el.setAttribute("href", `mailto:${EMAIL_ADDRESS}`);
+    const label = EMAIL_ADDRESS;
+    el.setAttribute("aria-label", label);
+    el.setAttribute("title", label);
+  });
+
+  document.querySelectorAll("[data-github-link]").forEach((el) => {
+    el.setAttribute("href", GITHUB_URL);
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener");
-    const label = ui.footer && ui.footer.link_contact ? ui.footer.link_contact : "Contact";
+    const label = "GitHub";
+    el.setAttribute("aria-label", label);
+    el.setAttribute("title", label);
+  });
+
+  document.querySelectorAll("[data-linkedin-link]").forEach((el) => {
+    el.setAttribute("href", LINKEDIN_URL);
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener");
+    const label = "LinkedIn";
     el.setAttribute("aria-label", label);
     el.setAttribute("title", label);
   });
@@ -809,33 +833,12 @@ function initBottomDock() {
   const dock = document.querySelector("[data-bottom-dock]");
   if (!dock) return;
 
-  const isCoarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-  let nearBottom = false;
-
   function updateVisibility() {
     const scrolledEnough = window.scrollY > 260;
-    const visible = scrolledEnough && (isCoarsePointer || nearBottom);
+    const visible = scrolledEnough;
     dock.classList.toggle("is-visible", visible);
     dock.setAttribute("aria-hidden", visible ? "false" : "true");
   }
-
-  document.addEventListener(
-    "mousemove",
-    (event) => {
-      nearBottom = event.clientY >= window.innerHeight * 0.82;
-      updateVisibility();
-    },
-    { passive: true }
-  );
-
-  document.addEventListener(
-    "mouseleave",
-    () => {
-      nearBottom = false;
-      updateVisibility();
-    },
-    { passive: true }
-  );
 
   window.addEventListener("scroll", updateVisibility, { passive: true });
   window.addEventListener("resize", updateVisibility, { passive: true });
