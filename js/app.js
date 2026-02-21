@@ -10,34 +10,30 @@ const routes = {
   cours: 'templates/cours.tpl.html'
 };
 
+function parseProjectEndDate(dateRange) {
+  if (!dateRange) return 0;
+
+  const value = String(dateRange).trim();
+  if (/aujourd/i.test(value)) {
+    const now = new Date();
+    return now.getFullYear() * 100 + (now.getMonth() + 1);
+  }
+
+  const parts = value.split(/\s*[–-]\s*/);
+  const endPart = parts.length > 1 ? parts[parts.length - 1] : parts[0];
+  const match = endPart.match(/(0[1-9]|1[0-2])\/(\d{4})/);
+
+  if (!match) return 0;
+  return parseInt(match[2] + match[1], 10);
+}
+
 function getData() {
   // Cloner les données pour éviter les modifications accidentelles
   const data = JSON.parse(JSON.stringify(portfolioData));
 
   // Trier les projets par date de fin décroissante (plus récent d'abord)
   data.projets.sort((a, b) => {
-    // Extraire la date de fin (dernière date après le tiret) au format MM/YYYY
-    let dateA = a.date.split('–')[1]?.trim() || a.date;
-    let dateB = b.date.split('–')[1]?.trim() || b.date;
-
-    // Convertir au format numérique YYYYMM pour comparaison
-    let numA = 0, numB = 0;
-
-    if (dateA.includes('Aujourd')) {
-      numA = 202612; // Décembre 2026
-    } else {
-      const matchA = dateA.match(/(\d{2})\/(\d{4})/);
-      if (matchA) numA = parseInt(matchA[2] + matchA[1]); // YYYYMM
-    }
-
-    if (dateB.includes('Aujourd')) {
-      numB = 202612;
-    } else {
-      const matchB = dateB.match(/(\d{2})\/(\d{4})/);
-      if (matchB) numB = parseInt(matchB[2] + matchB[1]); // YYYYMM
-    }
-
-    return numB - numA; // Décroissant (plus récent en premier)
+    return parseProjectEndDate(b.date) - parseProjectEndDate(a.date);
   });
 
   return data;
@@ -61,7 +57,9 @@ function loadPage(page) {
       // Ajouter la classe active au premier carousel-item de chaque carousel
       document.querySelectorAll('.carousel').forEach((carouselEl) => {
         const firstItem = carouselEl.querySelector('.carousel-item');
-        if (firstItem) {
+        const activeItem = carouselEl.querySelector('.carousel-item.active');
+
+        if (firstItem && !activeItem) {
           firstItem.classList.add('active');
         }
 
@@ -72,19 +70,23 @@ function loadPage(page) {
         if (prevBtn) {
           prevBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const activeItem = carouselEl.querySelector('.carousel-item.active');
-            const nextItem = activeItem.nextElementSibling || carouselEl.querySelector('.carousel-item:first-child');
-            activeItem.classList.remove('active');
-            nextItem.classList.add('active');
+            const currentItem = carouselEl.querySelector('.carousel-item.active');
+            if (!currentItem) return;
+
+            const previousItem = currentItem.previousElementSibling || carouselEl.querySelector('.carousel-item:last-child');
+            currentItem.classList.remove('active');
+            previousItem.classList.add('active');
           });
         }
         if (nextBtn) {
           nextBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const activeItem = carouselEl.querySelector('.carousel-item.active');
-            const prevItem = activeItem.previousElementSibling || carouselEl.querySelector('.carousel-item:last-child');
-            activeItem.classList.remove('active');
-            prevItem.classList.add('active');
+            const currentItem = carouselEl.querySelector('.carousel-item.active');
+            if (!currentItem) return;
+
+            const followingItem = currentItem.nextElementSibling || carouselEl.querySelector('.carousel-item:first-child');
+            currentItem.classList.remove('active');
+            followingItem.classList.add('active');
           });
         }
       });
@@ -97,7 +99,6 @@ function loadPage(page) {
 
 $(function () {
   console.log("DOM prêt");
-  loadPage("accueil");
 
   function goTo(page) {
     loadPage(page);
@@ -110,6 +111,11 @@ $(function () {
     const page = $(this).data("page");
     console.log("click nav sur", page);
     goTo(page);
+
+    const navbarCollapseEl = document.getElementById('navbarMain');
+    if (navbarCollapseEl && navbarCollapseEl.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(navbarCollapseEl).hide();
+    }
   });
 
   $(document).on("click", ".js-nav", function (e) {
@@ -119,9 +125,5 @@ $(function () {
     goTo(page);
   });
 
-  // Active le lien de navigation correspondant
-  $(document).on('pageLoaded', function (event, page) {
-    $('.nav-link').removeClass('active');
-    $('.nav-link[data-page="' + page + '"]').addClass('active');
-  });
+  goTo("accueil");
 });

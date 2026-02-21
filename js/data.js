@@ -134,6 +134,91 @@ const portfolioData = {
               ]
             }
           ]
+        },
+        {
+          annee: "3A",
+          cours: [
+            {
+              titre: "Comportement des matériaux",
+              description: "Étude des déformations irréversibles au-delà du domaine d’élasticité et modélisation des comportements non linéaires en petites déformations.",
+              paragraphes: [
+                "Le cours traite des comportements non linéaires des matériaux en petites déformations, avec un accent sur la viscoélasticité, la plasticité et la viscoplasticité.",
+                "Il relie les mécanismes physiques aux lois de comportement macroscopiques, dans un cadre mécanique puis thermomécanique, et présente les essais utilisés pour identifier les paramètres des modèles.",
+                "Une partie est consacrée à l’implémentation numérique des lois de comportement et au passage du matériau à la structure sur des cas de chargements thermomécaniques.",
+                "Ce cours m’a permis de mieux relier phénomènes physiques, modélisation constitutive et analyse de structures au-delà du domaine élastique."
+              ]
+            },
+            {
+              titre: "Méthodes numériques en mécanique des solides",
+              description: "Introduction approfondie aux méthodes numériques pour la mécanique des milieux continus, des systèmes algébriques à la méthode des éléments finis.",
+              paragraphes: [
+                "Le cours présente les bases de la résolution numérique en mécanique des milieux continus : systèmes linéaires et non linéaires, équations différentielles ordinaires et partielles, problèmes aux valeurs initiales et aux limites.",
+                "Il développe ensuite la méthode des éléments finis, de la formulation variationnelle à la discrétisation, puis ses étapes de mise en œuvre : maillage, fonctions de forme, intégration numérique, assemblage et post-traitement.",
+                "Les notions sont appliquées à des cas de poutres, plaques et solides en statique et en dynamique, avec des implémentations progressives en Python dans des notebooks Jupyter.",
+                "Ce cours m’a apporté une vraie autonomie sur la chaîne complète d’un calcul numérique, de la modélisation à l’interprétation des résultats."
+              ]
+            },
+            {
+              titre: "Dynamique des solides et structures",
+              description: "Panorama des phénomènes dynamiques des solides et structures, de l’analyse modale aux ondes en milieux continus.",
+              paragraphes: [
+                "Le cours donne une vision d’ensemble des phénomènes dynamiques en mécanique des solides, en régimes harmonique et transitoire, en reliant vibrations, ondes et dynamique structurale.",
+                "La progression va des systèmes discrets (un degré de liberté puis N degrés de liberté) vers les milieux continus, avec des applications sur les poutres, les solides élastiques et les problèmes de stabilité.",
+                "Des thèmes avancés sont abordés, notamment la dynamique des milieux structurés et la dynamique non linéaire, avec un appui fort sur les PC et l’implémentation numérique en Python.",
+                "Ce cours m’a permis de mieux passer du modèle physique à l’outil de calcul pour analyser des phénomènes vibratoires complexes."
+              ]
+            },
+            {
+              titre: "Analyse et dimensionnement des structures et composants",
+              description: "Cours-projet de conception et de dimensionnement appliqué à des cas industriels en mécanique des structures.",
+              paragraphes: [
+                "Après des rappels sur les poutres et les plaques, le cours est centré sur des projets concrets de conception et de dimensionnement issus de problématiques industrielles.",
+                "Les sujets couvrent le génie civil, le génie mécanique et la modélisation de composants, avec des approches analytiques, numériques ou expérimentales selon le besoin.",
+                "Le travail en binôme met l’accent sur la démarche d’ingénieur : hypothèses de modélisation, choix des méthodes, justification des résultats et prise en compte des contraintes de conception.",
+                "Ce cours m’a apporté une expérience proche des pratiques industrielles, avec une meilleure capacité d’argumentation technique sur des choix de dimensionnement."
+              ]
+            },
+            {
+              titre: "Mécanique et couplages multiphysiques",
+              description: "Outils théoriques et numériques pour modéliser des matériaux et systèmes couplés (thermiques, mécaniques, chimiques, électriques) en contexte d’ingénierie.",
+              paragraphes: [
+                "Le cours fournit un cadre unifié pour modéliser des systèmes où interagissent plusieurs physiques, notamment en énergétique, biomédical, durabilité des structures et capteurs/actionneurs.",
+                "Il aborde le point de vue énergétique et thermodynamique, puis la construction de lois de comportement adaptées aux sollicitations multiphysiques, avec de nombreux exemples industriels.",
+                "Les applications traitées incluent les couplages chimio-mécaniques, la thermo-mécanique des matériaux actifs, la thermo-piézo-électricité et les schémas numériques dédiés aux problèmes d’évolution.",
+                "Ce cours m’a donné une vision intégrée des couplages physiques et des outils pour construire des modèles robustes de systèmes complexes."
+              ]
+            },
+            {
+              titre: "Mécanique de la rupture",
+              description: "Introduction aux concepts fondamentaux de fissuration et de rupture, de l’élasticité aux modèles variationnels et à leur implémentation numérique.",
+              paragraphes: [
+                "Le cours relie les bases d’élasticité à la modélisation des phénomènes de fissuration et de rupture, à partir d’observations expérimentales et d’exemples d’incidents structuraux.",
+                "L’approche repose sur des concepts énergétiques et variationnels pour construire des modèles utiles au calcul et au dimensionnement de structures sollicitées mécaniquement.",
+                "Une partie numérique met en œuvre ces modèles par éléments finis en Python, avec analyse des champs de contraintes et simulation de propagation de fissures en 2D.",
+                "Ce cours m’a permis d’articuler compréhension physique de la rupture, cadre théorique et simulation pour anticiper les mécanismes de défaillance."
+              ]
+            },
+            {
+              titre: "Solides en grandes transformations",
+              description: "Étude des matériaux élastiques en grandes transformations, avec prise en compte des précontraintes et des contraintes résiduelles.",
+              paragraphes: [
+                "Le cours complète la mécanique des milieux continus en traitant les non-linéarités géométriques et le comportement des solides hors du cadre des petites perturbations.",
+                "Il reprend la cinématique en grandes transformations, les tenseurs de contraintes associés, puis les lois de comportement non linéaires isotropes et anisotropes.",
+                "Il aborde aussi les effets des précontraintes et contraintes résiduelles, les vibrations autour d’un état tendu, ainsi que des comportements non standards (croissance, polymérisation induite, viscoélasticité).",
+                "Ce cours m’a permis de mieux modéliser des structures soumises à de fortes déformations et d’intégrer l’effet des contraintes internes dans l’analyse mécanique."
+              ]
+            },
+            {
+              titre: "Ingénierie informatique de la mécanique des solides",
+              description: "Cours-projet à l’interface entre mécanique, microfluidique, nanophysique et bioingénierie, avec un fort volet transfert technologique.",
+              paragraphes: [
+                "Le cours combine des présentations sur la microfluidique, la nanophysique et la bioingénierie avec une réflexion sur la propriété intellectuelle, le transfert technologique et l’entrepreneuriat scientifique.",
+                "Il s’appuie sur des projets courts pour acquérir des briques expérimentales (mesures de fluorescence, culture de bactéries) puis sur un projet long de conception-réalisation d’un laboratoire sur puce.",
+                "L’ensemble relie état de l’art scientifique, prototypage et applications industrielles innovantes dans une démarche de projet en groupe.",
+                "Ce cours m’a apporté une expérience concrète de projet interdisciplinaire et une meilleure compréhension du continuum recherche-innovation-industrie."
+              ]
+            }
+          ]
         }
       ]
     },
@@ -328,17 +413,6 @@ const portfolioData = {
   ],
   interets: [
     {
-      titre: "Football",
-      sous_titre: "Gardien de but",
-      image: "images/hobbies/football.jpeg",
-      paragraphes: [
-        "Je joue au football depuis le collège, essentiellement au poste de gardien de but.",
-        "À l'École polytechnique, je suis gardien depuis deux ans. Nous avons deux créneaux d'entraînement par semaine (un en troisième année), ainsi que des matchs en championnat universitaire le jeudi.",
-        "Avant cela, j'ai joué deux ans en club au collège et deux ans avec l'équipe de ma prépa."
-      ],
-      liens: []
-    },
-    {
       titre: "Scoutisme marin",
       sous_titre: "Troupe Saint François-Xavier (Paris VI)",
       image: "images/hobbies/voile_scout.jpeg",
@@ -350,36 +424,6 @@ const portfolioData = {
         "Je suis titulaire du CEP1 et du PSC1."
       ],
       liens: []
-    },
-    {
-      titre: "Orgue",
-      sous_titre: "Formation au conservatoire et en cours particuliers",
-      paragraphes: [
-        "J'ai commencé l'orgue au conservatoire pendant le primaire, puis j'ai poursuivi tout le collège avec un professeur particulier.",
-        "Au lycée, j'ai continué une année avec un professeur particulier, organiste dans une église.",
-        "Je suis particulièrement attaché à la musique de Bach"
-      ],
-      liens: [
-        {
-          url: "https://www.youtube.com/watch?v=a_pJjg6qUXk&list=RDa_pJjg6qUXk&start_radio=1",
-          texte: "Une interprétation des petits préludes et fugues de Bach"
-        }
-      ]
-    },
-    {
-      titre: "Piano",
-      sous_titre: "Cours particuliers",
-      paragraphes: [
-        "J'ai pris un an de cours particuliers de piano au lycée.",
-        "Même si je ne joue pas à un niveau avancé, j'apprécie beaucoup le répertoire pour piano.",
-        "En particulier, j'aime beaucoup Bach, mais également Chopin, Beethoven, Mozart ..."
-      ],
-      liens: [
-        {
-          url: "https://www.youtube.com/watch?v=NLF-OpGH-u4&list=RDNLF-OpGH-u4&start_radio=1",
-          texte: "Le concerto pour clavier n°1 de Bach, interprété par Glenn Gould"
-        }
-      ]
     },
     {
       titre: "Chant choral",
@@ -396,6 +440,62 @@ const portfolioData = {
           texte: "Le compte Instagram de l'Ensemble Vocal"
         }
       ]
+    },
+    {
+      titre: "Orgue",
+      sous_titre: "Formation au conservatoire et en cours particuliers",
+      image: "images/hobbies/orgue.jpeg",
+      paragraphes: [
+        "J'ai commencé l'orgue au conservatoire pendant le primaire, puis j'ai poursuivi tout le collège avec un professeur particulier.",
+        "Au lycée, j'ai continué une année avec un professeur particulier, organiste dans une église.",
+        "Je suis particulièrement attaché à la musique de Bach"
+      ],
+      liens: [
+        {
+          url: "https://www.youtube.com/watch?v=a_pJjg6qUXk&list=RDa_pJjg6qUXk&start_radio=1",
+          texte: "Une interprétation des petits préludes et fugues de Bach"
+        }
+      ]
+    },
+    {
+      titre: "Piano",
+      sous_titre: "Cours particuliers",
+      image: "images/hobbies/schubert_piano.png",
+      paragraphes: [
+        "J'ai pris un an de cours particuliers de piano au lycée.",
+        "Même si je ne joue pas à un niveau avancé, j'apprécie beaucoup le répertoire pour piano.",
+        "En particulier, j'aime beaucoup Bach, mais également Chopin, Beethoven, Mozart ..."
+      ],
+      liens: [
+        {
+          url: "https://www.youtube.com/watch?v=NLF-OpGH-u4&list=RDNLF-OpGH-u4&start_radio=1",
+          texte: "Le concerto pour clavier n°1 de Bach, interprété par Glenn Gould"
+        }
+      ]
+    },
+    {
+      titre: "Football",
+      sous_titre: "Gardien de but",
+      image: "images/hobbies/football.jpeg",
+      paragraphes: [
+        "Je joue au football depuis le collège, essentiellement au poste de gardien de but.",
+        "À l'École polytechnique, je suis gardien depuis deux ans. Nous avons deux créneaux d'entraînement par semaine (un seul en troisième année), ainsi que des matchs en championnat universitaire le jeudi.",
+        "Avant cela, j'ai joué deux ans en club au collège et deux ans avec l'équipe de ma prépa."
+      ],
+      liens: []
+    },
+    {
+      titre: "Langue allemande et culture germanique",
+      sous_titre: "Allemand C1, littérature, musique et histoire",
+      image: "images/hobbies/Caspar_David_Friedrich.jpg",
+      paragraphes: [
+        "J'ai vécu quatre ans en Allemagne, ce qui m'a donné une relation durable à la langue et à la culture germanophones.",
+        "À l'École polytechnique, je suis des cours d'allemand de niveau C1, en particulier un cours de philosophie et un autre sur la musique chorale classique allemande.",
+        "J'apprécie la littérature allemande et la musique classique de l'espace germanique, notamment Bach, Mozart, Schubert et Schumann.",
+        "J'ai effectué un stage de trois mois à la Deutsche Telekom, à Bonn, ce qui m'a permis de renforcer ma pratique professionnelle de l'allemand.",
+        "Je m'intéresse aussi beaucoup à l'histoire des Etats allemands et de l'Autriche."
+      ],
+      liens: []
     }
   ]
 };
