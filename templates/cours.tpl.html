@@ -7,6 +7,22 @@
 
     <div class="cours-toolbar">
       <p class="cours-toolbar-label">{{ui.cours.filter_label}}</p>
+      <div class="cours-search-wrap">
+        <input
+          type="search"
+          class="cours-search-input"
+          data-cours-search
+          aria-label="{{ui.cours.search_label}}"
+          placeholder="{{ui.cours.search_placeholder}}"
+        />
+        <button
+          type="button"
+          class="cours-search-clear d-none"
+          data-cours-search-clear
+        >
+          {{ui.cours.search_clear}}
+        </button>
+      </div>
       <div class="cours-filters" role="toolbar" aria-label="{{ui.cours.filter_aria}}">
         <button
           class="course-filter-btn is-active"
@@ -43,7 +59,15 @@
           {{ui.cours.reset_filters}}
         </button>
       </div>
-      <p class="cours-active-filters" data-cours-active-filters></p>
+      <div class="cours-view-modes" role="group" aria-label="{{ui.cours.view_label}}">
+        <button type="button" class="cours-view-btn is-active" data-cours-view="detailed">
+          {{ui.cours.view_detailed}}
+        </button>
+        <button type="button" class="cours-view-btn" data-cours-view="compact">
+          {{ui.cours.view_compact}}
+        </button>
+      </div>
+      <p class="cours-active-filters" data-cours-active-filters role="status" aria-live="polite"></p>
     </div>
 
     <div class="accordion cours-accordion" id="accordionMatieres">
@@ -125,5 +149,6 @@
       </div>
       {{/cours}}
     </div>
+    <p class="cours-empty d-none" data-cours-empty role="status" aria-live="polite">{{ui.cours.no_results}}</p>
   </div>
 </section>

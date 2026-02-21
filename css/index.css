@@ -17,11 +17,45 @@ body {
   min-height: 100vh;
 }
 
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -42px;
+  z-index: 2000;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.95) !important;
   border-bottom: 1px solid #e5e7eb;
   backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1100;
 }
 
 .navbar-brand {
@@ -187,6 +221,21 @@ body {
   background: #eef2f7;
 }
 
+.footer-view-btn {
+  border: 1px solid #dbe3ef;
+  background: #ffffff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.32rem 0.72rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.footer-view-btn:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
 .bottom-dock {
   position: fixed;
   left: 50%;
@@ -257,7 +306,7 @@ section.container {
 .hero-section {
   background: linear-gradient(180deg, #eef2ff 0%, #f9fafb 50%, #ffffff 100%);
   padding: 3.5rem 0;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -589,6 +638,8 @@ section.container {
   height: 100%;
   position: relative;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 560px;
 }
 
 /* Image du hobby */
@@ -745,6 +796,22 @@ section.container {
 
 /* Responsive */
 @media (max-width: 768px) {
+  section.container {
+    padding: 1.45rem 1rem;
+    margin-top: 1.15rem;
+    border-radius: 14px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 1.8rem 0 2.2rem;
+    align-items: flex-start;
+  }
+
+  .profile-image-container {
+    height: 280px;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -789,6 +856,51 @@ section.container {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.cours-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.cours-search-input {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #d4dce8;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 0.5rem 0.85rem;
+  color: #0f172a;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.cours-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.cours-search-input:focus {
+  outline: none;
+  border-color: #7ea6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.cours-search-clear {
+  border: 1px solid #d4dce8;
+  background: #f8fafc;
+  color: #334155;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.38rem 0.72rem;
+  white-space: nowrap;
+}
+
+.cours-search-clear:hover {
+  border-color: #94a3b8;
+  background: #eef2f7;
 }
 
 .cours-filters {
@@ -844,6 +956,33 @@ section.container {
   margin-bottom: 0.6rem;
 }
 
+.cours-view-modes {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+  padding: 0.2rem;
+  border: 1px solid #d4dce8;
+  border-radius: 999px;
+  background: #f8fafc;
+}
+
+.cours-view-btn {
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+}
+
+.cours-view-btn.is-active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+}
+
 .cours-action-btn {
   border: 1px solid #d4dce8;
   background: #f8fafc;
@@ -864,6 +1003,12 @@ section.container {
   margin: 0;
   font-size: 0.85rem;
   color: #475569;
+  font-weight: 600;
+}
+
+.cours-empty {
+  margin: 1rem 0 0 0;
+  color: #64748b;
   font-weight: 600;
 }
 
@@ -929,6 +1074,8 @@ section.container {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 420px;
 }
 
 .cours-accordion .matiere-item:last-child {
@@ -1067,6 +1214,18 @@ section.container {
   padding: 0.8rem 1rem 0.95rem;
 }
 
+.cours-mode-compact .course-summary {
+  cursor: default;
+}
+
+.cours-mode-compact .course-summary::after {
+  display: none;
+}
+
+.cours-mode-compact .course-content-panel {
+  display: none;
+}
+
 .course-title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -1096,12 +1255,36 @@ section.container {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .cours-section {
+    padding: 2.5rem 0;
+  }
+
+  .cours-search-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .cours-search-input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .cours-search-clear {
+    align-self: flex-start;
+  }
+
   .cours-filters {
     gap: 0.5rem;
   }
 
   .cours-toolbar-actions {
     gap: 0.4rem;
+  }
+
+  .cours-view-modes {
+    width: 100%;
+    justify-content: center;
   }
 
   .cours-action-btn {
@@ -1141,6 +1324,62 @@ section.container {
   }
 }
 
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    max-width: 74vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .site-footer-inner {
+    padding: 0.95rem 0;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .footer-left,
+  .footer-center {
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .bottom-dock {
+    bottom: 0.65rem;
+    padding: 0.28rem;
+  }
+
+  body {
+    padding-bottom: 4.4rem;
+  }
+}
+
+html.force-desktop-view body {
+  min-width: 1200px;
+}
+
 /* ==================== PROJETS SECTION ==================== */
 .projets-section {
   padding: 4rem 0;
@@ -1162,6 +1401,8 @@ section.container {
   transition: all 0.3s ease;
   margin-bottom: 1.5rem;
   padding: 2rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 600px;
 }
 
 .project-card:hover {
@@ -1415,6 +1656,7 @@ section.container {
 @media (max-width: 768px) {
   .project-card {
     grid-template-columns: 1fr;
+    padding: 1.1rem;
   }
 
   .project-image {
@@ -1422,7 +1664,7 @@ section.container {
   }
 
   .project-content {
-    padding: 1.5rem;
+    padding: 0;
     gap: 1rem;
   }
 
@@ -1433,5 +1675,41 @@ section.container {
   .project-header {
     flex-direction: column;
     gap: 0.75rem;
+  }
+
+  .project-carousel-container {
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .carousel-item {
+    height: 260px;
+  }
+
+  .carousel-item img {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 220px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

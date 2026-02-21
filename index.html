@@ -2,7 +2,44 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="viewport-meta"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Philibert Pappens - Portfolio" />
+    <meta property="og:image" content="images/profile/photo.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="images/profile/photo.jpeg" />
+    <meta id="meta-og-title" property="og:title" content="Philibert Pappens - Portfolio" />
+    <meta
+      id="meta-og-description"
+      property="og:description"
+      content="Portfolio académique et technique: projets, cours et centres d'intérêt."
+    />
+    <meta id="meta-og-url" property="og:url" content="" />
+    <meta id="meta-og-locale" property="og:locale" content="fr_FR" />
+    <meta id="meta-twitter-title" name="twitter:title" content="Philibert Pappens - Portfolio" />
+    <meta
+      id="meta-twitter-description"
+      name="twitter:description"
+      content="Portfolio académique et technique: projets, cours et centres d'intérêt."
+    />
+    <meta
+      id="meta-description"
+      name="description"
+      content="Portfolio de Philibert Pappens: projets, cours et centres d'intérêt en ingénierie, mécanique et sciences."
+    />
+    <meta
+      id="meta-keywords"
+      name="keywords"
+      content="Philibert Pappens, portfolio, École polytechnique, mécanique, structures, matériaux, projets, cours"
+    />
+    <link id="meta-canonical" rel="canonical" href="" />
+    <link rel="icon" type="image/png" href="images/profile/photo.jpeg" />
     <title>Philibert Pappens - Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -15,7 +52,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <a href="#content" class="skip-link" data-i18n-nav="skip_content">Aller au contenu</a>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+      aria-label="Navigation principale"
+      data-i18n-nav-aria="main_aria"
+    >
       <div class="container">
         <a class="navbar-brand" href="#" data-page="accueil">
           Philibert Pappens - Portfolio
@@ -58,7 +100,7 @@
         </div>
       </div>
     </nav>
-    <div id="content"></div>
+    <main id="content" tabindex="-1"></main>
 
     <footer class="site-footer border-top">
       <div class="container site-footer-inner">
@@ -91,6 +133,9 @@
           </div>
           <button type="button" class="footer-top-btn" data-scroll-top data-i18n-footer="back_to_top">
             Remonter
+          </button>
+          <button type="button" class="footer-view-btn d-none" data-view-toggle>
+            Version ordinateur
           </button>
         </div>
       </div>

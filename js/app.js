@@ -1,5 +1,3 @@
-console.log("app.js charge");
-
 const routes = {
   accueil: "templates/accueil.tpl.html",
   projets: "templates/projets.tpl.html",
@@ -11,9 +9,24 @@ const routes = {
 const DEFAULT_LANG = "fr";
 const SUPPORTED_LANGS = ["fr", "en", "de"];
 const LANG_STORAGE_KEY = "portfolio_lang";
+const VIEW_MODE_STORAGE_KEY = "portfolio_view_mode";
+const COURSE_VIEW_MODE_STORAGE_KEY = "portfolio_course_view_mode";
+const MOBILE_VIEW_MAX_WIDTH = 991;
 const EMAIL_ADDRESS = "philibert.pappens@gmail.com";
 const LINKEDIN_URL = "https://linkedin.com/in/philibert-pappens-993468313";
 const GITHUB_URL = "https://github.com/PhilibertPap";
+const LAST_UPDATED_PATHS = [
+  "index.html",
+  "css/index.css",
+  "js/app.js",
+  "js/data.js",
+  "templates/accueil.tpl.html",
+  "templates/projets.tpl.html",
+  "templates/cours.tpl.html",
+  "templates/hobbies.tpl.html"
+];
+
+let latestUpdateDateCache = null;
 
 const UI_STRINGS = {
   fr: {
@@ -24,6 +37,8 @@ const UI_STRINGS = {
       projects: "Projets",
       hobbies: "Centres d'intérêt",
       courses: "Cours suivis",
+      skip_content: "Aller au contenu",
+      main_aria: "Navigation principale",
       language_aria: "Sélecteur de langue",
       menu_aria: "Ouvrir le menu"
     },
@@ -43,18 +58,31 @@ const UI_STRINGS = {
         { icon: "⛵", text: "Attrait pour l'architecture navale et le monde maritime" }
       ]
     },
-    projets: { title: "Projets", subtitle: "Sélection de mes principaux projets et réalisations", results_title: "Résultats clés" },
+    projets: {
+      title: "Projets",
+      subtitle: "Sélection de mes principaux projets et réalisations",
+      results_title: "Résultats clés",
+      carousel_prev: "Image précédente",
+      carousel_next: "Image suivante"
+    },
     hobbies: { title: "Centres d'intérêt", subtitle: "Au-delà de l'ingénierie, je cultive des passions qui me définissent" },
     cours: {
       title: "Formations et cours",
       subtitle: "Cours suivis en classes préparatoires et à l'École polytechnique.",
       filter_label: "Filtrer par matière",
+      search_label: "Rechercher un cours",
+      search_placeholder: "Rechercher par titre ou mot-clé",
+      search_clear: "Effacer",
+      no_results: "Aucun cours ne correspond à cette recherche.",
       filter_aria: "Filtre des matières",
       filter_on_label: "Filtrer sur",
       all_label: "Toutes",
       open_visible: "Ouvrir visibles",
       close_visible: "Fermer visibles",
       reset_filters: "Réinitialiser filtres",
+      view_label: "Mode d'affichage des cours",
+      view_detailed: "Détaillé",
+      view_compact: "Compact",
       showing_all: "Affichage: toutes les matières.",
       showing_selected_prefix: "Affichage: ",
       showing_selected_joiner: " + "
@@ -72,7 +100,20 @@ const UI_STRINGS = {
       contact_label: "Contact",
       contact_linkedin: "Profil LinkedIn",
       contact_github: "Profil GitHub",
-      back_to_top: "Remonter"
+      back_to_top: "Remonter",
+      switch_to_desktop: "Version ordinateur",
+      switch_to_mobile: "Version mobile"
+    },
+    seo: {
+      description: "Portfolio de Philibert Pappens: projets, cours et centres d'intérêt en ingénierie, mécanique et sciences.",
+      keywords: "Philibert Pappens, portfolio, École polytechnique, mécanique, structures, matériaux, projets, cours",
+      og_locale: "fr_FR",
+      page: {
+        accueil: "Accueil - Philibert Pappens",
+        projets: "Projets - Philibert Pappens",
+        cours: "Cours - Philibert Pappens",
+        hobbies: "Centres d'intérêt - Philibert Pappens"
+      }
     },
     errors: { template_load: "Erreur de chargement du template." }
   },
@@ -84,6 +125,8 @@ const UI_STRINGS = {
       projects: "Projects",
       hobbies: "Interests",
       courses: "Courses",
+      skip_content: "Skip to content",
+      main_aria: "Main navigation",
       language_aria: "Language selector",
       menu_aria: "Open menu"
     },
@@ -103,18 +146,31 @@ const UI_STRINGS = {
         { icon: "⛵", text: "Strong interest in naval architecture and maritime systems" }
       ]
     },
-    projets: { title: "Projects", subtitle: "Selection of my main projects and achievements", results_title: "Key results" },
+    projets: {
+      title: "Projects",
+      subtitle: "Selection of my main projects and achievements",
+      results_title: "Key results",
+      carousel_prev: "Previous image",
+      carousel_next: "Next image"
+    },
     hobbies: { title: "Interests", subtitle: "Beyond engineering, I cultivate passions that shape who I am" },
     cours: {
       title: "Education and courses",
       subtitle: "Courses taken in preparatory classes and at École polytechnique.",
       filter_label: "Filter by subject",
+      search_label: "Search courses",
+      search_placeholder: "Search by title or keyword",
+      search_clear: "Clear",
+      no_results: "No courses match this search.",
       filter_aria: "Subject filters",
       filter_on_label: "Filter on",
       all_label: "All",
       open_visible: "Open visible",
       close_visible: "Close visible",
       reset_filters: "Reset filters",
+      view_label: "Course display mode",
+      view_detailed: "Detailed",
+      view_compact: "Compact",
       showing_all: "Display: all subjects.",
       showing_selected_prefix: "Display: ",
       showing_selected_joiner: " + "
@@ -132,7 +188,20 @@ const UI_STRINGS = {
       contact_label: "Contact",
       contact_linkedin: "LinkedIn profile",
       contact_github: "GitHub profile",
-      back_to_top: "Top"
+      back_to_top: "Top",
+      switch_to_desktop: "Desktop version",
+      switch_to_mobile: "Mobile version"
+    },
+    seo: {
+      description: "Portfolio of Philibert Pappens: projects, courses, and interests in engineering, mechanics, and science.",
+      keywords: "Philibert Pappens, portfolio, École polytechnique, mechanics, structures, materials, projects, courses",
+      og_locale: "en_US",
+      page: {
+        accueil: "Home - Philibert Pappens",
+        projets: "Projects - Philibert Pappens",
+        cours: "Courses - Philibert Pappens",
+        hobbies: "Interests - Philibert Pappens"
+      }
     },
     errors: { template_load: "Template loading error." }
   },
@@ -144,6 +213,8 @@ const UI_STRINGS = {
       projects: "Projekte",
       hobbies: "Interessen",
       courses: "Lehrveranstaltungen",
+      skip_content: "Zum Inhalt springen",
+      main_aria: "Hauptnavigation",
       language_aria: "Sprachauswahl",
       menu_aria: "Menü öffnen"
     },
@@ -163,18 +234,31 @@ const UI_STRINGS = {
         { icon: "⛵", text: "Interesse an Schiffsarchitektur und maritimen Themen" }
       ]
     },
-    projets: { title: "Projekte", subtitle: "Auswahl meiner wichtigsten Projekte und Arbeiten", results_title: "Wichtigste Ergebnisse" },
+    projets: {
+      title: "Projekte",
+      subtitle: "Auswahl meiner wichtigsten Projekte und Arbeiten",
+      results_title: "Wichtigste Ergebnisse",
+      carousel_prev: "Vorheriges Bild",
+      carousel_next: "Nächstes Bild"
+    },
     hobbies: { title: "Interessen", subtitle: "Neben dem Ingenieurwesen pflege ich Leidenschaften, die mich prägen" },
     cours: {
       title: "Ausbildung und Kurse",
       subtitle: "Belegte Kurse in den Vorbereitungsklassen und an der École polytechnique.",
       filter_label: "Nach Fach filtern",
+      search_label: "Kurse suchen",
+      search_placeholder: "Nach Titel oder Stichwort suchen",
+      search_clear: "Löschen",
+      no_results: "Keine Kurse entsprechen dieser Suche.",
       filter_aria: "Fachfilter",
       filter_on_label: "Filtern nach",
       all_label: "Alle",
       open_visible: "Sichtbare öffnen",
       close_visible: "Sichtbare schließen",
       reset_filters: "Filter zurücksetzen",
+      view_label: "Darstellungsmodus der Kurse",
+      view_detailed: "Detailliert",
+      view_compact: "Kompakt",
       showing_all: "Anzeige: alle Fächer.",
       showing_selected_prefix: "Anzeige: ",
       showing_selected_joiner: " + "
@@ -192,7 +276,20 @@ const UI_STRINGS = {
       contact_label: "Kontakt",
       contact_linkedin: "LinkedIn-Profil",
       contact_github: "GitHub-Profil",
-      back_to_top: "Nach oben"
+      back_to_top: "Nach oben",
+      switch_to_desktop: "Desktop-Version",
+      switch_to_mobile: "Mobile-Version"
+    },
+    seo: {
+      description: "Portfolio von Philibert Pappens: Projekte, Kurse und Interessen in Ingenieurwesen, Mechanik und Naturwissenschaften.",
+      keywords: "Philibert Pappens, Portfolio, École polytechnique, Mechanik, Strukturen, Werkstoffe, Projekte, Kurse",
+      og_locale: "de_DE",
+      page: {
+        accueil: "Start - Philibert Pappens",
+        projets: "Projekte - Philibert Pappens",
+        cours: "Kurse - Philibert Pappens",
+        hobbies: "Interessen - Philibert Pappens"
+      }
     },
     errors: { template_load: "Fehler beim Laden der Vorlage." }
   }
@@ -651,6 +748,150 @@ function getUi(lang) {
   return UI_STRINGS[lang] || UI_STRINGS.fr;
 }
 
+function getStoredViewMode() {
+  const raw = localStorage.getItem(VIEW_MODE_STORAGE_KEY);
+  return raw === "desktop" ? "desktop" : "auto";
+}
+
+function setStoredViewMode(mode) {
+  localStorage.setItem(VIEW_MODE_STORAGE_KEY, mode === "desktop" ? "desktop" : "auto");
+}
+
+function getStoredCourseViewMode() {
+  const raw = localStorage.getItem(COURSE_VIEW_MODE_STORAGE_KEY);
+  return raw === "compact" ? "compact" : "detailed";
+}
+
+function setStoredCourseViewMode(mode) {
+  localStorage.setItem(COURSE_VIEW_MODE_STORAGE_KEY, mode === "compact" ? "compact" : "detailed");
+}
+
+function isMobileViewport() {
+  return window.matchMedia(`(max-width: ${MOBILE_VIEW_MAX_WIDTH}px)`).matches;
+}
+
+function getEffectiveViewMode() {
+  const preferred = getStoredViewMode();
+  const isMobile = isMobileViewport();
+  if (preferred === "desktop" && isMobile) return "desktop";
+  return isMobile ? "mobile" : "desktop";
+}
+
+function applyViewportMode(lang) {
+  const ui = getUi(lang);
+  const effectiveMode = getEffectiveViewMode();
+  const isMobile = isMobileViewport();
+  const forceDesktop = isMobile && effectiveMode === "desktop";
+
+  const viewportMeta = document.getElementById("viewport-meta");
+  if (viewportMeta) {
+    viewportMeta.setAttribute(
+      "content",
+      forceDesktop ? "width=1280" : "width=device-width, initial-scale=1.0"
+    );
+  }
+
+  document.documentElement.classList.toggle("force-desktop-view", forceDesktop);
+  document.documentElement.classList.toggle("mobile-layout", isMobile && !forceDesktop);
+
+  document.querySelectorAll("[data-view-toggle]").forEach((btn) => {
+    if (!isMobile) {
+      btn.classList.add("d-none");
+      return;
+    }
+
+    btn.classList.remove("d-none");
+    const toDesktop = !forceDesktop;
+    btn.dataset.viewTarget = toDesktop ? "desktop" : "mobile";
+    const label = toDesktop ? ui.footer.switch_to_desktop : ui.footer.switch_to_mobile;
+    btn.textContent = label;
+    btn.setAttribute("aria-label", label);
+    btn.setAttribute("title", label);
+  });
+}
+
+function formatDateLabel(date, lang) {
+  const locale = lang === "de" ? "de-DE" : lang === "en" ? "en-US" : "fr-FR";
+  return new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(date);
+}
+
+function getDocumentLastModifiedDate() {
+  const fallbackDate = new Date();
+  const parsedDate = document.lastModified ? new Date(document.lastModified) : fallbackDate;
+  return Number.isNaN(parsedDate.getTime()) ? fallbackDate : parsedDate;
+}
+
+function refreshFooterUpdatedDate(lang) {
+  const footerUpdated = document.getElementById("footer-updated-value");
+  if (!footerUpdated) return;
+
+  const fallbackDate = getDocumentLastModifiedDate();
+  footerUpdated.textContent = formatDateLabel(latestUpdateDateCache || fallbackDate, lang);
+
+  if (latestUpdateDateCache) return;
+
+  Promise.all(
+    LAST_UPDATED_PATHS.map((path) =>
+      fetch(path, { method: "HEAD", cache: "no-store" })
+        .then((response) => {
+          const headerValue = response.headers.get("last-modified");
+          if (!headerValue) return null;
+          const parsedDate = new Date(headerValue);
+          return Number.isNaN(parsedDate.getTime()) ? null : parsedDate;
+        })
+        .catch(() => null)
+    )
+  ).then((dates) => {
+    const validDates = [fallbackDate, ...dates.filter(Boolean)];
+    const newestDate = validDates.reduce((latest, current) => (current > latest ? current : latest), fallbackDate);
+    latestUpdateDateCache = newestDate;
+    const node = document.getElementById("footer-updated-value");
+    if (node) node.textContent = formatDateLabel(newestDate, lang);
+  });
+}
+
+function normalizeForSearch(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function applySeoMetadata(ui, page, lang) {
+  if (!ui || !ui.seo) return;
+  const pageKey = routes[page] ? page : "accueil";
+  const pageTitle = (ui.seo.page && ui.seo.page[pageKey]) || ui.page_title;
+  const description = ui.seo.description || "";
+  const keywords = ui.seo.keywords || "";
+  const ogLocale = ui.seo.og_locale || "fr_FR";
+  const url = window.location.href;
+
+  const titleTag = document.querySelector("title");
+  if (titleTag) titleTag.textContent = pageTitle;
+
+  const fields = [
+    { id: "meta-description", value: description },
+    { id: "meta-keywords", value: keywords },
+    { id: "meta-og-title", value: pageTitle },
+    { id: "meta-og-description", value: description },
+    { id: "meta-og-url", value: url },
+    { id: "meta-og-locale", value: ogLocale },
+    { id: "meta-twitter-title", value: pageTitle },
+    { id: "meta-twitter-description", value: description }
+  ];
+
+  fields.forEach((field) => {
+    const node = document.getElementById(field.id);
+    if (node) node.setAttribute("content", field.value);
+  });
+
+  const canonicalNode = document.getElementById("meta-canonical");
+  if (canonicalNode) canonicalNode.setAttribute("href", url);
+
+  document.documentElement.setAttribute("lang", lang);
+}
+
 function tr(value, map) {
   if (!value || !map) return value;
   if (Object.prototype.hasOwnProperty.call(map, value)) return map[value];
@@ -777,6 +1018,11 @@ function applyStaticUi(ui, lang) {
     if (ui.nav[key]) el.textContent = ui.nav[key];
   });
 
+  document.querySelectorAll("[data-i18n-nav-aria]").forEach((el) => {
+    const key = el.dataset.i18nNavAria;
+    if (ui.nav[key]) el.setAttribute("aria-label", ui.nav[key]);
+  });
+
   const toggler = document.querySelector(".navbar-toggler");
   if (toggler) toggler.setAttribute("aria-label", ui.nav.menu_aria);
 
@@ -784,7 +1030,9 @@ function applyStaticUi(ui, lang) {
   if (langSwitcher) langSwitcher.setAttribute("aria-label", ui.nav.language_aria);
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.classList.toggle("is-active", btn.dataset.lang === lang);
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle("is-active", isActive);
+    btn.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
 
   document.querySelectorAll("[data-i18n-footer]").forEach((el) => {
@@ -792,10 +1040,7 @@ function applyStaticUi(ui, lang) {
     if (ui.footer && ui.footer[key]) el.textContent = ui.footer[key];
   });
 
-  const footerUpdated = document.getElementById("footer-updated-value");
-  if (footerUpdated && ui.footer && ui.footer.updated_value) {
-    footerUpdated.textContent = ui.footer.updated_value;
-  }
+  refreshFooterUpdatedDate(lang);
 
   document.querySelectorAll("[data-email-link]").forEach((el) => {
     el.setAttribute("href", `mailto:${EMAIL_ADDRESS}`);
@@ -827,6 +1072,8 @@ function applyStaticUi(ui, lang) {
     el.setAttribute("aria-label", label);
     el.setAttribute("title", label);
   });
+
+  applyViewportMode(lang);
 }
 
 function initBottomDock() {
@@ -856,7 +1103,16 @@ function initCourseFilters(ui) {
   const matiereButtons = filterButtons.filter((btn) => btn.dataset.coursFilter !== "ALL");
   const actionButtons = Array.from(document.querySelectorAll("[data-cours-action]"));
   const activeFiltersEl = document.querySelector("[data-cours-active-filters]");
+  const searchInput = document.querySelector("[data-cours-search]");
+  const searchClearBtn = document.querySelector("[data-cours-search-clear]");
+  const emptyStateEl = document.querySelector("[data-cours-empty]");
   const activeFilterIds = new Set();
+  const searchIndex = new Map();
+  let currentSearchQuery = "";
+
+  matiereItems.forEach((item) => {
+    searchIndex.set(item, normalizeForSearch(item.textContent));
+  });
 
   function getTopCollapse(item) {
     return item.querySelector(":scope > .accordion-collapse") || item.querySelector(".accordion-collapse");
@@ -878,28 +1134,37 @@ function initCourseFilters(ui) {
   function applyFilters(options = {}) {
     const { openSelected = false } = options;
     const hasSelection = activeFilterIds.size > 0;
+    const hasQuery = currentSearchQuery.length > 0;
+    const visibleItems = [];
 
     if (allButton) allButton.classList.toggle("is-active", !hasSelection);
     matiereButtons.forEach((btn) => btn.classList.toggle("is-active", activeFilterIds.has(btn.dataset.coursFilter)));
 
     matiereItems.forEach((item) => {
-      const isVisible = !hasSelection || activeFilterIds.has(item.dataset.matiereId);
+      const matchFilter = !hasSelection || activeFilterIds.has(item.dataset.matiereId);
+      const matchSearch = !hasQuery || (searchIndex.get(item) || "").includes(currentSearchQuery);
+      const isVisible = matchFilter && matchSearch;
       item.classList.toggle("d-none", !isVisible);
       if (!isVisible) hideOpenCollapses(item);
+      else visibleItems.push(item);
     });
 
     if (hasSelection && openSelected) {
-      matiereItems.forEach((item) => {
-        if (!item.classList.contains("d-none")) setTopCollapseVisible(item, true);
-      });
+      visibleItems.forEach((item) => setTopCollapseVisible(item, true));
     }
 
+    if (emptyStateEl) emptyStateEl.classList.toggle("d-none", visibleItems.length > 0);
+    if (searchClearBtn) searchClearBtn.classList.toggle("d-none", !hasQuery);
+
     if (activeFiltersEl) {
-      if (!hasSelection) activeFiltersEl.textContent = ui.cours.showing_all;
-      else {
+      const filterText = !hasSelection
+        ? ui.cours.showing_all
+        : (() => {
         const labels = matiereButtons.filter((btn) => activeFilterIds.has(btn.dataset.coursFilter)).map((btn) => btn.dataset.coursLabel || btn.dataset.coursFilter);
-        activeFiltersEl.textContent = `${ui.cours.showing_selected_prefix}${labels.join(ui.cours.showing_selected_joiner)}`;
-      }
+        return `${ui.cours.showing_selected_prefix}${labels.join(ui.cours.showing_selected_joiner)}`;
+      })();
+      const searchText = hasQuery && searchInput ? ` ${ui.cours.search_label}: "${searchInput.value.trim()}".` : "";
+      activeFiltersEl.textContent = `${filterText}${searchText}`;
     }
   }
 
@@ -925,22 +1190,132 @@ function initCourseFilters(ui) {
       else if (action === "close-visible") visibleItems.forEach((item) => hideOpenCollapses(item));
       else if (action === "clear-filters") {
         activeFilterIds.clear();
+        currentSearchQuery = "";
+        if (searchInput) searchInput.value = "";
         applyFilters();
       }
     });
   });
 
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      currentSearchQuery = normalizeForSearch(searchInput.value);
+      applyFilters({ openSelected: true });
+    });
+  }
+
+  if (searchInput && searchClearBtn) {
+    searchClearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      currentSearchQuery = "";
+      applyFilters();
+      searchInput.focus();
+    });
+  }
+
   applyFilters();
+}
+
+function initCourseViewMode() {
+  const coursSection = document.querySelector(".cours-section");
+  if (!coursSection) return;
+
+  const buttons = Array.from(document.querySelectorAll("[data-cours-view]"));
+  if (!buttons.length) return;
+
+  let currentMode = getStoredCourseViewMode();
+
+  function applyMode(mode) {
+    currentMode = mode === "compact" ? "compact" : "detailed";
+    const isCompact = currentMode === "compact";
+    coursSection.classList.toggle("cours-mode-compact", isCompact);
+    setStoredCourseViewMode(currentMode);
+
+    buttons.forEach((btn) => {
+      const isActive = btn.dataset.coursView === currentMode;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    if (isCompact) {
+      coursSection.querySelectorAll(".course-details[open]").forEach((detailsNode) => {
+        detailsNode.removeAttribute("open");
+      });
+    }
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => applyMode(btn.dataset.coursView));
+  });
+
+  coursSection.addEventListener("click", (event) => {
+    if (currentMode !== "compact") return;
+    const summaryNode = event.target.closest(".course-summary");
+    if (summaryNode) event.preventDefault();
+  });
+
+  coursSection.addEventListener("keydown", (event) => {
+    if (currentMode !== "compact") return;
+    const summaryNode = event.target.closest(".course-summary");
+    if (!summaryNode) return;
+    if (event.key === "Enter" || event.key === " ") event.preventDefault();
+  });
+
+  applyMode(currentMode);
+}
+
+function applyDynamicPageUi(ui) {
+  document.querySelectorAll("[data-i18n-projets-aria]").forEach((node) => {
+    const key = node.dataset.i18nProjetsAria;
+    const label = ui.projets && ui.projets[key];
+    if (label) {
+      node.setAttribute("aria-label", label);
+      node.setAttribute("title", label);
+    }
+  });
+}
+
+function optimizeMediaLoading() {
+  const images = Array.from(document.querySelectorAll("#content img"));
+  images.forEach((img) => {
+    if (!img.getAttribute("loading")) img.setAttribute("loading", "lazy");
+    if (!img.getAttribute("decoding")) img.setAttribute("decoding", "async");
+    if (!img.getAttribute("fetchpriority")) img.setAttribute("fetchpriority", "low");
+
+    if (img.closest(".project-carousel-container")) {
+      if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 768px) 100vw, 78vw");
+    } else if (img.closest(".hobby-card")) {
+      if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 768px) 100vw, 33vw");
+    } else if (img.closest(".profile-image-container")) {
+      if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 991px) 100vw, 42vw");
+    }
+  });
+
+  const firstHeroImage = document.querySelector(".profile-image");
+  if (firstHeroImage) {
+    firstHeroImage.setAttribute("loading", "eager");
+    firstHeroImage.setAttribute("fetchpriority", "high");
+  }
+
+  const firstCarouselImage = document.querySelector(".carousel-item img");
+  if (firstCarouselImage) {
+    firstCarouselImage.setAttribute("loading", "eager");
+    firstCarouselImage.setAttribute("fetchpriority", "high");
+  }
 }
 
 function loadPage(page, lang) {
   const path = routes[page] || routes.accueil;
   const ui = getUi(lang);
+  const contentNode = document.getElementById("content");
+  if (contentNode) contentNode.setAttribute("aria-busy", "true");
 
   $.ajax({ url: path, method: "GET", dataType: "text" })
     .done((templateText) => {
       const rendered = Mustache.render(templateText, getData(lang));
       $("#content").html(rendered);
+      applyDynamicPageUi(ui);
+      optimizeMediaLoading();
 
       document.querySelectorAll(".carousel").forEach((carouselEl) => {
         const firstItem = carouselEl.querySelector(".carousel-item");
@@ -974,21 +1349,34 @@ function loadPage(page, lang) {
       });
 
       initCourseFilters(ui);
+      initCourseViewMode();
+      if (contentNode) contentNode.setAttribute("aria-busy", "false");
     })
     .fail(() => {
       $("#content").html(`<p class='text-danger'>${ui.errors.template_load}</p>`);
+      if (contentNode) contentNode.setAttribute("aria-busy", "false");
     });
 }
 
 $(function () {
   let currentLang = getStoredLanguage();
-  let currentPage = "accueil";
+  const initialHashPage = window.location.hash ? window.location.hash.replace(/^#/, "") : "";
+  let currentPage = routes[initialHashPage] ? initialHashPage : "accueil";
+
+  function setActiveNavigation(page) {
+    document.querySelectorAll(".nav-link[data-page]").forEach((link) => {
+      const isActive = link.dataset.page === page;
+      link.classList.toggle("active", isActive);
+      link.setAttribute("aria-current", isActive ? "page" : "false");
+    });
+  }
 
   function goTo(page) {
     currentPage = page;
     loadPage(page, currentLang);
-    $(".nav-link").removeClass("active");
-    $(`.nav-link[data-page="${page}"]`).addClass("active");
+    setActiveNavigation(page);
+    if (window.location.hash !== `#${page}`) window.history.replaceState(null, "", `#${page}`);
+    applySeoMetadata(getUi(currentLang), page, currentLang);
   }
 
   function applyLanguage(lang) {
@@ -1021,11 +1409,24 @@ $(function () {
     if (nextLang && nextLang !== currentLang) applyLanguage(nextLang);
   });
 
+  $(document).on("click", "[data-view-toggle]", function () {
+    const target = this.dataset.viewTarget === "mobile" ? "auto" : "desktop";
+    setStoredViewMode(target);
+    applyViewportMode(currentLang);
+    window.location.reload();
+  });
+
   $(document).on("click", "[data-scroll-top]", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  window.addEventListener("resize", () => applyViewportMode(currentLang), { passive: true });
+  window.addEventListener("hashchange", () => {
+    const hashPage = window.location.hash.replace(/^#/, "");
+    if (hashPage && routes[hashPage] && hashPage !== currentPage) goTo(hashPage);
+  });
+
   initBottomDock();
   applyStaticUi(getUi(currentLang), currentLang);
-  goTo("accueil");
+  goTo(currentPage);
 });
