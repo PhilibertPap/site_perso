@@ -98,6 +98,82 @@ const portfolioData = {
       liens: []
     }
   ],
+  experiences: [
+    {
+      id: "suf-scouts-marins",
+      titre: "Chef assistant de troupe (SUF - scouts marins)",
+      organisation: "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier",
+      lieu: "Paris, France",
+      date_debut: "2023-09-01",
+      date_fin: "",
+      date_label: "2023 – Aujourd'hui",
+      badge: "SUF",
+      kind: "volunteer",
+      logo_text: "✠⚓",
+      logo_url: "images/exp/scout_marin.png",
+      logo_theme: "suf",
+      resume: "Encadrement bénévole en scoutisme marin : préparation d'activités, conduite de camps et suivi d'un groupe de jeunes.",
+      contexte: "Responsabilité de chef assistant au sein d'une troupe SUF de scouts marins, dans un cadre d'encadrement régulier sur l'année et de camps d'été.",
+      mission: "Encadrer un groupe de jeunes, préparer et conduire des activités, participer à l'organisation des camps et contribuer à la formation humaine et à la cohésion de la troupe.",
+      points_cles: [
+        "Encadrement d'un groupe d'environ 20 adolescents dans un cadre éducatif exigeant et structuré.",
+        "Participation à l'organisation de week-ends campés et de camps d'été, incluant plusieurs jours de navigation.",
+        "Coordination avec l'équipe de maîtrise pour la préparation des activités, la sécurité et la vie de camp.",
+        "Mobilisation du CEP1 (qualification d'encadrement scout) et du PSC1 dans la conduite des activités."
+      ],
+      environnement: ["Bénévolat", "Encadrement", "Scoutisme marin", "Organisation d'activités", "Responsabilité"],
+      apport: "Cet engagement m'apprend concrètement à préparer des activités, encadrer un groupe dans la durée et prendre des responsabilités."
+    },
+    {
+      id: "gendarmerie",
+      titre: "Gendarmerie nationale",
+      organisation: "Compagnie de gendarmerie de Guingamp",
+      lieu: "Guingamp, Côtes-d'Armor, France",
+      date_debut: "2023-12-01",
+      date_fin: "2024-04-30",
+      date_label: "Déc. 2023 – Avr. 2024",
+      badge: "GN",
+      kind: "professional",
+      logo_text: "GN",
+      logo_url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Gendarmerie_nationale_logo.svg",
+      logo_theme: "gendarmerie",
+      resume: "Formation humaine et militaire en gendarmerie : formation initiale à l'EOGN de Melun puis immersion de terrain et de commandement au sein de la compagnie de Guingamp.",
+      contexte: "Expérience de 1A de l'École polytechnique en gendarmerie nationale, combinant une phase de formation (EOGN, Melun, avec modules opérationnels dont maintien/rétablissement de l'ordre) et une phase en unité dans les Côtes-d'Armor.",
+      mission: "Découvrir le fonctionnement d'une compagnie de gendarmerie, suivre des unités de terrain et la cellule de commandement, et comprendre les interactions entre sécurité publique, commandement et coordination territoriale.",
+      points_cles: [
+        "Patrouilles et observation d'interventions en brigade territoriale (BTA) : police de la route, accueil, transfèrements et découverte des procédures.",
+        "Immersion au PSIG de Guingamp : patrouilles d'appui, entraînements à l'intervention et préparation physique.",
+        "Suivi du commandement sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité."
+      ],
+      environnement: ["Institution publique", "Terrain", "Chaîne de commandement", "Sécurité publique", "Coordination"],
+      apport: "Cette expérience m'a donné une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, avec des exigences fortes de rigueur, de coordination et de sang-froid."
+    },
+    {
+      id: "deutsche-telekom",
+      titre: "Digital Transformation - Fiber Factory",
+      organisation: "Deutsche Telekom Technik GmbH",
+      lieu: "Bonn, Allemagne",
+      date_debut: "2025-06-04",
+      date_fin: "2025-09-12",
+      date_label: "4 juin 2025 – 12 septembre 2025",
+      badge: "DT",
+      kind: "professional",
+      logo_text: "T",
+      logo_url: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Deutsche_Telekom_2022.svg",
+      logo_theme: "telekom",
+      resume: "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.",
+      contexte: "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.",
+      mission: "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, en particulier sur la documentation interne de l'équipe et sur des sujets liés à l'IA, en lien avec plusieurs interlocuteurs.",
+      points_cles: [
+        "Rédaction d'un playbook interne pour l'équipe de digitalisation (intégration des nouveaux arrivants, documentation des pratiques).",
+        "Participation à des travaux sur l'usage de l'IA et à des réunions avec plusieurs équipes.",
+        "Découverte des méthodes de travail et de coordination d'un grand groupe technologique international.",
+        "Pratique quotidienne de l'allemand en contexte professionnel et adaptation rapide à un environnement de travail germanophone."
+      ],
+      environnement: ["Grand groupe technologique", "Transformation digitale", "Innovation", "Allemand professionnel", "Travail en équipe"],
+      apport: "Cette expérience m'a donné une vision concrète du fonctionnement d'un grand groupe technologique, tout en renforçant mon autonomie, mon adaptation à un environnement germanophone et ma communication professionnelle en allemand."
+    }
+  ],
   cours: [
     {
       matiere: "Mécanique",

@@ -1,0 +1,119 @@
+<section class="experiences-section" data-experiences-root="true">
+  <div class="container">
+    <div class="section-header mb-5">
+      <h1 class="section-title">{{ui.experiences.title}}</h1>
+      <p class="section-subtitle">{{ui.experiences.subtitle}}</p>
+    </div>
+
+    <div class="experience-timeline-wrap">
+      <p class="experience-timeline-label">{{ui.experiences.timeline_label}}</p>
+      <div class="experience-timeline" aria-label="{{ui.experiences.timeline_aria}}">
+        {{#experiences}}
+        <button
+          type="button"
+          class="experience-timeline-node experience-kind-{{kind}}"
+          data-experience-target="{{id}}"
+          aria-expanded="false"
+          aria-controls="experience-panel-{{id}}"
+          id="experience-tab-{{id}}"
+          tabindex="0"
+        >
+          <span class="experience-timeline-node-dot experience-logo experience-logo-{{logo_theme}}" aria-hidden="true">
+            {{#logo_url}}
+            <img src="{{logo_url}}" alt="" class="experience-logo-image" loading="lazy" decoding="async" />
+            {{/logo_url}}
+            {{^logo_url}}
+            {{logo_text}}
+            {{/logo_url}}
+          </span>
+          <span class="experience-timeline-node-date">{{date_label}}</span>
+          <span class="experience-timeline-node-title">{{titre}}</span>
+          <span class="experience-timeline-node-org">{{organisation}}</span>
+        </button>
+        {{/experiences}}
+      </div>
+    </div>
+
+    <div class="experience-panels">
+      <div class="experience-empty" data-experience-empty="true" role="status" aria-live="polite">
+        {{ui.experiences.select_prompt}}
+      </div>
+      {{#experiences}}
+      <article
+        class="experience-card experience-kind-{{kind}} d-none"
+        data-experience-card="{{id}}"
+        id="experience-panel-{{id}}"
+        aria-labelledby="experience-tab-{{id}}"
+      >
+        <div class="experience-card-header">
+          <div class="experience-card-title-wrap">
+            <span class="experience-card-badge experience-logo experience-logo-{{logo_theme}}" aria-hidden="true">
+              {{#logo_url}}
+              <img src="{{logo_url}}" alt="" class="experience-logo-image" loading="lazy" decoding="async" />
+              {{/logo_url}}
+              {{^logo_url}}
+              {{logo_text}}
+              {{/logo_url}}
+            </span>
+            <div>
+              <h2 class="experience-card-title">{{titre}}</h2>
+              <p class="experience-card-org">{{organisation}}</p>
+            </div>
+          </div>
+          <div class="experience-card-meta">
+            <p><span class="experience-meta-label">{{ui.experiences.period_label}}</span> {{date_label}}</p>
+            <p><span class="experience-meta-label">{{ui.experiences.location_label}}</span> {{lieu}}</p>
+          </div>
+          <span class="experience-kind-pill experience-kind-pill-{{kind}}">{{kind_label}}</span>
+          <button type="button" class="experience-card-close" data-experience-close="true" aria-label="{{ui.experiences.close_card}}">
+            {{ui.experiences.close_card}}
+          </button>
+        </div>
+
+        {{#resume}}
+        <p class="experience-card-resume">{{resume}}</p>
+        {{/resume}}
+
+        <div class="experience-card-grid">
+          <div class="experience-card-main">
+            <section class="experience-card-section">
+              <h3 class="experience-card-section-title">{{ui.experiences.context_label}}</h3>
+              <p>{{contexte}}</p>
+            </section>
+
+            <section class="experience-card-section">
+              <h3 class="experience-card-section-title">{{ui.experiences.mission_label}}</h3>
+              <p>{{mission}}</p>
+            </section>
+
+            <section class="experience-card-section">
+              <h3 class="experience-card-section-title">{{ui.experiences.highlights_label}}</h3>
+              <ul class="experience-points">
+                {{#points_cles}}
+                <li>{{.}}</li>
+                {{/points_cles}}
+              </ul>
+            </section>
+
+            <section class="experience-card-section">
+              <h3 class="experience-card-section-title">{{ui.experiences.impact_label}}</h3>
+              <p>{{apport}}</p>
+            </section>
+          </div>
+
+          <aside class="experience-card-side">
+            <section class="experience-card-section experience-card-section-side">
+              <h3 class="experience-card-section-title">{{ui.experiences.environment_label}}</h3>
+              <div class="experience-tags">
+                {{#environnement}}
+                <span class="experience-tag">{{.}}</span>
+                {{/environnement}}
+              </div>
+            </section>
+          </aside>
+        </div>
+      </article>
+      {{/experiences}}
+    </div>
+  </div>
+</section>

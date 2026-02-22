@@ -1,6 +1,7 @@
 const routes = {
   accueil: "templates/accueil.tpl.html",
   projets: "templates/projets.tpl.html",
+  experiences: "templates/experiences.tpl.html",
   cv: "templates/cv.tpl.html",
   hobbies: "templates/hobbies.tpl.html",
   cours: "templates/cours.tpl.html"
@@ -20,6 +21,7 @@ const LAST_UPDATED_PATHS = [
   "js/data.js",
   "templates/accueil.tpl.html",
   "templates/projets.tpl.html",
+  "templates/experiences.tpl.html",
   "templates/cours.tpl.html",
   "templates/hobbies.tpl.html"
 ];
@@ -33,6 +35,7 @@ const UI_STRINGS = {
       brand: "Philibert Pappens - Portfolio",
       home: "Accueil",
       projects: "Projets",
+      experiences: "Expériences",
       hobbies: "Centres d'intérêt",
       courses: "Cours suivis",
       skip_content: "Aller au contenu",
@@ -62,6 +65,23 @@ const UI_STRINGS = {
       results_title: "Résultats clés",
       carousel_prev: "Image précédente",
       carousel_next: "Image suivante"
+    },
+    experiences: {
+      title: "Expériences professionnelles",
+      subtitle: "Stages et immersions qui ont structuré ma compréhension du travail en organisation.",
+      timeline_label: "Frise chronologique",
+      timeline_aria: "Frise des expériences",
+      select_prompt: "Cliquez sur un point de la frise pour afficher le détail d'une expérience.",
+      period_label: "Période :",
+      location_label: "Lieu :",
+      context_label: "Contexte",
+      mission_label: "Mission",
+      highlights_label: "Points clés",
+      environment_label: "Environnement",
+      impact_label: "Ce que cela m'a apporté",
+      close_card: "Fermer",
+      kind_professional: "Expérience",
+      kind_volunteer: "Bénévolat"
     },
     hobbies: { title: "Centres d'intérêt", subtitle: "Au-delà de l'ingénierie, je cultive des passions qui me définissent" },
     cours: {
@@ -93,6 +113,7 @@ const UI_STRINGS = {
       updated_value: "21 février 2026",
       link_home: "Accueil",
       link_projects: "Projets",
+      link_experiences: "Expériences",
       link_courses: "Cours",
       link_hobbies: "Centres d'intérêt",
       contact_label: "Contact",
@@ -109,6 +130,7 @@ const UI_STRINGS = {
       page: {
         accueil: "Accueil - Philibert Pappens",
         projets: "Projets - Philibert Pappens",
+        experiences: "Expériences - Philibert Pappens",
         cours: "Cours - Philibert Pappens",
         hobbies: "Centres d'intérêt - Philibert Pappens"
       }
@@ -121,6 +143,7 @@ const UI_STRINGS = {
       brand: "Philibert Pappens - Portfolio",
       home: "Home",
       projects: "Projects",
+      experiences: "Experience",
       hobbies: "Interests",
       courses: "Courses",
       skip_content: "Skip to content",
@@ -150,6 +173,23 @@ const UI_STRINGS = {
       results_title: "Key results",
       carousel_prev: "Previous image",
       carousel_next: "Next image"
+    },
+    experiences: {
+      title: "Professional Experience",
+      subtitle: "Internships and immersive experiences that shaped how I understand work in organizations.",
+      timeline_label: "Timeline",
+      timeline_aria: "Experience timeline",
+      select_prompt: "Click a point on the timeline to display an experience card.",
+      period_label: "Period:",
+      location_label: "Location:",
+      context_label: "Context",
+      mission_label: "Mission",
+      highlights_label: "Key points",
+      environment_label: "Environment",
+      impact_label: "What it brought me",
+      close_card: "Close",
+      kind_professional: "Experience",
+      kind_volunteer: "Volunteer"
     },
     hobbies: { title: "Interests", subtitle: "Beyond engineering, I cultivate passions that shape who I am" },
     cours: {
@@ -181,6 +221,7 @@ const UI_STRINGS = {
       updated_value: "February 21, 2026",
       link_home: "Home",
       link_projects: "Projects",
+      link_experiences: "Experience",
       link_courses: "Courses",
       link_hobbies: "Interests",
       contact_label: "Contact",
@@ -197,6 +238,7 @@ const UI_STRINGS = {
       page: {
         accueil: "Home - Philibert Pappens",
         projets: "Projects - Philibert Pappens",
+        experiences: "Experience - Philibert Pappens",
         cours: "Courses - Philibert Pappens",
         hobbies: "Interests - Philibert Pappens"
       }
@@ -209,6 +251,7 @@ const UI_STRINGS = {
       brand: "Philibert Pappens - Portfolio",
       home: "Start",
       projects: "Projekte",
+      experiences: "Erfahrungen",
       hobbies: "Interessen",
       courses: "Lehrveranstaltungen",
       skip_content: "Zum Inhalt springen",
@@ -238,6 +281,23 @@ const UI_STRINGS = {
       results_title: "Wichtigste Ergebnisse",
       carousel_prev: "Vorheriges Bild",
       carousel_next: "Nächstes Bild"
+    },
+    experiences: {
+      title: "Berufserfahrungen",
+      subtitle: "Praktika und berufliche Einblicke, die mein Verständnis von Arbeit in Organisationen geprägt haben.",
+      timeline_label: "Zeitleiste",
+      timeline_aria: "Zeitleiste der Erfahrungen",
+      select_prompt: "Klicken Sie auf einen Punkt der Zeitleiste, um die Detailkarte einer Erfahrung anzuzeigen.",
+      period_label: "Zeitraum:",
+      location_label: "Ort:",
+      context_label: "Kontext",
+      mission_label: "Aufgabe",
+      highlights_label: "Wichtige Punkte",
+      environment_label: "Umfeld",
+      impact_label: "Was es mir gebracht hat",
+      close_card: "Schließen",
+      kind_professional: "Erfahrung",
+      kind_volunteer: "Ehrenamt"
     },
     hobbies: { title: "Interessen", subtitle: "Neben dem Ingenieurwesen pflege ich Leidenschaften, die mich prägen" },
     cours: {
@@ -269,6 +329,7 @@ const UI_STRINGS = {
       updated_value: "21. Februar 2026",
       link_home: "Start",
       link_projects: "Projekte",
+      link_experiences: "Erfahrungen",
       link_courses: "Kurse",
       link_hobbies: "Interessen",
       contact_label: "Kontakt",
@@ -285,6 +346,7 @@ const UI_STRINGS = {
       page: {
         accueil: "Start - Philibert Pappens",
         projets: "Projekte - Philibert Pappens",
+        experiences: "Erfahrungen - Philibert Pappens",
         cours: "Kurse - Philibert Pappens",
         hobbies: "Interessen - Philibert Pappens"
       }
@@ -1034,12 +1096,176 @@ for (const lang of Object.keys(CONTENT_TRANSLATIONS_PATCH)) {
   const dict = CONTENT_TRANSLATIONS[lang];
   const patchLang = CONTENT_TRANSLATIONS_PATCH[lang];
   if (!dict || !patchLang) continue;
-  if (patchLang.description) {
-    dict.description = dict.description || {};
-    Object.assign(dict.description, patchLang.description);
+  for (const bucket of Object.keys(patchLang)) {
+    dict[bucket] = dict[bucket] || {};
+    Object.assign(dict[bucket], patchLang[bucket]);
   }
 }
 // END GENERATED CONTENT TRANSLATION PATCH
+
+const EXPERIENCES_TRANSLATIONS_PATCH = {
+  en: {
+    titre: {
+      "Gendarmerie nationale": "French National Gendarmerie",
+      "Digital Transformation - Fiber Factory": "Digital Transformation - Fiber Factory",
+      "Chef assistant de troupe (SUF - scouts marins)": "Assistant Troop Leader (SUF - Sea Scouts)"
+    },
+    description: {
+      "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier": "Scouts Unitaires de France (SUF) - Saint François-Xavier Troop",
+      "Paris, France": "Paris, France",
+      "2023 – Aujourd'hui": "2023 – Present",
+      "Encadrement bénévole en scoutisme marin : préparation d'activités, conduite de camps et suivi d'un groupe de jeunes.": "Volunteer supervision in sea scouting: planning activities, helping run camps, and supervising a group of young scouts.",
+      "Engagement bénévole d'encadrement en scoutisme marin, avec responsabilité éducative, organisation d'activités et conduite de camps.": "Volunteer leadership engagement in sea scouting, with educational responsibility, activity planning, and camp supervision.",
+      "Responsabilité de chef assistant au sein d'une troupe SUF de scouts marins, dans un cadre d'encadrement régulier sur l'année et de camps d'été.": "Assistant troop leader role within an SUF sea-scout troop, with regular year-round supervision and summer camps.",
+      "Encadrer un groupe de jeunes, préparer et conduire des activités, participer à l'organisation des camps et contribuer à la formation humaine et à la cohésion de la troupe.": "Supervise a group of young scouts, prepare and run activities, help organize camps, and contribute to their development and to troop cohesion.",
+      "Encadrement d'un groupe d'environ 20 adolescents dans un cadre éducatif exigeant et structuré.": "Supervision of a group of about 20 teenagers in a demanding and structured educational setting.",
+      "Participation à l'organisation de week-ends campés et de camps d'été, incluant plusieurs jours de navigation.": "Participation in the organization of camp weekends and summer camps, including several days of sailing.",
+      "Coordination avec l'équipe de maîtrise pour la préparation des activités, la sécurité et la vie de camp.": "Coordination with the leadership team for activity preparation, safety, and camp life.",
+      "Mobilisation du CEP1 (qualification d'encadrement scout) et du PSC1 dans la conduite des activités.": "Use of CEP1 (scout leadership qualification) and PSC1 first-aid training in activity supervision.",
+      "Bénévolat": "Volunteer",
+      "Encadrement": "Supervision",
+      "Scoutisme marin": "Sea scouting",
+      "Organisation d'activités": "Activity planning",
+      "Responsabilité": "Responsibility",
+      "Cet engagement m'apprend concrètement à préparer des activités, encadrer un groupe dans la durée et prendre des responsabilités.": "This commitment gives me concrete experience in planning activities, supervising a group over time, and taking responsibility.",
+      "Cet engagement me fait progresser de manière très concrète en leadership, en sens des responsabilités, en préparation collective et en gestion de groupe dans la durée.": "This commitment gives me very concrete experience in supervision, responsibility, collective preparation, and long-term group management.",
+      "Compagnie de gendarmerie de Guingamp": "Guingamp Gendarmerie Company",
+      "Guingamp, Côtes-d'Armor, France": "Guingamp, Côtes-d'Armor, France",
+      "Déc. 2023 – Avr. 2024": "Dec. 2023 – Apr. 2024",
+      "Formation humaine et militaire en gendarmerie : formation initiale à l'EOGN de Melun puis immersion de terrain et de commandement au sein de la compagnie de Guingamp.": "Human and military training experience within the gendarmerie: initial training at the EOGN in Melun, followed by field and command-level immersion within the Guingamp company.",
+      "Expérience de 1A de l'École polytechnique en gendarmerie nationale, combinant une phase de formation (EOGN, Melun, avec modules opérationnels dont maintien/rétablissement de l'ordre) et une phase en unité dans les Côtes-d'Armor.": "Year-1 experience at École polytechnique within the French National Gendarmerie, combining a training phase (EOGN, Melun, including operational modules such as crowd-control training) and a unit phase in Côtes-d'Armor.",
+      "Découvrir le fonctionnement d'une compagnie de gendarmerie, suivre des unités de terrain et la cellule de commandement, et comprendre les interactions entre sécurité publique, commandement et coordination territoriale.": "Understand how a gendarmerie company operates, follow field units and the command cell, and analyze the interactions between public security, command, and territorial coordination.",
+      "Patrouilles et observation d'interventions en brigade territoriale (BTA) : interventions, police de la route, accueil, transfèrements et découverte des procédures.": "Patrols and observation of interventions within a territorial brigade (BTA): interventions, traffic policing, front-desk work, prisoner transfers, and discovery of procedural workflows.",
+      "Patrouilles et observation d'interventions en brigade territoriale (BTA) : police de la route, accueil, transfèrements et découverte des procédures.": "Patrols and observation of interventions within a territorial brigade (BTA): traffic policing, front-desk work, prisoner transfers, and discovery of procedural workflows.",
+      "Immersion au PSIG de Guingamp : patrouilles de surveillance et d'appui, entraînements à l'intervention, préparation physique et culture opérationnelle.": "Immersion with the Guingamp PSIG: support and surveillance patrols, intervention training, physical preparation, and operational culture.",
+      "Immersion au PSIG de Guingamp : patrouilles d'appui, entraînements à l'intervention et préparation physique.": "Immersion with the Guingamp PSIG: support patrols, intervention training, and physical preparation.",
+      "Suivi du commandement en second de la compagnie sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité.": "Shadowing the deputy company commander during sensitive events (farmers' protests, En Avant Guingamp matches) and participation in security meetings.",
+      "Suivi du commandement sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité.": "Following command staff during sensitive events (farmers' protests, En Avant Guingamp matches) and participating in security meetings.",
+      "Découverte du travail interservices et du fonctionnement d'autres institutions (justice, sous-préfecture, secours / centres opérationnels).": "Exposure to inter-agency work and to the functioning of other institutions (judiciary, sub-prefecture, emergency services / operational centers).",
+      "Institution publique": "Public institution",
+      "Institution régalienne": "Sovereign public institution",
+      "Terrain": "Field operations",
+      "Chaîne de commandement": "Chain of command",
+      "Sécurité publique": "Public security",
+      "Coordination": "Coordination",
+      "Coordination territoriale": "Territorial coordination",
+      "Cette expérience m'a donné une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, avec des exigences fortes de rigueur, de coordination et de sang-froid.": "This experience gave me a concrete understanding of how a hierarchical organization functions in an operational context, with strong requirements for rigor, coordination, and composure.",
+      "Cette expérience m'a apporté une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, ainsi que des réflexes de rigueur, de coordination et de sang-froid utiles dans tout environnement exigeant.": "This experience gave me a concrete understanding of how a hierarchical organization functions in an operational setting, along with habits of rigor, coordination, and composure that are valuable in any demanding environment.",
+      "Deutsche Telekom Technik GmbH": "Deutsche Telekom Technik GmbH",
+      "Bonn, Allemagne": "Bonn, Germany",
+      "4 juin 2025 – 12 septembre 2025": "June 4, 2025 – September 12, 2025",
+      "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.": "Work within Deutsche Telekom Technik's Fiber Factory digitalization team in the context of fiber deployment in Germany.",
+      "Immersion dans l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement massif de la fibre optique en Allemagne.": "Immersion in Deutsche Telekom Technik's Fiber Factory digitalization team, in the context of large-scale fiber deployment in Germany.",
+      "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.": "Second-year internship at École polytechnique, carried out at the Bonn headquarters in a German-speaking environment, within a team working on digitalization and organizational topics.",
+      "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn au sein d'un grand groupe technologique, dans un environnement germanophone et transversal, à l'interface entre digitalisation, organisation et innovation.": "Second-year internship at École polytechnique, carried out at the Bonn headquarters of a large technology group, in a German-speaking and cross-functional environment at the intersection of digitalization, organization, and innovation.",
+      "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, en particulier sur la documentation interne de l'équipe et sur des sujets liés à l'IA, en lien avec plusieurs interlocuteurs.": "Contribute to the Digital Transformation / Fiber Factory team's work, especially on internal team documentation and on AI-related topics, working with several stakeholders.",
+      "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, notamment sur la structuration de la connaissance interne et sur des sujets de transformation (dont la stratégie IA), en coordination avec différents interlocuteurs.": "Contribute to the Digital Transformation / Fiber Factory team's work, particularly on structuring internal knowledge and on transformation topics (including AI strategy), in coordination with multiple stakeholders.",
+      "Rédaction d'un playbook interne pour l'équipe de digitalisation, utile pour l'intégration des nouveaux arrivants et pour documenter les pratiques de travail.": "Drafting an internal playbook for the digitalization team, useful for onboarding new arrivals and documenting working practices.",
+      "Conception d'un playbook de référence pour l'équipe de digitalisation, utile à l'intégration des nouveaux arrivants et à la capitalisation des pratiques.": "Design of a reference playbook for the digitalization team, supporting onboarding and the capitalization of internal practices.",
+      "Rédaction d'un playbook interne pour l'équipe de digitalisation (intégration des nouveaux arrivants, documentation des pratiques).": "Drafting an internal playbook for the digitalization team (onboarding new arrivals, documenting working practices).",
+      "Participation à des travaux sur l'usage de l'IA et à de nombreuses réunions avec des équipes aux profils variés.": "Participation in work on AI use and in many meetings with teams from varied backgrounds.",
+      "Contribution à des réflexions de stratégie IA (FNES) et participation à de nombreuses réunions de travail avec des équipes aux profils variés.": "Contribution to AI-strategy discussions (FNES) and participation in many working meetings with teams from varied backgrounds.",
+      "Participation à des travaux sur l'usage de l'IA et à des réunions avec plusieurs équipes.": "Participation in work on AI use and in meetings with several teams.",
+      "Découverte des méthodes de travail, de coordination et de décision dans un grand groupe technologique international.": "Exposure to working methods, coordination, and decision-making in a large international technology group.",
+      "Découverte des méthodes de travail, de coordination et de management d'un grand groupe technologique international.": "Exposure to the working methods, coordination practices, and management style of a large international technology group.",
+      "Découverte des méthodes de travail et de coordination d'un grand groupe technologique international.": "Exposure to the working methods and coordination practices of a large international technology group.",
+      "Pratique quotidienne de l'allemand en contexte professionnel et adaptation rapide à un environnement de travail germanophone.": "Daily use of German in a professional setting and rapid adaptation to a German-speaking work environment.",
+      "Cette expérience m'a donné une vision concrète du fonctionnement d'un grand groupe technologique, tout en renforçant mon autonomie, mon adaptation à un environnement germanophone et ma communication professionnelle en allemand.": "This experience gave me a concrete view of how a large technology group operates, while strengthening my autonomy, my adaptation to a German-speaking environment, and my professional communication in German.",
+      "Grand groupe technologique": "Large technology group",
+      "Transformation digitale": "Digital transformation",
+      "Innovation": "Innovation",
+      "Allemand professionnel": "Professional German",
+      "Travail en équipe": "Teamwork",
+      "Cette expérience m'a donné une vision concrète des enjeux de transformation et d'innovation dans une grande entreprise, tout en renforçant mon autonomie, mon adaptation interculturelle et ma communication professionnelle en allemand.": "This experience gave me a concrete view of transformation and innovation challenges in a large company, while strengthening my autonomy, intercultural adaptation, and professional communication in German."
+    }
+  },
+  de: {
+    titre: {
+      "Gendarmerie nationale": "Französische Gendarmerie",
+      "Digital Transformation - Fiber Factory": "Digital Transformation - Fiber Factory",
+      "Chef assistant de troupe (SUF - scouts marins)": "Assistenz-Truppführer (SUF - Seepfadfinder)"
+    },
+    description: {
+      "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier": "Scouts Unitaires de France (SUF) - Truppe Saint François-Xavier",
+      "Paris, France": "Paris, Frankreich",
+      "2023 – Aujourd'hui": "2023 – heute",
+      "Encadrement bénévole en scoutisme marin : préparation d'activités, conduite de camps et suivi d'un groupe de jeunes.": "Ehrenamtliche Betreuung bei den Seepfadfindern: Vorbereitung von Aktivitäten, Mitwirkung bei Lagern und Begleitung einer Jugendgruppe.",
+      "Engagement bénévole d'encadrement en scoutisme marin, avec responsabilité éducative, organisation d'activités et conduite de camps.": "Ehrenamtliches Engagement in der Leitung von Seepfadfindern mit erzieherischer Verantwortung, Aktivitätsorganisation und Lagerführung.",
+      "Responsabilité de chef assistant au sein d'une troupe SUF de scouts marins, dans un cadre d'encadrement régulier sur l'année et de camps d'été.": "Rolle als Assistenz-Truppführer in einer SUF-Seepfadfindertruppe mit regelmäßiger Leitung über das Jahr hinweg und Sommerlagern.",
+      "Encadrer un groupe de jeunes, préparer et conduire des activités, participer à l'organisation des camps et contribuer à la formation humaine et à la cohésion de la troupe.": "Eine Gruppe Jugendlicher betreuen, Aktivitäten vorbereiten und durchführen, bei der Organisation von Lagern mitwirken und zur persönlichen Entwicklung und zum Zusammenhalt der Truppe beitragen.",
+      "Encadrement d'un groupe d'environ 20 adolescents dans un cadre éducatif exigeant et structuré.": "Leitung einer Gruppe von etwa 20 Jugendlichen in einem anspruchsvollen und strukturierten pädagogischen Rahmen.",
+      "Participation à l'organisation de week-ends campés et de camps d'été, incluant plusieurs jours de navigation.": "Mitwirkung bei der Organisation von Lagerwochenenden und Sommerlagern, einschließlich mehrerer Tage Navigation/Segeln.",
+      "Coordination avec l'équipe de maîtrise pour la préparation des activités, la sécurité et la vie de camp.": "Koordination mit dem Leitungsteam bei Aktivitätsvorbereitung, Sicherheit und Lagerleben.",
+      "Mobilisation du CEP1 (qualification d'encadrement scout) et du PSC1 dans la conduite des activités.": "Einsatz von CEP1 (Pfadfinder-Leitungsqualifikation) und PSC1 bei der Durchführung der Aktivitäten.",
+      "Bénévolat": "Ehrenamt",
+      "Encadrement": "Betreuung",
+      "Scoutisme marin": "Seepfadfinder",
+      "Organisation d'activités": "Aktivitätsorganisation",
+      "Responsabilité": "Verantwortung",
+      "Cet engagement m'apprend concrètement à préparer des activités, encadrer un groupe dans la durée et prendre des responsabilités.": "Dieses Engagement lehrt mich ganz konkret, Aktivitäten vorzubereiten, eine Gruppe über längere Zeit zu betreuen und Verantwortung zu übernehmen.",
+      "Cet engagement me fait progresser de manière très concrète en leadership, en sens des responsabilités, en préparation collective et en gestion de groupe dans la durée.": "Dieses Engagement lässt mich sehr konkret in Führung, Verantwortungsbewusstsein, kollektiver Vorbereitung und langfristiger Gruppenleitung wachsen.",
+      "Compagnie de gendarmerie de Guingamp": "Gendarmeriekompanie Guingamp",
+      "Guingamp, Côtes-d'Armor, France": "Guingamp, Côtes-d'Armor, Frankreich",
+      "Déc. 2023 – Avr. 2024": "Dez. 2023 – Apr. 2024",
+      "Formation humaine et militaire en gendarmerie : formation initiale à l'EOGN de Melun puis immersion de terrain et de commandement au sein de la compagnie de Guingamp.": "Menschliche und militärische Ausbildung in der Gendarmerie: Grundausbildung an der EOGN in Melun, anschließend Feld- und Kommandoeinblick innerhalb der Kompanie Guingamp.",
+      "Expérience de 1A de l'École polytechnique en gendarmerie nationale, combinant une phase de formation (EOGN, Melun, avec modules opérationnels dont maintien/rétablissement de l'ordre) et une phase en unité dans les Côtes-d'Armor.": "Erfahrung des 1. Jahres der École polytechnique in der Gendarmerie nationale, mit einer Ausbildungsphase (EOGN, Melun, einschließlich operativer Module wie Aufrechterhaltung/Wiederherstellung der Ordnung) und einer Einheitphase in den Côtes-d'Armor.",
+      "Découvrir le fonctionnement d'une compagnie de gendarmerie, suivre des unités de terrain et la cellule de commandement, et comprendre les interactions entre sécurité publique, commandement et coordination territoriale.": "Das Funktionieren einer Gendarmeriekompanie kennenlernen, Feldeinheiten und die Führungszelle begleiten und die Wechselwirkungen zwischen öffentlicher Sicherheit, Führung und territorialer Koordination verstehen.",
+      "Patrouilles et observation d'interventions en brigade territoriale (BTA) : interventions, police de la route, accueil, transfèrements et découverte des procédures.": "Streifen und Beobachtung von Einsätzen in der territorialen Brigade (BTA): Einsätze, Verkehrspolizei, Empfangsdienst, Überführungen und Kennenlernen von Verfahren.",
+      "Patrouilles et observation d'interventions en brigade territoriale (BTA) : police de la route, accueil, transfèrements et découverte des procédures.": "Streifen und Beobachtung von Einsätzen in der territorialen Brigade (BTA): Verkehrspolizei, Empfangsdienst, Überführungen und Kennenlernen von Verfahren.",
+      "Immersion au PSIG de Guingamp : patrouilles de surveillance et d'appui, entraînements à l'intervention, préparation physique et culture opérationnelle.": "Einblick in das PSIG Guingamp: Überwachungs- und Unterstützungsstreifen, Interventionstrainings, körperliche Vorbereitung und operative Kultur.",
+      "Immersion au PSIG de Guingamp : patrouilles d'appui, entraînements à l'intervention et préparation physique.": "Einblick in das PSIG Guingamp: Unterstützungsstreifen, Interventionstrainings und körperliche Vorbereitung.",
+      "Suivi du commandement en second de la compagnie sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité.": "Begleitung des stellvertretenden Kompaniekommandeurs bei sensiblen Ereignissen (Bauernproteste, Spiele von En Avant Guingamp) und Teilnahme an Sicherheitsbesprechungen.",
+      "Suivi du commandement sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité.": "Begleitung der Führung bei sensiblen Ereignissen (Bauernproteste, Spiele von En Avant Guingamp) und Teilnahme an Sicherheitsbesprechungen.",
+      "Découverte du travail interservices et du fonctionnement d'autres institutions (justice, sous-préfecture, secours / centres opérationnels).": "Einblick in behördenübergreifende Zusammenarbeit und in die Funktionsweise anderer Institutionen (Justiz, Unterpräfektur, Rettungsdienste / Einsatzzentralen).",
+      "Institution publique": "Öffentliche Institution",
+      "Institution régalienne": "Hoheitliche Institution",
+      "Terrain": "Einsatzfeld",
+      "Chaîne de commandement": "Befehlskette",
+      "Sécurité publique": "Öffentliche Sicherheit",
+      "Coordination": "Koordination",
+      "Coordination territoriale": "Territoriale Koordination",
+      "Cette expérience m'a donné une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, avec des exigences fortes de rigueur, de coordination et de sang-froid.": "Diese Erfahrung gab mir ein konkretes Verständnis für das Funktionieren einer hierarchischen Organisation im operativen Kontext mit hohen Anforderungen an Genauigkeit, Koordination und Besonnenheit.",
+      "Cette expérience m'a apporté une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, ainsi que des réflexes de rigueur, de coordination et de sang-froid utiles dans tout environnement exigeant.": "Diese Erfahrung vermittelte mir ein konkretes Verständnis für das Funktionieren einer hierarchischen Organisation im operativen Kontext sowie Gewohnheiten in Bezug auf Genauigkeit, Koordination und Besonnenheit, die in jedem anspruchsvollen Umfeld nützlich sind.",
+      "Deutsche Telekom Technik GmbH": "Deutsche Telekom Technik GmbH",
+      "Bonn, Allemagne": "Bonn, Deutschland",
+      "4 juin 2025 – 12 septembre 2025": "4. Juni 2025 – 12. September 2025",
+      "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.": "Mitarbeit im Digitalisierungsteam der Fiber Factory von Deutsche Telekom Technik im Kontext des Glasfaserausbaus in Deutschland.",
+      "Immersion dans l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement massif de la fibre optique en Allemagne.": "Einblick in das Digitalisierungsteam der Fiber Factory von Deutsche Telekom Technik im Kontext des großflächigen Glasfaserausbaus in Deutschland.",
+      "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.": "Praktikum des zweiten Jahres der École polytechnique am Standort Bonn in einem deutschsprachigen Umfeld, in einem Team zu Themen der Digitalisierung und Organisation.",
+      "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn au sein d'un grand groupe technologique, dans un environnement germanophone et transversal, à l'interface entre digitalisation, organisation et innovation.": "Praktikum des zweiten Jahres der École polytechnique am Standort Bonn in einem großen Technologiekonzern, in einem deutschsprachigen und bereichsübergreifenden Umfeld an der Schnittstelle von Digitalisierung, Organisation und Innovation.",
+      "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, en particulier sur la documentation interne de l'équipe et sur des sujets liés à l'IA, en lien avec plusieurs interlocuteurs.": "Mitarbeit an den Aufgaben des Teams Digital Transformation / Fiber Factory, insbesondere an der internen Teamdokumentation und an KI-bezogenen Themen mit mehreren Ansprechpartnern.",
+      "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, notamment sur la structuration de la connaissance interne et sur des sujets de transformation (dont la stratégie IA), en coordination avec différents interlocuteurs.": "Mitarbeit an den Aufgaben des Teams Digital Transformation / Fiber Factory, insbesondere zur Strukturierung internen Wissens und zu Transformationsthemen (einschließlich KI-Strategie), in Abstimmung mit verschiedenen Ansprechpartnern.",
+      "Rédaction d'un playbook interne pour l'équipe de digitalisation, utile pour l'intégration des nouveaux arrivants et pour documenter les pratiques de travail.": "Erstellung eines internen Playbooks für das Digitalisierungsteam, nützlich für das Onboarding neuer Mitarbeitender und zur Dokumentation von Arbeitsweisen.",
+      "Conception d'un playbook de référence pour l'équipe de digitalisation, utile à l'intégration des nouveaux arrivants et à la capitalisation des pratiques.": "Erstellung eines Referenz-Playbooks für das Digitalisierungsteam zur Unterstützung des Onboardings und zur Sicherung interner Praktiken.",
+      "Rédaction d'un playbook interne pour l'équipe de digitalisation (intégration des nouveaux arrivants, documentation des pratiques).": "Erstellung eines internen Playbooks für das Digitalisierungsteam (Onboarding neuer Mitarbeitender, Dokumentation von Arbeitsweisen).",
+      "Participation à des travaux sur l'usage de l'IA et à de nombreuses réunions avec des équipes aux profils variés.": "Mitarbeit an Themen zum Einsatz von KI und Teilnahme an zahlreichen Besprechungen mit Teams unterschiedlicher Profile.",
+      "Contribution à des réflexions de stratégie IA (FNES) et participation à de nombreuses réunions de travail avec des équipes aux profils variés.": "Beitrag zu Überlegungen zur KI-Strategie (FNES) und Teilnahme an zahlreichen Arbeitssitzungen mit Teams unterschiedlicher Profile.",
+      "Participation à des travaux sur l'usage de l'IA et à des réunions avec plusieurs équipes.": "Mitarbeit an Themen zum Einsatz von KI und Teilnahme an Besprechungen mit mehreren Teams.",
+      "Découverte des méthodes de travail, de coordination et de décision dans un grand groupe technologique international.": "Einblick in Arbeits-, Koordinations- und Entscheidungsweisen eines großen internationalen Technologiekonzerns.",
+      "Découverte des méthodes de travail, de coordination et de management d'un grand groupe technologique international.": "Einblick in Arbeits-, Koordinations- und Managementmethoden eines großen internationalen Technologiekonzerns.",
+      "Découverte des méthodes de travail et de coordination d'un grand groupe technologique international.": "Einblick in Arbeits- und Koordinationsweisen eines großen internationalen Technologiekonzerns.",
+      "Pratique quotidienne de l'allemand en contexte professionnel et adaptation rapide à un environnement de travail germanophone.": "Tägliche Nutzung des Deutschen im beruflichen Kontext und schnelle Anpassung an ein deutschsprachiges Arbeitsumfeld.",
+      "Cette expérience m'a donné une vision concrète du fonctionnement d'un grand groupe technologique, tout en renforçant mon autonomie, mon adaptation à un environnement germanophone et ma communication professionnelle en allemand.": "Diese Erfahrung gab mir einen konkreten Einblick in die Funktionsweise eines großen Technologiekonzerns und stärkte zugleich meine Autonomie, meine Anpassung an ein deutschsprachiges Umfeld und meine berufliche Kommunikation auf Deutsch.",
+      "Grand groupe technologique": "Großer Technologiekonzern",
+      "Transformation digitale": "Digitale Transformation",
+      "Innovation": "Innovation",
+      "Allemand professionnel": "Berufsdeutsch",
+      "Travail en équipe": "Teamarbeit",
+      "Cette expérience m'a donné une vision concrète des enjeux de transformation et d'innovation dans une grande entreprise, tout en renforçant mon autonomie, mon adaptation interculturelle et ma communication professionnelle en allemand.": "Diese Erfahrung gab mir einen konkreten Einblick in Transformations- und Innovationsfragen in einem großen Unternehmen und stärkte zugleich meine Autonomie, meine interkulturelle Anpassungsfähigkeit und meine berufliche Kommunikation auf Deutsch."
+    }
+  }
+};
+
+for (const lang of Object.keys(EXPERIENCES_TRANSLATIONS_PATCH)) {
+  const dict = CONTENT_TRANSLATIONS[lang];
+  const patchLang = EXPERIENCES_TRANSLATIONS_PATCH[lang];
+  if (!dict || !patchLang) continue;
+  for (const bucket of Object.keys(patchLang)) {
+    dict[bucket] = dict[bucket] || {};
+    Object.assign(dict[bucket], patchLang[bucket]);
+  }
+}
+
 function parseProjectEndDate(dateRange) {
   if (!dateRange) return 0;
   const value = String(dateRange).trim();
@@ -1245,6 +1471,19 @@ function localizeContent(data, lang) {
     });
   });
 
+  (data.experiences || []).forEach((exp) => {
+    exp.titre = tr(exp.titre, dict.titre);
+    exp.organisation = tr(exp.organisation, dict.description);
+    exp.lieu = tr(exp.lieu, dict.description);
+    exp.date_label = tr(exp.date_label, dict.description);
+    exp.resume = tr(exp.resume, dict.description);
+    exp.contexte = tr(exp.contexte, dict.description);
+    exp.mission = tr(exp.mission, dict.description);
+    exp.apport = tr(exp.apport, dict.description);
+    exp.points_cles = (exp.points_cles || []).map((it) => tr(it, dict.description));
+    exp.environnement = (exp.environnement || []).map((it) => tr(it, dict.description));
+  });
+
   return data;
 }
 
@@ -1265,6 +1504,16 @@ function getData(lang) {
   localizeContent(data, lang);
 
   data.projets.sort((a, b) => parseProjectEndDate(b.date) - parseProjectEndDate(a.date));
+
+  if (Array.isArray(data.experiences)) {
+    data.experiences.sort((a, b) => String(a.date_debut || "").localeCompare(String(b.date_debut || "")));
+    const lastIndex = data.experiences.length - 1;
+    data.experiences.forEach((exp, index) => {
+      exp.is_first = index === lastIndex;
+      const kindKey = exp.kind === "volunteer" ? "kind_volunteer" : "kind_professional";
+      exp.kind_label = (ui.experiences && ui.experiences[kindKey]) || "";
+    });
+  }
 
   data.cours.forEach((matiere) => {
     let courseCount = 0;
@@ -1290,6 +1539,141 @@ function getData(lang) {
   data.ui = ui;
   data.current_lang = lang;
   return data;
+}
+
+function initExperiencesTimeline() {
+  const root = document.querySelector("[data-experiences-root]");
+  if (!root) return;
+
+  const tabs = Array.from(root.querySelectorAll("[data-experience-target]"));
+  const panels = Array.from(root.querySelectorAll("[data-experience-card]"));
+  const panelsWrap = root.querySelector(".experience-panels");
+  const emptyState = root.querySelector("[data-experience-empty]");
+  const closeButtons = Array.from(root.querySelectorAll("[data-experience-close]"));
+  if (!tabs.length || !panels.length || !panelsWrap) return;
+
+  let activeId = null;
+  let lastActiveTab = null;
+
+  function isMobileLayout() {
+    return window.matchMedia("(max-width: 991px)").matches;
+  }
+
+  function clearDesktopPositioning(panel) {
+    if (!panel) return;
+    panel.style.removeProperty("--experience-card-left");
+    panel.style.removeProperty("--experience-anchor-x");
+  }
+
+  function syncActivePanelLayout() {
+    if (!activeId) {
+      panelsWrap.style.removeProperty("height");
+      panelsWrap.classList.remove("has-active");
+      return;
+    }
+
+    const activeTab = tabs.find((tab) => tab.dataset.experienceTarget === activeId);
+    const activePanel = panels.find((panel) => panel.dataset.experienceCard === activeId);
+    if (!activeTab || !activePanel) return;
+
+    lastActiveTab = activeTab;
+    panelsWrap.classList.add("has-active");
+
+    if (isMobileLayout()) {
+      clearDesktopPositioning(activePanel);
+      panelsWrap.style.removeProperty("height");
+      return;
+    }
+
+    const dot = activeTab.querySelector(".experience-timeline-node-dot") || activeTab;
+    const wrapRect = panelsWrap.getBoundingClientRect();
+    const dotRect = dot.getBoundingClientRect();
+    const panelWidth = activePanel.offsetWidth;
+    const wrapWidth = wrapRect.width;
+
+    const anchorXRaw = dotRect.left + dotRect.width / 2 - wrapRect.left;
+    const maxLeft = Math.max(0, wrapWidth - panelWidth);
+    const desiredLeft = anchorXRaw - panelWidth / 2;
+    const cardLeft = Math.min(Math.max(0, desiredLeft), maxLeft);
+    const anchorXInCard = Math.min(Math.max(18, anchorXRaw - cardLeft), Math.max(18, panelWidth - 18));
+
+    activePanel.style.setProperty("--experience-card-left", `${Math.round(cardLeft)}px`);
+    activePanel.style.setProperty("--experience-anchor-x", `${Math.round(anchorXInCard)}px`);
+    panelsWrap.style.height = `${Math.ceil(activePanel.offsetHeight + 10)}px`;
+  }
+
+  function setActive(id) {
+    activeId = id || null;
+
+    tabs.forEach((tab) => {
+      const active = !!id && tab.dataset.experienceTarget === id;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-expanded", active ? "true" : "false");
+    });
+
+    panels.forEach((panel) => {
+      const active = !!id && panel.dataset.experienceCard === id;
+      panel.classList.toggle("is-active", active);
+      panel.classList.toggle("d-none", !active);
+      if (!active) clearDesktopPositioning(panel);
+    });
+
+    if (emptyState) emptyState.classList.toggle("d-none", !!id);
+    syncActivePanelLayout();
+  }
+
+  function moveFocus(delta, fromTab) {
+    const currentIndex = tabs.indexOf(fromTab);
+    if (currentIndex < 0) return;
+    const nextIndex = (currentIndex + delta + tabs.length) % tabs.length;
+    const nextTab = tabs[nextIndex];
+    if (!nextTab) return;
+    nextTab.focus();
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const nextId = tab.dataset.experienceTarget;
+      setActive(activeId === nextId ? null : nextId);
+    });
+
+    tab.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+        event.preventDefault();
+        moveFocus(1, tab);
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+        event.preventDefault();
+        moveFocus(-1, tab);
+      } else if (event.key === "Home") {
+        event.preventDefault();
+        tabs[0].focus();
+      } else if (event.key === "End") {
+        event.preventDefault();
+        const lastTab = tabs[tabs.length - 1];
+        lastTab.focus();
+      } else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        const nextId = tab.dataset.experienceTarget;
+        setActive(activeId === nextId ? null : nextId);
+      } else if (event.key === "Escape") {
+        event.preventDefault();
+        setActive(null);
+      }
+    });
+  });
+
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setActive(null);
+      if (lastActiveTab) lastActiveTab.focus();
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (activeId) syncActivePanelLayout();
+  }, { passive: true });
+
+  setActive(null);
 }
 
 function applyStaticUi(ui, lang) {
@@ -1623,6 +2007,8 @@ function optimizeMediaLoading() {
       if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 768px) 100vw, 78vw");
     } else if (img.closest(".hobby-card")) {
       if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 768px) 100vw, 33vw");
+    } else if (img.closest(".experience-card")) {
+      if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 768px) 100vw, 40vw");
     } else if (img.closest(".profile-image-container")) {
       if (!img.getAttribute("sizes")) img.setAttribute("sizes", "(max-width: 991px) 100vw, 42vw");
     }
@@ -1687,6 +2073,7 @@ function loadPage(page, lang) {
 
       initCourseFilters(ui);
       initCourseViewMode();
+      initExperiencesTimeline();
       if (contentNode) contentNode.setAttribute("aria-busy", "false");
     })
     .fail(() => {
