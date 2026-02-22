@@ -692,11 +692,11 @@ const portfolioData = {
       sous_titre: "Troupe Saint François-Xavier (Paris VI)",
       image: "images/hobbies/voile_scout.jpeg",
       paragraphes: [
-        "J'ai commencé le scoutisme à la troupe Vé Brest marine, avec un premier camp d'été et deux années de troupe.",
-        "Je suis actuellement assistant chef de troupe à la SUF Saint François-Xavier à Notre-Dame-des-Champs (Paris VI).",
+        "J'ai commencé le scoutisme à la troupe Vème (cinquième) marine Brest, avec un premier camp d'été puis pendant 2 ans en troupe.",
+        "Je suis actuellement chef assistant à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).",
         "J'ai participé à un camp d'été en 2024, un autre en 2025 et je préparerai mon dernier camp en 2026.",
         "La particularité de ces groupes est d'être des scouts marins : les camps comprennent une partie voile, en plus des activités scoutes habituelles.",
-        "Je suis titulaire du CEP1 et du PSC1."
+        "Je suis titulaire du CEP1 (qualification d'encadrement scout, proche dans son rôle du BAFA) et du PSC1."
       ],
       liens: []
     },
@@ -764,10 +764,10 @@ const portfolioData = {
       sous_titre: "Allemand C1, littérature, musique et histoire",
       image: "images/hobbies/Caspar_David_Friedrich.jpg",
       paragraphes: [
-        "J'ai vécu quatre ans en Allemagne, ce qui m'a donné une relation durable à la langue et à la culture germanophones.",
+        "J'ai vécu quatre ans en Allemagne, ce qui m'a donné un lien durable avec la langue et la culture germanophones.",
         "À l'École polytechnique, je suis des cours d'allemand de niveau C1, en particulier un cours de philosophie et un autre sur la musique chorale classique allemande.",
         "J'apprécie la littérature allemande et la musique classique de l'espace germanique, notamment Bach, Mozart, Schubert et Schumann.",
-        "J'ai effectué un stage de trois mois à la Deutsche Telekom, à Bonn, ce qui m'a permis de renforcer ma pratique professionnelle de l'allemand.",
+        "J'ai effectué un stage de trois mois chez Deutsche Telekom, à Bonn, ce qui m'a permis de renforcer ma pratique professionnelle de l'allemand.",
         "Je m'intéresse aussi beaucoup à l'histoire des Etats allemands et de l'Autriche."
       ],
       liens: []
