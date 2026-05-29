@@ -149,6 +149,31 @@ const portfolioData = {
       apport: "Cette expérience m'a donné une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, avec des exigences fortes de rigueur, de coordination et de sang-froid."
     },
     {
+      id: "irdl-lorient",
+      titre: "Stage de recherche – Composites et conditions de Bloch-Floquet",
+      organisation: "Institut de Recherche Dupuy de Lôme (IRDL)",
+      lieu: "Lorient, France",
+      date_debut: "2026-03-23",
+      date_fin: "2026-07-10",
+      date_label: "Mars – Juil. 2026",
+      badge: "IRDL",
+      kind: "professional",
+      logo_text: "IRDL",
+      logo_url: "",
+      logo_theme: "irdl",
+      resume: "Stage de recherche en mécanique des composites : implémentation de conditions périodiques de type Bloch-Floquet dans Abaqus pour prédire la résistance en compression d'hydrofoils à fibres continues de carbone.",
+      contexte: "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences), ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.",
+      mission: "Implémenter des conditions aux limites périodiques de type Bloch-Floquet dans Abaqus pour prédire numériquement la résistance en compression de composites stratifiés à plis unidirectionnels de carbone, représentatifs des hydrofoils de voile de compétition.",
+      points_cles: [
+        "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.",
+        "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.",
+        "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.",
+        "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT."
+      ],
+      environnement: ["Recherche académique", "Éléments finis (Abaqus)", "Composites stratifiés", "Nautisme de compétition", "Python"],
+      apport: "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition."
+    },
+    {
       id: "deutsche-telekom",
       titre: "Digital Transformation - Fiber Factory",
       organisation: "Deutsche Telekom Technik GmbH",

@@ -1163,7 +1163,8 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
     titre: {
       "Gendarmerie nationale": "French National Gendarmerie",
       "Digital Transformation - Fiber Factory": "Digital Transformation - Fiber Factory",
-      "Chef assistant de troupe (SUF - scouts marins)": "Assistant Troop Leader (SUF - Sea Scouts)"
+      "Chef assistant de troupe (SUF - scouts marins)": "Assistant Troop Leader (SUF - Sea Scouts)",
+      "Stage de recherche – Composites et conditions de Bloch-Floquet": "Research internship – Composites and Bloch-Floquet conditions"
     },
     description: {
       "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier": "Scouts Unitaires de France (SUF) - Saint François-Xavier Troop",
@@ -1209,6 +1210,20 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Deutsche Telekom Technik GmbH": "Deutsche Telekom Technik GmbH",
       "Bonn, Allemagne": "Bonn, Germany",
       "4 juin 2025 – 12 septembre 2025": "June 4, 2025 – September 12, 2025",
+      "Mars – Juil. 2026": "Mar. – Jul. 2026",
+      "Institut de Recherche Dupuy de Lôme (IRDL)": "Institut de Recherche Dupuy de Lôme (IRDL)",
+      "Stage de recherche en mécanique des composites : implémentation de conditions périodiques de type Bloch-Floquet dans Abaqus pour prédire la résistance en compression d'hydrofoils à fibres continues de carbone.": "Research internship in composite mechanics: implementing Bloch-Floquet periodic boundary conditions in Abaqus to predict the compressive strength of continuous carbon-fiber hydrofoils.",
+      "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences), ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.": "Final-year internship at École polytechnique within the DEMAT team of the Institut de Recherche Dupuy de Lôme (IRDL), Lorient. Supervised by Christelle Combescure (Associate Professor), this applied research internship focuses on numerical modelling of compressive instabilities in laminated composite structures, building on the team's experimental work on materials for competitive sailing.",
+      "Implémenter des conditions aux limites périodiques de type Bloch-Floquet dans Abaqus pour prédire numériquement la résistance en compression de composites stratifiés à plis unidirectionnels de carbone, représentatifs des hydrofoils de voile de compétition.": "Implement Bloch-Floquet periodic boundary conditions in Abaqus to numerically predict the compressive strength of carbon-fiber unidirectional laminates representative of competitive sailing hydrofoils.",
+      "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.": "Literature review on modelling compressive instability in unidirectional laminated composites.",
+      "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.": "Study of Floquet-Bloch waves and their relevance for predicting instability modes in periodic materials.",
+      "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.": "Implementation and parametrisation of Floquet-Bloch boundary conditions in Abaqus.",
+      "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT.": "Validation against literature test cases and comparison with experimental data from the DEMAT team.",
+      "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition.": "This internship allows me to deepen my knowledge of composite materials mechanics and gain hands-on mastery of industrial numerical simulation tools (Abaqus), in an applied research context for competitive sailing.",
+      "Recherche académique": "Academic research",
+      "Éléments finis (Abaqus)": "Finite elements (Abaqus)",
+      "Composites stratifiés": "Laminated composites",
+      "Nautisme de compétition": "Competitive sailing",
       "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.": "Work within Deutsche Telekom Technik's Fiber Factory digitalization team in the context of fiber deployment in Germany.",
       "Immersion dans l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement massif de la fibre optique en Allemagne.": "Immersion in Deutsche Telekom Technik's Fiber Factory digitalization team, in the context of large-scale fiber deployment in Germany.",
       "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.": "Second-year internship at École polytechnique, carried out at the Bonn headquarters in a German-speaking environment, within a team working on digitalization and organizational topics.",
@@ -1238,7 +1253,8 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
     titre: {
       "Gendarmerie nationale": "Französische Gendarmerie",
       "Digital Transformation - Fiber Factory": "Digital Transformation - Fiber Factory",
-      "Chef assistant de troupe (SUF - scouts marins)": "Assistenz-Truppführer (SUF - Seepfadfinder)"
+      "Chef assistant de troupe (SUF - scouts marins)": "Assistenz-Truppführer (SUF - Seepfadfinder)",
+      "Stage de recherche – Composites et conditions de Bloch-Floquet": "Forschungspraktikum – Verbundwerkstoffe und Bloch-Floquet-Bedingungen"
     },
     description: {
       "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier": "Scouts Unitaires de France (SUF) - Truppe Saint François-Xavier",
@@ -1284,6 +1300,20 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Deutsche Telekom Technik GmbH": "Deutsche Telekom Technik GmbH",
       "Bonn, Allemagne": "Bonn, Deutschland",
       "4 juin 2025 – 12 septembre 2025": "4. Juni 2025 – 12. September 2025",
+      "Mars – Juil. 2026": "März – Juli 2026",
+      "Institut de Recherche Dupuy de Lôme (IRDL)": "Institut de Recherche Dupuy de Lôme (IRDL)",
+      "Stage de recherche en mécanique des composites : implémentation de conditions périodiques de type Bloch-Floquet dans Abaqus pour prédire la résistance en compression d'hydrofoils à fibres continues de carbone.": "Forschungspraktikum in Verbundwerkstoffmechanik: Implementierung periodischer Bloch-Floquet-Randbedingungen in Abaqus zur Vorhersage der Druckfestigkeit von Hydrofoils aus Kohlenstofffasern.",
+      "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences), ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.": "Praktikum im 3. Jahr der École polytechnique im DEMAT-Team des Institut de Recherche Dupuy de Lôme (IRDL) in Lorient. Betreut von Christelle Combescure (Dozentin), befasst sich dieses angewandte Forschungspraktikum mit der numerischen Modellierung von Druckinstabilitäten in geschichteten Verbundstrukturen, aufbauend auf den experimentellen Arbeiten des Teams zu Materialien für den Wettkampfsegelsport.",
+      "Implémenter des conditions aux limites périodiques de type Bloch-Floquet dans Abaqus pour prédire numériquement la résistance en compression de composites stratifiés à plis unidirectionnels de carbone, représentatifs des hydrofoils de voile de compétition.": "Implementierung periodischer Bloch-Floquet-Randbedingungen in Abaqus zur numerischen Vorhersage der Druckfestigkeit von unidirektionalen Kohlenstofffaser-Laminaten, wie sie in Wettkampf-Hydrofoils eingesetzt werden.",
+      "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.": "Literaturrecherche zur Modellierung der Druckinstabilität unidirektionaler Schichtverbundwerkstoffe.",
+      "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.": "Untersuchung von Floquet-Bloch-Wellen und deren Bedeutung für die Vorhersage von Instabilitätsmoden in periodischen Materialien.",
+      "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.": "Implementierung und Parametrisierung der Floquet-Bloch-Randbedingungen in Abaqus.",
+      "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT.": "Validierung anhand von Testfällen aus der Literatur und Vergleich mit experimentellen Daten des DEMAT-Teams.",
+      "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition.": "Dieses Praktikum ermöglicht mir, meine Kenntnisse der Verbundwerkstoffmechanik zu vertiefen und praxisnahe Kompetenz in industriellen Simulationswerkzeugen (Abaqus) zu erwerben, in einem angewandten Forschungskontext für den Wettkampfsegelsport.",
+      "Recherche académique": "Akademische Forschung",
+      "Éléments finis (Abaqus)": "Finite Elemente (Abaqus)",
+      "Composites stratifiés": "Schichtverbundwerkstoffe",
+      "Nautisme de compétition": "Wettkampfsegelsport",
       "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.": "Mitarbeit im Digitalisierungsteam der Fiber Factory von Deutsche Telekom Technik im Kontext des Glasfaserausbaus in Deutschland.",
       "Immersion dans l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement massif de la fibre optique en Allemagne.": "Einblick in das Digitalisierungsteam der Fiber Factory von Deutsche Telekom Technik im Kontext des großflächigen Glasfaserausbaus in Deutschland.",
       "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.": "Praktikum des zweiten Jahres der École polytechnique am Standort Bonn in einem deutschsprachigen Umfeld, in einem Team zu Themen der Digitalisierung und Organisation.",

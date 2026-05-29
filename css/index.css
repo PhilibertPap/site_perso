@@ -1935,6 +1935,20 @@ section.container {
   filter: brightness(0) invert(1);
 }
 
+.experience-logo-irdl {
+  background: #0e4f6e !important;
+  border-color: #0e7490 !important;
+  color: #e0f2fe !important;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+}
+
+[data-theme="dark"] .experience-logo-irdl {
+  background: #0c4a6e !important;
+  border-color: #0369a1 !important;
+  color: #bae6fd !important;
+}
+
 .experience-logo-gendarmerie {
   background: #ffffff !important;
   border-color: #93c5fd !important;
