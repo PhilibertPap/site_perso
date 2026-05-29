@@ -159,10 +159,10 @@ const portfolioData = {
       badge: "IRDL",
       kind: "professional",
       logo_text: "IRDL",
-      logo_url: "",
+      logo_url: "images/exp/irdl.png",
       logo_theme: "irdl",
       resume: "Stage de recherche en mécanique des composites : implémentation de conditions périodiques de type Bloch-Floquet dans Abaqus pour prédire la résistance en compression d'hydrofoils à fibres continues de carbone.",
-      contexte: "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences), ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.",
+      contexte: "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences) et Vincent Keryvin, ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.",
       mission: "Implémenter des conditions aux limites périodiques de type Bloch-Floquet dans Abaqus pour prédire numériquement la résistance en compression de composites stratifiés à plis unidirectionnels de carbone, représentatifs des hydrofoils de voile de compétition.",
       points_cles: [
         "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.",
