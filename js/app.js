@@ -4,13 +4,15 @@ const routes = {
   experiences: "templates/experiences.tpl.html",
   cv: "templates/cv.tpl.html",
   hobbies: "templates/hobbies.tpl.html",
-  cours: "templates/cours.tpl.html"
+  cours: "templates/cours.tpl.html",
+  contact: "templates/contact.tpl.html"
 };
 
 const DEFAULT_LANG = "fr";
 const SUPPORTED_LANGS = ["fr", "en", "de"];
 const LANG_STORAGE_KEY = "portfolio_lang";
 const COURSE_VIEW_MODE_STORAGE_KEY = "portfolio_course_view_mode";
+const THEME_STORAGE_KEY = "portfolio_theme";
 const EMAIL_ADDRESS = "philibert.pappens@gmail.com";
 const LINKEDIN_URL = "https://linkedin.com/in/philibert-pappens-993468313";
 const GITHUB_URL = "https://github.com/PhilibertPap";
@@ -41,7 +43,9 @@ const UI_STRINGS = {
       skip_content: "Aller au contenu",
       main_aria: "Navigation principale",
       language_aria: "Sélecteur de langue",
-      menu_aria: "Ouvrir le menu"
+      menu_aria: "Ouvrir le menu",
+      contact: "Contact",
+      theme_toggle: "Basculer le mode sombre"
     },
     words: { course_singular: "cours", course_plural: "cours", year_singular: "année", year_plural: "années" },
     accueil: {
@@ -106,6 +110,19 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Curriculum Vitae", placeholder: "CV à compléter (formation, expériences, compétences)." },
+    contact: {
+      title: "Contact",
+      subtitle: "Une question, une opportunité ? Écrivez-moi.",
+      name_label: "Nom",
+      name_placeholder: "Votre nom",
+      email_label: "Adresse e-mail",
+      email_placeholder: "votre@email.com",
+      message_label: "Message",
+      message_placeholder: "Votre message…",
+      submit: "Envoyer",
+      success: "Message envoyé ! Je vous répondrai dès que possible.",
+      error: "Une erreur est survenue. Essayez de m'écrire directement à philibert.pappens@gmail.com."
+    },
     footer: {
       title: "Philibert Pappens - Portfolio",
       subtitle: "École polytechnique • Lycée Sainte-Geneviève",
@@ -116,6 +133,7 @@ const UI_STRINGS = {
       link_experiences: "Expériences",
       link_courses: "Cours",
       link_hobbies: "Centres d'intérêt",
+      link_contact: "Contact",
       contact_label: "Contact",
       contact_linkedin: "Profil LinkedIn",
       contact_github: "Profil GitHub",
@@ -132,7 +150,8 @@ const UI_STRINGS = {
         projets: "Projets - Philibert Pappens",
         experiences: "Expériences - Philibert Pappens",
         cours: "Cours - Philibert Pappens",
-        hobbies: "Centres d'intérêt - Philibert Pappens"
+        hobbies: "Centres d'intérêt - Philibert Pappens",
+        contact: "Contact - Philibert Pappens"
       }
     },
     errors: { template_load: "Erreur de chargement du template." }
@@ -149,7 +168,9 @@ const UI_STRINGS = {
       skip_content: "Skip to content",
       main_aria: "Main navigation",
       language_aria: "Language selector",
-      menu_aria: "Open menu"
+      menu_aria: "Open menu",
+      contact: "Contact",
+      theme_toggle: "Toggle dark mode"
     },
     words: { course_singular: "course", course_plural: "courses", year_singular: "year", year_plural: "years" },
     accueil: {
@@ -214,6 +235,19 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Curriculum Vitae", placeholder: "CV section to complete (education, experience, skills)." },
+    contact: {
+      title: "Contact",
+      subtitle: "A question, an opportunity? Get in touch.",
+      name_label: "Name",
+      name_placeholder: "Your name",
+      email_label: "Email address",
+      email_placeholder: "your@email.com",
+      message_label: "Message",
+      message_placeholder: "Your message…",
+      submit: "Send",
+      success: "Message sent! I'll get back to you as soon as possible.",
+      error: "Something went wrong. Please write to me directly at philibert.pappens@gmail.com."
+    },
     footer: {
       title: "Philibert Pappens - Portfolio",
       subtitle: "École polytechnique • Lycée Sainte-Geneviève",
@@ -224,6 +258,7 @@ const UI_STRINGS = {
       link_experiences: "Experience",
       link_courses: "Courses",
       link_hobbies: "Interests",
+      link_contact: "Contact",
       contact_label: "Contact",
       contact_linkedin: "LinkedIn profile",
       contact_github: "GitHub profile",
@@ -240,7 +275,8 @@ const UI_STRINGS = {
         projets: "Projects - Philibert Pappens",
         experiences: "Experience - Philibert Pappens",
         cours: "Courses - Philibert Pappens",
-        hobbies: "Interests - Philibert Pappens"
+        hobbies: "Interests - Philibert Pappens",
+        contact: "Contact - Philibert Pappens"
       }
     },
     errors: { template_load: "Template loading error." }
@@ -257,7 +293,9 @@ const UI_STRINGS = {
       skip_content: "Zum Inhalt springen",
       main_aria: "Hauptnavigation",
       language_aria: "Sprachauswahl",
-      menu_aria: "Menü öffnen"
+      menu_aria: "Menü öffnen",
+      contact: "Kontakt",
+      theme_toggle: "Dunkelmodus umschalten"
     },
     words: { course_singular: "Kurs", course_plural: "Kurse", year_singular: "Jahr", year_plural: "Jahre" },
     accueil: {
@@ -322,6 +360,19 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Lebenslauf", placeholder: "Lebenslauf wird ergänzt (Ausbildung, Erfahrung, Kompetenzen)." },
+    contact: {
+      title: "Kontakt",
+      subtitle: "Eine Frage, eine Möglichkeit? Schreiben Sie mir.",
+      name_label: "Name",
+      name_placeholder: "Ihr Name",
+      email_label: "E-Mail-Adresse",
+      email_placeholder: "ihre@email.com",
+      message_label: "Nachricht",
+      message_placeholder: "Ihre Nachricht…",
+      submit: "Senden",
+      success: "Nachricht gesendet! Ich antworte Ihnen so bald wie möglich.",
+      error: "Es ist ein Fehler aufgetreten. Schreiben Sie mir bitte direkt an philibert.pappens@gmail.com."
+    },
     footer: {
       title: "Philibert Pappens - Portfolio",
       subtitle: "École polytechnique • Lycée Sainte-Geneviève",
@@ -332,6 +383,7 @@ const UI_STRINGS = {
       link_experiences: "Erfahrungen",
       link_courses: "Kurse",
       link_hobbies: "Interessen",
+      link_contact: "Kontakt",
       contact_label: "Kontakt",
       contact_linkedin: "LinkedIn-Profil",
       contact_github: "GitHub-Profil",
@@ -348,7 +400,8 @@ const UI_STRINGS = {
         projets: "Projekte - Philibert Pappens",
         experiences: "Erfahrungen - Philibert Pappens",
         cours: "Kurse - Philibert Pappens",
-        hobbies: "Interessen - Philibert Pappens"
+        hobbies: "Interessen - Philibert Pappens",
+        contact: "Kontakt - Philibert Pappens"
       }
     },
     errors: { template_load: "Fehler beim Laden der Vorlage." }
@@ -1699,6 +1752,9 @@ function applyStaticUi(ui, lang) {
   const langSwitcher = document.querySelector(".lang-switcher");
   if (langSwitcher) langSwitcher.setAttribute("aria-label", ui.nav.language_aria);
 
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle && ui.nav.theme_toggle) themeToggle.setAttribute("aria-label", ui.nav.theme_toggle);
+
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     const isActive = btn.dataset.lang === lang;
     btn.classList.toggle("is-active", isActive);
@@ -1742,6 +1798,37 @@ function applyStaticUi(ui, lang) {
     el.setAttribute("aria-label", label);
     el.setAttribute("title", label);
   });
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem(THEME_STORAGE_KEY, theme);
+  const icon = document.querySelector("#theme-toggle .theme-icon");
+  if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+function initTheme() {
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(stored || (prefersDark ? "dark" : "light"));
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+function initScrollAnimations() {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+  if (!elements.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("is-visible");
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  elements.forEach((el) => observer.observe(el));
 }
 
 function initBottomDock() {
@@ -2074,6 +2161,37 @@ function loadPage(page, lang) {
       initCourseFilters(ui);
       initCourseViewMode();
       initExperiencesTimeline();
+      initScrollAnimations();
+
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const btn = contactForm.querySelector('[type="submit"]');
+          const feedback = document.getElementById("contact-feedback");
+          btn.disabled = true;
+          try {
+            const res = await fetch(contactForm.action, {
+              method: "POST",
+              body: new FormData(contactForm),
+              headers: { Accept: "application/json" }
+            });
+            if (res.ok) {
+              contactForm.reset();
+              feedback.className = "contact-feedback contact-feedback--success";
+              feedback.textContent = ui.contact.success;
+            } else {
+              throw new Error();
+            }
+          } catch {
+            feedback.className = "contact-feedback contact-feedback--error";
+            feedback.textContent = ui.contact.error;
+          } finally {
+            btn.disabled = false;
+          }
+        });
+      }
+
       if (contentNode) contentNode.setAttribute("aria-busy", "false");
     })
     .fail(() => {
@@ -2143,6 +2261,7 @@ $(function () {
   });
 
   clearLegacyMobileOverride();
+  initTheme();
   initBottomDock();
   applyStaticUi(getUi(currentLang), currentLang);
   goTo(currentPage);
