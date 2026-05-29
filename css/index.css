@@ -2464,6 +2464,194 @@ section.container {
   }
 }
 
+/* ==================== DARK MODE — COMPONENT OVERRIDES ==================== */
+
+/* Bootstrap accordion */
+[data-theme="dark"] .accordion-button {
+  background: var(--bg-section);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) brightness(1.5);
+}
+
+[data-theme="dark"] .accordion-body {
+  background: var(--bg-section);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .accordion-item {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+}
+
+/* Cours — search & filters */
+[data-theme="dark"] .cours-search-input {
+  background: var(--bg-input);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .cours-search-clear,
+[data-theme="dark"] .cours-action-btn {
+  background: var(--bg-section);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .cours-search-clear:hover,
+[data-theme="dark"] .cours-action-btn:hover {
+  background: var(--border-color);
+  border-color: #475569;
+}
+
+[data-theme="dark"] .course-filter-btn {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .course-filter-btn.is-active {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .cours-view-modes {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .cours-view-btn {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .cours-view-btn.is-active {
+  background: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .cours-active-filters {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .cours-accordion .matiere-item {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .cours-accordion .accordion-body .accordion-item {
+  border-color: var(--border-color);
+}
+
+/* Skill tags */
+[data-theme="dark"] .skill-tag {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+}
+
+/* Project results */
+[data-theme="dark"] .project-results {
+  background: var(--bg-main);
+}
+
+/* Experience */
+[data-theme="dark"] .experience-card-title {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .experience-card-meta {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .experience-card-close {
+  background: var(--bg-section);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .experience-card-close:hover {
+  background: var(--border-color);
+}
+
+[data-theme="dark"] .experience-card-resume {
+  color: var(--text-muted);
+  border-left-color: var(--accent-soft);
+}
+
+[data-theme="dark"] .experience-card-section p,
+[data-theme="dark"] .experience-card-section ul {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .experience-card-section .experience-card-section-label {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .experience-kind-pill {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .experience-kind-pill-professional {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .experience-kind-pill-volunteer {
+  background: #134e4a;
+  border-color: #0f766e;
+  color: #5eead4;
+}
+
+[data-theme="dark"] .experience-logo-gendarmerie,
+[data-theme="dark"] .experience-logo-suf {
+  background: var(--bg-section) !important;
+}
+
+/* Experience timeline */
+[data-theme="dark"] .experience-timeline-node-date,
+[data-theme="dark"] .experience-timeline-node-title,
+[data-theme="dark"] .experience-timeline-node-org {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .experience-card::before {
+  background: var(--bg-section);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .experience-card-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .experience-tag {
+  background: var(--bg-section);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+/* Footer contact links area */
+[data-theme="dark"] .footer-contact-line {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .footer-contact-line:hover {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .footer-contact-text {
+  color: var(--text-muted);
+}
+
 /* ==================== CONTACT ==================== */
 .contact-section {
   padding: 3rem 0 5rem;

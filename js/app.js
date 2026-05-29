@@ -25,10 +25,12 @@ const LAST_UPDATED_PATHS = [
   "templates/projets.tpl.html",
   "templates/experiences.tpl.html",
   "templates/cours.tpl.html",
-  "templates/hobbies.tpl.html"
+  "templates/hobbies.tpl.html",
+  "templates/contact.tpl.html"
 ];
 
 let latestUpdateDateCache = null;
+const templateCache = new Map();
 
 const UI_STRINGS = {
   fr: {
@@ -2120,80 +2122,88 @@ function loadPage(page, lang) {
   const contentNode = document.getElementById("content");
   if (contentNode) contentNode.setAttribute("aria-busy", "true");
 
-  $.ajax({ url: path, method: "GET", dataType: "text" })
-    .done((templateText) => {
-      const rendered = Mustache.render(templateText, getData(lang));
-      $("#content").html(rendered);
-      applyDynamicPageUi(ui);
-      optimizeMediaLoading();
+  function renderTemplate(templateText) {
+    templateCache.set(path, templateText);
+    const rendered = Mustache.render(templateText, getData(lang));
+    $("#content").html(rendered);
+    applyDynamicPageUi(ui);
+    optimizeMediaLoading();
 
-      document.querySelectorAll(".carousel").forEach((carouselEl) => {
-        const firstItem = carouselEl.querySelector(".carousel-item");
-        const activeItem = carouselEl.querySelector(".carousel-item.active");
-        if (firstItem && !activeItem) firstItem.classList.add("active");
+    document.querySelectorAll(".carousel").forEach((carouselEl) => {
+      const firstItem = carouselEl.querySelector(".carousel-item");
+      const activeItem = carouselEl.querySelector(".carousel-item.active");
+      if (firstItem && !activeItem) firstItem.classList.add("active");
 
-        const prevBtn = carouselEl.querySelector(".carousel-control-prev");
-        const nextBtn = carouselEl.querySelector(".carousel-control-next");
+      const prevBtn = carouselEl.querySelector(".carousel-control-prev");
+      const nextBtn = carouselEl.querySelector(".carousel-control-next");
 
-        if (prevBtn) {
-          prevBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const currentItem = carouselEl.querySelector(".carousel-item.active");
-            if (!currentItem) return;
-            const previousItem = currentItem.previousElementSibling || carouselEl.querySelector(".carousel-item:last-child");
-            currentItem.classList.remove("active");
-            previousItem.classList.add("active");
-          });
-        }
-
-        if (nextBtn) {
-          nextBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const currentItem = carouselEl.querySelector(".carousel-item.active");
-            if (!currentItem) return;
-            const followingItem = currentItem.nextElementSibling || carouselEl.querySelector(".carousel-item:first-child");
-            currentItem.classList.remove("active");
-            followingItem.classList.add("active");
-          });
-        }
-      });
-
-      initCourseFilters(ui);
-      initCourseViewMode();
-      initExperiencesTimeline();
-      initScrollAnimations();
-
-      const contactForm = document.getElementById("contact-form");
-      if (contactForm) {
-        contactForm.addEventListener("submit", async (e) => {
+      if (prevBtn) {
+        prevBtn.addEventListener("click", (e) => {
           e.preventDefault();
-          const btn = contactForm.querySelector('[type="submit"]');
-          const feedback = document.getElementById("contact-feedback");
-          btn.disabled = true;
-          try {
-            const res = await fetch(contactForm.action, {
-              method: "POST",
-              body: new FormData(contactForm),
-              headers: { Accept: "application/json" }
-            });
-            if (res.ok) {
-              contactForm.reset();
-              feedback.className = "contact-feedback contact-feedback--success";
-              feedback.textContent = ui.contact.success;
-            } else {
-              throw new Error();
-            }
-          } catch {
-            feedback.className = "contact-feedback contact-feedback--error";
-            feedback.textContent = ui.contact.error;
-          } finally {
-            btn.disabled = false;
-          }
+          const currentItem = carouselEl.querySelector(".carousel-item.active");
+          if (!currentItem) return;
+          const previousItem = currentItem.previousElementSibling || carouselEl.querySelector(".carousel-item:last-child");
+          currentItem.classList.remove("active");
+          previousItem.classList.add("active");
         });
       }
 
-      if (contentNode) contentNode.setAttribute("aria-busy", "false");
-    })
+      if (nextBtn) {
+        nextBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const currentItem = carouselEl.querySelector(".carousel-item.active");
+          if (!currentItem) return;
+          const followingItem = currentItem.nextElementSibling || carouselEl.querySelector(".carousel-item:first-child");
+          currentItem.classList.remove("active");
+          followingItem.classList.add("active");
+        });
+      }
+    });
+
+    initCourseFilters(ui);
+    initCourseViewMode();
+    initExperiencesTimeline();
+    initScrollAnimations();
+
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector('[type="submit"]');
+        const feedback = document.getElementById("contact-feedback");
+        btn.disabled = true;
+        try {
+          const res = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" }
+          });
+          if (res.ok) {
+            contactForm.reset();
+            feedback.className = "contact-feedback contact-feedback--success";
+            feedback.textContent = ui.contact.success;
+          } else {
+            throw new Error();
+          }
+        } catch {
+          feedback.className = "contact-feedback contact-feedback--error";
+          feedback.textContent = ui.contact.error;
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    }
+
+    if (contentNode) contentNode.setAttribute("aria-busy", "false");
+  }
+
+  if (templateCache.has(path)) {
+    renderTemplate(templateCache.get(path));
+    return;
+  }
+
+  $.ajax({ url: path, method: "GET", dataType: "text" })
+    .done(renderTemplate)
     .fail(() => {
       $("#content").html(`<p class='text-danger'>${ui.errors.template_load}</p>`);
       if (contentNode) contentNode.setAttribute("aria-busy", "false");
@@ -2217,7 +2227,7 @@ $(function () {
     currentPage = page;
     loadPage(page, currentLang);
     setActiveNavigation(page);
-    if (window.location.hash !== `#${page}`) window.history.replaceState(null, "", `#${page}`);
+    if (window.location.hash !== `#${page}`) window.history.pushState(null, "", `#${page}`);
     applySeoMetadata(getUi(currentLang), page, currentLang);
   }
 
@@ -2255,9 +2265,15 @@ $(function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  window.addEventListener("hashchange", () => {
+  window.addEventListener("popstate", () => {
     const hashPage = window.location.hash.replace(/^#/, "");
-    if (hashPage && routes[hashPage] && hashPage !== currentPage) goTo(hashPage);
+    const target = (hashPage && routes[hashPage]) ? hashPage : "accueil";
+    if (target !== currentPage) {
+      currentPage = target;
+      loadPage(target, currentLang);
+      setActiveNavigation(target);
+      applySeoMetadata(getUi(currentLang), target, currentLang);
+    }
   });
 
   clearLegacyMobileOverride();
