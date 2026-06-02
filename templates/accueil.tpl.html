@@ -39,13 +39,21 @@
             >
               {{ui.accueil.cta_hobbies}}
             </a>
+            <a
+              href="#"
+              data-page="contact"
+              class="btn btn-outline-secondary btn-lg js-nav"
+            >
+              {{ui.nav.contact}}
+            </a>
           </div>
 
-          <p class="hero-footer">
-            <a href="documents/cv.pdf" target="_blank" class="link-secondary">
-              {{ui.accueil.cta_cv}}
+          <div class="hero-footer-cta">
+            <a href="documents/cv.pdf" target="_blank" class="btn btn-cv-download" download>
+              <span class="cv-icon">📄</span>
+              <span class="cv-text">{{ui.accueil.cta_cv}}</span>
             </a>
-          </p>
+          </div>
         </div>
       </div>
 

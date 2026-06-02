@@ -16,7 +16,7 @@
       property="og:description"
       content="Portfolio académique et technique: projets, cours et centres d'intérêt."
     />
-    <meta id="meta-og-url" property="og:url" content="" />
+    <meta id="meta-og-url" property="og:url" content="https://philibertpap.github.io/site_perso" />
     <meta id="meta-og-locale" property="og:locale" content="fr_FR" />
     <meta id="meta-twitter-title" name="twitter:title" content="Philibert Pappens - Portfolio" />
     <meta
@@ -34,8 +34,12 @@
       name="keywords"
       content="Philibert Pappens, portfolio, École polytechnique, mécanique, structures, matériaux, projets, cours"
     />
-    <link id="meta-canonical" rel="canonical" href="" />
-    <link rel="icon" type="image/png" href="images/profile/photo.jpeg" />
+    <meta property="og:image:width" content="133" />
+    <meta property="og:image:height" content="133" />
+    <meta name="twitter:image:alt" content="Photo de profil de Philibert Pappens" />
+    <link id="meta-canonical" rel="canonical" href="https://philibertpap.github.io/site_perso" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <title>Philibert Pappens - Portfolio</title>
     <script type="application/ld+json">
     {
@@ -63,6 +67,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="css/index.css" as="style" />
   </head>
 
   <body>
@@ -206,10 +212,29 @@
         ↑
       </button>
     </div>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/mustache.min.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeSsggtAAAAAGeSYPAzCXUG8Bhdy1Iqm2Y8Lx8X" async></script>
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/mustache.min.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <!-- Script pour reCAPTCHA v3 -->
+    <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contact-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LeSsggtAAAAAGeSYPAzCXUG8Bhdy1Iqm2Y8Lx8X', {action: 'submit'}).then(function(token) {
+                        document.getElementById('g-recaptcha-response').value = token;
+                        form.submit();
+                    });
+                });
+            });
+        }
+    });
+    </script>
   </body>
 </html>

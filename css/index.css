@@ -2844,3 +2844,114 @@ section.container {
     transform: none !important;
   }
 }
+
+/* ==================== CTA AMÉLIORÉS ==================== */
+.hero-footer-cta {
+  margin-top: 1.5rem;
+}
+
+.btn-cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn-cv-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #1d4ed8 0%, var(--accent) 100%);
+}
+
+.btn-cv-download:active {
+  transform: translateY(0);
+}
+
+.cv-icon {
+  font-size: 1.1rem;
+}
+
+.cv-text {
+  letter-spacing: 0.02em;
+}
+
+/* Bouton Contact dans le hero */
+.btn-outline-secondary {
+  color: #64748b;
+  border-color: #e2e8f0;
+  background: transparent;
+}
+
+.btn-outline-secondary:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ==================== RECAPTCHA ==================== */
+.g-recaptcha {
+  display: none;
+}
+
+/* ==================== MICRO-INTERACTIONS ==================== */
+.hero-cta .btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+}
+
+/* Animation pour les tags de compétences */
+.skill-tag {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* ==================== RESPONSIVE AMÉLIORÉ ==================== */
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-footer-cta {
+    width: 100%;
+  }
+  
+  .btn-cv-download {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ==================== PERFORMANCE ==================== */
+/* Préchargement des polices critiques */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter Regular'), local('Inter'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_3VNrA.woff2') format('woff2');
+}
