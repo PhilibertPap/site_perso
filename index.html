@@ -27,12 +27,12 @@
     <meta
       id="meta-description"
       name="description"
-      content="Portfolio de Philibert Pappens: projets, cours et centres d'intérêt en ingénierie, mécanique et sciences."
+      content="Philibert Pappens - Élève-officier à l'École polytechnique (X2026). Portfolio de projets en mécanique des structures, éléments finis (Cast3M, Abaqus), informatique quantique (Qiskit) et architecture navale. Découvrez mes réalisations académiques, stages et expériences professionnelles."
     />
     <meta
       id="meta-keywords"
       name="keywords"
-      content="Philibert Pappens, portfolio, École polytechnique, mécanique, structures, matériaux, projets, cours"
+      content="Philibert Pappens, portfolio, École polytechnique, X2026, mécanique des structures, éléments finis, Cast3M, Abaqus, informatique quantique, Qiskit, architecture navale, stage IRDL, gendarmerie nationale, Deutsche Telekom, projets étudiants, ingénierie, matériaux, simulation numérique"
     />
     <meta property="og:image:width" content="133" />
     <meta property="og:image:height" content="133" />
@@ -47,6 +47,9 @@
       "@type": "Person",
       "name": "Philibert Pappens",
       "email": "philibert.pappens@gmail.com",
+      "image": "https://philibertpap.github.io/site_perso/images/profile/photo.jpeg",
+      "url": "https://philibertpap.github.io/site_perso",
+      "jobTitle": "Élève-officier - École polytechnique",
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "École polytechnique",
@@ -56,22 +59,24 @@
         "https://linkedin.com/in/philibert-pappens-993468313",
         "https://github.com/PhilibertPap"
       ],
-      "knowsAbout": ["Mécanique des structures", "Éléments finis", "Informatique quantique", "Architecture navale"]
+      "knowsAbout": ["Mécanique des structures", "Éléments finis", "Cast3M", "Abaqus", "Informatique quantique", "Qiskit", "Architecture navale", "Composites", "Optimisation structurale", "Simulation numérique"]
     }
     </script>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" /></noscript>
     <link rel="preload" href="css/bootstrap.min.css" as="style" />
     <link rel="preload" href="css/index.css" as="style" />
   </head>
 
   <body>
+    <!-- Loading spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+      <div class="spinner" aria-label="Chargement..."></div>
+    </div>
     <a href="#content" class="skip-link" data-i18n-nav="skip_content">Aller au contenu</a>
     <nav
       class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
@@ -221,15 +226,65 @@
     <script src="js/app.js" defer></script>
     <!-- Script pour reCAPTCHA v3 -->
     <script defer>
+    // Masquer le loading spinner
+    window.addEventListener('load', function() {
+      const spinner = document.getElementById('loading-spinner');
+      if (spinner) {
+        spinner.classList.add('loaded');
+        setTimeout(() => spinner.remove(), 500);
+      }
+    });
+    
+    // reCAPTCHA v3
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contact-form');
         if (form) {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
+                const feedback = document.getElementById('contact-feedback');
+                
+                // Afficher loading
+                if (feedback) {
+                    feedback.innerHTML = '<div class="feedback-loading" role="status">⏳ Envoi en cours...</div>';
+                    feedback.classList.add('show');
+                    feedback.setAttribute('aria-live', 'polite');
+                }
+                
                 grecaptcha.ready(function() {
                     grecaptcha.execute('6LeSsggtAAAAAGeSYPAzCXUG8Bhdy1Iqm2Y8Lx8X', {action: 'submit'}).then(function(token) {
                         document.getElementById('g-recaptcha-response').value = token;
-                        form.submit();
+                        
+                        // Soumission du formulaire avec feedback
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(response => {
+                            if (response.ok) {
+                                if (feedback) {
+                                    feedback.innerHTML = `
+                                        <div class="feedback-success" role="alert">
+                                            ✅ Message envoyé avec succès !
+                                            <p>Je te répondrai sous 24-48h à <strong>${form.email.value}</strong>.</p>
+                                        </div>
+                                    `;
+                                }
+                                form.reset();
+                            } else {
+                                throw new Error('Erreur serveur');
+                            }
+                        }).catch(error => {
+                            if (feedback) {
+                                feedback.innerHTML = `
+                                    <div class="feedback-error" role="alert">
+                                        ❌ Erreur lors de l\'envoi.
+                                        <p>Essaie de m\'écrire directement à <a href="mailto:philibert.pappens@gmail.com">philibert.pappens@gmail.com</a>.</p>
+                                    </div>
+                                `;
+                            }
+                        });
                     });
                 });
             });

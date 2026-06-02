@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://philibertpap.github.io/site_perso/sitemap.xml
+
+# Cache control
+Cache-Control: max-age=3600
+
+# Crawl delay to be gentle
+Crawl-delay: 5
