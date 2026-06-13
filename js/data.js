@@ -822,10 +822,10 @@ const portfolioData = {
       categorie: "Programmation",
       icone: "⌨",
       items: [
-        { nom: "Python",        niveau: 4, label: "Expert",         detail: "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL" },
-        { nom: "C++",           niveau: 3, label: "Avancé",         detail: "Projet TRON 3D – moteur de jeu 3D complet" },
+        { nom: "Python",        niveau: 3, label: "Avancé",         detail: "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL" },
+        { nom: "C++",           niveau: 2, label: "Intermédiaire",  detail: "Projet TRON 3D – moteur de jeu 3D complet" },
         { nom: "LaTeX",         niveau: 3, label: "Avancé",         detail: "Tous les rapports de projet et de stage" },
-        { nom: "Git",           niveau: 3, label: "Avancé",         detail: "Projets académiques et personnels" },
+        { nom: "Git",           niveau: 3, label: "Avancé",         detail: "Projets académiques et personnels – SSH" },
         { nom: "HTML / CSS / JS", niveau: 2, label: "Intermédiaire", detail: "Application mobile PerdriX (cours applications smartphone)" },
         { nom: "Java",          niveau: 2, label: "Intermédiaire",  detail: "Cours POO – 1A École polytechnique" }
       ]
@@ -835,8 +835,8 @@ const portfolioData = {
       icone: "⚙",
       items: [
         { nom: "Abaqus",  niveau: 3, label: "Avancé",        detail: "Stage IRDL – simulation de composites, conditions de Bloch-Floquet" },
-        { nom: "Cast3M",  niveau: 3, label: "Avancé",        detail: "Projet voilier – éléments finis 3D complet" },
-        { nom: "Qiskit",  niveau: 2, label: "Intermédiaire", detail: "Projet isomorphisme de graphes quantiques" }
+        { nom: "Cast3M",  niveau: 2, label: "Intermédiaire", detail: "Projet voilier – éléments finis 3D complet" },
+        { nom: "Qiskit",  niveau: 1, label: "Débutant",      detail: "Projet isomorphisme de graphes quantiques" }
       ]
     },
     {
@@ -845,7 +845,7 @@ const portfolioData = {
       items: [
         { nom: "Français", niveau: 4, label: "Langue maternelle",        detail: "" },
         { nom: "Anglais",  niveau: 4, label: "C1+ – Linguaskill",        detail: "" },
-        { nom: "Allemand", niveau: 3, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" }
+        { nom: "Allemand", niveau: 4, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" }
       ]
     },
     {
@@ -855,7 +855,7 @@ const portfolioData = {
       items: [
         { nom: "Encadrement",            detail: "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents" },
         { nom: "Communication",          detail: "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux" },
-        { nom: "Pratique musicale",      detail: "Concerts dans les grandes églises de Paris – orgue et chant choral" }
+        { nom: "Pratique musicale",      detail: "Orgue, piano et guitare" }
       ]
     }
   ],
