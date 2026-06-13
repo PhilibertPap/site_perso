@@ -5,6 +5,7 @@ const routes = {
   cv: "templates/cv.tpl.html",
   hobbies: "templates/hobbies.tpl.html",
   cours: "templates/cours.tpl.html",
+  competences: "templates/competences.tpl.html",
   contact: "templates/contact.tpl.html"
 };
 
@@ -42,6 +43,7 @@ const UI_STRINGS = {
       experiences: "Expériences",
       hobbies: "Centres d'intérêt",
       courses: "Cours suivis",
+      competences: "Compétences",
       skip_content: "Aller au contenu",
       main_aria: "Navigation principale",
       language_aria: "Sélecteur de langue",
@@ -112,6 +114,10 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Curriculum Vitae", placeholder: "CV à compléter (formation, expériences, compétences)." },
+    competences: {
+      title: "Compétences",
+      subtitle: "Langages, outils et langues maîtrisés au fil des projets et des stages."
+    },
     contact: {
       title: "Contact",
       subtitle: "Une question, une opportunité ? Écrivez-moi.",
@@ -167,6 +173,7 @@ const UI_STRINGS = {
       experiences: "Experience",
       hobbies: "Interests",
       courses: "Courses",
+      competences: "Skills",
       skip_content: "Skip to content",
       main_aria: "Main navigation",
       language_aria: "Language selector",
@@ -237,6 +244,10 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Curriculum Vitae", placeholder: "CV section to complete (education, experience, skills)." },
+    competences: {
+      title: "Skills",
+      subtitle: "Languages, tools and spoken languages developed through projects and internships."
+    },
     contact: {
       title: "Contact",
       subtitle: "A question, an opportunity? Get in touch.",
@@ -292,6 +303,7 @@ const UI_STRINGS = {
       experiences: "Erfahrungen",
       hobbies: "Interessen",
       courses: "Lehrveranstaltungen",
+      competences: "Kompetenzen",
       skip_content: "Zum Inhalt springen",
       main_aria: "Hauptnavigation",
       language_aria: "Sprachauswahl",
@@ -362,6 +374,10 @@ const UI_STRINGS = {
       showing_selected_joiner: " + "
     },
     cv: { title: "Lebenslauf", placeholder: "Lebenslauf wird ergänzt (Ausbildung, Erfahrung, Kompetenzen)." },
+    competences: {
+      title: "Kompetenzen",
+      subtitle: "Programmiersprachen, Werkzeuge und Sprachkenntnisse aus Projekten und Praktika."
+    },
     contact: {
       title: "Kontakt",
       subtitle: "Eine Frage, eine Möglichkeit? Schreiben Sie mir.",
@@ -1590,6 +1606,13 @@ function getData(lang) {
 
   data.projets.sort((a, b) => parseProjectEndDate(b.date) - parseProjectEndDate(a.date));
 
+  const niveauPct = { 4: 92, 3: 70, 2: 45, 1: 20 };
+  (data.competences || []).forEach((cat) => {
+    (cat.items || []).forEach((item) => {
+      item.niveau_pct = niveauPct[item.niveau] || 0;
+    });
+  });
+
   if (Array.isArray(data.experiences)) {
     data.experiences.sort((a, b) => String(a.date_debut || "").localeCompare(String(b.date_debut || "")));
     const lastIndex = data.experiences.length - 1;
@@ -1847,6 +1870,21 @@ function initTheme() {
     const current = document.documentElement.getAttribute("data-theme") || "light";
     applyTheme(current === "dark" ? "light" : "dark");
   });
+}
+
+function initSkillBars() {
+  const bars = document.querySelectorAll(".skill-bar-fill[data-pct]");
+  if (!bars.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const bar = e.target;
+        bar.style.width = bar.dataset.pct + "%";
+        observer.unobserve(bar);
+      }
+    });
+  }, { threshold: 0.2 });
+  bars.forEach((bar) => observer.observe(bar));
 }
 
 function initScrollAnimations() {
@@ -2193,6 +2231,7 @@ function loadPage(page, lang) {
     initCourseFilters(ui);
     initCourseViewMode();
     initExperiencesTimeline();
+    initSkillBars();
     initScrollAnimations();
 
     const contactForm = document.getElementById("contact-form");

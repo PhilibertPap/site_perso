@@ -1,0 +1,47 @@
+<section class="competences-section">
+  <div class="container">
+    <div class="section-header mb-5">
+      <h1 class="section-title">{{ui.competences.title}}</h1>
+      <p class="section-subtitle">{{ui.competences.subtitle}}</p>
+    </div>
+
+    <div class="competences-grid">
+      {{#competences}}
+      <div class="competence-card animate-on-scroll">
+        <div class="competence-card-header">
+          <span class="competence-icone" aria-hidden="true">{{icone}}</span>
+          <h2 class="competence-categorie">{{categorie}}</h2>
+        </div>
+
+        {{^soft}}
+        <ul class="skill-list" aria-label="{{categorie}}">
+          {{#items}}
+          <li class="skill-item">
+            <div class="skill-meta">
+              <span class="skill-nom">{{nom}}</span>
+              <span class="skill-label niveau-{{niveau}}">{{label}}</span>
+            </div>
+            <div class="skill-bar-track" title="{{detail}}" aria-label="{{nom}} – {{label}}">
+              <div class="skill-bar-fill niveau-{{niveau}}" data-pct="{{niveau_pct}}"></div>
+            </div>
+            {{#detail}}<p class="skill-detail">{{detail}}</p>{{/detail}}
+          </li>
+          {{/items}}
+        </ul>
+        {{/soft}}
+
+        {{#soft}}
+        <ul class="soft-list" aria-label="{{categorie}}">
+          {{#items}}
+          <li class="soft-item">
+            <span class="soft-nom">{{nom}}</span>
+            <span class="soft-detail">{{detail}}</span>
+          </li>
+          {{/items}}
+        </ul>
+        {{/soft}}
+      </div>
+      {{/competences}}
+    </div>
+  </div>
+</section>

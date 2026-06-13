@@ -99,7 +99,7 @@ const portfolioData = {
     },
     {
       titre: "Dynamiques électorales en France (2017–2024)",
-      contexte: "Devoir de fin de semestre – Introduction aux problèmes institutionnels – École polytechnique",
+      contexte: "Devoir de fin de trimestre – Introduction aux problèmes institutionnels – École polytechnique",
       description: "Analyse quantitative et cartographique des résultats du premier tour des élections présidentielles et législatives françaises entre 2017 et 2024, à l'échelle nationale et départementale (Bouches-du-Rhône). L'étude croise différentiel de votes, évolution partisane et taux de participation pour mettre en évidence la recomposition du paysage politique français.",
       date: "10/2024",
       carousel: {
@@ -111,7 +111,7 @@ const portfolioData = {
           { src: "documents/elections/abstention_13_2022.png", alt: "Abstention dans les Bouches-du-Rhône (2022)", description: "Abstention dans les Bouches-du-Rhône aux présidentielles 2022, avec focus sur les quartiers populaires de Marseille" }
         ]
       },
-      technologies: ["Python (matplotlib)", "Analyse de données électorales", "Cartographie", "Science politique"],
+      technologies: ["Analyse de données électorales", "Cartographie", "Science politique"],
       resultats: {
         items: [
           "Mise en évidence de la montée du RN (+20 pts aux législatives 2024) et de LFI, au détriment des partis traditionnels (LR, PS)",
@@ -814,6 +814,48 @@ const portfolioData = {
             }
           ]
         }
+      ]
+    }
+  ],
+  competences: [
+    {
+      categorie: "Programmation",
+      icone: "⌨",
+      items: [
+        { nom: "Python",        niveau: 4, label: "Expert",         detail: "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL" },
+        { nom: "C++",           niveau: 3, label: "Avancé",         detail: "Projet TRON 3D – moteur de jeu 3D complet" },
+        { nom: "LaTeX",         niveau: 3, label: "Avancé",         detail: "Tous les rapports de projet et de stage" },
+        { nom: "Git",           niveau: 3, label: "Avancé",         detail: "Projets académiques et personnels" },
+        { nom: "HTML / CSS / JS", niveau: 2, label: "Intermédiaire", detail: "Application mobile PerdriX (cours applications smartphone)" },
+        { nom: "Java",          niveau: 2, label: "Intermédiaire",  detail: "Cours POO – 1A École polytechnique" }
+      ]
+    },
+    {
+      categorie: "Logiciels de simulation",
+      icone: "⚙",
+      items: [
+        { nom: "Abaqus",  niveau: 3, label: "Avancé",        detail: "Stage IRDL – simulation de composites, conditions de Bloch-Floquet" },
+        { nom: "Cast3M",  niveau: 3, label: "Avancé",        detail: "Projet voilier – éléments finis 3D complet" },
+        { nom: "Qiskit",  niveau: 2, label: "Intermédiaire", detail: "Projet isomorphisme de graphes quantiques" }
+      ]
+    },
+    {
+      categorie: "Langues",
+      icone: "🌐",
+      items: [
+        { nom: "Français", niveau: 4, label: "Langue maternelle",        detail: "" },
+        { nom: "Anglais",  niveau: 4, label: "C1+ – Linguaskill",        detail: "" },
+        { nom: "Allemand", niveau: 3, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" }
+      ]
+    },
+    {
+      categorie: "Soft skills",
+      icone: "✦",
+      soft: true,
+      items: [
+        { nom: "Encadrement",            detail: "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents" },
+        { nom: "Communication",          detail: "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux" },
+        { nom: "Pratique musicale",      detail: "Concerts dans les grandes églises de Paris – orgue et chant choral" }
       ]
     }
   ],
