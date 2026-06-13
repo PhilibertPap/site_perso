@@ -54,6 +54,22 @@ const portfolioData = {
       ]
     },
     {
+      titre: "TRON 3D – Jeu vidéo multijoueur",
+      contexte: "Cours d'Informatique 3D – École polytechnique",
+      description: "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos navigent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.",
+      date: "03/2025 – 05/2025",
+      technologies: ["C++", "Développement 3D", "Graphique 3D", "Jeux vidéo"],
+      resultats: {
+        items: [
+          "Moteur de jeu 3D entièrement fonctionnel",
+          "Système de collision en temps réel",
+          "Mode multijoueur local (2 joueurs)",
+          "Graphisme 3D avec grille et effets lumineux"
+        ]
+      },
+      liens: []
+    },
+    {
       titre: "PerdriX – Réseau social de récupération d'objets perdus",
       contexte: "MODAL (Module Appliqué en Laboratoire) – École polytechnique",
       description: "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.",
@@ -82,20 +98,34 @@ const portfolioData = {
       ]
     },
     {
-      titre: "TRON 3D – Jeu vidéo multijoueur",
-      contexte: "Cours d'Informatique 3D – École polytechnique",
-      description: "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos navigent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.",
-      date: "03/2025 – 05/2025",
-      technologies: ["C++", "Développement 3D", "Graphique 3D", "Jeux vidéo"],
-      resultats: {
-        items: [
-          "Moteur de jeu 3D entièrement fonctionnel",
-          "Système de collision en temps réel",
-          "Mode multijoueur local (2 joueurs)",
-          "Graphisme 3D avec grille et effets lumineux"
+      titre: "Dynamiques électorales en France (2017–2024)",
+      contexte: "Devoir de fin de semestre – Introduction aux problèmes institutionnels – École polytechnique",
+      description: "Analyse quantitative et cartographique des résultats du premier tour des élections présidentielles et législatives françaises entre 2017 et 2024, à l'échelle nationale et départementale (Bouches-du-Rhône). L'étude croise différentiel de votes, évolution partisane et taux de participation pour mettre en évidence la recomposition du paysage politique français.",
+      date: "10/2024",
+      carousel: {
+        images: [
+          { src: "documents/elections/rn_legislatives.png", alt: "Évolution du vote RN aux législatives", description: "Progression du vote RN aux législatives de 2017 à 2024 par circonscription" },
+          { src: "documents/elections/lfi_legislatives.png", alt: "Évolution du vote LFI aux législatives", description: "Progression du vote LFI aux législatives de 2017 à 2024 par circonscription" },
+          { src: "documents/elections/lrem_rn_diff_2024.png", alt: "Différentiel LREM–RN aux législatives 2024", description: "Renversement du rapport de force entre LREM et le RN aux législatives 2024" },
+          { src: "documents/elections/abstention_2024.png", alt: "Abstention aux législatives 2024", description: "Taux d'abstention aux législatives 2024 par département – hausse de participation post-dissolution" },
+          { src: "documents/elections/abstention_13_2022.png", alt: "Abstention dans les Bouches-du-Rhône (2022)", description: "Abstention dans les Bouches-du-Rhône aux présidentielles 2022, avec focus sur les quartiers populaires de Marseille" }
         ]
       },
-      liens: []
+      technologies: ["Python (matplotlib)", "Analyse de données électorales", "Cartographie", "Science politique"],
+      resultats: {
+        items: [
+          "Mise en évidence de la montée du RN (+20 pts aux législatives 2024) et de LFI, au détriment des partis traditionnels (LR, PS)",
+          "Analyse du comportement différencié LREM entre présidentielles (hausse) et législatives (baisse), relié à l'effet « président sortant »",
+          "Identification d'une abstention structurellement plus élevée dans les zones urbaines populaires et les DROM, avec un rebond exceptionnel en 2024 (dissolution)",
+          "Étude de cas approfondie sur les Bouches-du-Rhône, illustrant les dynamiques nationales à l'échelle d'un département mixte urbain-rural"
+        ]
+      },
+      liens: [
+        {
+          url: "documents/elections/rapport_elections.pdf",
+          label: "Rapport complet (PDF)"
+        }
+      ]
     }
   ],
   experiences: [
