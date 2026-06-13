@@ -855,7 +855,7 @@ const portfolioData = {
       items: [
         { nom: "Encadrement",            detail: "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents" },
         { nom: "Communication",          detail: "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux" },
-        { nom: "Pratique musicale",      detail: "Orgue, piano et guitare" }
+        { nom: "Pratique musicale",      detail: "Orgue, piano, guitare et chant choral" }
       ]
     }
   ],
@@ -896,6 +896,7 @@ const portfolioData = {
       paragraphes: [
         "J'ai commencé l'orgue au conservatoire pendant le primaire, puis j'ai poursuivi tout le collège avec un professeur particulier.",
         "Au lycée, j'ai continué une année avec un professeur particulier, organiste dans une église.",
+        "Aujourd'hui, je joue occasionnellement lors de messes en semaine ou de mariages dans la famille — sans prétention de virtuose, mais avec assez d'aisance pour tenir la partie d'accompagnement.",
         "Je suis particulièrement attaché à la musique de Bach"
       ],
       liens: [
