@@ -42,7 +42,7 @@ const portfolioData = {
       technologies: ["Qiskit", "Informatique quantique", "Théorie des graphes", "Réduction du bruit"],
       resultats: {
         items: [
-          "Etude analytique puis numérique du problème",
+          "Étude analytique puis numérique du problème",
           "Optimisation et réduction du bruit dans les simulations quantiques"
         ]
       },
@@ -56,7 +56,7 @@ const portfolioData = {
     {
       titre: "TRON 3D – Jeu vidéo multijoueur",
       contexte: "Cours d'Informatique 3D – École polytechnique",
-      description: "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos navigent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.",
+      description: "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos naviguent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.",
       date: "03/2025 – 05/2025",
       technologies: ["C++", "Développement 3D", "Graphique 3D", "Jeux vidéo"],
       resultats: {
@@ -253,7 +253,7 @@ const portfolioData = {
               paragraphes: [
                 "Cinématique des milieux continus en trois dimensions : transformations, tenseurs de déformation, descriptions lagrangienne et eulérienne.",
                 "Lois de bilan (masse, quantité de mouvement, moment cinétique), tenseur des contraintes et lois de comportement (élasticité isotrope, hyperélasticité).",
-                "Formulation et résolution de problèmes d'élasticité en petites et grandes déformations, avec introduction aux principes variationnelles et aux méthodes énergétiques."
+                "Formulation et résolution de problèmes d'élasticité en petites et grandes déformations, avec introduction aux principes variationnels et aux méthodes énergétiques."
               ]
             },
             {
@@ -666,7 +666,7 @@ const portfolioData = {
               titre: "Français-Philosophie (thème : L'enfance)",
               description: "Travail annuel de culture générale et de dissertation sur le thème de « l'enfance » en CPGE scientifique, au Lycée Sainte-Geneviève (Versailles).",
               paragraphes: [
-                "Le cours articule lecture comparée d'oeuvres philosophiques et littéraires, analyse conceptuelle et entraînement méthodique à la dissertation.",
+                "Le cours articule lecture comparée d'œuvres philosophiques et littéraires, analyse conceptuelle et entraînement méthodique à la dissertation.",
                 "Le thème de l'enfance conduit à interroger l'éducation, la formation du sujet, la mémoire, la transmission et la construction de la liberté.",
                 "Le travail hebdomadaire m'a entraîné à problématiser rapidement, structurer une argumentation solide et soigner la précision de l'expression.",
                 "Ce cours m'a apporté une méthode durable de réflexion et de rédaction, utile bien au-delà des concours."
@@ -682,7 +682,7 @@ const portfolioData = {
               description: "Approfondissement des méthodes d'analyse et de dissertation autour du thème de « le travail » en deuxième année de prépa, au Lycée Sainte-Geneviève (Versailles).",
               paragraphes: [
                 "Le thème du travail permet d'examiner les dimensions économiques, sociales, politiques et existentielles de l'activité humaine.",
-                "Le cours combine étude d'oeuvres, clarification des concepts, confrontation des positions d'auteurs et entraînement intensif à l'écrit.",
+                "Le cours combine étude d'œuvres, clarification des concepts, confrontation des positions d'auteurs et entraînement intensif à l'écrit.",
                 "Il m'a aidé à mieux articuler lecture fine des textes, mise en perspective historique et argumentation personnelle rigoureuse.",
                 "Ce cours m'a renforcé en culture générale et en qualité d'expression, avec un impact direct sur mes présentations et écrits académiques."
               ]
@@ -897,7 +897,7 @@ const portfolioData = {
         "J'ai commencé l'orgue au conservatoire pendant le primaire, puis j'ai poursuivi tout le collège avec un professeur particulier.",
         "Au lycée, j'ai continué une année avec un professeur particulier, organiste dans une église.",
         "Aujourd'hui, je joue occasionnellement lors de messes en semaine ou de mariages dans la famille — sans prétention de virtuose, mais avec assez d'aisance pour tenir la partie d'accompagnement.",
-        "Je suis particulièrement attaché à la musique de Bach"
+        "Je suis particulièrement attaché à la musique de Bach."
       ],
       liens: [
         {
@@ -942,7 +942,7 @@ const portfolioData = {
         "À l'École polytechnique, je suis des cours d'allemand de niveau C1, en particulier un cours de philosophie et un autre sur la musique chorale classique allemande.",
         "J'apprécie la littérature allemande et la musique classique de l'espace germanique, notamment Bach, Mozart, Schubert et Schumann.",
         "J'ai effectué un stage de trois mois chez Deutsche Telekom, à Bonn, ce qui m'a permis de renforcer ma pratique professionnelle de l'allemand.",
-        "Je m'intéresse aussi beaucoup à l'histoire des Etats allemands et de l'Autriche."
+        "Je m'intéresse aussi beaucoup à l'histoire des États allemands et de l'Autriche."
       ],
       liens: []
     }
