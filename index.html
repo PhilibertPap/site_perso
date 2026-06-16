@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#2563eb" />
     <meta property="og:type" content="website" />
@@ -186,6 +186,16 @@
         </div>
       </div>
     </footer>
+
+    <button
+      type="button"
+      class="view-mode-toggle"
+      data-view-mode-toggle="true"
+      aria-hidden="true"
+    >
+      <span class="view-mode-icon" aria-hidden="true">🖥️</span>
+      <span class="view-mode-label" data-view-mode-label="true">Version ordinateur</span>
+    </button>
 
     <div class="bottom-dock" data-bottom-dock="true" aria-hidden="true">
       <a

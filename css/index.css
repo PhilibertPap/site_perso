@@ -3476,3 +3476,62 @@ section.container {
     transform: translate(-50%, 0); 
   }
 }
+
+/* =========================================================
+   Mobile typography scaling & desktop/mobile view toggle
+   ========================================================= */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Reduce overall text size on small phones (rem-based scaling).
+   Disabled automatically when the user forces the desktop view,
+   because that switches the layout viewport width to 1100px. */
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+}
+
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+}
+
+/* Avoid accidental horizontal scrolling on mobile */
+@media (max-width: 600px) {
+  html, body { overflow-x: hidden; }
+}
+
+/* Desktop/mobile view toggle button (only shown on mobile devices) */
+.view-mode-toggle {
+  display: none;
+}
+
+html.device-mobile .view-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  position: fixed;
+  left: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 1050;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card, #ffffff);
+  color: var(--text-subtle);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.16);
+  cursor: pointer;
+}
+
+html.device-mobile .view-mode-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.view-mode-toggle .view-mode-icon {
+  font-size: 1rem;
+}
+
