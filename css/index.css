@@ -3535,3 +3535,14 @@ html.device-mobile .view-mode-toggle:hover {
   font-size: 1rem;
 }
 
+/* Experiences tab: align card text size with the rest of the site on mobile */
+@media (max-width: 768px) {
+  .experience-card-title { font-size: 1rem; }
+  .experience-card-org { font-size: 0.8rem; }
+  .experience-card-resume { font-size: 0.9rem; }
+  .experience-card-section-title { font-size: 0.72rem; }
+  .experience-card-section p { font-size: 0.9rem; }
+  .experience-points { font-size: 0.9rem; }
+  .experience-tag { font-size: 0.74rem; }
+  .experience-card-meta { font-size: 0.8rem; }
+}
