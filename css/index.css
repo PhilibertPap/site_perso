@@ -3546,3 +3546,20 @@ html.device-mobile .view-mode-toggle:hover {
   .experience-tag { font-size: 0.74rem; }
   .experience-card-meta { font-size: 0.8rem; }
 }
+
+/* Experiences tab: smaller, more compact typography on mobile (whole section) */
+@media (max-width: 768px) {
+  .experiences-section .section-title { font-size: 1.45rem; }
+  .experiences-section .section-subtitle { font-size: 0.88rem; }
+  .experiences-section .experience-timeline-node-title { font-size: 0.84rem; }
+  .experiences-section .experience-timeline-node-org { font-size: 0.74rem; }
+  .experiences-section .experience-timeline-node-date { font-size: 0.72rem; }
+  .experiences-section .experience-card-title { font-size: 0.98rem; }
+  .experiences-section .experience-card-org { font-size: 0.78rem; }
+  .experiences-section .experience-card-resume { font-size: 0.88rem; }
+  .experiences-section .experience-card-section-title { font-size: 0.7rem; }
+  .experiences-section .experience-card-section p { font-size: 0.88rem; }
+  .experiences-section .experience-points { font-size: 0.88rem; }
+  .experiences-section .experience-tag { font-size: 0.74rem; }
+  .experiences-section .experience-card-meta { font-size: 0.78rem; }
+}
