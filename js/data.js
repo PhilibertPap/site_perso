@@ -227,9 +227,152 @@ const portfolioData = {
       ],
       environnement: ["Grand groupe technologique", "Transformation digitale", "Innovation", "Allemand professionnel", "Travail en équipe"],
       apport: "Cette expérience m'a donné une vision concrète du fonctionnement d'un grand groupe technologique, tout en renforçant mon autonomie, mon adaptation à un environnement germanophone et ma communication professionnelle en allemand."
+    },
+    {
+      id: "stage-fin-etudes",
+      titre: "Stage de fin d'études (à venir)",
+      organisation: "À définir",
+      lieu: "À définir",
+      date_debut: "2028-01-01",
+      date_fin: "",
+      date_label: "2028 – à venir",
+      badge: "PFE",
+      kind: "upcoming",
+      logo_text: "PFE",
+      logo_url: "",
+      logo_theme: "kth",
+      resume: "Stage de fin d'études de six mois clôturant le double diplôme École polytechnique × KTH en architecture navale.",
+      contexte: "Dernière étape du cursus d'ingénieur, ce stage de fin d'études de six mois fait suite à l'année de master et au projet de fin d'études (degree project) suivis à KTH Stockholm. L'entreprise et le sujet précis restent à définir.",
+      mission: "Mettre en application, sur un projet d'ingénierie réel, les compétences acquises en architecture navale, mécanique des structures et des matériaux, composites et simulation numérique.",
+      points_cles: [
+        "Stage long (6 mois) en entreprise ou en laboratoire, dans le prolongement de la spécialisation en architecture navale.",
+        "Domaines visés : structures et matériaux composites pour le nautisme et le maritime, hydromécanique, simulation par éléments finis.",
+        "Sujet et structure d'accueil en cours de définition."
+      ],
+      environnement: ["Architecture navale", "Mécanique des structures", "Composites", "Simulation numérique", "À venir"],
+      apport: "Ce stage constituera la transition entre ma formation et mon entrée dans la vie professionnelle d'ingénieur."
     }
   ],
   cours: [
+    {
+      matiere: "Architecture navale — KTH",
+      matiere_id: "KTH",
+      logo: "⚓",
+      annees: [
+        {
+          annee: "KTH — Semestre 1 (automne 2026)",
+          cours: [
+            {
+              titre: "Structures légères et éléments finis (SD2411)",
+              description: "Comportement structural et dimensionnement des structures légères à parois minces, et introduction à la méthode des éléments finis.",
+              paragraphes: [
+                "Analyse des poutres à parois minces, ouvertes et fermées, avec et sans raidisseurs : flexion, cisaillement, torsion et gauchissement, puis théorie des plaques de Kirchhoff.",
+                "Étude de la stabilité locale et globale des poutres et des plaques minces (flambement), avec un accent sur les compromis résistance / rigidité / masse propres aux structures légères.",
+                "Introduction à la méthode des éléments finis : principes des codes EF et écriture d'un petit code en MatLab pour analyser des problèmes de poutres."
+              ]
+            },
+            {
+              titre: "Conception de navires – Ship Design (SD2721)",
+              description: "Introduction à l'architecture navale : théorie du navire, processus de conception et ingénierie système.",
+              paragraphes: [
+                "Bases de la théorie du navire : hydrostatique, stabilité, résistance à l'avancement et propulsion.",
+                "Développement d'un code de calcul d'hydrostatique, expériences sur la stabilité et la résistance, et visites à bord de navires.",
+                "Projet individuel de conception préliminaire d'un navire pour un scénario de transport donné, en intégrant les enjeux économiques, environnementaux et réglementaires internationaux."
+              ]
+            },
+            {
+              titre: "Structures marines – Marine Structures (SD2722)",
+              description: "Conception et dimensionnement des structures de coque de navire.",
+              paragraphes: [
+                "Architecture des structures de coque, rôle des différents éléments structuraux, chargements subis par la coque et règles de classification.",
+                "Application de la théorie des poutres, des plaques et des éléments finis à l'analyse des structures de navire, avec prise en compte de la fatigue et du flambement.",
+                "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis."
+              ]
+            },
+            {
+              titre: "Conception avancée des structures soudées (SD2420)",
+              description: "Méthodes avancées de dimensionnement en fatigue des structures soudées.",
+              paragraphes: [
+                "Méthodes d'évaluation de la durée de vie en fatigue des assemblages soudés : contrainte nominale, contrainte géométrique (hot spot), contrainte d'entaille effective et mécanique linéaire élastique de la rupture (LEFM).",
+                "Influence des concentrations de contraintes, des défauts de soudure et des contraintes résiduelles, et techniques d'amélioration post-soudage.",
+                "Dimensionnement en fatigue par éléments finis et utilisation des codes et recommandations (IIW), avec études de cas industrielles."
+              ]
+            },
+            {
+              titre: "Développement durable et méthodologie de recherche (SA2002)",
+              description: "Méthodologie de recherche et développement durable pour une société climatiquement neutre.",
+              paragraphes: [
+                "Séminaires sur la méthodologie de recherche liée au métier d'ingénieur, en lien avec l'égalité, la diversité et le développement durable.",
+                "Réflexion sur le rôle des sciences et des techniques dans la société et sur la responsabilité de l'ingénieur dans la transition vers une société neutre en carbone."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "KTH — Semestre 2 (printemps 2027)",
+          cours: [
+            {
+              titre: "Voile et performance – Sailing for Performance (SD2706)",
+              description: "Mécanique de la voile et prédiction de performance des voiliers.",
+              paragraphes: [
+                "Forces, moments et équilibres fondamentaux d'un voilier : hydromécanique, aérodynamique, résistance de vagues et comportement des foils porteurs.",
+                "Modélisation et résolution numérique des équations d'équilibre non linéaires dans un programme de prédiction de vitesse (VPP).",
+                "Optimisation de la performance d'un voilier sous contraintes et introduction aux méthodes de routage météorologique."
+              ]
+            },
+            {
+              titre: "Méthodes numériques pour l'acoustique et les vibrations (SD2175)",
+              description: "Méthodes éléments finis et éléments de frontière pour l'acoustique et les vibrations.",
+              paragraphes: [
+                "Fondements des méthodes numériques en ingénierie : différences finies, méthode de Galerkin et des résidus pondérés, formulation des éléments, isoparamétrie et intégration numérique.",
+                "Analyse aux valeurs propres, superposition modale, équations intégrales et éléments de frontière (BEM) pour le rayonnement et la diffusion acoustiques.",
+                "Interaction fluide-structure, modélisation de l'amortissement et mise en œuvre sous Matlab et Comsol Multiphysics."
+              ]
+            },
+            {
+              titre: "Hydromécanique marine – Marine Hydromechanics (SD2723)",
+              description: "Tenue à la mer et manœuvrabilité des navires.",
+              paragraphes: [
+                "Analyse analytique et numérique des mouvements et de la manœuvre du navire, et modélisation hydromécanique et probabiliste des vagues.",
+                "Étude de la tenue à la mer dans les domaines temporel et fréquentiel (fonction de transfert du navire, spectre d'état de mer).",
+                "Caractérisation statistique des processus stochastiques (vagues et réponse du navire) et de leurs valeurs extrêmes, avec expériences en vraie grandeur."
+              ]
+            },
+            {
+              titre: "Composites à fibres : analyse et conception (SD2413)",
+              description: "Théorie, analyse et conception des matériaux composites stratifiés.",
+              paragraphes: [
+                "Comportement mécanique des matériaux anisotropes et théorie classique des stratifiés pour prédire rigidité et résistance.",
+                "Développement d'un code de calcul pour des stratifiés généraux, extension aux plaques composites et aperçu de l'analyse par éléments finis.",
+                "Problème de conception ouvert pour mettre en pratique la démarche d'ingénieur, avec interventions d'industriels. Cours en lien direct avec mon stage de recherche à l'IRDL sur les composites."
+              ]
+            },
+            {
+              titre: "Théorie et méthodologie des sciences (AK2030)",
+              description: "Épistémologie et méthodologie des sciences de la nature et de la technologie.",
+              paragraphes: [
+                "Connaissance scientifique, définitions, hypothèses, observations et mesures, expériences, modèles et raisonnement statistique.",
+                "Causes et explications, conception en ingénierie, méthodes qualitatives, éthique de la recherche et évaluation des risques."
+              ]
+            }
+          ]
+        },
+        {
+          annee: "KTH — Semestre 3 : projet de fin d'études (automne 2027)",
+          cours: [
+            {
+              titre: "Projet de fin d'études en architecture navale – Degree Project (SG271X)",
+              description: "Mémoire de master de 30 crédits en architecture navale, validant le double diplôme à KTH.",
+              paragraphes: [
+                "Travail de recherche individuel de niveau master, sanctionnant le double diplôme École polytechnique × KTH.",
+                "Application des compétences acquises (structures marines, composites, hydromécanique, méthodes numériques) à une problématique d'architecture navale.",
+                "Réalisé au troisième semestre, en articulation avec le stage de fin d'études de six mois."
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       matiere: "Mécanique",
       matiere_id: "MEC",

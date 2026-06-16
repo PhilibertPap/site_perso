@@ -1270,6 +1270,11 @@ section.container {
   color: var(--matiere-color, var(--accent));
 }
 
+.matiere-KTH {
+  --matiere-color: #1954a6;
+  --matiere-soft: #e8f0fb;
+}
+
 .matiere-MEC {
   --matiere-color: #4ea6d7;
   --matiere-soft: #eaf6fc;
@@ -1967,6 +1972,20 @@ section.container {
   font-size: 0.68rem;
 }
 
+.experience-logo-kth {
+  background: #1954a6 !important;
+  border-color: #1954a6 !important;
+  color: #ffffff !important;
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+}
+
+[data-theme="dark"] .experience-logo-kth {
+  background: #2563eb !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
 .experience-card-title {
   margin: 0;
   font-size: 1.05rem;
@@ -2013,6 +2032,18 @@ section.container {
   border-color: #99f6e4;
   background: #ecfeff;
   color: #0f766e;
+}
+
+.experience-kind-pill-upcoming {
+  border-color: #fcd9a8;
+  background: #fff7ed;
+  color: #b45309;
+}
+
+[data-theme="dark"] .experience-kind-pill-upcoming {
+  border-color: #b45309;
+  background: rgba(180, 83, 9, 0.18);
+  color: #fdba74;
 }
 
 .experience-card-meta p {

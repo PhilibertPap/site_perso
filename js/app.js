@@ -62,9 +62,9 @@ const UI_STRINGS = {
       cta_cv: "Télécharger mon CV (PDF)",
       currently: "Actuellement",
       info_items: [
-        { icon: "📚", text: "Élève en 3ème année à l'École polytechnique" },
-        { icon: "⚙️", text: "Étudiant en mécanique - matériaux et structures" },
-        { icon: "⛵", text: "Attrait pour l'architecture navale et le monde maritime" }
+        { icon: "🎓", text: "Double diplôme à KTH Stockholm – architecture navale (à partir d'août 2026)" },
+        { icon: "⚙️", text: "Ingénierie de la mécanique des structures et des matériaux" },
+        { icon: "⛵", text: "Spécialisation navale : structures, composites et hydromécanique" }
       ]
     },
     projets: {
@@ -89,12 +89,13 @@ const UI_STRINGS = {
       impact_label: "Ce que cela m'a apporté",
       close_card: "Fermer",
       kind_professional: "Expérience",
-      kind_volunteer: "Bénévolat"
+      kind_volunteer: "Bénévolat",
+      kind_upcoming: "À venir"
     },
     hobbies: { title: "Centres d'intérêt", subtitle: "Au-delà de l'ingénierie, je cultive des passions qui me définissent" },
     cours: {
       title: "Formations et cours",
-      subtitle: "Cours suivis en classes préparatoires et à l'École polytechnique.",
+      subtitle: "Cours suivis en classes préparatoires et à l'École polytechnique, et cursus à venir à KTH Stockholm.",
       filter_label: "Filtrer par matière",
       search_label: "Rechercher un cours",
       search_placeholder: "Rechercher par titre ou mot-clé",
@@ -192,9 +193,9 @@ const UI_STRINGS = {
       cta_cv: "Download my CV (PDF)",
       currently: "Currently",
       info_items: [
-        { icon: "📚", text: "Third-year student at École polytechnique" },
-        { icon: "⚙️", text: "Student in mechanics - materials and structures" },
-        { icon: "⛵", text: "Strong interest in naval architecture and maritime systems" }
+        { icon: "🎓", text: "Double degree at KTH Stockholm – Naval Architecture (from August 2026)" },
+        { icon: "⚙️", text: "Engineering in structural and material mechanics" },
+        { icon: "⛵", text: "Naval specialization: structures, composites and hydromechanics" }
       ]
     },
     projets: {
@@ -219,12 +220,13 @@ const UI_STRINGS = {
       impact_label: "What it brought me",
       close_card: "Close",
       kind_professional: "Experience",
-      kind_volunteer: "Volunteer"
+      kind_volunteer: "Volunteer",
+      kind_upcoming: "Upcoming"
     },
     hobbies: { title: "Interests", subtitle: "Beyond engineering, I cultivate passions that shape who I am" },
     cours: {
       title: "Education and courses",
-      subtitle: "Courses taken in preparatory classes and at École polytechnique.",
+      subtitle: "Courses taken in preparatory classes and at École polytechnique, and upcoming studies at KTH Stockholm.",
       filter_label: "Filter by subject",
       search_label: "Search courses",
       search_placeholder: "Search by title or keyword",
@@ -322,9 +324,9 @@ const UI_STRINGS = {
       cta_cv: "Lebenslauf herunterladen (PDF)",
       currently: "Derzeit",
       info_items: [
-        { icon: "📚", text: "Student im 3. Jahr an der École polytechnique" },
-        { icon: "⚙️", text: "Student der Mechanik - Werkstoffe und Strukturen" },
-        { icon: "⛵", text: "Interesse an Schiffsarchitektur und maritimen Themen" }
+        { icon: "🎓", text: "Doppeldiplom an der KTH Stockholm – Schiffstechnik (ab August 2026)" },
+        { icon: "⚙️", text: "Ingenieurwesen in Struktur- und Werkstoffmechanik" },
+        { icon: "⛵", text: "Maritime Spezialisierung: Strukturen, Verbundwerkstoffe und Hydromechanik" }
       ]
     },
     projets: {
@@ -349,12 +351,13 @@ const UI_STRINGS = {
       impact_label: "Was es mir gebracht hat",
       close_card: "Schließen",
       kind_professional: "Erfahrung",
-      kind_volunteer: "Ehrenamt"
+      kind_volunteer: "Ehrenamt",
+      kind_upcoming: "Bevorstehend"
     },
     hobbies: { title: "Interessen", subtitle: "Neben dem Ingenieurwesen pflege ich Leidenschaften, die mich prägen" },
     cours: {
       title: "Ausbildung und Kurse",
-      subtitle: "Belegte Kurse in den Vorbereitungsklassen und an der École polytechnique.",
+      subtitle: "Belegte Kurse in den Vorbereitungsklassen und an der École polytechnique sowie das bevorstehende Studium an der KTH Stockholm.",
       filter_label: "Nach Fach filtern",
       search_label: "Kurse suchen",
       search_placeholder: "Nach Titel oder Stichwort suchen",
@@ -436,9 +439,13 @@ const CONTENT_TRANSLATIONS = {
       "Mathématiques appliquées": "Applied Mathematics",
       "Économie": "Economics",
       "Humanités et Sciences Sociales": "Humanities and Social Sciences",
-      "Management de l'innovation et entrepreneuriat": "Innovation Management and Entrepreneurship"
+      "Management de l'innovation et entrepreneuriat": "Innovation Management and Entrepreneurship",
+      "Architecture navale — KTH": "Naval Architecture — KTH"
     },
     annee: {
+      "KTH — Semestre 1 (automne 2026)": "KTH — Semester 1 (autumn 2026)",
+      "KTH — Semestre 2 (printemps 2027)": "KTH — Semester 2 (spring 2027)",
+      "KTH — Semestre 3 : projet de fin d'études (automne 2027)": "KTH — Semester 3: degree project (autumn 2027)",
       "Prépa MPSI": "Preparatory class MPSI (Lycée Sainte-Geneviève, Versailles)",
       "Prépa MP* (option informatique)": "Preparatory class MP* - Computer Science option (Lycée Sainte-Geneviève, Versailles)",
       "1A": "Year 1 (X)",
@@ -446,6 +453,18 @@ const CONTENT_TRANSLATIONS = {
       "3A": "Year 3 (X)"
     },
     titre: {
+      "Structures légères et éléments finis (SD2411)": "Lightweight Structures and FEM (SD2411)",
+      "Conception de navires – Ship Design (SD2721)": "Ship Design (SD2721)",
+      "Structures marines – Marine Structures (SD2722)": "Marine Structures (SD2722)",
+      "Conception avancée des structures soudées (SD2420)": "Advanced Design of Welded Structures (SD2420)",
+      "Développement durable et méthodologie de recherche (SA2002)": "Sustainable Development and Research Methodology (SA2002)",
+      "Voile et performance – Sailing for Performance (SD2706)": "Sailing for Performance (SD2706)",
+      "Méthodes numériques pour l'acoustique et les vibrations (SD2175)": "Numerical Methods for Acoustics and Vibration (SD2175)",
+      "Hydromécanique marine – Marine Hydromechanics (SD2723)": "Marine Hydromechanics (SD2723)",
+      "Composites à fibres : analyse et conception (SD2413)": "Fibre Composites – Analysis and Design (SD2413)",
+      "Théorie et méthodologie des sciences (AK2030)": "Theory and Methodology of Science (AK2030)",
+      "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Degree Project in Naval Architecture (SG271X)",
+      "Stage de fin d'études (à venir)": "Master's thesis internship (upcoming)",
       "Analyse structurelle du gréement d'un voilier": "Structural analysis of a sailboat rigging",
       "Solution au problème d'isomorphisme de graphes": "Solution to the graph isomorphism problem",
       "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Social network for lost-and-found items",
@@ -500,6 +519,62 @@ const CONTENT_TRANSLATIONS = {
       "Gouvernance d'entreprise et finance durable": "Corporate governance and sustainable finance"
     },
     description: {
+      "Comportement structural et dimensionnement des structures légères à parois minces, et introduction à la méthode des éléments finis.": "Structural behaviour and design of thin-walled lightweight structures, with an introduction to the finite element method.",
+      "Analyse des poutres à parois minces, ouvertes et fermées, avec et sans raidisseurs : flexion, cisaillement, torsion et gauchissement, puis théorie des plaques de Kirchhoff.": "Analysis of open and closed thin-walled beams, with and without stiffeners: bending, shear, torsion and warping, followed by Kirchhoff plate theory.",
+      "Étude de la stabilité locale et globale des poutres et des plaques minces (flambement), avec un accent sur les compromis résistance / rigidité / masse propres aux structures légères.": "Study of the local and global instability (buckling) of beams and thin plates, with a focus on the strength / stiffness / weight trade-offs specific to lightweight structures.",
+      "Introduction à la méthode des éléments finis : principes des codes EF et écriture d'un petit code en MatLab pour analyser des problèmes de poutres.": "Introduction to the finite element method: principles of FE codes and writing a small MatLab code to analyse beam problems.",
+      "Introduction à l'architecture navale : théorie du navire, processus de conception et ingénierie système.": "Introduction to naval architecture: ship theory, the design process and systems engineering.",
+      "Bases de la théorie du navire : hydrostatique, stabilité, résistance à l'avancement et propulsion.": "Fundamentals of ship theory: hydrostatics, stability, resistance and propulsion.",
+      "Développement d'un code de calcul d'hydrostatique, expériences sur la stabilité et la résistance, et visites à bord de navires.": "Development of a hydrostatics computation code, experiments on stability and resistance, and visits on board ships.",
+      "Projet individuel de conception préliminaire d'un navire pour un scénario de transport donné, en intégrant les enjeux économiques, environnementaux et réglementaires internationaux.": "Individual project on the preliminary design of a ship for a given transport scenario, integrating economic, environmental and international regulatory aspects.",
+      "Conception et dimensionnement des structures de coque de navire.": "Design and dimensioning of ship hull structures.",
+      "Architecture des structures de coque, rôle des différents éléments structuraux, chargements subis par la coque et règles de classification.": "Layout of hull structures, the role of the different structural members, the loads acting on the hull and classification rules.",
+      "Application de la théorie des poutres, des plaques et des éléments finis à l'analyse des structures de navire, avec prise en compte de la fatigue et du flambement.": "Application of beam theory, plate theory and finite element methods to the analysis of ship structures, accounting for fatigue and buckling.",
+      "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis.": "Project on the design of a ship structure: dimensioning of the midship section based on classification rules and direct finite element calculations.",
+      "Méthodes avancées de dimensionnement en fatigue des structures soudées.": "Advanced methods for the fatigue design of welded structures.",
+      "Méthodes d'évaluation de la durée de vie en fatigue des assemblages soudés : contrainte nominale, contrainte géométrique (hot spot), contrainte d'entaille effective et mécanique linéaire élastique de la rupture (LEFM).": "Methods for assessing the fatigue life of welded joints: nominal stress, hot-spot (geometric) stress, effective notch stress and linear elastic fracture mechanics (LEFM).",
+      "Influence des concentrations de contraintes, des défauts de soudure et des contraintes résiduelles, et techniques d'amélioration post-soudage.": "Influence of stress concentrations, weld defects and residual stresses, and post-weld improvement techniques.",
+      "Dimensionnement en fatigue par éléments finis et utilisation des codes et recommandations (IIW), avec études de cas industrielles.": "Fatigue design with finite elements and the use of codes and recommendations (IIW), with industrial case studies.",
+      "Méthodologie de recherche et développement durable pour une société climatiquement neutre.": "Research methodology and sustainable development for a climate-neutral society.",
+      "Séminaires sur la méthodologie de recherche liée au métier d'ingénieur, en lien avec l'égalité, la diversité et le développement durable.": "Seminars on research methodology related to the engineering profession, connected with gender equality, diversity and sustainable development.",
+      "Réflexion sur le rôle des sciences et des techniques dans la société et sur la responsabilité de l'ingénieur dans la transition vers une société neutre en carbone.": "Reflection on the role of science and technology in society and on the engineer's responsibility in the transition to a climate-neutral society.",
+      "Mécanique de la voile et prédiction de performance des voiliers.": "Mechanics of sailing and performance prediction of sailing yachts.",
+      "Forces, moments et équilibres fondamentaux d'un voilier : hydromécanique, aérodynamique, résistance de vagues et comportement des foils porteurs.": "Fundamental forces, moments and equilibria of a sailing yacht: hydromechanics, aerodynamics, wave-making resistance and the behaviour of lifting foils.",
+      "Modélisation et résolution numérique des équations d'équilibre non linéaires dans un programme de prédiction de vitesse (VPP).": "Modelling and numerical solution of the non-linear equilibrium equations in a velocity prediction program (VPP).",
+      "Optimisation de la performance d'un voilier sous contraintes et introduction aux méthodes de routage météorologique.": "Optimisation of a sailing yacht's performance under constraints and an introduction to weather-routing methods.",
+      "Méthodes éléments finis et éléments de frontière pour l'acoustique et les vibrations.": "Finite element and boundary element methods for acoustics and vibration.",
+      "Fondements des méthodes numériques en ingénierie : différences finies, méthode de Galerkin et des résidus pondérés, formulation des éléments, isoparamétrie et intégration numérique.": "Foundations of numerical methods in engineering: finite differences, Galerkin and weighted-residual methods, element formulation, isoparametry and numerical integration.",
+      "Analyse aux valeurs propres, superposition modale, équations intégrales et éléments de frontière (BEM) pour le rayonnement et la diffusion acoustiques.": "Eigenvalue analysis, modal superposition, integral equations and boundary elements (BEM) for acoustic radiation and scattering.",
+      "Interaction fluide-structure, modélisation de l'amortissement et mise en œuvre sous Matlab et Comsol Multiphysics.": "Fluid-structure interaction, damping modelling and implementation in Matlab and Comsol Multiphysics.",
+      "Tenue à la mer et manœuvrabilité des navires.": "Seakeeping and manoeuvrability of ships.",
+      "Analyse analytique et numérique des mouvements et de la manœuvre du navire, et modélisation hydromécanique et probabiliste des vagues.": "Analytical and numerical analysis of ship motions and manoeuvring, and hydromechanical and probabilistic modelling of waves.",
+      "Étude de la tenue à la mer dans les domaines temporel et fréquentiel (fonction de transfert du navire, spectre d'état de mer).": "Study of seakeeping in the time and frequency domains (ship transfer function, sea-state spectrum).",
+      "Caractérisation statistique des processus stochastiques (vagues et réponse du navire) et de leurs valeurs extrêmes, avec expériences en vraie grandeur.": "Statistical characterisation of stochastic processes (waves and ship response) and their extreme values, with full-scale experiments.",
+      "Théorie, analyse et conception des matériaux composites stratifiés.": "Theory, analysis and design of laminated composite materials.",
+      "Comportement mécanique des matériaux anisotropes et théorie classique des stratifiés pour prédire rigidité et résistance.": "Mechanical behaviour of anisotropic materials and classical lamination theory to predict stiffness and strength.",
+      "Développement d'un code de calcul pour des stratifiés généraux, extension aux plaques composites et aperçu de l'analyse par éléments finis.": "Development of a computation code for general laminates, extension to composite plates and an overview of finite element analysis.",
+      "Problème de conception ouvert pour mettre en pratique la démarche d'ingénieur, avec interventions d'industriels. Cours en lien direct avec mon stage de recherche à l'IRDL sur les composites.": "Open-ended design problem to put engineering practice into action, with guest lectures from industry. A course directly related to my research internship at IRDL on composites.",
+      "Épistémologie et méthodologie des sciences de la nature et de la technologie.": "Epistemology and methodology of the natural and technological sciences.",
+      "Connaissance scientifique, définitions, hypothèses, observations et mesures, expériences, modèles et raisonnement statistique.": "Scientific knowledge, definitions, hypotheses, observations and measurements, experiments, models and statistical reasoning.",
+      "Causes et explications, conception en ingénierie, méthodes qualitatives, éthique de la recherche et évaluation des risques.": "Causes and explanations, engineering design, qualitative methods, research ethics and risk assessment.",
+      "Mémoire de master de 30 crédits en architecture navale, validant le double diplôme à KTH.": "30-credit Master's thesis in naval architecture, completing the double degree at KTH.",
+      "Travail de recherche individuel de niveau master, sanctionnant le double diplôme École polytechnique × KTH.": "Individual master's-level research project completing the École polytechnique × KTH double degree.",
+      "Application des compétences acquises (structures marines, composites, hydromécanique, méthodes numériques) à une problématique d'architecture navale.": "Application of the skills acquired (marine structures, composites, hydromechanics, numerical methods) to a naval architecture problem.",
+      "Réalisé au troisième semestre, en articulation avec le stage de fin d'études de six mois.": "Carried out in the third semester, in connection with the six-month end-of-studies internship.",
+      "À définir": "To be defined",
+      "2028 – à venir": "2028 – upcoming",
+      "Stage de fin d'études de six mois clôturant le double diplôme École polytechnique × KTH en architecture navale.": "Six-month end-of-studies internship completing the École polytechnique × KTH double degree in naval architecture.",
+      "Dernière étape du cursus d'ingénieur, ce stage de fin d'études de six mois fait suite à l'année de master et au projet de fin d'études (degree project) suivis à KTH Stockholm. L'entreprise et le sujet précis restent à définir.": "The final stage of the engineering programme, this six-month end-of-studies internship follows the master's year and the degree project completed at KTH Stockholm. The company and exact topic remain to be defined.",
+      "Mettre en application, sur un projet d'ingénierie réel, les compétences acquises en architecture navale, mécanique des structures et des matériaux, composites et simulation numérique.": "Apply, on a real engineering project, the skills acquired in naval architecture, structural and material mechanics, composites and numerical simulation.",
+      "Stage long (6 mois) en entreprise ou en laboratoire, dans le prolongement de la spécialisation en architecture navale.": "Long internship (6 months) in a company or laboratory, building on the naval architecture specialization.",
+      "Domaines visés : structures et matériaux composites pour le nautisme et le maritime, hydromécanique, simulation par éléments finis.": "Target areas: structures and composite materials for yachting and marine applications, hydromechanics, finite element simulation.",
+      "Sujet et structure d'accueil en cours de définition.": "Topic and host organization currently being defined.",
+      "Architecture navale": "Naval architecture",
+      "Mécanique des structures": "Structural mechanics",
+      "Composites": "Composites",
+      "Simulation numérique": "Numerical simulation",
+      "À venir": "Upcoming",
+      "Ce stage constituera la transition entre ma formation et mon entrée dans la vie professionnelle d'ingénieur.": "This internship will be the transition between my education and my entry into professional life as an engineer.",
       "Étude complète du comportement mécanique du gréement et du mât sous différents chargements. Le projet combine modélisation numérique par éléments finis, analyse dynamique et optimisation structurale pour un voilier classique dont la géométrie peut varier.": "Comprehensive study of rigging and mast mechanical behavior under multiple load cases, combining finite element modeling, dynamic analysis, and structural optimization for a classical sailboat with variable geometry.",
       "Résolution du problème de l'isomorphisme de graphes à l'aide du théorème adiabatique quantique, implémentation dans Qiskit et réduction du bruit.": "Solving the graph isomorphism problem using the quantum adiabatic theorem, implemented in Qiskit with noise-reduction techniques.",
       "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.": "Collaborative mobile app to report and recover lost items at Ecole polytechnique, with social-network features (posts, private messaging, and real-time notifications).",
@@ -644,9 +719,13 @@ const CONTENT_TRANSLATIONS = {
       "Mathématiques appliquées": "Angewandte Mathematik",
       "Économie": "Volkswirtschaftslehre",
       "Humanités et Sciences Sociales": "Geistes- und Sozialwissenschaften",
-      "Management de l'innovation et entrepreneuriat": "Innovationsmanagement und Unternehmertum"
+      "Management de l'innovation et entrepreneuriat": "Innovationsmanagement und Unternehmertum",
+      "Architecture navale — KTH": "Schiffstechnik — KTH"
     },
     annee: {
+      "KTH — Semestre 1 (automne 2026)": "KTH — Semester 1 (Herbst 2026)",
+      "KTH — Semestre 2 (printemps 2027)": "KTH — Semester 2 (Frühjahr 2027)",
+      "KTH — Semestre 3 : projet de fin d'études (automne 2027)": "KTH — Semester 3: Abschlussarbeit (Herbst 2027)",
       "Prépa MPSI": "Vorklasse MPSI (Lycée Sainte-Geneviève, Versailles)",
       "Prépa MP* (option informatique)": "Vorklasse MP* - Informatikoption (Lycée Sainte-Geneviève, Versailles)",
       "1A": "1. Jahr (X)",
@@ -654,6 +733,18 @@ const CONTENT_TRANSLATIONS = {
       "3A": "3. Jahr (X)"
     },
     titre: {
+      "Structures légères et éléments finis (SD2411)": "Leichtbaustrukturen und FEM (SD2411)",
+      "Conception de navires – Ship Design (SD2721)": "Schiffsentwurf – Ship Design (SD2721)",
+      "Structures marines – Marine Structures (SD2722)": "Meeresstrukturen – Marine Structures (SD2722)",
+      "Conception avancée des structures soudées (SD2420)": "Fortgeschrittener Entwurf geschweißter Strukturen (SD2420)",
+      "Développement durable et méthodologie de recherche (SA2002)": "Nachhaltige Entwicklung und Forschungsmethodik (SA2002)",
+      "Voile et performance – Sailing for Performance (SD2706)": "Segeln und Leistung – Sailing for Performance (SD2706)",
+      "Méthodes numériques pour l'acoustique et les vibrations (SD2175)": "Numerische Methoden für Akustik und Schwingungen (SD2175)",
+      "Hydromécanique marine – Marine Hydromechanics (SD2723)": "Marine Hydromechanik – Marine Hydromechanics (SD2723)",
+      "Composites à fibres : analyse et conception (SD2413)": "Faserverbundwerkstoffe: Analyse und Auslegung (SD2413)",
+      "Théorie et méthodologie des sciences (AK2030)": "Wissenschaftstheorie und -methodik (AK2030)",
+      "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Abschlussarbeit in Schiffstechnik – Degree Project (SG271X)",
+      "Stage de fin d'études (à venir)": "Abschlusspraktikum (bevorstehend)",
       "Analyse structurelle du gréement d'un voilier": "Strukturanalyse der Takelage eines Segelboots",
       "Solution au problème d'isomorphisme de graphes": "Lösung des Graphisomorphieproblems",
       "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Soziales Netzwerk für Fundgegenstände",
@@ -708,6 +799,62 @@ const CONTENT_TRANSLATIONS = {
       "Gouvernance d'entreprise et finance durable": "Unternehmensführung und nachhaltige Finanzen"
     },
     description: {
+      "Comportement structural et dimensionnement des structures légères à parois minces, et introduction à la méthode des éléments finis.": "Strukturverhalten und Auslegung dünnwandiger Leichtbaustrukturen sowie Einführung in die Finite-Elemente-Methode.",
+      "Analyse des poutres à parois minces, ouvertes et fermées, avec et sans raidisseurs : flexion, cisaillement, torsion et gauchissement, puis théorie des plaques de Kirchhoff.": "Analyse offener und geschlossener dünnwandiger Balken, mit und ohne Versteifungen: Biegung, Schub, Torsion und Verwölbung, anschließend Kirchhoff'sche Plattentheorie.",
+      "Étude de la stabilité locale et globale des poutres et des plaques minces (flambement), avec un accent sur les compromis résistance / rigidité / masse propres aux structures légères.": "Untersuchung der lokalen und globalen Stabilität von Balken und dünnen Platten (Beulen), mit Schwerpunkt auf den für den Leichtbau typischen Kompromissen zwischen Festigkeit, Steifigkeit und Masse.",
+      "Introduction à la méthode des éléments finis : principes des codes EF et écriture d'un petit code en MatLab pour analyser des problèmes de poutres.": "Einführung in die Finite-Elemente-Methode: Prinzipien von FE-Codes und Erstellung eines kleinen MatLab-Codes zur Analyse von Balkenproblemen.",
+      "Introduction à l'architecture navale : théorie du navire, processus de conception et ingénierie système.": "Einführung in die Schiffstechnik: Schiffstheorie, Entwurfsprozess und Systems Engineering.",
+      "Bases de la théorie du navire : hydrostatique, stabilité, résistance à l'avancement et propulsion.": "Grundlagen der Schiffstheorie: Hydrostatik, Stabilität, Widerstand und Antrieb.",
+      "Développement d'un code de calcul d'hydrostatique, expériences sur la stabilité et la résistance, et visites à bord de navires.": "Entwicklung eines Codes zur Hydrostatikberechnung, Experimente zu Stabilität und Widerstand sowie Besichtigungen an Bord von Schiffen.",
+      "Projet individuel de conception préliminaire d'un navire pour un scénario de transport donné, en intégrant les enjeux économiques, environnementaux et réglementaires internationaux.": "Individuelles Projekt zum Vorentwurf eines Schiffs für ein gegebenes Transportszenario unter Berücksichtigung wirtschaftlicher, ökologischer und internationaler regulatorischer Aspekte.",
+      "Conception et dimensionnement des structures de coque de navire.": "Entwurf und Dimensionierung von Schiffsrumpfstrukturen.",
+      "Architecture des structures de coque, rôle des différents éléments structuraux, chargements subis par la coque et règles de classification.": "Aufbau von Rumpfstrukturen, Rolle der verschiedenen Strukturelemente, auf den Rumpf wirkende Lasten und Klassifikationsvorschriften.",
+      "Application de la théorie des poutres, des plaques et des éléments finis à l'analyse des structures de navire, avec prise en compte de la fatigue et du flambement.": "Anwendung der Balken-, Platten- und Finite-Elemente-Theorie auf die Analyse von Schiffsstrukturen unter Berücksichtigung von Ermüdung und Beulen.",
+      "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis.": "Projekt zum Entwurf einer Schiffsstruktur: Dimensionierung des Hauptspants auf Basis von Klassifikationsvorschriften und direkten Finite-Elemente-Berechnungen.",
+      "Méthodes avancées de dimensionnement en fatigue des structures soudées.": "Fortgeschrittene Methoden zur Ermüdungsauslegung geschweißter Strukturen.",
+      "Méthodes d'évaluation de la durée de vie en fatigue des assemblages soudés : contrainte nominale, contrainte géométrique (hot spot), contrainte d'entaille effective et mécanique linéaire élastique de la rupture (LEFM).": "Methoden zur Bewertung der Ermüdungslebensdauer geschweißter Verbindungen: Nennspannung, geometrische (Hot-Spot-)Spannung, effektive Kerbspannung und linear-elastische Bruchmechanik (LEFM).",
+      "Influence des concentrations de contraintes, des défauts de soudure et des contraintes résiduelles, et techniques d'amélioration post-soudage.": "Einfluss von Spannungskonzentrationen, Schweißfehlern und Eigenspannungen sowie Techniken zur Nachbehandlung von Schweißnähten.",
+      "Dimensionnement en fatigue par éléments finis et utilisation des codes et recommandations (IIW), avec études de cas industrielles.": "Ermüdungsauslegung mit Finiten Elementen und Anwendung von Regelwerken und Empfehlungen (IIW), mit industriellen Fallstudien.",
+      "Méthodologie de recherche et développement durable pour une société climatiquement neutre.": "Forschungsmethodik und nachhaltige Entwicklung für eine klimaneutrale Gesellschaft.",
+      "Séminaires sur la méthodologie de recherche liée au métier d'ingénieur, en lien avec l'égalité, la diversité et le développement durable.": "Seminare zur Forschungsmethodik im Ingenieurberuf, in Verbindung mit Gleichstellung, Vielfalt und nachhaltiger Entwicklung.",
+      "Réflexion sur le rôle des sciences et des techniques dans la société et sur la responsabilité de l'ingénieur dans la transition vers une société neutre en carbone.": "Reflexion über die Rolle von Wissenschaft und Technik in der Gesellschaft und über die Verantwortung des Ingenieurs beim Übergang zu einer klimaneutralen Gesellschaft.",
+      "Mécanique de la voile et prédiction de performance des voiliers.": "Mechanik des Segelns und Leistungsvorhersage von Segelyachten.",
+      "Forces, moments et équilibres fondamentaux d'un voilier : hydromécanique, aérodynamique, résistance de vagues et comportement des foils porteurs.": "Grundlegende Kräfte, Momente und Gleichgewichte einer Segelyacht: Hydromechanik, Aerodynamik, Wellenwiderstand und Verhalten der Tragflügel (Foils).",
+      "Modélisation et résolution numérique des équations d'équilibre non linéaires dans un programme de prédiction de vitesse (VPP).": "Modellierung und numerische Lösung der nichtlinearen Gleichgewichtsgleichungen in einem Geschwindigkeitsvorhersageprogramm (VPP).",
+      "Optimisation de la performance d'un voilier sous contraintes et introduction aux méthodes de routage météorologique.": "Optimierung der Leistung einer Segelyacht unter Randbedingungen und Einführung in Methoden des Wetterroutings.",
+      "Méthodes éléments finis et éléments de frontière pour l'acoustique et les vibrations.": "Finite-Elemente- und Randelementmethoden für Akustik und Schwingungen.",
+      "Fondements des méthodes numériques en ingénierie : différences finies, méthode de Galerkin et des résidus pondérés, formulation des éléments, isoparamétrie et intégration numérique.": "Grundlagen numerischer Methoden im Ingenieurwesen: Finite Differenzen, Galerkin- und gewichtete Residuenmethode, Elementformulierung, Isoparametrie und numerische Integration.",
+      "Analyse aux valeurs propres, superposition modale, équations intégrales et éléments de frontière (BEM) pour le rayonnement et la diffusion acoustiques.": "Eigenwertanalyse, modale Superposition, Integralgleichungen und Randelemente (BEM) für akustische Abstrahlung und Streuung.",
+      "Interaction fluide-structure, modélisation de l'amortissement et mise en œuvre sous Matlab et Comsol Multiphysics.": "Fluid-Struktur-Interaktion, Dämpfungsmodellierung und Umsetzung in Matlab und Comsol Multiphysics.",
+      "Tenue à la mer et manœuvrabilité des navires.": "Seegangsverhalten und Manövrierfähigkeit von Schiffen.",
+      "Analyse analytique et numérique des mouvements et de la manœuvre du navire, et modélisation hydromécanique et probabiliste des vagues.": "Analytische und numerische Analyse der Schiffsbewegungen und des Manövrierens sowie hydromechanische und probabilistische Modellierung von Wellen.",
+      "Étude de la tenue à la mer dans les domaines temporel et fréquentiel (fonction de transfert du navire, spectre d'état de mer).": "Untersuchung des Seegangsverhaltens im Zeit- und Frequenzbereich (Übertragungsfunktion des Schiffs, Seegangsspektrum).",
+      "Caractérisation statistique des processus stochastiques (vagues et réponse du navire) et de leurs valeurs extrêmes, avec expériences en vraie grandeur.": "Statistische Charakterisierung stochastischer Prozesse (Wellen und Schiffsantwort) und ihrer Extremwerte, mit Großversuchen.",
+      "Théorie, analyse et conception des matériaux composites stratifiés.": "Theorie, Analyse und Auslegung laminierter Verbundwerkstoffe.",
+      "Comportement mécanique des matériaux anisotropes et théorie classique des stratifiés pour prédire rigidité et résistance.": "Mechanisches Verhalten anisotroper Werkstoffe und klassische Laminattheorie zur Vorhersage von Steifigkeit und Festigkeit.",
+      "Développement d'un code de calcul pour des stratifiés généraux, extension aux plaques composites et aperçu de l'analyse par éléments finis.": "Entwicklung eines Berechnungscodes für allgemeine Laminate, Erweiterung auf Verbundplatten und Überblick über die Finite-Elemente-Analyse.",
+      "Problème de conception ouvert pour mettre en pratique la démarche d'ingénieur, avec interventions d'industriels. Cours en lien direct avec mon stage de recherche à l'IRDL sur les composites.": "Offene Entwurfsaufgabe zur praktischen Anwendung der Ingenieurmethodik, mit Gastvorträgen aus der Industrie. Ein Kurs in direktem Bezug zu meinem Forschungspraktikum am IRDL über Verbundwerkstoffe.",
+      "Épistémologie et méthodologie des sciences de la nature et de la technologie.": "Erkenntnistheorie und Methodik der Natur- und Technikwissenschaften.",
+      "Connaissance scientifique, définitions, hypothèses, observations et mesures, expériences, modèles et raisonnement statistique.": "Wissenschaftliches Wissen, Definitionen, Hypothesen, Beobachtungen und Messungen, Experimente, Modelle und statistisches Schließen.",
+      "Causes et explications, conception en ingénierie, méthodes qualitatives, éthique de la recherche et évaluation des risques.": "Ursachen und Erklärungen, Ingenieurentwurf, qualitative Methoden, Forschungsethik und Risikobewertung.",
+      "Mémoire de master de 30 crédits en architecture navale, validant le double diplôme à KTH.": "Masterarbeit mit 30 Credits in Schiffstechnik, die das Doppeldiplom an der KTH abschließt.",
+      "Travail de recherche individuel de niveau master, sanctionnant le double diplôme École polytechnique × KTH.": "Individuelle Forschungsarbeit auf Masterniveau zum Abschluss des Doppeldiploms École polytechnique × KTH.",
+      "Application des compétences acquises (structures marines, composites, hydromécanique, méthodes numériques) à une problématique d'architecture navale.": "Anwendung der erworbenen Kompetenzen (Meeresstrukturen, Verbundwerkstoffe, Hydromechanik, numerische Methoden) auf eine Fragestellung der Schiffstechnik.",
+      "Réalisé au troisième semestre, en articulation avec le stage de fin d'études de six mois.": "Durchgeführt im dritten Semester, in Verbindung mit dem sechsmonatigen Abschlusspraktikum.",
+      "À définir": "Noch festzulegen",
+      "2028 – à venir": "2028 – bevorstehend",
+      "Stage de fin d'études de six mois clôturant le double diplôme École polytechnique × KTH en architecture navale.": "Sechsmonatiges Abschlusspraktikum zum Abschluss des Doppeldiploms École polytechnique × KTH in Schiffstechnik.",
+      "Dernière étape du cursus d'ingénieur, ce stage de fin d'études de six mois fait suite à l'année de master et au projet de fin d'études (degree project) suivis à KTH Stockholm. L'entreprise et le sujet précis restent à définir.": "Als letzte Etappe des Ingenieurstudiums folgt dieses sechsmonatige Abschlusspraktikum auf das Masterjahr und die Abschlussarbeit (Degree Project) an der KTH Stockholm. Unternehmen und genaues Thema sind noch festzulegen.",
+      "Mettre en application, sur un projet d'ingénierie réel, les compétences acquises en architecture navale, mécanique des structures et des matériaux, composites et simulation numérique.": "Anwendung der in Schiffstechnik, Struktur- und Werkstoffmechanik, Verbundwerkstoffen und numerischer Simulation erworbenen Kompetenzen auf ein reales Ingenieurprojekt.",
+      "Stage long (6 mois) en entreprise ou en laboratoire, dans le prolongement de la spécialisation en architecture navale.": "Langes Praktikum (6 Monate) in einem Unternehmen oder Labor, im Anschluss an die Spezialisierung in Schiffstechnik.",
+      "Domaines visés : structures et matériaux composites pour le nautisme et le maritime, hydromécanique, simulation par éléments finis.": "Zielbereiche: Strukturen und Verbundwerkstoffe für Wassersport und maritime Anwendungen, Hydromechanik, Finite-Elemente-Simulation.",
+      "Sujet et structure d'accueil en cours de définition.": "Thema und gastgebende Einrichtung werden derzeit festgelegt.",
+      "Architecture navale": "Schiffstechnik",
+      "Mécanique des structures": "Strukturmechanik",
+      "Composites": "Verbundwerkstoffe",
+      "Simulation numérique": "Numerische Simulation",
+      "À venir": "Bevorstehend",
+      "Ce stage constituera la transition entre ma formation et mon entrée dans la vie professionnelle d'ingénieur.": "Dieses Praktikum bildet den Übergang zwischen meiner Ausbildung und meinem Eintritt in das Berufsleben als Ingenieur.",
       "Étude complète du comportement mécanique du gréement et du mât sous différents chargements. Le projet combine modélisation numérique par éléments finis, analyse dynamique et optimisation structurale pour un voilier classique dont la géométrie peut varier.": "Umfassende Untersuchung des mechanischen Verhaltens von Takelage und Mast unter verschiedenen Lasten mit FEM-Modellierung, Dynamikanalyse und Strukturoptimierung.",
       "Résolution du problème de l'isomorphisme de graphes à l'aide du théorème adiabatique quantique, implémentation dans Qiskit et réduction du bruit.": "Lösung des Graphisomorphieproblems mit dem quantenadiabatischen Theorem, Implementierung in Qiskit und Rauschreduktion.",
       "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.": "Kollaborative App zum Melden und Wiederfinden verlorener Gegenstände an der École polytechnique mit sozialen Funktionen (Posts, private Nachrichten, Echtzeit-Benachrichtigungen).",
@@ -1620,7 +1767,12 @@ function getData(lang) {
     const lastIndex = data.experiences.length - 1;
     data.experiences.forEach((exp, index) => {
       exp.is_first = index === lastIndex;
-      const kindKey = exp.kind === "volunteer" ? "kind_volunteer" : "kind_professional";
+      const kindKey =
+        exp.kind === "volunteer"
+          ? "kind_volunteer"
+          : exp.kind === "upcoming"
+          ? "kind_upcoming"
+          : "kind_professional";
       exp.kind_label = (ui.experiences && ui.experiences[kindKey]) || "";
     });
   }
