@@ -988,7 +988,8 @@ const portfolioData = {
       items: [
         { nom: "Français", niveau: 4, label: "Langue maternelle",        detail: "" },
         { nom: "Anglais",  niveau: 4, label: "C1+ – Linguaskill",        detail: "" },
-        { nom: "Allemand", niveau: 4, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" }
+        { nom: "Allemand", niveau: 4, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" },
+        { nom: "Suédois",  niveau: 1, label: "Débutant",                 detail: "Cours de suédois à KTH depuis 2026" }
       ]
     },
     {
