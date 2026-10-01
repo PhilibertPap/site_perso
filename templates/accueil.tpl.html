@@ -25,33 +25,8 @@
               {{ui.accueil.cta_projects}}
               <span class="btn-arrow">→</span>
             </a>
-            <a
-              href="#"
-              data-page="cours"
-              class="btn btn-outline-primary btn-lg js-nav"
-            >
-              {{ui.accueil.cta_courses}}
-            </a>
-            <a
-              href="#"
-              data-page="hobbies"
-              class="btn btn-outline-primary btn-lg js-nav"
-            >
-              {{ui.accueil.cta_hobbies}}
-            </a>
-            <a
-              href="#"
-              data-page="contact"
-              class="btn btn-outline-secondary btn-lg js-nav"
-            >
-              {{ui.nav.contact}}
-            </a>
-          </div>
-
-          <div class="hero-footer-cta">
-            <a href="{{ui.accueil.cv_url}}" target="_blank" class="btn btn-cv-download" download>
-              <span class="cv-icon">📄</span>
-              <span class="cv-text">{{ui.accueil.cta_cv}}</span>
+            <a href="{{ui.accueil.cv_url}}" target="_blank" class="btn btn-outline-primary btn-lg" download>
+              {{ui.accueil.cta_cv}}
             </a>
           </div>
         </div>
@@ -74,16 +49,12 @@
           </div>
 
           <div class="hero-info-card">
-            <h3
-              class="h6 text-uppercase text-muted"
-              style="letter-spacing: 0.18em"
-            >
+            <h3 class="info-card-title">
               {{ui.accueil.currently}}
             </h3>
             <ul class="info-list mb-0">
               {{#ui.accueil.info_items}}
               <li>
-                <span class="info-icon">{{icon}}</span>
                 {{text}}
               </li>
               {{/ui.accueil.info_items}}

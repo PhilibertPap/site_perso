@@ -198,7 +198,7 @@ const portfolioData = {
         "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.",
         "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.",
         "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.",
-        "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT."
+        "Validation par comparaison à des résultats numériques antérieurs, obtenus par d'autres méthodes."
       ],
       environnement: ["Recherche académique", "Éléments finis (Abaqus)", "Composites stratifiés", "Nautisme de compétition", "Python"],
       apport: "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition."

@@ -15,7 +15,7 @@
                             <p class="project-context">{{contexte}}</p>
                             {{#date}}
                             <p class="project-date">
-                                <span class="date-icon">📅</span> {{date}}
+                                {{date}}
                             </p>
                             {{/date}}
                         </div>
@@ -34,13 +34,11 @@
                     </div>
                     {{/resultats}}
 
-                    {{#technologies}}
                     <div class="project-tech">
-                        {{#.}}
+                        {{#technologies}}
                         <span class="tech-tag">{{.}}</span>
-                        {{/.}}
+                        {{/technologies}}
                     </div>
-                    {{/technologies}}
 
                     {{#liens}}
                     <div class="project-links">
