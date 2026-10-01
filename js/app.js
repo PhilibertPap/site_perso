@@ -66,7 +66,7 @@ const UI_STRINGS = {
       cv_url: "documents/cv.pdf",
       currently: "Actuellement",
       info_items: [
-        { icon: "🎓", text: "Double diplôme à KTH Stockholm – architecture navale (à partir d'août 2026)" },
+        { icon: "🎓", text: "Double diplôme à KTH Stockholm – architecture navale (depuis août 2026)" },
         { icon: "⚙️", text: "Ingénierie de la mécanique des structures et des matériaux" },
         { icon: "⛵", text: "Spécialisation navale : structures, composites et hydromécanique" }
       ]
@@ -198,7 +198,7 @@ const UI_STRINGS = {
       cv_url: "documents/cv_en.pdf",
       currently: "Currently",
       info_items: [
-        { icon: "🎓", text: "Double degree at KTH Stockholm – Naval Architecture (from August 2026)" },
+        { icon: "🎓", text: "Double degree at KTH Stockholm – Naval Architecture (since August 2026)" },
         { icon: "⚙️", text: "Engineering in structural and material mechanics" },
         { icon: "⛵", text: "Naval specialization: structures, composites and hydromechanics" }
       ]
@@ -330,7 +330,7 @@ const UI_STRINGS = {
       cv_url: "documents/cv_en.pdf",
       currently: "Derzeit",
       info_items: [
-        { icon: "🎓", text: "Doppeldiplom an der KTH Stockholm – Schiffstechnik (ab August 2026)" },
+        { icon: "🎓", text: "Doppeldiplom an der KTH Stockholm – Schiffstechnik (seit August 2026)" },
         { icon: "⚙️", text: "Ingenieurwesen in Struktur- und Werkstoffmechanik" },
         { icon: "⛵", text: "Maritime Spezialisierung: Strukturen, Verbundwerkstoffe und Hydromechanik" }
       ]
@@ -1390,7 +1390,7 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.": "Literature review on modelling compressive instability in unidirectional laminated composites.",
       "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.": "Study of Floquet-Bloch waves and their relevance for predicting instability modes in periodic materials.",
       "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.": "Implementation and parametrisation of Floquet-Bloch boundary conditions in Abaqus.",
-      "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT.": "Validation against literature test cases and comparison with experimental data from the DEMAT team.",
+      "Validation par comparaison à des résultats numériques antérieurs, obtenus par d'autres méthodes.": "Validation against earlier numerical results obtained with other methods.",
       "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition.": "This internship allows me to deepen my knowledge of composite materials mechanics and gain hands-on mastery of industrial numerical simulation tools (Abaqus), in an applied research context for competitive sailing.",
       "Recherche académique": "Academic research",
       "Éléments finis (Abaqus)": "Finite elements (Abaqus)",
@@ -1481,7 +1481,7 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.": "Literaturrecherche zur Modellierung der Druckinstabilität unidirektionaler Schichtverbundwerkstoffe.",
       "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.": "Untersuchung von Floquet-Bloch-Wellen und deren Bedeutung für die Vorhersage von Instabilitätsmoden in periodischen Materialien.",
       "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.": "Implementierung und Parametrisierung der Floquet-Bloch-Randbedingungen in Abaqus.",
-      "Validation sur cas-tests de la littérature et comparaison avec les données expérimentales de l'équipe DEMAT.": "Validierung anhand von Testfällen aus der Literatur und Vergleich mit experimentellen Daten des DEMAT-Teams.",
+      "Validation par comparaison à des résultats numériques antérieurs, obtenus par d'autres méthodes.": "Validierung durch Vergleich mit früheren numerischen Ergebnissen, die mit anderen Methoden gewonnen wurden.",
       "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition.": "Dieses Praktikum ermöglicht mir, meine Kenntnisse der Verbundwerkstoffmechanik zu vertiefen und praxisnahe Kompetenz in industriellen Simulationswerkzeugen (Abaqus) zu erwerben, in einem angewandten Forschungskontext für den Wettkampfsegelsport.",
       "Recherche académique": "Akademische Forschung",
       "Éléments finis (Abaqus)": "Finite Elemente (Abaqus)",
@@ -2022,7 +2022,7 @@ function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem(THEME_STORAGE_KEY, theme);
   const icon = document.querySelector("#theme-toggle .theme-icon");
-  if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
+  if (icon) icon.textContent = "◐";
 }
 
 function initTheme() {
