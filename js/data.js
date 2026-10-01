@@ -963,43 +963,36 @@ const portfolioData = {
   competences: [
     {
       categorie: "Programmation",
-      icone: "⌨",
+      icone: "",
       items: [
-        { nom: "Python",        niveau: 3, label: "Avancé",         detail: "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL" },
-        { nom: "C++",           niveau: 2, label: "Intermédiaire",  detail: "Projet TRON 3D – moteur de jeu 3D complet" },
-        { nom: "LaTeX",         niveau: 3, label: "Avancé",         detail: "Tous les rapports de projet et de stage" },
-        { nom: "Git",           niveau: 3, label: "Avancé",         detail: "Projets académiques et personnels – SSH" },
-        { nom: "HTML / CSS / JS", niveau: 2, label: "Intermédiaire", detail: "Application mobile PerdriX (cours applications smartphone)" },
-        { nom: "Java",          niveau: 2, label: "Intermédiaire",  detail: "Cours POO – 1A École polytechnique" }
+        { nom: "Python",          niveau: 3, label: "Avancé",        detail: "Scripting Abaqus (stage IRDL), calcul scientifique" },
+        { nom: "MATLAB",          niveau: 2, label: "Intermédiaire", detail: "Cours KTH : code éléments finis, hydrostatique" },
+        { nom: "C++",             niveau: 2, label: "Intermédiaire", detail: "Jeu TRON en 3D" },
+        { nom: "LaTeX",           niveau: 3, label: "Avancé",        detail: "Rapports, CV" },
+        { nom: "Git",             niveau: 3, label: "Avancé",        detail: "Projets académiques et personnels" },
+        { nom: "HTML / CSS / JS", niveau: 2, label: "Intermédiaire", detail: "Application PerdriX, ce site" },
+        { nom: "Java",            niveau: 2, label: "Intermédiaire", detail: "Programmation objet (1A)" },
+        { nom: "Qiskit",          niveau: 1, label: "Débutant",      detail: "Isomorphisme de graphes par calcul adiabatique" }
       ]
     },
     {
-      categorie: "Logiciels de simulation",
-      icone: "⚙",
+      categorie: "Éléments finis",
+      icone: "",
       items: [
-        { nom: "Abaqus",  niveau: 3, label: "Avancé",        detail: "Stage IRDL – simulation de composites, conditions de Bloch-Floquet" },
-        { nom: "Cast3M",  niveau: 2, label: "Intermédiaire", detail: "Projet voilier – éléments finis 3D complet" },
-        { nom: "Qiskit",  niveau: 1, label: "Débutant",      detail: "Projet isomorphisme de graphes quantiques" }
+        { nom: "Abaqus",   niveau: 3, label: "Avancé",        detail: "Stage IRDL : conditions de Bloch-Floquet, microflambage" },
+        { nom: "Cast3M",   niveau: 2, label: "Intermédiaire", detail: "Gréement de voilier : flambement, modes propres" },
+        { nom: "FEniCSx",  niveau: 2, label: "Intermédiaire", detail: "Impact iceberg sur la coque rivetée du Titanic" },
+        { nom: "ANSYS",    niveau: 1, label: "Débutant",      detail: "Cours KTH" }
       ]
     },
     {
       categorie: "Langues",
-      icone: "🌐",
+      icone: "",
       items: [
-        { nom: "Français", niveau: 4, label: "Langue maternelle",        detail: "" },
-        { nom: "Anglais",  niveau: 4, label: "C1+ – Linguaskill",        detail: "" },
+        { nom: "Français", niveau: 4, label: "Langue maternelle",       detail: "" },
+        { nom: "Anglais",  niveau: 4, label: "C1+ – Linguaskill",       detail: "" },
         { nom: "Allemand", niveau: 4, label: "C1 – 4 ans en Allemagne", detail: "Stage Deutsche Telekom à Bonn, cours C1 à l'X" },
-        { nom: "Suédois",  niveau: 1, label: "Débutant",                 detail: "Cours de suédois à KTH depuis 2026" }
-      ]
-    },
-    {
-      categorie: "Soft skills",
-      icone: "✦",
-      soft: true,
-      items: [
-        { nom: "Encadrement",            detail: "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents" },
-        { nom: "Communication",          detail: "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux" },
-        { nom: "Pratique musicale",      detail: "Orgue, piano, guitare et chant choral" }
+        { nom: "Suédois",  niveau: 1, label: "Débutant",                detail: "Cours de suédois à KTH depuis 2026" }
       ]
     }
   ],
