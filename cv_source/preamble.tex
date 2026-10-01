@@ -1,0 +1,111 @@
+% =====================================================================
+%  Préambule commun aux CV FR et EN (style RenderCV / sb2nov)
+%  Modifier ici la mise en page : elle s'applique aux deux langues.
+% =====================================================================
+\usepackage[
+    a4paper,
+    ignoreheadfoot,
+    top=0.8 cm,
+    bottom=0.8 cm,
+    left=1.8 cm,
+    right=1.8 cm,
+    footskip=0.5 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={CV Philibert Pappens},
+    pdfauthor={Philibert Pappens},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% PDF lisible par les ATS
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.15 cm}{0.07 cm}
+
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{
+    \begin{itemize}[topsep=0.07 cm, parsep=0.07 cm, partopsep=0pt, itemsep=0pt, leftmargin=0.3 cm + 10pt]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+% Raccourcis
+\newcommand{\entrysep}{\vspace{0.1 cm}}   % espace entre deux entrées
+\newcommand{\bulletsep}{\vspace{0.07 cm}} % espace titre -> puces
+\newcommand{\cpp}{C\texorpdfstring{$++$}{++}}
+
+% Liens externes avec flèche
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+% En-tête (identique FR/EN, seul le lieu change)
+\newcommand{\cvheader}[2]{% #1 = lieu, #2 = libellé du lien vers le site
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Philibert Pappens}
+
+        \vspace{0.2 cm}
+
+        \small
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.1cm}#1}%
+        \hspace{0.25 cm plus 0.1 cm}%
+        \mbox{\hrefWithoutArrow{mailto:philibert.pappens@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.1cm}philibert.pappens@gmail.com}}%
+        \hspace{0.25 cm plus 0.1 cm}%
+        \mbox{\hrefWithoutArrow{tel:+33783458038}{\color{black}{\footnotesize\faPhone*}\hspace*{0.1cm}+33 (0)7 83 45 80 38}}%
+        \hspace{0.25 cm plus 0.1 cm}%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/philibert-pappens-993468313}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.1cm}Philibert Pappens}}%
+        \hspace{0.25 cm plus 0.1 cm}%
+        \mbox{\hrefWithoutArrow{https://philibertpap.github.io/site_perso}{\color{black}{\footnotesize\faGlobe}\hspace*{0.1cm}#2}}%
+    \end{header}
+}
