@@ -1678,8 +1678,91 @@ function trOrNull(value, map) {
   return null;
 }
 
+const SKILL_TRANSLATIONS = {
+  en: {
+    "Programmation": "Programming",
+    "Logiciels de simulation": "Simulation software",
+    "Langues": "Languages",
+    "Soft skills": "Soft skills",
+    "Avancé": "Advanced",
+    "Intermédiaire": "Intermediate",
+    "Débutant": "Beginner",
+    "Langue maternelle": "Native",
+    "C1+ – Linguaskill": "C1+ – Linguaskill",
+    "C1 – 4 ans en Allemagne": "C1 – 4 years in Germany",
+    "Français": "French",
+    "Anglais": "English",
+    "Allemand": "German",
+    "Suédois": "Swedish",
+    "Encadrement": "Leadership",
+    "Communication": "Communication",
+    "Pratique musicale": "Music",
+    "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL": "Since high school, two years of prépa, courses at X, Abaqus scripting during the IRDL internship",
+    "Projet TRON 3D – moteur de jeu 3D complet": "3D TRON project – complete 3D game engine",
+    "Tous les rapports de projet et de stage": "All project and internship reports",
+    "Projets académiques et personnels – SSH": "Academic and personal projects – SSH",
+    "Application mobile PerdriX (cours applications smartphone)": "PerdriX mobile app (smartphone applications course)",
+    "Cours POO – 1A École polytechnique": "OOP course – 1st year at École polytechnique",
+    "Stage IRDL – simulation de composites, conditions de Bloch-Floquet": "IRDL internship – composite simulation, Bloch-Floquet conditions",
+    "Projet voilier – éléments finis 3D complet": "Sailboat project – full 3D finite element model",
+    "Projet isomorphisme de graphes quantiques": "Quantum graph isomorphism project",
+    "Stage Deutsche Telekom à Bonn, cours C1 à l'X": "Deutsche Telekom internship in Bonn, C1 course at X",
+    "Cours de suédois à KTH depuis 2026": "Swedish classes at KTH since 2026",
+    "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents": "Assistant scout leader – SUF sea scouts (CEP1) – leading about twenty teenagers",
+    "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux": "Head of communications for the X choir – posters, website, social media",
+    "Orgue, piano, guitare et chant choral": "Organ, piano, guitar and choral singing"
+  },
+  de: {
+    "Programmation": "Programmierung",
+    "Logiciels de simulation": "Simulationssoftware",
+    "Langues": "Sprachen",
+    "Soft skills": "Soft Skills",
+    "Avancé": "Fortgeschritten",
+    "Intermédiaire": "Mittelstufe",
+    "Débutant": "Anfänger",
+    "Langue maternelle": "Muttersprache",
+    "C1+ – Linguaskill": "C1+ – Linguaskill",
+    "C1 – 4 ans en Allemagne": "C1 – 4 Jahre in Deutschland",
+    "Français": "Französisch",
+    "Anglais": "Englisch",
+    "Allemand": "Deutsch",
+    "Suédois": "Schwedisch",
+    "Encadrement": "Führung",
+    "Communication": "Kommunikation",
+    "Pratique musicale": "Musik",
+    "Depuis le lycée, 2 ans de prépa, cours X, scripting Abaqus au stage IRDL": "Seit der Schulzeit, zwei Jahre Prépa, Kurse an der X, Abaqus-Scripting im IRDL-Praktikum",
+    "Projet TRON 3D – moteur de jeu 3D complet": "3D-TRON-Projekt – vollständige 3D-Spiel-Engine",
+    "Tous les rapports de projet et de stage": "Alle Projekt- und Praktikumsberichte",
+    "Projets académiques et personnels – SSH": "Akademische und persönliche Projekte – SSH",
+    "Application mobile PerdriX (cours applications smartphone)": "Mobile App PerdriX (Kurs Smartphone-Anwendungen)",
+    "Cours POO – 1A École polytechnique": "OOP-Kurs – 1. Jahr École polytechnique",
+    "Stage IRDL – simulation de composites, conditions de Bloch-Floquet": "IRDL-Praktikum – Simulation von Verbundwerkstoffen, Bloch-Floquet-Bedingungen",
+    "Projet voilier – éléments finis 3D complet": "Segelboot-Projekt – vollständiges 3D-FE-Modell",
+    "Projet isomorphisme de graphes quantiques": "Projekt Quanten-Graphisomorphie",
+    "Stage Deutsche Telekom à Bonn, cours C1 à l'X": "Praktikum bei der Deutschen Telekom in Bonn, C1-Kurs an der X",
+    "Cours de suédois à KTH depuis 2026": "Schwedischkurs an der KTH seit 2026",
+    "Chef assistant de troupe – scouts marins SUF (CEP1) – encadrement d'une vingtaine d'adolescents": "Stellvertretender Truppführer – SUF-Seepfadfinder (CEP1) – Betreuung von rund zwanzig Jugendlichen",
+    "Responsable communication de l'Ensemble Vocal de l'X – affiches, site web, réseaux sociaux": "Kommunikationsverantwortlicher des Chors der X – Plakate, Website, soziale Netzwerke",
+    "Orgue, piano, guitare et chant choral": "Orgel, Klavier, Gitarre und Chorgesang"
+  }
+};
+
+function localizeSkills(data, lang) {
+  const map = SKILL_TRANSLATIONS[lang];
+  if (!map) return;
+  (data.competences || []).forEach((cat) => {
+    cat.categorie = tr(cat.categorie, map);
+    (cat.items || []).forEach((item) => {
+      item.nom = tr(item.nom, map);
+      item.label = tr(item.label, map);
+      item.detail = tr(item.detail, map);
+    });
+  });
+}
+
 function localizeContent(data, lang) {
   if (lang === "fr") return data;
+  localizeSkills(data, lang);
   const dict = CONTENT_TRANSLATIONS[lang];
   if (!dict) return data;
 
