@@ -63,6 +63,7 @@ const UI_STRINGS = {
       cta_courses: "Cours suivis",
       cta_hobbies: "Centres d'intérêt",
       cta_cv: "Télécharger mon CV (PDF)",
+      cv_url: "documents/cv.pdf",
       currently: "Actuellement",
       info_items: [
         { icon: "🎓", text: "Double diplôme à KTH Stockholm – architecture navale (à partir d'août 2026)" },
@@ -194,6 +195,7 @@ const UI_STRINGS = {
       cta_courses: "Courses",
       cta_hobbies: "Interests",
       cta_cv: "Download my CV (PDF)",
+      cv_url: "documents/cv_en.pdf",
       currently: "Currently",
       info_items: [
         { icon: "🎓", text: "Double degree at KTH Stockholm – Naval Architecture (from August 2026)" },
@@ -325,6 +327,7 @@ const UI_STRINGS = {
       cta_courses: "Lehrveranstaltungen",
       cta_hobbies: "Interessen",
       cta_cv: "Lebenslauf herunterladen (PDF)",
+      cv_url: "documents/cv_en.pdf",
       currently: "Derzeit",
       info_items: [
         { icon: "🎓", text: "Doppeldiplom an der KTH Stockholm – Schiffstechnik (ab August 2026)" },
