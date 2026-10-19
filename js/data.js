@@ -3,6 +3,110 @@ const portfolioData = {
   nom: "Philibert Pappens",
   projets: [
     {
+      titre: "Livre de mathématiques – Première et Terminale",
+      contexte: "Projet personnel",
+      date: "06/2026 – aujourd'hui",
+      description: "Un cours complet sur le programme de spécialité de Première et de Terminale (et maths expertes), écrit avec le niveau d'abstraction d'une prépa : définitions générales, théorèmes énoncés précisément et démontrés, exemples tirés de situations réelles. La dernière partie explique les mathématiques derrière l'IA, de la régression logistique jusqu'à l'attention des Transformers. Je ne mets ici que quelques pages.",
+      carousel: {
+        images: [
+          { src: "documents/livre_maths/couverture.jpg", alt: "Couverture du livre", description: "Couverture – 453 pages" },
+          { src: "documents/livre_maths/suites.jpg", alt: "Pages du chapitre sur les suites", description: "Analyse : début du chapitre sur les suites" },
+          { src: "documents/livre_maths/derivation.jpg", alt: "Pages du chapitre sur la dérivation", description: "Analyse : nombre dérivé et tangente" },
+          { src: "documents/livre_maths/second_degre.jpg", alt: "Pages du chapitre sur le second degré", description: "Algèbre : second degré, avec la méthode d'al-Khwarizmi" },
+          { src: "documents/livre_maths/probabilites.jpg", alt: "Ouverture de la partie probabilités", description: "Ouverture de la partie Probabilités et statistique" },
+          { src: "documents/livre_maths/attention.jpg", alt: "Pages sur les plongements et l'attention", description: "Maths de l'IA : plongements de mots et attention" }
+        ]
+      },
+      technologies: ["LaTeX", "TikZ / pgfplots", "Python", "Analyse", "Algèbre", "Probabilités"],
+      resultats: {
+        items: [
+          "Six parties : logique, analyse, algèbre, géométrie, probabilités et statistique, mathématiques de l'IA",
+          "Exercices classés de ★ à ★★★, problèmes de synthèse, indications et corrigés en fin d'ouvrage",
+          "Passages hors programme signalés (groupes et corps, espaces vectoriels, loi normale, statistique inférentielle)",
+          "Figures en TikZ, données générées par des scripts Python reproductibles"
+        ]
+      },
+      liens: [
+        {
+          url: "documents/livre_maths/extrait_livre_maths.pdf",
+          label: "Extrait de 17 pages (PDF)"
+        }
+      ]
+    },
+    {
+      titre: "Patron d'embarcation – site de cours de navigation",
+      contexte: "Projet personnel – scouts marins",
+      date: "02/2026 – aujourd'hui",
+      description: "Un site pour préparer le brevet de patron d'embarcation des scouts marins, et plus largement pour apprendre à mener un voilier. On y trouve le cours, l'entraînement à l'examen et la pratique. L'accès se fait par compte, validé par un chef : les scouts y suivent leur progression, les chefs gèrent inscriptions, équipages et diplômes.",
+      carousel: {
+        images: [
+          { src: "documents/patron_embarcation/accueil.jpg", alt: "Page d'accueil du site Patron d'embarcation", description: "Accueil" },
+          { src: "documents/patron_embarcation/cours_maree.jpg", alt: "Chapitre sur la marée", description: "Cours : la marée" },
+          { src: "documents/patron_embarcation/cours_balisage.jpg", alt: "Chapitre sur le balisage", description: "Cours : le balisage, figures en SVG" },
+          { src: "documents/patron_embarcation/qcm.jpg", alt: "Épreuve blanche de QCM", description: "QCM : épreuve blanche chronométrée" },
+          { src: "documents/patron_embarcation/exercices.jpg", alt: "Exercice de compas généré", description: "Exercices générés au hasard, avec corrigé" },
+          { src: "documents/patron_embarcation/pratique_allures.jpg", alt: "Page sur les allures", description: "Pratique : allures et réglages" }
+        ]
+      },
+      technologies: ["JavaScript", "Node.js", "Firebase", "SVG", "GitHub Pages", "Navigation"],
+      structure: {
+        titre: "Structure du site",
+        items: [
+          "Cours : dix chapitres, de la carte marine à la VHF",
+          "QCM : plus de 500 questions, épreuves blanches au format de l'examen",
+          "Exercices : compas, estime, marée, avec des énoncés générés à volonté",
+          "Pratique : le voilier, réglages, manœuvres, mouillage, avaries, homme à la mer",
+          "CQ / CF : la formation des chefs (dossier de navigation, flottille, oral)",
+          "Annales 2015–2025, questions aux formateurs, classement des équipages",
+          "Espace chefs : inscriptions, équipages, diplômes, tableaux de bord"
+        ]
+      },
+      resultats: {
+        items: [
+          "Site statique généré par un script Node sans dépendance, republié par GitHub Actions à chaque modification",
+          "Comptes et données sur Firebase, avec des droits différents pour scouts, chefs d'équipage et chefs",
+          "Installable sur téléphone et consultable hors ligne"
+        ]
+      },
+      liens: [
+        {
+          url: "https://philibertpap.github.io/site_pe/",
+          label: "Le site (accès réservé aux scouts inscrits)"
+        }
+      ]
+    },
+    {
+      titre: "Microflambage des composites et conditions de Bloch-Floquet",
+      contexte: "Stage de recherche de 3A – IRDL, Lorient",
+      date: "03/2026 – 07/2026",
+      description: "En compression, un composite carbone/époxy unidirectionnel casse le plus souvent par microflambage : les fibres ondulent ensemble. Les modèles classiques donnent la contrainte critique ou la longueur d'onde du mode, rarement les deux. Pendant mon stage, j'ai implémenté les conditions de Bloch-Floquet dans Abaqus : on calcule sur une seule cellule fibre + matrice et on balaie les vecteurs d'onde pour trouver le mode le plus critique, qui sert ensuite d'imperfection dans un calcul post-critique.",
+      carousel: {
+        images: [
+          { src: "documents/stage_irdl/maillage_ver.jpg", alt: "Maillage de la cellule élémentaire", description: "Maillage de la cellule : une fibre dans sa matrice" },
+          { src: "documents/stage_irdl/riks_periodique.jpg", alt: "Déformée post-critique", description: "Déformée post-critique (Riks) avec périodicité dans le plan" },
+          { src: "documents/stage_irdl/contraintes_bloch.jpg", alt: "Contraintes multi-points", description: "Contraintes multi-points qui relient les faces de la cellule" },
+          { src: "documents/stage_irdl/balayage_bloch.png", alt: "Déformation critique en fonction de la phase de Bloch", description: "Balayage en phase de Bloch : le minimum donne la longueur d'onde critique" },
+          { src: "documents/stage_irdl/interpolation_omega2.png", alt: "Fréquence propre en fonction de la prédéformation", description: "Le point critique : ω² s'annule à la déformation critique" },
+          { src: "documents/stage_irdl/influence_desalignement.png", alt: "Courbes contrainte-déformation", description: "Effet du désalignement initial des fibres sur la réponse en compression" }
+        ]
+      },
+      technologies: ["Abaqus", "Python", "Fortran", "Stabilité des structures", "Composites"],
+      resultats: {
+        items: [
+          "Chaîne Python automatisée : maillage, contraintes de Bloch, calculs Abaqus, reconstruction des modes",
+          "Validation pas à pas, de la cellule isolée jusqu'à Bloch-Floquet, face aux modèles de Rosen et de Grandidier et al.",
+          "Longueur d'onde critique quasi indépendante de la taille de la cellule, ce que la périodicité classique ne donne pas",
+          "Effet de la plasticité de la matrice, du module de cisaillement de la fibre et du désalignement initial"
+        ]
+      },
+      liens: [
+        {
+          url: "documents/stage_irdl/extrait_rapport_stage_irdl.pdf",
+          label: "Extrait du rapport : résumé, introduction, conclusion (PDF)"
+        }
+      ]
+    },
+    {
       titre: "Analyse structurelle du gréement d'un voilier",
       contexte: "Projet de recherche – École polytechnique",
       description: "Étude complète du comportement mécanique du gréement et du mât sous différents chargements. Le projet combine modélisation numérique par éléments finis, analyse dynamique et optimisation structurale pour un voilier classique dont la géométrie peut varier.",
@@ -131,102 +235,101 @@ const portfolioData = {
   experiences: [
     {
       id: "suf-scouts-marins",
-      titre: "Chef assistant de troupe (SUF - scouts marins)",
-      organisation: "Scouts unitaires de France (SUF) - Troupe Saint François-Xavier",
+      titre: "Assistant chef de troupe – scouts marins",
+      organisation: "Scouts unitaires de France – troupe Saint-François-Xavier",
       lieu: "Paris, France",
       date_debut: "2023-09-01",
       date_fin: "2026-08-31",
-      date_label: "2023 – Août 2026",
+      date_label: "2023 – août 2026",
       badge: "SUF",
       kind: "volunteer",
       logo_text: "✠⚓",
       logo_url: "images/exp/scout_marin.png",
       logo_theme: "suf",
-      resume: "Encadrement bénévole en scoutisme marin : préparation d'activités, conduite de camps et suivi d'un groupe de jeunes.",
-      contexte: "Responsabilité de chef assistant au sein d'une troupe SUF de scouts marins, dans un cadre d'encadrement régulier sur l'année et de camps d'été.",
-      mission: "Encadrer un groupe de jeunes, préparer et conduire des activités, participer à l'organisation des camps et contribuer à la formation humaine et à la cohésion de la troupe.",
+      resume: "Trois ans à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.",
+      contexte: "Une troupe d'une vingtaine d'adolescents à Paris : des week-ends pendant l'année et un camp de deux semaines chaque été, dont plusieurs jours en mer.",
+      mission: "Avec les autres chefs, préparer les activités, encadrer les camps et faire progresser les scouts, notamment en navigation.",
       points_cles: [
-        "Encadrement d'un groupe d'environ 20 adolescents dans un cadre éducatif exigeant et structuré.",
-        "Participation à l'organisation de week-ends campés et de camps d'été, incluant plusieurs jours de navigation.",
-        "Coordination avec l'équipe de maîtrise pour la préparation des activités, la sécurité et la vie de camp.",
-        "Mobilisation du CEP1 (qualification d'encadrement scout) et du PSC1 dans la conduite des activités."
+        "Trois camps d'été (2024, 2025, 2026), avec 4 à 5 jours de navigation à chaque fois.",
+        "Infirmier de la troupe (PSC1), qualification d'encadrement CEP1.",
+        "Au dernier camp, j'avais aussi l'intendance et la notation des équipages.",
+        "Pour aider les scouts à préparer le brevet de patron d'embarcation, j'ai créé un site de cours (voir Projets)."
       ],
-      environnement: ["Bénévolat", "Encadrement", "Scoutisme marin", "Organisation d'activités", "Responsabilité"],
-      apport: "Cet engagement m'apprend concrètement à préparer des activités, encadrer un groupe dans la durée et prendre des responsabilités."
+      environnement: ["Bénévolat", "Encadrement", "Scoutisme marin", "Navigation"],
+      apport: "Tenir un groupe sur la durée, et préparer une activité assez sérieusement pour qu'elle se passe bien une fois en mer."
     },
     {
       id: "gendarmerie",
-      titre: "Gendarmerie nationale",
-      organisation: "Compagnie de gendarmerie de Guingamp",
-      lieu: "Guingamp, Côtes-d'Armor, France",
-      date_debut: "2023-12-01",
+      titre: "Formation militaire – Gendarmerie nationale",
+      organisation: "AMGN (Melun), puis compagnie de gendarmerie de Guingamp",
+      lieu: "Melun et Guingamp, France",
+      date_debut: "2023-10-01",
       date_fin: "2024-04-30",
-      date_label: "Déc. 2023 – Avr. 2024",
+      date_label: "Oct. 2023 – avr. 2024",
       badge: "GN",
       kind: "professional",
       logo_text: "GN",
       logo_url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Gendarmerie_nationale_logo.svg",
       logo_theme: "gendarmerie",
-      resume: "Formation humaine et militaire en gendarmerie : formation initiale à l'EOGN de Melun puis immersion de terrain et de commandement au sein de la compagnie de Guingamp.",
-      contexte: "Expérience de 1A de l'École polytechnique en gendarmerie nationale, combinant une phase de formation (EOGN, Melun, avec modules opérationnels dont maintien/rétablissement de l'ordre) et une phase en unité dans les Côtes-d'Armor.",
-      mission: "Découvrir le fonctionnement d'une compagnie de gendarmerie, suivre des unités de terrain et la cellule de commandement, et comprendre les interactions entre sécurité publique, commandement et coordination territoriale.",
+      resume: "À l'X, la première année commence par une formation militaire. Pour moi, c'était la gendarmerie.",
+      contexte: "D'abord l'Académie militaire de la gendarmerie à Melun, avec notamment du maintien de l'ordre, puis plusieurs mois dans une compagnie des Côtes-d'Armor.",
+      mission: "Suivre le quotidien d'une compagnie, des brigades de terrain jusqu'au commandement.",
       points_cles: [
-        "Patrouilles et observation d'interventions en brigade territoriale (BTA) : police de la route, accueil, transfèrements et découverte des procédures.",
-        "Immersion au PSIG de Guingamp : patrouilles d'appui, entraînements à l'intervention et préparation physique.",
-        "Suivi du commandement sur des événements sensibles (manifestations agricoles, matchs de l'En Avant Guingamp) et participation à des réunions de sécurité."
+        "Patrouilles avec la brigade territoriale : police de la route, accueil du public, transfèrements, procédures.",
+        "Passage au PSIG : patrouilles d'appui, entraînement à l'intervention, sport.",
+        "Avec le commandement pendant les manifestations agricoles et les matchs de l'En Avant Guingamp, réunions de sécurité comprises."
       ],
-      environnement: ["Institution publique", "Terrain", "Chaîne de commandement", "Sécurité publique", "Coordination"],
-      apport: "Cette expérience m'a donné une compréhension concrète du fonctionnement d'une organisation hiérarchisée en contexte opérationnel, avec des exigences fortes de rigueur, de coordination et de sang-froid."
+      environnement: ["Gendarmerie", "Terrain", "Commandement", "Sécurité publique"],
+      apport: "Voir de près comment une organisation très hiérarchisée fonctionne sous pression, et ce que cela demande à ceux qui commandent."
     },
     {
       id: "irdl-lorient",
-      titre: "Stage de recherche – Composites et conditions de Bloch-Floquet",
-      organisation: "Institut de Recherche Dupuy de Lôme (IRDL)",
+      titre: "Stage de recherche – microflambage des composites",
+      organisation: "Institut de recherche Dupuy de Lôme (IRDL) – équipe DEMAT",
       lieu: "Lorient, France",
       date_debut: "2026-03-23",
       date_fin: "2026-07-10",
-      date_label: "Mars – Juil. 2026",
+      date_label: "Mars – juil. 2026",
       badge: "IRDL",
       kind: "professional",
       logo_text: "IRDL",
       logo_url: "images/exp/irdl.png",
       logo_theme: "irdl",
-      resume: "Stage de recherche en mécanique des composites : implémentation de conditions périodiques de type Bloch-Floquet dans Abaqus pour prédire la résistance en compression d'hydrofoils à fibres continues de carbone.",
-      contexte: "Stage de 3ème année de l'École polytechnique au sein de l'équipe DEMAT de l'Institut de Recherche Dupuy de Lôme (IRDL), à Lorient. Encadré par Christelle Combescure (Maître de Conférences) et Vincent Keryvin, ce stage de recherche appliquée porte sur la modélisation numérique d'instabilités en compression de structures composites stratifiées, dans la continuité des travaux expérimentaux de l'équipe sur les matériaux pour le nautisme de compétition.",
-      mission: "Implémenter des conditions aux limites périodiques de type Bloch-Floquet dans Abaqus pour prédire numériquement la résistance en compression de composites stratifiés à plis unidirectionnels de carbone, représentatifs des hydrofoils de voile de compétition.",
+      resume: "Stage de recherche de 3A : prédire la résistance en compression de composites carbone, comme ceux des foils de bateaux de course.",
+      contexte: "En compression, les composites à fibres de carbone cassent le plus souvent par microflambage des fibres. L'équipe DEMAT travaille sur ces matériaux pour le nautisme de compétition. J'étais encadré par Christelle Combescure et Vincent Keryvin.",
+      mission: "Implémenter les conditions de Bloch-Floquet dans Abaqus pour trouver directement le mode de microflambage et sa longueur d'onde.",
       points_cles: [
-        "Synthèse bibliographique sur la modélisation de l'instabilité en compression des composites stratifiés à plis unidirectionnels.",
-        "Étude des ondes de Floquet-Bloch et de leur intérêt pour la prédiction des modes d'instabilité dans les matériaux périodiques.",
-        "Implémentation et paramétrisation des conditions aux limites de Floquet-Bloch dans Abaqus.",
-        "Validation par comparaison à des résultats numériques antérieurs, obtenus par d'autres méthodes."
+        "Bibliographie sur le microflambage et sur les ondes de Bloch, puis choix de la méthode.",
+        "Écriture d'une chaîne Python qui pilote Abaqus : maillage, conditions aux limites, calculs, post-traitement.",
+        "Validation par comparaison aux modèles analytiques et à des résultats numériques antérieurs obtenus par d'autres méthodes.",
+        "L'outil est maintenant utilisé par l'équipe."
       ],
-      environnement: ["Recherche académique", "Éléments finis (Abaqus)", "Composites stratifiés", "Nautisme de compétition", "Python"],
-      apport: "Ce stage me permet d'approfondir la mécanique des matériaux composites et d'acquérir une maîtrise concrète des outils de simulation numérique industrielle (Abaqus), dans un contexte de recherche appliquée au nautisme de compétition."
+      environnement: ["Recherche", "Abaqus", "Python", "Composites", "Flambement"],
+      apport: "Mener un sujet de recherche de bout en bout en autonomie. Et beaucoup d'Abaqus."
     },
     {
       id: "deutsche-telekom",
-      titre: "Digital Transformation - Fiber Factory",
-      organisation: "Deutsche Telekom Technik GmbH",
+      titre: "Stage en entreprise – Digital Transformation",
+      organisation: "Deutsche Telekom Technik – Fiber Factory",
       lieu: "Bonn, Allemagne",
       date_debut: "2025-06-04",
       date_fin: "2025-09-12",
-      date_label: "4 juin 2025 – 12 septembre 2025",
+      date_label: "Juin – sept. 2025",
       badge: "DT",
       kind: "professional",
       logo_text: "T",
       logo_url: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Deutsche_Telekom_2022.svg",
       logo_theme: "telekom",
-      resume: "Travail au sein de l'équipe de digitalisation de la Fiber Factory de Deutsche Telekom Technik, dans le contexte du déploiement de la fibre optique en Allemagne.",
-      contexte: "Stage de deuxième année de l'École polytechnique, effectué au siège de Bonn dans un environnement germanophone, au sein d'une équipe travaillant sur des sujets de digitalisation et d'organisation.",
-      mission: "Contribuer aux travaux de l'équipe Digital Transformation / Fiber Factory, en particulier sur la documentation interne de l'équipe et sur des sujets liés à l'IA, en lien avec plusieurs interlocuteurs.",
+      resume: "Stage de 2A à Bonn, dans l'équipe qui digitalise le déploiement de la fibre en Allemagne. Tout en allemand.",
+      contexte: "La Fiber Factory organise le déploiement de la fibre optique de Deutsche Telekom en Allemagne. L'équipe Digital Transformation s'occupe de ses outils et de ses processus.",
+      mission: "Aider l'équipe sur sa documentation interne et sur des sujets liés à l'IA.",
       points_cles: [
-        "Rédaction d'un playbook interne pour l'équipe de digitalisation (intégration des nouveaux arrivants, documentation des pratiques).",
-        "Participation à des travaux sur l'usage de l'IA et à des réunions avec plusieurs équipes.",
-        "Découverte des méthodes de travail et de coordination d'un grand groupe technologique international.",
-        "Pratique quotidienne de l'allemand en contexte professionnel et adaptation rapide à un environnement de travail germanophone."
+        "J'ai écrit le playbook de l'équipe : comment elle travaille et ce qu'un nouvel arrivant doit savoir.",
+        "J'ai participé à des travaux sur l'usage de l'IA et à beaucoup de réunions avec d'autres équipes.",
+        "Trois mois à travailler uniquement en allemand."
       ],
-      environnement: ["Grand groupe technologique", "Transformation digitale", "Innovation", "Allemand professionnel", "Travail en équipe"],
-      apport: "Cette expérience m'a donné une vision concrète du fonctionnement d'un grand groupe technologique, tout en renforçant mon autonomie, mon adaptation à un environnement germanophone et ma communication professionnelle en allemand."
+      environnement: ["Grand groupe", "Transformation digitale", "Allemand professionnel"],
+      apport: "Un premier aperçu de la vie d'un grand groupe, et un allemand professionnel qui tient la route."
     },
     {
       id: "stage-fin-etudes",
@@ -235,22 +338,20 @@ const portfolioData = {
       lieu: "À définir",
       date_debut: "2028-01-01",
       date_fin: "",
-      date_label: "2028 – à venir",
+      date_label: "2028",
       badge: "PFE",
       kind: "upcoming",
       logo_text: "PFE",
       logo_url: "",
       logo_theme: "kth",
-      resume: "Stage de fin d'études de six mois clôturant le double diplôme École polytechnique × KTH en architecture navale.",
-      contexte: "Dernière étape du cursus d'ingénieur, ce stage de fin d'études de six mois fait suite à l'année de master et au projet de fin d'études (degree project) suivis à KTH Stockholm. L'entreprise et le sujet précis restent à définir.",
-      mission: "Mettre en application, sur un projet d'ingénierie réel, les compétences acquises en architecture navale, mécanique des structures et des matériaux, composites et simulation numérique.",
+      resume: "Six mois en entreprise ou en laboratoire pour terminer le double diplôme X–KTH. Le sujet n'est pas encore choisi.",
+      contexte: "Il viendra après l'année de master à KTH et le mémoire de l'automne 2027.",
+      mission: "",
       points_cles: [
-        "Stage long (6 mois) en entreprise ou en laboratoire, dans le prolongement de la spécialisation en architecture navale.",
-        "Domaines visés : structures et matériaux composites pour le nautisme et le maritime, hydromécanique, simulation par éléments finis.",
-        "Sujet et structure d'accueil en cours de définition."
+        "Je regarde plutôt du côté des structures et des matériaux pour le naval : composites, calcul de structures, hydromécanique."
       ],
-      environnement: ["Architecture navale", "Mécanique des structures", "Composites", "Simulation numérique", "À venir"],
-      apport: "Ce stage constituera la transition entre ma formation et mon entrée dans la vie professionnelle d'ingénieur."
+      environnement: ["Architecture navale", "Structures", "Composites"],
+      apport: ""
     }
   ],
   cours: [
@@ -1003,12 +1104,18 @@ const portfolioData = {
       image: "images/hobbies/voile_scout.jpeg",
       paragraphes: [
         "J'ai commencé le scoutisme à la troupe Vème (cinquième) marine Brest, avec un premier camp d'été puis pendant 2 ans en troupe.",
-        "Je suis actuellement chef assistant à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).",
-        "J'ai participé à un camp d'été en 2024, un autre en 2025 et je préparerai mon dernier camp en 2026.",
+        "De 2023 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).",
+        "J'y ai encadré trois camps d'été, en 2024, 2025 et 2026, avant de partir à Stockholm.",
         "La particularité de ces groupes est d'être des scouts marins : les camps comprennent une partie voile, en plus des activités scoutes habituelles.",
-        "Je suis titulaire du CEP1 (qualification d'encadrement scout, proche dans son rôle du BAFA) et du PSC1."
+        "Je suis titulaire du CEP1 (qualification d'encadrement scout, proche dans son rôle du BAFA) et du PSC1.",
+        "J'ai aussi créé un site de cours pour le brevet de patron d'embarcation. Il est réservé aux scouts inscrits : sans compte validé par un chef, on ne voit que la page de connexion (quelques captures sont dans Projets)."
       ],
-      liens: []
+      liens: [
+        {
+          url: "https://philibertpap.github.io/site_pe/",
+          texte: "Le site Patron d'embarcation (accès réservé)"
+        }
+      ]
     },
     {
       titre: "Chant choral",

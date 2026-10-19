@@ -76,15 +76,19 @@
 
         <div class="experience-card-grid">
           <div class="experience-card-main">
+            {{#contexte}}
             <section class="experience-card-section">
               <h3 class="experience-card-section-title">{{ui.experiences.context_label}}</h3>
               <p>{{contexte}}</p>
             </section>
+            {{/contexte}}
 
+            {{#mission}}
             <section class="experience-card-section">
               <h3 class="experience-card-section-title">{{ui.experiences.mission_label}}</h3>
               <p>{{mission}}</p>
             </section>
+            {{/mission}}
 
             <section class="experience-card-section">
               <h3 class="experience-card-section-title">{{ui.experiences.highlights_label}}</h3>
@@ -95,10 +99,12 @@
               </ul>
             </section>
 
+            {{#apport}}
             <section class="experience-card-section">
               <h3 class="experience-card-section-title">{{ui.experiences.impact_label}}</h3>
               <p>{{apport}}</p>
             </section>
+            {{/apport}}
           </div>
 
           <aside class="experience-card-side">

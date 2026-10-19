@@ -23,6 +23,17 @@
 
                     <p class="project-description">{{description}}</p>
 
+                    {{#structure}}
+                    <div class="project-results">
+                        <h4 class="results-title">{{titre}}</h4>
+                        <ul class="results-list">
+                            {{#items}}
+                            <li>{{.}}</li>
+                            {{/items}}
+                        </ul>
+                    </div>
+                    {{/structure}}
+
                     {{#resultats}}
                     <div class="project-results">
                         <h4 class="results-title">{{ui.projets.results_title}}</h4>
