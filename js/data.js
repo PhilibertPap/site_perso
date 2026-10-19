@@ -160,15 +160,24 @@ const portfolioData = {
     {
       titre: "TRON 3D – Jeu vidéo multijoueur",
       contexte: "Cours d'Informatique 3D – École polytechnique",
-      description: "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos naviguent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.",
+      description: "Un jeu de motos lumineuses inspiré de TRON, codé en binôme en C++ et OpenGL pour le cours d'informatique graphique (INF443). Deux joueurs sur le même clavier : chaque moto laisse une traînée derrière elle, et celui qui percute la traînée de l'autre donne un point à l'adversaire.",
       date: "03/2025 – 05/2025",
-      technologies: ["C++", "Développement 3D", "Graphique 3D", "Jeux vidéo"],
+      carousel: {
+        images: [
+          { src: "documents/tron/moto_trainee.jpg", alt: "Une moto et sa traînée", description: "Une moto et sa traînée" },
+          { src: "documents/tron/deux_motos.jpg", alt: "Les deux motos et leurs traînées", description: "Les deux motos et leurs traînées" },
+          { src: "documents/tron/trainee_adverse.jpg", alt: "Moto bleue à côté de la traînée verte", description: "La moto bleue longe la traînée verte de l'adversaire" },
+          { src: "documents/tron/vue_ensemble.jpg", alt: "Vue d'ensemble de la partie", description: "Vue d'ensemble, avec un booster au fond" },
+          { src: "documents/tron/vue_dessus.jpg", alt: "Vue de dessus de la grille", description: "Vue de dessus : les deux trajectoires" }
+        ]
+      },
+      technologies: ["C++", "OpenGL", "GLSL", "Graphique 3D", "Jeux vidéo"],
       resultats: {
         items: [
-          "Moteur de jeu 3D entièrement fonctionnel",
-          "Système de collision en temps réel",
-          "Mode multijoueur local (2 joueurs)",
-          "Graphisme 3D avec grille et effets lumineux"
+          "Traînées reconstruites à chaque image sous forme de maillage",
+          "Collisions entre chaque moto et la traînée adverse, avec un score",
+          "Boosters qui apparaissent au hasard sur la grille et donnent un coup d'accélération",
+          "Grille texturée éclairée par des lumières locales, skybox de galaxies"
         ]
       },
       liens: []
