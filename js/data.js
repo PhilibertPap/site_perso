@@ -171,27 +171,38 @@ const portfolioData = {
     {
       titre: "TRON 3D – Jeu vidéo multijoueur",
       contexte: "Cours d'Informatique 3D – École polytechnique",
-      description: "Un jeu de motos lumineuses inspiré de TRON, codé en binôme en C++ et OpenGL pour le cours d'informatique graphique (INF443). Deux joueurs sur le même clavier : chaque moto laisse une traînée derrière elle, et celui qui percute la traînée de l'autre donne un point à l'adversaire.",
-      date: "03/2025 – 05/2025",
+      description: "Un jeu de motos de lumière inspiré de TRON, codé en C++ et OpenGL en binôme pour le cours d'informatique graphique (INF443), puis repris en octobre 2026. Deux joueurs sur le même clavier : toucher un mur, le décor ou tomber dans le vide fait perdre la manche. Contrairement au jeu d'origine, l'arène est en 3D, avec des étages, des rampes et des tremplins. On peut y jouer directement dans le navigateur.",
+      date: "03/2025 – 10/2026",
       carousel: {
         images: [
-          { src: "documents/tron/moto_trainee.jpg", alt: "Une moto et sa traînée", description: "Une moto et sa traînée" },
-          { src: "documents/tron/deux_motos.jpg", alt: "Les deux motos et leurs traînées", description: "Les deux motos et leurs traînées" },
-          { src: "documents/tron/trainee_adverse.jpg", alt: "Moto bleue à côté de la traînée verte", description: "La moto bleue longe la traînée verte de l'adversaire" },
-          { src: "documents/tron/vue_ensemble.jpg", alt: "Vue d'ensemble de la partie", description: "Vue d'ensemble, avec un booster au fond" },
-          { src: "documents/tron/vue_dessus.jpg", alt: "Vue de dessus de la grille", description: "Vue de dessus : les deux trajectoires" }
+          { src: "documents/tron/ecran_titre.jpg", alt: "Écran titre du jeu", description: "Écran titre : réglages de la partie et commandes" },
+          { src: "documents/tron/ecran_partage.jpg", alt: "Vue à la troisième personne en écran partagé", description: "Écran partagé : la moto orange vire vers un tremplin" },
+          { src: "documents/tron/tremplin.jpg", alt: "Moto qui décolle d'un tremplin", description: "La moto orange décolle d'un tremplin" },
+          { src: "documents/tron/croisement.jpg", alt: "Les deux motos se croisent", description: "Les deux motos se croisent" },
+          { src: "documents/tron/explosion.jpg", alt: "Explosion d'une moto contre un mur", description: "La moto bleue percute le mur orange : point pour le joueur 2" },
+          { src: "documents/tron/vue_globale.jpg", alt: "Vue globale de l'arène", description: "Vue globale de l'arène et des murs de lumière" }
         ]
       },
-      technologies: ["C++", "OpenGL", "GLSL", "Graphique 3D", "Jeux vidéo"],
+      technologies: ["C++", "OpenGL", "GLSL", "WebAssembly", "Jeux vidéo"],
       resultats: {
         items: [
-          "Traînées reconstruites à chaque image sous forme de maillage",
-          "Collisions entre chaque moto et la traînée adverse, avec un score",
-          "Boosters qui apparaissent au hasard sur la grille et donnent un coup d'accélération",
-          "Grille texturée éclairée par des lumières locales, skybox de galaxies"
+          "Arène 3D de 160 m sur trois niveaux : on passe sous un étage, on saute par-dessus un mur avec un tremplin",
+          "Murs de lumière en maillage pré-alloué, collisions par intersection de segments",
+          "Rendu néon : grille calculée dans le shader, effet de lueur (bloom), explosions",
+          "Trois vues (globale, 3e et 1re personne en écran partagé), manches au score",
+          "Version web compilée en WebAssembly et publiée automatiquement sur GitHub Pages"
         ]
       },
-      liens: []
+      liens: [
+        {
+          url: "https://philibertpap.github.io/tron/",
+          label: "Jouer dans le navigateur (clavier)"
+        },
+        {
+          url: "https://github.com/PhilibertPap/tron",
+          label: "Code source"
+        }
+      ]
     },
     {
       titre: "PerdriX – Réseau social de récupération d'objets perdus",
