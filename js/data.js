@@ -143,11 +143,22 @@ const portfolioData = {
       contexte: "Projet scientifique collectif – École polytechnique",
       description: "Résolution du problème de l'isomorphisme de graphes à l'aide du théorème adiabatique quantique, implémentation dans Qiskit et réduction du bruit.",
       date: "09/2024 – 06/2025",
+      carousel: {
+        images: [
+          { src: "documents/isomorphisme/graphes_isomorphes.png", alt: "Deux graphes isomorphes et les probabilités mesurées", description: "Deux graphes isomorphes : l'état le plus mesuré donne la bonne permutation (simulation)" },
+          { src: "documents/isomorphisme/graphes_non_isomorphes.png", alt: "Deux graphes non isomorphes et les probabilités mesurées", description: "Deux graphes non isomorphes : les états les plus mesurés ne donnent aucun isomorphisme" },
+          { src: "documents/isomorphisme/circuit_n2.png", alt: "Circuit quantique à deux qubits", description: "Circuit d'une étape de discrétisation, pour 2 qubits" },
+          { src: "documents/isomorphisme/reussite_trotter.png", alt: "Carte du taux de réussite selon T et D", description: "Taux de réussite en simulation selon les paramètres de trotterisation T et D" },
+          { src: "documents/isomorphisme/duree_circuit.png", alt: "Durée du circuit selon le nombre d'étapes", description: "Durée du circuit comparée au temps de cohérence des qubits" },
+          { src: "documents/isomorphisme/extrapolation_bruit.png", alt: "Extrapolation du bruit vers zéro", description: "Extrapolation du bruit vers zéro (ZNE) sur un ordinateur quantique IBM" }
+        ]
+      },
       technologies: ["Qiskit", "Informatique quantique", "Théorie des graphes", "Réduction du bruit"],
       resultats: {
         items: [
           "Étude analytique puis numérique du problème",
-          "Optimisation et réduction du bruit dans les simulations quantiques"
+          "Optimisation et réduction du bruit dans les simulations quantiques",
+          "Exécution sur un vrai ordinateur quantique IBM, avec extrapolation du bruit vers zéro"
         ]
       },
       liens: [
