@@ -470,7 +470,6 @@ const CONTENT_TRANSLATIONS = {
       "Composites à fibres : analyse et conception (SD2413)": "Fibre Composites – Analysis and Design (SD2413)",
       "Théorie et méthodologie des sciences (AK2030)": "Theory and Methodology of Science (AK2030)",
       "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Degree Project in Naval Architecture (SG271X)",
-      "Stage de fin d'études (à venir)": "Master's thesis internship (upcoming)",
       "Analyse structurelle du gréement d'un voilier": "Structural analysis of a sailboat rigging",
       "Solution au problème d'isomorphisme de graphes": "Solution to the graph isomorphism problem",
       "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Social network for lost-and-found items",
@@ -750,7 +749,6 @@ const CONTENT_TRANSLATIONS = {
       "Composites à fibres : analyse et conception (SD2413)": "Faserverbundwerkstoffe: Analyse und Auslegung (SD2413)",
       "Théorie et méthodologie des sciences (AK2030)": "Wissenschaftstheorie und -methodik (AK2030)",
       "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Abschlussarbeit in Schiffstechnik – Degree Project (SG271X)",
-      "Stage de fin d'études (à venir)": "Abschlusspraktikum (bevorstehend)",
       "Analyse structurelle du gréement d'un voilier": "Strukturanalyse der Takelage eines Segelboots",
       "Solution au problème d'isomorphisme de graphes": "Lösung des Graphisomorphieproblems",
       "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Soziales Netzwerk für Fundgegenstände",
@@ -1334,9 +1332,9 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
     titre: {
       "Assistant chef de troupe – scouts marins": "Assistant troop leader – sea scouts",
       "Formation militaire – Gendarmerie nationale": "Military training – French Gendarmerie",
+      "Master thesis – stage de fin d'études (à venir)": "Master's thesis – final internship (upcoming)",
       "Stage de recherche – microflambage des composites": "Research internship – microbuckling of composites",
       "Stage en entreprise – Digital Transformation": "Company internship – Digital Transformation",
-      "Stage de fin d'études (à venir)": "Final-year internship (upcoming)",
       "Livre de mathématiques – Première et Terminale": "Mathematics textbook – final two years of French high school",
       "Patron d'embarcation – site de cours de navigation": "Patron d'embarcation – a navigation course website",
       "Microflambage des composites et conditions de Bloch-Floquet": "Microbuckling of composites with Bloch-Floquet conditions"
@@ -1350,8 +1348,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       // ---- expériences : scouts
       "Scouts unitaires de France – troupe Saint-François-Xavier": "Scouts unitaires de France – Saint-François-Xavier troop",
       "Paris, France": "Paris, France",
-      "2023 – août 2026": "2023 – Aug. 2026",
-      "Trois ans à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.": "Three years leading a sea-scout troop, until I left for Stockholm.",
       "Une troupe d'une vingtaine d'adolescents à Paris : des week-ends pendant l'année et un camp de deux semaines chaque été, dont plusieurs jours en mer.": "A troop of about twenty teenagers in Paris: weekends during the year and a two-week camp every summer, with several days at sea.",
       "Avec les autres chefs, préparer les activités, encadrer les camps et faire progresser les scouts, notamment en navigation.": "With the other leaders, plan activities, run camps and help the scouts progress, especially in sailing and navigation.",
       "Trois camps d'été (2024, 2025, 2026), avec 4 à 5 jours de navigation à chaque fois.": "Three summer camps (2024, 2025, 2026), each with 4 to 5 days of sailing.",
@@ -1411,10 +1407,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Un premier aperçu de la vie d'un grand groupe, et un allemand professionnel qui tient la route.": "A first look at life inside a large company, and solid professional German.",
       // ---- expériences : PFE
       "À définir": "To be decided",
-      "2028": "2028",
-      "Six mois en entreprise ou en laboratoire pour terminer le double diplôme X–KTH. Le sujet n'est pas encore choisi.": "Six months in a company or a lab to complete the X–KTH double degree. The topic is not chosen yet.",
-      "Il viendra après l'année de master à KTH et le mémoire de l'automne 2027.": "It will come after the master's year at KTH and the thesis in autumn 2027.",
-      "Je regarde plutôt du côté des structures et des matériaux pour le naval : composites, calcul de structures, hydromécanique.": "I am mostly looking at structures and materials for the marine sector: composites, structural analysis, hydromechanics.",
       "Architecture navale": "Naval architecture",
       "Structures": "Structures",
       // ---- projets : dates
@@ -1497,7 +1489,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Effet de la plasticité de la matrice, du module de cisaillement de la fibre et du désalignement initial": "Effect of matrix plasticity, fibre shear modulus and initial misalignment",
       "Extrait du rapport : résumé, introduction, conclusion (PDF)": "Report excerpt: abstract, introduction, conclusion (PDF, in French)",
       // ---- centres d'intérêt : scoutisme
-      "De 2023 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "From 2023 to August 2026, I was assistant troop leader of the Saint François-Xavier troop (SUF) at the Notre-Dame-des-Champs parish (Paris VI).",
       "J'y ai encadré trois camps d'été, en 2024, 2025 et 2026, avant de partir à Stockholm.": "I led three summer camps there, in 2024, 2025 and 2026, before leaving for Stockholm.",
       "J'ai aussi créé un site de cours pour le brevet de patron d'embarcation. Il est réservé aux scouts inscrits : sans compte validé par un chef, on ne voit que la page de connexion (quelques captures sont dans Projets).": "I also built a course website for the boat-skipper certificate. It is restricted to registered scouts: without an account approved by a leader, you only see the login page (a few screenshots are in Projects).",
       "Le site Patron d'embarcation (accès réservé)": "The Patron d'embarcation website (restricted access)"
@@ -1507,9 +1498,9 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
     titre: {
       "Assistant chef de troupe – scouts marins": "Assistenz-Truppführer – Seepfadfinder",
       "Formation militaire – Gendarmerie nationale": "Militärische Ausbildung – Gendarmerie nationale",
+      "Master thesis – stage de fin d'études (à venir)": "Masterarbeit – Abschlusspraktikum (geplant)",
       "Stage de recherche – microflambage des composites": "Forschungspraktikum – Mikroknicken von Verbundwerkstoffen",
       "Stage en entreprise – Digital Transformation": "Unternehmenspraktikum – Digital Transformation",
-      "Stage de fin d'études (à venir)": "Abschlusspraktikum (geplant)",
       "Livre de mathématiques – Première et Terminale": "Mathematikbuch – Oberstufe (Première und Terminale)",
       "Patron d'embarcation – site de cours de navigation": "Patron d'embarcation – eine Website zum Navigationskurs",
       "Microflambage des composites et conditions de Bloch-Floquet": "Mikroknicken von Verbundwerkstoffen mit Bloch-Floquet-Bedingungen"
@@ -1523,8 +1514,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       // ---- expériences : scouts
       "Scouts unitaires de France – troupe Saint-François-Xavier": "Scouts unitaires de France – Truppe Saint-François-Xavier",
       "Paris, France": "Paris, Frankreich",
-      "2023 – août 2026": "2023 – Aug. 2026",
-      "Trois ans à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.": "Drei Jahre lang habe ich eine Seepfadfindertruppe geleitet, bis zu meinem Umzug nach Stockholm.",
       "Une troupe d'une vingtaine d'adolescents à Paris : des week-ends pendant l'année et un camp de deux semaines chaque été, dont plusieurs jours en mer.": "Eine Truppe mit rund zwanzig Jugendlichen in Paris: Wochenenden im Laufe des Jahres und jeden Sommer ein zweiwöchiges Lager, davon mehrere Tage auf See.",
       "Avec les autres chefs, préparer les activités, encadrer les camps et faire progresser les scouts, notamment en navigation.": "Mit den anderen Leitern Aktivitäten vorbereiten, Lager leiten und die Pfadfinder voranbringen, besonders beim Segeln und Navigieren.",
       "Trois camps d'été (2024, 2025, 2026), avec 4 à 5 jours de navigation à chaque fois.": "Drei Sommerlager (2024, 2025, 2026), jeweils mit 4 bis 5 Tagen auf dem Wasser.",
@@ -1584,10 +1573,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Un premier aperçu de la vie d'un grand groupe, et un allemand professionnel qui tient la route.": "Ein erster Einblick in den Alltag eines Konzerns und ein belastbares Berufsdeutsch.",
       // ---- expériences : PFE
       "À définir": "Noch offen",
-      "2028": "2028",
-      "Six mois en entreprise ou en laboratoire pour terminer le double diplôme X–KTH. Le sujet n'est pas encore choisi.": "Sechs Monate in einem Unternehmen oder Labor zum Abschluss des Doppelabschlusses X–KTH. Das Thema steht noch nicht fest.",
-      "Il viendra après l'année de master à KTH et le mémoire de l'automne 2027.": "Es folgt auf das Masterjahr an der KTH und die Masterarbeit im Herbst 2027.",
-      "Je regarde plutôt du côté des structures et des matériaux pour le naval : composites, calcul de structures, hydromécanique.": "Ich suche eher im Bereich Strukturen und Werkstoffe für den Schiffbau: Verbundwerkstoffe, Strukturberechnung, Hydromechanik.",
       "Architecture navale": "Schiffbau",
       "Structures": "Strukturen",
       // ---- projets : dates
@@ -1670,7 +1655,6 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
       "Effet de la plasticité de la matrice, du module de cisaillement de la fibre et du désalignement initial": "Einfluss der Matrixplastizität, des Faserschubmoduls und der anfänglichen Schiefstellung",
       "Extrait du rapport : résumé, introduction, conclusion (PDF)": "Auszug aus dem Bericht: Zusammenfassung, Einleitung, Fazit (PDF, auf Französisch)",
       // ---- centres d'intérêt : scoutisme
-      "De 2023 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Von 2023 bis August 2026 war ich Assistenz-Truppführer der Truppe Saint François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
       "J'y ai encadré trois camps d'été, en 2024, 2025 et 2026, avant de partir à Stockholm.": "Dort habe ich drei Sommerlager geleitet, 2024, 2025 und 2026, bevor ich nach Stockholm gegangen bin.",
       "J'ai aussi créé un site de cours pour le brevet de patron d'embarcation. Il est réservé aux scouts inscrits : sans compte validé par un chef, on ne voit que la page de connexion (quelques captures sont dans Projets).": "Außerdem habe ich eine Kurs-Website für den Bootsführerschein gebaut. Sie ist angemeldeten Pfadfindern vorbehalten: Ohne von einem Leiter freigegebenes Konto sieht man nur die Anmeldeseite (einige Screenshots stehen unter Projekte).",
       "Le site Patron d'embarcation (accès réservé)": "Die Website Patron d'embarcation (Zugang beschränkt)"
@@ -1751,6 +1735,13 @@ const MISSING_TRANSLATIONS_PATCH = {
       "Version web en WebAssembly, installable sur téléphone et jouable en inclinant l'écran": "Web version in WebAssembly, installable on a phone and playable by tilting the screen",
       "Jouer (navigateur ou téléphone)": "Play (browser or phone)",
       "Rapport : le jeu et les notions du cours (PDF)": "Report: the game and the course concepts (PDF, in French)",
+      "Deux ans et demi à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.": "Two and a half years leading a sea-scout troop, until I left for Stockholm.",
+      "Avr. 2024 – août 2026": "Apr. 2024 – Aug. 2026",
+      "D'avril 2024 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "From April 2024 to August 2026, I was assistant troop leader of the Saint François-Xavier troop (SUF) at the Notre-Dame-des-Champs parish (Paris VI).",
+      "Juil. – déc. 2027": "Jul. – Dec. 2027",
+      "Six mois de master thesis, en entreprise ou en laboratoire, après les cours à KTH. Le sujet n'est pas encore choisi.": "A six-month master's thesis, in a company or a lab, after the courses at KTH. The topic is not chosen yet.",
+      "Il clôt le double diplôme X–KTH.": "It completes the X–KTH double degree.",
+      "Plutôt dans le naval : calcul de structures, matériaux, hydromécanique.": "Mostly in the marine sector: structural analysis, materials, hydromechanics.",
       "J'ai commencé l'orgue au conservatoire pendant le primaire, puis j'ai poursuivi tout le collège avec un professeur particulier.": "I started the organ at the conservatoire in primary school, then continued with a private teacher throughout middle school.",
       "Au lycée, j'ai continué une année avec un professeur particulier, organiste dans une église.": "In high school, I continued for a year with a private teacher who was a church organist.",
       "Aujourd'hui, je joue occasionnellement lors de messes en semaine ou de mariages dans la famille — sans prétention de virtuose, mais avec assez d'aisance pour tenir la partie d'accompagnement.": "Today I play now and then at weekday masses or family weddings — no virtuoso, but comfortable enough to handle the accompaniment.",
@@ -1801,6 +1792,13 @@ const MISSING_TRANSLATIONS_PATCH = {
       "Version web en WebAssembly, installable sur téléphone et jouable en inclinant l'écran": "Webversion in WebAssembly, auf dem Handy installierbar und durch Neigen des Bildschirms spielbar",
       "Jouer (navigateur ou téléphone)": "Spielen (Browser oder Handy)",
       "Rapport : le jeu et les notions du cours (PDF)": "Bericht: das Spiel und die Kursinhalte (PDF, auf Französisch)",
+      "Deux ans et demi à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.": "Zweieinhalb Jahre habe ich eine Seepfadfindertruppe geleitet, bis zu meinem Umzug nach Stockholm.",
+      "Avr. 2024 – août 2026": "Apr. 2024 – Aug. 2026",
+      "D'avril 2024 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Von April 2024 bis August 2026 war ich Assistenz-Truppführer der Truppe Saint François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
+      "Juil. – déc. 2027": "Juli – Dez. 2027",
+      "Six mois de master thesis, en entreprise ou en laboratoire, après les cours à KTH. Le sujet n'est pas encore choisi.": "Sechs Monate Masterarbeit in einem Unternehmen oder Labor, nach den Kursen an der KTH. Das Thema steht noch nicht fest.",
+      "Il clôt le double diplôme X–KTH.": "Sie schließt den Doppelabschluss X–KTH ab.",
+      "Plutôt dans le naval : calcul de structures, matériaux, hydromécanique.": "Eher im Schiffbau: Strukturberechnung, Werkstoffe, Hydromechanik.",
       "Analyse de données électorales": "Analyse von Wahldaten",
       "Cartographie": "Kartografie",
       "Science politique": "Politikwissenschaft",
