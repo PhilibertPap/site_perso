@@ -2285,7 +2285,21 @@ function initExperiencesTimeline() {
     });
 
     if (emptyState) emptyState.classList.toggle("d-none", !!id);
+    placePanels();
     syncActivePanelLayout();
+  }
+
+  // Sur téléphone, la carte s'ouvre juste sous le point cliqué ; sur ordinateur, sous la frise
+  function placePanels() {
+    const activeTab = tabs.find((tab) => tab.dataset.experienceTarget === activeId);
+    panels.forEach((panel) => {
+      const isActive = activeId && panel.dataset.experienceCard === activeId;
+      if (isActive && activeTab && isMobileLayout()) {
+        if (activeTab.nextElementSibling !== panel) activeTab.after(panel);
+      } else if (panel.parentElement !== panelsWrap) {
+        panelsWrap.appendChild(panel);
+      }
+    });
   }
 
   function moveFocus(delta, fromTab) {
@@ -2301,6 +2315,7 @@ function initExperiencesTimeline() {
     tab.addEventListener("click", () => {
       const nextId = tab.dataset.experienceTarget;
       setActive(activeId === nextId ? null : nextId);
+      if (activeId && isMobileLayout()) tab.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     tab.addEventListener("keydown", (event) => {
@@ -2336,7 +2351,10 @@ function initExperiencesTimeline() {
   });
 
   window.addEventListener("resize", () => {
-    if (activeId) syncActivePanelLayout();
+    if (activeId) {
+      placePanels();
+      syncActivePanelLayout();
+    }
   }, { passive: true });
 
   setActive(null);
