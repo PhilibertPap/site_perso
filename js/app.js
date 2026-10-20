@@ -56,7 +56,7 @@ const UI_STRINGS = {
     },
     words: { course_singular: "cours", course_plural: "cours", year_singular: "année", year_plural: "années" },
     accueil: {
-      badge: "Ingénieur diplômé de l'École polytechnique",
+      badge: "École polytechnique – 4A à KTH Stockholm",
       subtitle: "Études d'ingénierie en mécanique des structures et des matériaux. Passionné par le monde maritime.",
       skills: ["Culture pluridisciplinaire", "Curiosité intellectuelle", "Discipline personnelle", "Sens du détail et rigueur"],
       cta_projects: "Voir mes projets",
@@ -188,7 +188,7 @@ const UI_STRINGS = {
     },
     words: { course_singular: "course", course_plural: "courses", year_singular: "year", year_plural: "years" },
     accueil: {
-      badge: "Graduate engineer – École polytechnique",
+      badge: "École polytechnique – 4th year at KTH Stockholm",
       subtitle: "Engineering studies in structural and material mechanics. Passionate about maritime systems.",
       skills: ["Multidisciplinary culture", "Intellectual curiosity", "Personal discipline", "Attention to detail and rigor"],
       cta_projects: "View my projects",
@@ -320,7 +320,7 @@ const UI_STRINGS = {
     },
     words: { course_singular: "Kurs", course_plural: "Kurse", year_singular: "Jahr", year_plural: "Jahre" },
     accueil: {
-      badge: "Ingenieurabschluss der École polytechnique",
+      badge: "École polytechnique – 4. Jahr an der KTH Stockholm",
       subtitle: "Ingenieurstudium in Struktur- und Werkstoffmechanik. Leidenschaft für die maritime Welt.",
       skills: ["Interdisziplinäre Kultur", "Intellektuelle Neugier", "Persönliche Disziplin", "Sorgfalt und Genauigkeit"],
       cta_projects: "Meine Projekte ansehen",
