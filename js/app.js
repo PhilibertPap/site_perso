@@ -453,27 +453,27 @@ const CONTENT_TRANSLATIONS = {
       "KTH — Semestre 2 (printemps 2027)": "KTH — Semester 2 (spring 2027)",
       "KTH — Semestre 3 : projet de fin d'études (automne 2027)": "KTH — Semester 3: degree project (autumn 2027)",
       "Prépa MPSI": "Preparatory class MPSI (Lycée Sainte-Geneviève, Versailles)",
-      "Prépa MP* (option informatique)": "Preparatory class MP* - Computer Science option (Lycée Sainte-Geneviève, Versailles)",
+      "Prépa MP* (option informatique)": "Preparatory class MP* – Computer Science option (Lycée Sainte-Geneviève, Versailles)",
       "1A": "Year 1 (X)",
       "2A": "Year 2 (X)",
       "3A": "Year 3 (X)"
     },
     titre: {
       "Structures légères et éléments finis (SD2411)": "Lightweight Structures and FEM (SD2411)",
-      "Conception de navires – Ship Design (SD2721)": "Ship Design (SD2721)",
-      "Structures marines – Marine Structures (SD2722)": "Marine Structures (SD2722)",
+      "Conception de navires (SD2721)": "Ship Design (SD2721)",
+      "Structures marines (SD2722)": "Marine Structures (SD2722)",
       "Conception avancée des structures soudées (SD2420)": "Advanced Design of Welded Structures (SD2420)",
       "Développement durable et méthodologie de recherche (SA2002)": "Sustainable Development and Research Methodology (SA2002)",
-      "Voile et performance – Sailing for Performance (SD2706)": "Sailing for Performance (SD2706)",
+      "Voile et performance (SD2706)": "Sailing for Performance (SD2706)",
       "Méthodes numériques pour l'acoustique et les vibrations (SD2175)": "Numerical Methods for Acoustics and Vibration (SD2175)",
-      "Hydromécanique marine – Marine Hydromechanics (SD2723)": "Marine Hydromechanics (SD2723)",
+      "Hydromécanique marine (SD2723)": "Marine Hydromechanics (SD2723)",
       "Composites à fibres : analyse et conception (SD2413)": "Fibre Composites – Analysis and Design (SD2413)",
       "Théorie et méthodologie des sciences (AK2030)": "Theory and Methodology of Science (AK2030)",
-      "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Degree Project in Naval Architecture (SG271X)",
+      "Projet de fin d'études en architecture navale (SG271X)": "Degree Project in Naval Architecture (SG271X)",
       "Analyse structurelle du gréement d'un voilier": "Structural analysis of a sailboat rigging",
       "Solution au problème d'isomorphisme de graphes": "Solution to the graph isomorphism problem",
-      "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Social network for lost-and-found items",
-      "TRON 3D – Jeu vidéo multijoueur": "TRON 3D - Multiplayer video game",
+      "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX – Social network for lost-and-found items",
+      "TRON 3D – Jeu vidéo multijoueur": "TRON 3D – Multiplayer video game",
       "Mécanique des milieux continus 1": "Continuum Mechanics 1",
       "Mécanique des milieux continus 2": "Continuum Mechanics 2",
       "Mécanique des fluides": "Fluid Mechanics",
@@ -582,10 +582,10 @@ const CONTENT_TRANSLATIONS = {
       "Ce stage constituera la transition entre ma formation et mon entrée dans la vie professionnelle d'ingénieur.": "This internship will be the transition between my education and my entry into professional life as an engineer.",
       "Étude complète du comportement mécanique du gréement et du mât sous différents chargements. Le projet combine modélisation numérique par éléments finis, analyse dynamique et optimisation structurale pour un voilier classique dont la géométrie peut varier.": "Comprehensive study of rigging and mast mechanical behavior under multiple load cases, combining finite element modeling, dynamic analysis, and structural optimization for a classical sailboat with variable geometry.",
       "Résolution du problème de l'isomorphisme de graphes à l'aide du théorème adiabatique quantique, implémentation dans Qiskit et réduction du bruit.": "Solving the graph isomorphism problem using the quantum adiabatic theorem, implemented in Qiskit with noise-reduction techniques.",
-      "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.": "Collaborative mobile app to report and recover lost items at Ecole polytechnique, with social-network features (posts, private messaging, and real-time notifications).",
+      "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.": "Collaborative mobile app to report and recover lost items at École polytechnique, with social-network features (posts, private messaging, and real-time notifications).",
       "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos naviguent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.": "TRON-inspired 3D game for two local players: two light bikes race on a dark grid and leave trails, and each player tries to trap the other into a collision. Fully coded in C++.",
       "Troupe Saint François-Xavier (Paris VI)": "Saint François-Xavier troop (Paris 6th district)",
-      "Ensemble Vocal de l'École polytechnique": "Ecole polytechnique vocal ensemble",
+      "Ensemble Vocal de l'École polytechnique": "École polytechnique vocal ensemble",
       "Formation au conservatoire et en cours particuliers": "Conservatory training and private lessons",
       "Cours particuliers": "Private lessons",
       "Gardien de but": "Goalkeeper",
@@ -709,10 +709,10 @@ const CONTENT_TRANSLATIONS = {
       "Architecture client de l'application": "Application client architecture"
     },
     contexte: {
-      "Projet de recherche – École polytechnique": "Research project - Ecole polytechnique",
-      "Projet scientifique collectif – École polytechnique": "Collaborative scientific project - Ecole polytechnique",
-      "MODAL (Module Appliqué en Laboratoire) – École polytechnique": "MODAL (Applied Laboratory Module) - Ecole polytechnique",
-      "Cours d'Informatique 3D – École polytechnique": "3D Computer Science course - Ecole polytechnique"
+      "Projet de recherche – École polytechnique": "Research project – École polytechnique",
+      "Projet scientifique collectif – École polytechnique": "Collaborative scientific project – École polytechnique",
+      "MODAL (Module Appliqué en Laboratoire) – École polytechnique": "MODAL (Applied Laboratory Module) – École polytechnique",
+      "Cours d'Informatique 3D – École polytechnique": "3D Computer Science course – École polytechnique"
     }
   },
   de: {
@@ -732,27 +732,27 @@ const CONTENT_TRANSLATIONS = {
       "KTH — Semestre 2 (printemps 2027)": "KTH — Semester 2 (Frühjahr 2027)",
       "KTH — Semestre 3 : projet de fin d'études (automne 2027)": "KTH — Semester 3: Abschlussarbeit (Herbst 2027)",
       "Prépa MPSI": "Vorklasse MPSI (Lycée Sainte-Geneviève, Versailles)",
-      "Prépa MP* (option informatique)": "Vorklasse MP* - Informatikoption (Lycée Sainte-Geneviève, Versailles)",
+      "Prépa MP* (option informatique)": "Vorklasse MP* – Informatikoption (Lycée Sainte-Geneviève, Versailles)",
       "1A": "1. Jahr (X)",
       "2A": "2. Jahr (X)",
       "3A": "3. Jahr (X)"
     },
     titre: {
       "Structures légères et éléments finis (SD2411)": "Leichtbaustrukturen und FEM (SD2411)",
-      "Conception de navires – Ship Design (SD2721)": "Schiffsentwurf – Ship Design (SD2721)",
-      "Structures marines – Marine Structures (SD2722)": "Meeresstrukturen – Marine Structures (SD2722)",
+      "Conception de navires (SD2721)": "Schiffsentwurf (SD2721)",
+      "Structures marines (SD2722)": "Schiffsstrukturen (SD2722)",
       "Conception avancée des structures soudées (SD2420)": "Fortgeschrittener Entwurf geschweißter Strukturen (SD2420)",
       "Développement durable et méthodologie de recherche (SA2002)": "Nachhaltige Entwicklung und Forschungsmethodik (SA2002)",
-      "Voile et performance – Sailing for Performance (SD2706)": "Segeln und Leistung – Sailing for Performance (SD2706)",
+      "Voile et performance (SD2706)": "Leistungssegeln (SD2706)",
       "Méthodes numériques pour l'acoustique et les vibrations (SD2175)": "Numerische Methoden für Akustik und Schwingungen (SD2175)",
-      "Hydromécanique marine – Marine Hydromechanics (SD2723)": "Marine Hydromechanik – Marine Hydromechanics (SD2723)",
+      "Hydromécanique marine (SD2723)": "Schiffshydromechanik (SD2723)",
       "Composites à fibres : analyse et conception (SD2413)": "Faserverbundwerkstoffe: Analyse und Auslegung (SD2413)",
       "Théorie et méthodologie des sciences (AK2030)": "Wissenschaftstheorie und -methodik (AK2030)",
-      "Projet de fin d'études en architecture navale – Degree Project (SG271X)": "Abschlussarbeit in Schiffstechnik – Degree Project (SG271X)",
+      "Projet de fin d'études en architecture navale (SG271X)": "Abschlussarbeit in Schiffstechnik (SG271X)",
       "Analyse structurelle du gréement d'un voilier": "Strukturanalyse der Takelage eines Segelboots",
       "Solution au problème d'isomorphisme de graphes": "Lösung des Graphisomorphieproblems",
-      "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX - Soziales Netzwerk für Fundgegenstände",
-      "TRON 3D – Jeu vidéo multijoueur": "TRON 3D - Mehrspieler-Videospiel",
+      "PerdriX – Réseau social de récupération d'objets perdus": "PerdriX – Soziales Netzwerk für Fundgegenstände",
+      "TRON 3D – Jeu vidéo multijoueur": "TRON 3D – Mehrspieler-Videospiel",
       "Mécanique des milieux continus 1": "Kontinuumsmechanik 1",
       "Mécanique des milieux continus 2": "Kontinuumsmechanik 2",
       "Mécanique des fluides": "Strömungsmechanik",
@@ -775,9 +775,9 @@ const CONTENT_TRANSLATIONS = {
       "Relativité et principes variationnels": "Relativität und Variationsprinzipien",
       "Physique statistique": "Statistische Physik",
       "Ondes électromagnétiques": "Elektromagnetische Wellen",
-      "Informatique tronc commun (MPSI)": "Informatik - gemeinsames Modul (MPSI)",
+      "Informatique tronc commun (MPSI)": "Informatik – gemeinsames Modul (MPSI)",
       "Option informatique (MPSI, S2)": "Informatikoption (MPSI, Semester 2)",
-      "Informatique tronc commun (MP*)": "Informatik - gemeinsames Modul (MP*)",
+      "Informatique tronc commun (MP*)": "Informatik – gemeinsames Modul (MP*)",
       "Informatique renforcée (MP*, option informatique)": "Vertiefte Informatik (MP*, Informatikoption)",
       "Mécanismes de la programmation orientée objet": "Mechanismen der objektorientierten Programmierung",
       "Informatique graphique 3D": "3D-Computergrafik",
@@ -789,11 +789,11 @@ const CONTENT_TRANSLATIONS = {
       "Orgue": "Orgel",
       "Piano": "Klavier",
       "Football": "Fußball",
-      "Langue allemande et culture germanique": "Deutsche Sprache und germanische Kultur",
+      "Langue allemande et culture germanique": "Deutsche Sprache und Kultur",
       "Équilibres mondiaux et enjeux de défense": "Weltgleichgewichte und Verteidigungsfragen",
       "Pouvons-nous aimer la démocratie ?": "Können wir die Demokratie lieben?",
       "Histoires d'Empires": "Geschichten der Imperien",
-      "Introduction aux problèmes institutionnels": "Einführung in institutionelle Probleme",
+      "Introduction aux problèmes institutionnels": "Einführung in institutionelle Fragen",
       "Histoire politique et culturelle de la France : de la Commune à la Belle Époque": "Politische und kulturelle Geschichte Frankreichs: von der Kommune bis zur Belle Epoque",
       "Stratégie et géopolitique": "Strategie und Geopolitik",
       "Découverte de l'Opéra": "Oper entdecken",
@@ -863,8 +863,8 @@ const CONTENT_TRANSLATIONS = {
       "Résolution du problème de l'isomorphisme de graphes à l'aide du théorème adiabatique quantique, implémentation dans Qiskit et réduction du bruit.": "Lösung des Graphisomorphieproblems mit dem quantenadiabatischen Theorem, Implementierung in Qiskit und Rauschreduktion.",
       "Application mobile collaborative pour signaler et retrouver les objets perdus à l'École polytechnique. Fonctionnalités de réseau social type Facebook : création de posts pour les objets trouvés, système de messagerie privée entre utilisateurs, et notifications en temps réel pour faciliter les retrouvailles.": "Kollaborative App zum Melden und Wiederfinden verlorener Gegenstände an der École polytechnique mit sozialen Funktionen (Posts, private Nachrichten, Echtzeit-Benachrichtigungen).",
       "Jeu vidéo en 3D inspiré de TRON, jouable à 2 joueurs sur le même ordinateur. Deux motos naviguent sur une grille noire brillante et traînent des fils lumineux derrière elles. Les joueurs visent à faire entrer en collision la moto adverse avec les fils (leur ou les leurs), ce qui entraîne la mort du joueur touché. Entièrement codé en C++.": "Von TRON inspiriertes 3D-Spiel für zwei lokale Spieler: Lichtmotorräder auf einem dunklen Raster, Ziel ist es, den Gegner in eine Kollision zu zwingen. Vollständig in C++ entwickelt.",
-      "Troupe Saint François-Xavier (Paris VI)": "Stamm Saint François-Xavier (Paris 6.)",
-      "Ensemble Vocal de l'École polytechnique": "Vokalensemble der Ecole polytechnique",
+      "Troupe Saint François-Xavier (Paris VI)": "Trupp Saint-François-Xavier (Paris 6.)",
+      "Ensemble Vocal de l'École polytechnique": "Vokalensemble der École polytechnique",
       "Formation au conservatoire et en cours particuliers": "Konservatorium und Privatunterricht",
       "Cours particuliers": "Privatunterricht",
       "Gardien de but": "Torwart",
@@ -940,8 +940,8 @@ const CONTENT_TRANSLATIONS = {
       "Le compte Instagram de l'Ensemble Vocal": "Instagram-Konto des Vokalensembles",
       "Une interprétation des petits préludes et fugues de Bach": "Eine Interpretation von Bachs kleinen Präludien und Fugen",
       "Le concerto pour clavier n°1 de Bach, interprété par Glenn Gould": "Bachs Klavierkonzert Nr. 1, interpretiert von Glenn Gould",
-      "J'ai commencé le scoutisme à la troupe Vème (cinquième) marine Brest, avec un premier camp d'été puis pendant 2 ans en troupe.": "Ich habe mit dem Pfadfinden in der Vème (fünften) marinen Truppe in Brest begonnen, mit einem ersten Sommerlager und anschließend zwei Jahren in der Truppe.",
-      "Je suis actuellement chef assistant à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Ich bin derzeit Assistenz-Truppführer in der Truppe Saint François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
+      "J'ai commencé le scoutisme à la troupe Vème (cinquième) marine Brest, avec un premier camp d'été puis pendant 2 ans en troupe.": "Ich habe mit dem Pfadfinden im Vème (fünften) Seepfadfindertrupp in Brest begonnen, mit einem ersten Sommerlager und anschließend zwei Jahren im Trupp.",
+      "Je suis actuellement chef assistant à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Ich bin derzeit Assistenz-Truppführer im Trupp Saint-François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
       "J'ai participé à un camp d'été en 2024, un autre en 2025 et je préparerai mon dernier camp en 2026.": "Ich habe 2024 an einem Sommerlager teilgenommen, 2025 an einem weiteren und bereite mein letztes Lager 2026 vor.",
       "La particularité de ces groupes est d'être des scouts marins : les camps comprennent une partie voile, en plus des activités scoutes habituelles.": "Die Besonderheit dieser Gruppen ist ihre maritime Ausrichtung: Die Lager umfassen einen Segelteil zusätzlich zu den üblichen Pfadfinderaktivitäten.",
       "Je suis titulaire du CEP1 (qualification d'encadrement scout, proche dans son rôle du BAFA) et du PSC1.": "Ich bin Inhaber des CEP1 (eine Pfadfinder-Leitungsqualifikation, in ihrer Funktion dem BAFA ähnlich) und des PSC1.",
@@ -988,10 +988,10 @@ const CONTENT_TRANSLATIONS = {
       "Architecture client de l'application": "Client-Architektur der Anwendung"
     },
     contexte: {
-      "Projet de recherche – École polytechnique": "Forschungsprojekt - École polytechnique",
-      "Projet scientifique collectif – École polytechnique": "Kollektives wissenschaftliches Projekt - École polytechnique",
-      "MODAL (Module Appliqué en Laboratoire) – École polytechnique": "MODAL (Angewandtes Labormodul) - École polytechnique",
-      "Cours d'Informatique 3D – École polytechnique": "3D-Informatikkurs - École polytechnique"
+      "Projet de recherche – École polytechnique": "Forschungsprojekt – École polytechnique",
+      "Projet scientifique collectif – École polytechnique": "Kollektives wissenschaftliches Projekt – École polytechnique",
+      "MODAL (Module Appliqué en Laboratoire) – École polytechnique": "MODAL (Angewandtes Labormodul) – École polytechnique",
+      "Cours d'Informatique 3D – École polytechnique": "3D-Informatikkurs – École polytechnique"
     }
   }
 };
@@ -1512,12 +1512,12 @@ const EXPERIENCES_TRANSLATIONS_PATCH = {
     },
     description: {
       // ---- expériences : scouts
-      "Scouts unitaires de France – troupe Saint-François-Xavier": "Scouts unitaires de France – Truppe Saint-François-Xavier",
+      "Scouts unitaires de France – troupe Saint-François-Xavier": "Scouts unitaires de France – Trupp Saint-François-Xavier",
       "Paris, France": "Paris, Frankreich",
-      "Une troupe d'une vingtaine d'adolescents à Paris : des week-ends pendant l'année et un camp de deux semaines chaque été, dont plusieurs jours en mer.": "Eine Truppe mit rund zwanzig Jugendlichen in Paris: Wochenenden im Laufe des Jahres und jeden Sommer ein zweiwöchiges Lager, davon mehrere Tage auf See.",
+      "Une troupe d'une vingtaine d'adolescents à Paris : des week-ends pendant l'année et un camp de deux semaines chaque été, dont plusieurs jours en mer.": "Ein Trupp mit rund zwanzig Jugendlichen in Paris: Wochenenden im Laufe des Jahres und jeden Sommer ein zweiwöchiges Lager, davon mehrere Tage auf See.",
       "Avec les autres chefs, préparer les activités, encadrer les camps et faire progresser les scouts, notamment en navigation.": "Mit den anderen Leitern Aktivitäten vorbereiten, Lager leiten und die Pfadfinder voranbringen, besonders beim Segeln und Navigieren.",
       "Trois camps d'été (2024, 2025, 2026), avec 4 à 5 jours de navigation à chaque fois.": "Drei Sommerlager (2024, 2025, 2026), jeweils mit 4 bis 5 Tagen auf dem Wasser.",
-      "Infirmier de la troupe (PSC1), qualification d'encadrement CEP1.": "Sanitäter der Truppe (PSC1), Leiterqualifikation CEP1.",
+      "Infirmier de la troupe (PSC1), qualification d'encadrement CEP1.": "Sanitäter des Trupps (PSC1), Leiterqualifikation CEP1.",
       "Au dernier camp, j'avais aussi l'intendance et la notation des équipages.": "Im letzten Lager war ich außerdem für die Verpflegung und die Wertung der Mannschaften zuständig.",
       "Pour aider les scouts à préparer le brevet de patron d'embarcation, j'ai créé un site de cours (voir Projets).": "Damit sich die Pfadfinder auf den Bootsführerschein (patron d'embarcation) vorbereiten können, habe ich eine Kurs-Website gebaut (siehe Projekte).",
       "Bénévolat": "Ehrenamt",
@@ -1794,7 +1794,7 @@ const MISSING_TRANSLATIONS_PATCH = {
       "Rapport : le jeu et les notions du cours (PDF)": "Bericht: das Spiel und die Kursinhalte (PDF, auf Französisch)",
       "Deux ans et demi à encadrer une troupe de scouts marins, jusqu'à mon départ pour Stockholm.": "Zweieinhalb Jahre habe ich eine Seepfadfindertruppe geleitet, bis zu meinem Umzug nach Stockholm.",
       "Avr. 2024 – août 2026": "Apr. 2024 – Aug. 2026",
-      "D'avril 2024 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Von April 2024 bis August 2026 war ich Assistenz-Truppführer der Truppe Saint François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
+      "D'avril 2024 à août 2026, j'ai été assistant chef de troupe à la troupe Saint François-Xavier (SUF) de la paroisse Notre-Dame-des-Champs (Paris VI).": "Von April 2024 bis August 2026 war ich Assistenz-Truppführer im Trupp Saint-François-Xavier (SUF) der Pfarrei Notre-Dame-des-Champs (Paris VI).",
       "Juil. – déc. 2027": "Juli – Dez. 2027",
       "Six mois de master thesis, en entreprise ou en laboratoire, après les cours à KTH. Le sujet n'est pas encore choisi.": "Sechs Monate Masterarbeit in einem Unternehmen oder Labor, nach den Kursen an der KTH. Das Thema steht noch nicht fest.",
       "Il clôt le double diplôme X–KTH.": "Sie schließt den Doppelabschluss X–KTH ab.",
@@ -1823,31 +1823,6 @@ const MISSING_TRANSLATIONS_PATCH = {
 for (const lang of Object.keys(MISSING_TRANSLATIONS_PATCH)) {
   const dict = CONTENT_TRANSLATIONS[lang];
   const patchLang = MISSING_TRANSLATIONS_PATCH[lang];
-  if (!dict || !patchLang) continue;
-  for (const bucket of Object.keys(patchLang)) {
-    dict[bucket] = dict[bucket] || {};
-    Object.assign(dict[bucket], patchLang[bucket]);
-  }
-}
-
-const COURSE_LINKS_TRANSLATIONS_PATCH = {
-  en: {
-    description: {
-      "Outil interactif : anatomie 3D de la structure de coque": "Interactive tool: 3D hull structure anatomy",
-      "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts.": "To study for this course, I built an interactive 3D tool: the hull structure of five ship types, each member explained (function, family, features), with a quiz and the load path."
-    }
-  },
-  de: {
-    description: {
-      "Outil interactif : anatomie 3D de la structure de coque": "Interaktives Tool: 3D-Anatomie der Rumpfstruktur",
-      "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts.": "Zur Prüfungsvorbereitung habe ich ein interaktives 3D-Tool entwickelt: die Rumpfstruktur von fünf Schiffstypen, jedes Bauteil erklärt (Funktion, Familie, Merkmale), mit Quiz und Lastpfad."
-    }
-  }
-};
-
-for (const lang of Object.keys(COURSE_LINKS_TRANSLATIONS_PATCH)) {
-  const dict = CONTENT_TRANSLATIONS[lang];
-  const patchLang = COURSE_LINKS_TRANSLATIONS_PATCH[lang];
   if (!dict || !patchLang) continue;
   for (const bucket of Object.keys(patchLang)) {
     dict[bucket] = dict[bucket] || {};

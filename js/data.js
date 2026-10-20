@@ -407,7 +407,7 @@ const portfolioData = {
               ]
             },
             {
-              titre: "Conception de navires – Ship Design (SD2721)",
+              titre: "Conception de navires (SD2721)",
               description: "Introduction à l'architecture navale : théorie du navire, processus de conception et ingénierie système.",
               paragraphes: [
                 "Bases de la théorie du navire : hydrostatique, stabilité, résistance à l'avancement et propulsion.",
@@ -416,19 +416,12 @@ const portfolioData = {
               ]
             },
             {
-              titre: "Structures marines – Marine Structures (SD2722)",
+              titre: "Structures marines (SD2722)",
               description: "Conception et dimensionnement des structures de coque de navire.",
               paragraphes: [
                 "Architecture des structures de coque, rôle des différents éléments structuraux, chargements subis par la coque et règles de classification.",
                 "Application de la théorie des poutres, des plaques et des éléments finis à l'analyse des structures de navire, avec prise en compte de la fatigue et du flambement.",
-                "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis.",
-                "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts."
-              ],
-              liens: [
-                {
-                  url: "documents/marine_structures/hull_anatomy.html",
-                  label: "Outil interactif : anatomie 3D de la structure de coque"
-                }
+                "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis."
               ]
             },
             {
@@ -454,7 +447,7 @@ const portfolioData = {
           annee: "KTH — Semestre 2 (printemps 2027)",
           cours: [
             {
-              titre: "Voile et performance – Sailing for Performance (SD2706)",
+              titre: "Voile et performance (SD2706)",
               description: "Mécanique de la voile et prédiction de performance des voiliers.",
               paragraphes: [
                 "Forces, moments et équilibres fondamentaux d'un voilier : hydromécanique, aérodynamique, résistance de vagues et comportement des foils porteurs.",
@@ -472,7 +465,7 @@ const portfolioData = {
               ]
             },
             {
-              titre: "Hydromécanique marine – Marine Hydromechanics (SD2723)",
+              titre: "Hydromécanique marine (SD2723)",
               description: "Tenue à la mer et manœuvrabilité des navires.",
               paragraphes: [
                 "Analyse analytique et numérique des mouvements et de la manœuvre du navire, et modélisation hydromécanique et probabiliste des vagues.",
@@ -503,7 +496,7 @@ const portfolioData = {
           annee: "KTH — Semestre 3 : projet de fin d'études (automne 2027)",
           cours: [
             {
-              titre: "Projet de fin d'études en architecture navale – Degree Project (SG271X)",
+              titre: "Projet de fin d'études en architecture navale (SG271X)",
               description: "Mémoire de master de 30 crédits en architecture navale, validant le double diplôme à KTH.",
               paragraphes: [
                 "Travail de recherche individuel de niveau master, sanctionnant le double diplôme École polytechnique × KTH.",

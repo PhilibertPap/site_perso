@@ -3878,3 +3878,52 @@ a { text-underline-offset: 3px; }
     gap: 0.75rem;
   }
 }
+
+/* ==================== DARK MODE — corrections (cours, frise, carrousel) ==================== */
+[data-theme="dark"] .course-details {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .course-details[open] {
+  border-color: #4a5868;
+}
+
+[data-theme="dark"] .course-summary,
+[data-theme="dark"] .cours-compact-item {
+  background: #202226;
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .course-summary::after,
+[data-theme="dark"] .matiere-meta,
+[data-theme="dark"] .annee-meta {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .annee-meta,
+[data-theme="dark"] .filter-count {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .lang-btn.is-active,
+[data-theme="dark"] .experience-logo-kth {
+  color: #141517 !important;
+}
+
+[data-theme="dark"] .experience-empty {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .project-carousel-container {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .carousel,
+[data-theme="dark"] .carousel-item {
+  background: #202226;
+}
