@@ -142,6 +142,16 @@
                           {{#paragraphes}}
                           <p class="course-paragraph mb-1">{{.}}</p>
                           {{/paragraphes}}
+                          {{#liens.length}}
+                          <div class="project-links">
+                            {{#liens}}
+                            <a href="{{url}}" target="_blank" rel="noopener" class="project-link">
+                              {{label}}
+                              <span class="link-arrow">→</span>
+                            </a>
+                            {{/liens}}
+                          </div>
+                          {{/liens.length}}
                         </div>
                       </details>
                       {{/cours}}

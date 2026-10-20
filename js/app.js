@@ -1830,6 +1830,31 @@ for (const lang of Object.keys(MISSING_TRANSLATIONS_PATCH)) {
   }
 }
 
+const COURSE_LINKS_TRANSLATIONS_PATCH = {
+  en: {
+    description: {
+      "Outil interactif : anatomie 3D de la structure de coque": "Interactive tool: 3D hull structure anatomy",
+      "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts.": "To study for this course, I built an interactive 3D tool: the hull structure of five ship types, each member explained (function, family, features), with a quiz and the load path."
+    }
+  },
+  de: {
+    description: {
+      "Outil interactif : anatomie 3D de la structure de coque": "Interaktives Tool: 3D-Anatomie der Rumpfstruktur",
+      "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts.": "Zur Prüfungsvorbereitung habe ich ein interaktives 3D-Tool entwickelt: die Rumpfstruktur von fünf Schiffstypen, jedes Bauteil erklärt (Funktion, Familie, Merkmale), mit Quiz und Lastpfad."
+    }
+  }
+};
+
+for (const lang of Object.keys(COURSE_LINKS_TRANSLATIONS_PATCH)) {
+  const dict = CONTENT_TRANSLATIONS[lang];
+  const patchLang = COURSE_LINKS_TRANSLATIONS_PATCH[lang];
+  if (!dict || !patchLang) continue;
+  for (const bucket of Object.keys(patchLang)) {
+    dict[bucket] = dict[bucket] || {};
+    Object.assign(dict[bucket], patchLang[bucket]);
+  }
+}
+
 function parseProjectEndDate(dateRange) {
   if (!dateRange) return 0;
   const value = String(dateRange).trim();
@@ -2104,6 +2129,9 @@ function localizeContent(data, lang) {
         cours.paragraphes = (cours.paragraphes || [])
           .map((p) => tr(p, dict.description))
           .filter((p) => p && p.trim());
+        (cours.liens || []).forEach((lien) => {
+          if (lien.label) lien.label = tr(lien.label, dict.description);
+        });
       });
     });
   });

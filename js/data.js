@@ -421,7 +421,14 @@ const portfolioData = {
               paragraphes: [
                 "Architecture des structures de coque, rôle des différents éléments structuraux, chargements subis par la coque et règles de classification.",
                 "Application de la théorie des poutres, des plaques et des éléments finis à l'analyse des structures de navire, avec prise en compte de la fatigue et du flambement.",
-                "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis."
+                "Projet de conception de la structure d'un navire : dimensionnement de la section maîtresse à partir des règles de classification et de calculs directs par éléments finis.",
+                "Pour réviser ce cours, j'ai développé un outil interactif en 3D : la structure de coque de cinq types de navires, chaque élément expliqué (fonction, famille, caractéristiques), avec un quiz et le cheminement des efforts."
+              ],
+              liens: [
+                {
+                  url: "documents/marine_structures/hull_anatomy.html",
+                  label: "Outil interactif : anatomie 3D de la structure de coque"
+                }
               ]
             },
             {
