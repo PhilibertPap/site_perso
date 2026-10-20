@@ -171,32 +171,35 @@ const portfolioData = {
     {
       titre: "TRON 3D – Jeu vidéo multijoueur",
       contexte: "Cours d'Informatique 3D – École polytechnique",
-      description: "Un jeu de motos de lumière inspiré de TRON, codé en C++ et OpenGL en binôme pour le cours d'informatique graphique (INF443), puis repris en octobre 2026. Deux joueurs sur le même clavier : toucher un mur, le décor ou tomber dans le vide fait perdre la manche. Contrairement au jeu d'origine, l'arène est en 3D, avec des étages, des rampes et des tremplins. On peut y jouer directement dans le navigateur.",
+      description: "Un jeu de motos de lumière inspiré de TRON, codé en C++ et OpenGL en binôme pour le cours d'informatique graphique (INF443), puis repris en octobre 2026. Tron (bleu) affronte Clu (orange) : en solo, Clu est piloté par une IA ; à deux, on partage le clavier. L'arène est en 3D, avec des étages, des rampes et des tremplins. Le jeu tourne dans le navigateur, et sur téléphone on pilote en inclinant l'écran comme un volant.",
       date: "03/2025 – 10/2026",
       carousel: {
         images: [
-          { src: "documents/tron/ecran_titre.jpg", alt: "Écran titre du jeu", description: "Écran titre : réglages de la partie et commandes" },
-          { src: "documents/tron/ecran_partage.jpg", alt: "Vue à la troisième personne en écran partagé", description: "Écran partagé : la moto orange vire vers un tremplin" },
-          { src: "documents/tron/tremplin.jpg", alt: "Moto qui décolle d'un tremplin", description: "La moto orange décolle d'un tremplin" },
-          { src: "documents/tron/croisement.jpg", alt: "Les deux motos se croisent", description: "Les deux motos se croisent" },
-          { src: "documents/tron/explosion.jpg", alt: "Explosion d'une moto contre un mur", description: "La moto bleue percute le mur orange : point pour le joueur 2" },
-          { src: "documents/tron/vue_globale.jpg", alt: "Vue globale de l'arène", description: "Vue globale de l'arène et des murs de lumière" }
+          { src: "documents/tron/titre.jpg", alt: "Écran titre du jeu", description: "Écran titre : mode solo ou 2 joueurs, difficulté, vue, son" },
+          { src: "documents/tron/course.jpg", alt: "Course contre Clu", description: "Course contre Clu, piloté par l'IA" },
+          { src: "documents/tron/crash.jpg", alt: "Tron s'écrase contre le mur de Clu", description: "Tron percute le mur de Clu : point pour Clu" },
+          { src: "documents/tron/tremplin.jpg", alt: "Moto qui décolle d'un tremplin", description: "À deux joueurs, en écran partagé : saut sur un tremplin" },
+          { src: "documents/tron/arene.jpg", alt: "Vue globale de l'arène", description: "L'arène vue de haut : sol, étages, rampes et tremplins" }
         ]
       },
       technologies: ["C++", "OpenGL", "GLSL", "WebAssembly", "Jeux vidéo"],
       resultats: {
         items: [
-          "Arène 3D de 160 m sur trois niveaux : on passe sous un étage, on saute par-dessus un mur avec un tremplin",
-          "Murs de lumière en maillage pré-alloué, collisions par intersection de segments",
+          "Arène 3D sur trois niveaux : on passe sous un étage, on saute par-dessus un mur avec un tremplin",
+          "Mode solo contre une IA qui simule plusieurs trajectoires et garde la plus sûre, trois niveaux de difficulté",
           "Rendu néon : grille calculée dans le shader, effet de lueur (bloom), explosions",
-          "Trois vues (globale, 3e et 1re personne en écran partagé), manches au score",
-          "Version web compilée en WebAssembly et publiée automatiquement sur GitHub Pages"
+          "Son spatialisé : bruit des moteurs qui suit la vitesse, effet Doppler quand on se croise",
+          "Version web en WebAssembly, installable sur téléphone et jouable en inclinant l'écran"
         ]
       },
       liens: [
         {
           url: "https://philibertpap.github.io/tron/",
-          label: "Jouer dans le navigateur (clavier)"
+          label: "Jouer (navigateur ou téléphone)"
+        },
+        {
+          url: "documents/tron/rapport_tron.pdf",
+          label: "Rapport : le jeu et les notions du cours (PDF)"
         },
         {
           url: "https://github.com/PhilibertPap/tron",
