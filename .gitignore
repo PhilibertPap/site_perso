@@ -22,8 +22,6 @@ npm-debug.log*
 
 # Temporary files
 /optimized/
-/favicon.ico
-/apple-touch-icon.png
 *.bak
 
 # Environment files
